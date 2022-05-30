@@ -1,0 +1,9 @@
+.DS_Store
+package-lock.json
+
+.idea/
+node_modules/
+
+dest/assets/css/*
+dest/assets/js/*
+dest/**/*.html

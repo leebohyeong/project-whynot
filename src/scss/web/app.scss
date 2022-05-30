@@ -1,0 +1,285 @@
+@use "sass:math";
+
+@import "../_mixins/clearfix";
+@import "../_mixins/font-face";
+@import "../_mixins/text-overflow";
+@import "../_mixins/visually-hidden";
+
+@mixin backdrop-content($height, $backdrop) {
+    position: relative;
+    padding-top: percentage(math.div($height, 1242));
+    background: url("/assets/images/#{$backdrop}") no-repeat center top/cover;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.why-not {
+    max-width: 1242px;
+    margin: 0 auto;
+
+    &__content {
+        @include visually-hidden;
+    }
+
+    &__header {
+        @include backdrop-content(1569, 'p_header.jpg');
+    }
+
+    &__zone {
+        @include backdrop-content(2138, 'p_zone.jpg');
+
+        li {
+            position: absolute;
+            width: percentage(math.div(420, 1242));
+            height: percentage(math.div(440, 2138));
+
+            &:nth-child(1),
+            &:nth-child(4) {
+                left: percentage(math.div(104, 1242));
+            }
+
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(5) {
+                left: percentage(math.div(693, 1242));
+            }
+
+            &:nth-child(1) {
+                top: percentage(math.div(580, 2138));
+            }
+
+            &:nth-child(2) {
+                top: percentage(math.div(523, 2138));
+            }
+
+            &:nth-child(3) {
+                top: percentage(math.div(1052, 2138));
+            }
+
+            &:nth-child(4) {
+                top: percentage(math.div(1115, 2138));
+            }
+
+            &:nth-child(5) {
+                top: percentage(math.div(1583, 2138));
+            }
+        }
+
+        a,
+        div {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        span {
+            @include visually-hidden;
+        }
+    }
+
+    &__about {
+        @include backdrop-content(1983, 'p_about.jpg');
+    }
+
+    &__about-movie {
+        position: absolute;
+        top: percentage(math.div(1212, 1983));
+        right: percentage(math.div(32, 1242));
+        left: percentage(math.div(32, 1242));
+
+        &::before {
+            display: block;
+            padding-top: percentage(math.div(9, 16));
+            clear: both;
+            content: "";
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.why-not-detail {
+    &__container {
+        background: {
+            repeat: no-repeat;
+            position: center top;
+            size: cover;
+        };
+
+        &::before {
+            display: block;
+            content: "";
+        }
+    }
+
+    &__content {
+        @include visually-hidden;
+    }
+
+    &__map {
+        position: absolute;
+
+        span {
+            @include visually-hidden;
+        }
+
+        a {
+            display: block;
+            padding-top: percentage(math.div(600, 1053));
+        }
+    }
+
+    &--1 & {
+        &__container {
+            background-image: url("/assets/images/p_list_1.png");
+
+            &::before {
+                padding-top: percentage(math.div(2523, 1242));
+            }
+        }
+
+        &__map {
+            left: percentage(math.div(101, 1242));
+            bottom: percentage(math.div(83, 2523));
+            width: percentage(math.div(1053, 1242));
+        }
+    }
+}
+
+$deviceType: "pc" !default;
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+
+    &--open {
+        display: block;
+    }
+
+    &__backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .55);
+        //opacity: 0;
+        //transition: opacity .15s linear;
+    }
+
+    &__dialog {
+        position: relative;
+        margin: 32px auto;
+        pointer-events: none;
+        //transform: translate(0, -50px);
+        //opacity: 0;
+        //transition: transform .3s ease-out, opacity .15s linear;
+    }
+
+    &__container {
+        overflow: hidden;
+        position: relative;
+        width: calc(100% - 40px);
+        max-width: 1242px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        pointer-events: auto;
+    }
+
+    &__close {
+        position: absolute;
+        @if $deviceType == pc {
+            top: 34px;
+            right: 34px;
+        } @else {
+            top: 12px;
+            right: 8px;
+        }
+        z-index: 100;
+
+        &-button {
+            display: block;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            border: 0;
+            background: transparent;
+            transition: background-color .2s cubic-bezier(0.4, 0, 0.2, 1);
+            outline: 0;
+
+            &:before,
+            &:after {
+                position: absolute;
+                top: calc(50% - 1px);
+                @if $deviceType == pc {
+                    left: calc(50% - 12px);
+                    width: 24px;
+                } @else {
+                    left: calc(50% - 10px);
+                    width: 20px;
+                }
+                height: 2px;
+                background: #000;
+                transform-origin: center;
+                content: "";
+            }
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: rgba(0, 0, 0, .05);
+                }
+            }
+        }
+
+        &-text {
+            @include visually-hidden;
+        }
+    }
+
+    &--fade & {
+        &__backdrop {
+            opacity: 1;
+        }
+
+        &__dialog {
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+.modal-open {
+    overflow: hidden;
+    height: 100%;
+}
