@@ -20,9 +20,9 @@ const Modal = class {
 
     initEvents() {
         this.modals.forEach(modal => {
-            const backdrop = modal.querySelector('.modal__backdrop');
+            const close = modal.querySelector('.modal__close');
 
-            backdrop.addEventListener('click', (event) => {
+            close.addEventListener('click', (event) => {
                 this.close();
             });
         });
@@ -36,7 +36,10 @@ const app = () => {
     const modal = new Modal(details);
 
     triggers.forEach((trigger, index) => {
-        trigger.addEventListener('click', () => modal.open(index));
+        trigger.addEventListener('click', (event) => {
+            event.preventDefault();
+            modal.open(index);
+        });
     });
 };
 

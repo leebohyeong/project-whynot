@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const path = require('path');
 const sass = require('gulp-sass')(require('sass'));
 const babel = require('gulp-babel');
+const terser = require('gulp-terser');
 const pug = require('gulp-pug-3');
 const autoprefixer = require('gulp-autoprefixer');
 const cssimport = require('gulp-cssimport');
@@ -45,6 +46,7 @@ gulp.task('js', () => {
             presets: ['@babel/env']
         }))
         .pipe(concat('app.js'))
+        .pipe(terser())
         .pipe(gulp.dest(`${dest}/assets/js`));
 });
 
@@ -52,9 +54,9 @@ gulp.task('css', () => {
     return gulp.src(`${src}/scss/web/[^_]*.?(s)css`)
         .pipe(sass({
             indentWidth: 4,
-            outputStyle: 'expanded',
+            // outputStyle: 'expanded',
             // outputStyle: 'compressed',
-            // outputStyle: 'compact',
+            outputStyle: 'compressed',
             includePaths: [
                 path.resolve(__dirname, 'node_modules')
             ]

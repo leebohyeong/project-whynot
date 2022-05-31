@@ -31,6 +31,10 @@ ul {
         @include visually-hidden;
     }
 
+    &__nav {
+        @include backdrop-content(152, 'p_tab.jpg');
+    }
+
     &__header {
         @include backdrop-content(1569, 'p_header.jpg');
     }
@@ -88,12 +92,12 @@ ul {
     }
 
     &__about {
-        @include backdrop-content(1983, 'p_about.jpg');
+        @include backdrop-content(2023, 'p_about.jpg');
     }
 
     &__about-movie {
         position: absolute;
-        top: percentage(math.div(1212, 1983));
+        bottom: percentage(math.div(153, 2023));
         right: percentage(math.div(32, 1242));
         left: percentage(math.div(32, 1242));
 
@@ -111,6 +115,10 @@ ul {
             width: 100%;
             height: 100%;
         }
+    }
+
+    &__footer {
+        @include backdrop-content(311, 'p_footer.jpg');
     }
 }
 
@@ -145,19 +153,38 @@ ul {
         }
     }
 
+    &__tip {
+        position: absolute;
+
+        span {
+            @include visually-hidden;
+        }
+
+        a {
+            display: block;
+            padding-top: percentage(math.div(101, 737));
+        }
+    }
+
     &--1 & {
         &__container {
             background-image: url("/assets/images/p_list_1.png");
 
             &::before {
-                padding-top: percentage(math.div(2523, 1242));
+                padding-top: percentage(math.div(2956, 1187));
             }
         }
 
         &__map {
-            left: percentage(math.div(101, 1242));
-            bottom: percentage(math.div(83, 2523));
-            width: percentage(math.div(1053, 1242));
+            left: percentage(math.div(71, 1187));
+            bottom: percentage(math.div(516, 2956));
+            width: percentage(math.div(1053, 1187));
+        }
+
+        &__tip {
+            left: percentage(math.div(234, 1187));
+            bottom: percentage(math.div(87, 2956));
+            width: percentage(math.div(737, 1187));
         }
     }
 }
@@ -191,7 +218,7 @@ $deviceType: "pc" !default;
 
     &__dialog {
         position: relative;
-        margin: 32px auto;
+        margin: 32px 0 10px;
         pointer-events: none;
         //transform: translate(0, -50px);
         //opacity: 0;
@@ -199,70 +226,39 @@ $deviceType: "pc" !default;
     }
 
     &__container {
-        overflow: hidden;
         position: relative;
         width: calc(100% - 40px);
-        max-width: 1242px;
+        max-width: 1187px;
         margin: 0 auto;
         box-sizing: border-box;
         pointer-events: auto;
+
+        &::before {
+            display: block;
+            padding-top: percentage(math.div(135, 1187));
+            content: "";
+        }
     }
 
     &__close {
         position: absolute;
-        @if $deviceType == pc {
-            top: 34px;
-            right: 34px;
-        } @else {
-            top: 12px;
-            right: 8px;
-        }
+        top: 0;
+        right: 0;
+        width: percentage(math.div(120, 1187));
         z-index: 100;
 
-        &-button {
+        button {
             display: block;
-            position: relative;
-            width: 40px;
-            height: 40px;
-            border-radius: 100%;
+            width: 100%;
+            padding-top: percentage(math.div(135, 120));
+            border-radius: 0;
             border: 0;
-            background: transparent;
-            transition: background-color .2s cubic-bezier(0.4, 0, 0.2, 1);
-            outline: 0;
-
-            &:before,
-            &:after {
-                position: absolute;
-                top: calc(50% - 1px);
-                @if $deviceType == pc {
-                    left: calc(50% - 12px);
-                    width: 24px;
-                } @else {
-                    left: calc(50% - 10px);
-                    width: 20px;
-                }
-                height: 2px;
-                background: #000;
-                transform-origin: center;
-                content: "";
-            }
-
-            &:before {
-                transform: rotate(45deg);
-            }
-
-            &:after {
-                transform: rotate(-45deg);
-            }
-
-            @media (hover: hover) {
-                &:hover {
-                    background-color: rgba(0, 0, 0, .05);
-                }
-            }
+            background: url("/assets/images/icon_close.png") no-repeat center top/percentage(math.div(90, 120)) auto;
+            appearance: none;
+            cursor: pointer;
         }
 
-        &-text {
+        span {
             @include visually-hidden;
         }
     }
