@@ -20,23 +20,115 @@ head
     meta(property="article:author" content="LG U+")
 
     link(rel="stylesheet" href="/assets/css/app.css")
+
+    script(src="https://polyfill.io/v3/polyfill.min.js?features=URL")
     script(src="/assets/js/app.js")
 body
-    div.why-not
-        nav.why-not__nav
-            ul.why-not__content
-                li
-                    a(href="#")
-                        span 와이낫 [comming soon]
-                li
-                    a(href="#")
-                        span 와이낫 로드
+    nav.why-not-nav
+        ul
+            li
+                a(href="/?content=why-not")
+                    span 와이낫
+            li
+                a(href="/?content=why-not-load")
+                    span 와이낫 로드
+
+    article#why-not.why-not
         header.why-not__header
             div.why-not__content
+                h1 유플러스만의 WHY NOT이란?
+                h2 유플러스 선 넘는 즐거움의 시작
+                p.
+                    '이 정도면 충분하지'
+                    '원래 그렇게 하는 거야'
+                    그 정도 선에서 멈추는 게 맞는 걸까?
+                    선을 넘지 않으면 아무 일도 생기지 않아
+                    선을 넘어야 새로움은 만들어지는 거야
+                    적당히 좋은 것,
+                    고정관념, 한계를 넘어,
+                    과감하게 도전하는 것
+                    뻔하지 않은 생각으로
+                    일상의 즐거움을 만드는 것
+                    그렇게 고객을 향해,
+                    선을 넘는 것
+                    이런 게 유플러스만의
+                    WHY NOT
+        section.why-not__contents
+            div.why-not__content
+                h2 WHY NOT Brand Film
+                p 공간을 넘어  디즈니+와 함께하는, 선 넘는 즐거움
+            div.why-not__contents-movie.why-not__contents-movie--1
+                iframe(src="https://www.youtube.com/embed/HK0YHM1a-_w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            div.why-not__content
+                h3 [WHY NOT? 아빠와 아들 편]
+                p.
+                    “같이 보니까 좋지?” “완전!”
+                    어린시절 내가 좋아했던 콘텐츠를,우리 아이와 함께 즐길 수 있다면?
+                    이런 게 유플러스만의 WHY NOT!
+            div.why-not__contents-movie.why-not__contents-movie--2
+                iframe(src="https://www.youtube.com/embed/Gh4fA2SYlgM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            div.why-not__content
+                h3 [WHY NOT? 칠공주 편]
+                p.
+                    “우리 진짜 언제 보냐~”
+                    멀리 떨어져있어도 같이 있는것 같은 생생한 즐거움!✨
+                    이런 게 유플러스만의 WHY NOT!
+
+            h2.why-not__content 처음을 이끄는 과감한 도전, Why Not?
+            div.why-not__contents-movie.why-not__contents-movie--3
+                iframe(src="https://www.youtube.com/embed/CWOgnaDjzcs?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            div.why-not__content
+                p.
+                    “할 수 있겠어?”
+                    “그게 될까?”
+                    일상의 즐거운 변화를 위해 편견을 깨고
+                    과감한 도전들을 먼저 시도하는 유플러스만의 실천 캠페인, “Why Not?”
+                h2 WHY NOT Playlist
+                h3 LG Uplus x essential, 일상의 즐거운 변화
+            div.why-not__contents-movie.why-not__contents-movie--4
+                iframe(src="https://www.youtube.com/embed/tyN9BriXcu0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            p.why-not__content.
+                Why Not? 선넘는 즐거움으로 오늘을 변화시켜 줄 컬러풀 팝
+                colorful trendy pop with LG U+
+
+
+
+
+
+
+
+
+        section.why-not__info
+            div.why-not__content
+                h2 WHY NOT 프로젝트 소개
+                p.
+                    음악과 함께하는 일상의 즐거움과
+                    전국 지역 활성화를 위한
+                    유플러스의 야심찬 프로젝트
+                    와이낫 크루!
+            p.why-not__info-detail.why-not__info-detail--1
+                a(href="https://youtu.be/IqvXsphopyc" target="_blank")
+                    span 와이낫 크루 선넘는 도전 보러가기 >>
+            p.why-not__content.
+                와이낫 클루가 소개하는
+                대한민국 핫플
+                와이낫 로드!
+            p.why-not__info-detail.why-not__info-detail--2
+                a(href="?content=why-not-load")
+                    span 와이낫 로드의 선 넘는 혜택 보기 >>
+            p.why-not__content.
+                예상 밖의 두 브랜드의 만남
+                LG U+ 콜라보레이션
+                7월 런칭 예정
+                Coming Soon
+
+    article#why-not-load.why-not-load
+        header.why-not-load__header
+            div.why-not-load__content
                 h1 LG U+
                 p 와이낫 크루가 소개하는 대한민국 핫플
-        section.why-not__zone
-            div.why-not__content
+        section.why-not-load__zone
+            div.why-not-load__content
                 h2 와이낫 로드 혜택Zone
                 p 와이낫 크루가 찾은 각 지역의 핫플! 그리고 U+가 선물하는 선 넘는 혜택을 공개합니다!
                 p * 각 지역의 버튼을 클릭하면 혜택 정보를 확인할 수 있습니다.
@@ -56,8 +148,8 @@ body
                 li 
                     div
                         span ??? - 8/12 OPEN
-        section.why-not__about
-            div.why-not__content
+        section.why-not-load__about
+            div.why-not-load__content
                 h2 와이낫 크루란?
                 p.
                     이제껏 볼 수 없었던 4인방의 선 넘는 도전기가 시작된다!<br>
@@ -70,27 +162,28 @@ body
                     li 박현규
                     li 권은비
                 h3 와이낫 크루 영상보기
-            div.why-not__about-movie
+            div.why-not-load__about-movie
                 iframe(src="https://www.youtube.com/embed/IqvXsphopyc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
-        footer.why-not__footer
-            div.why-not__content
-                p
-                    address ㈜엘지유플러스 주소 서울특별시 용산구 한강대로 32
-                ul
-                    li 대표이사 황현식
-                    li 사업자등록번호 220-81-39938
-                    li 통신판매신고 제 2015-서울용산-00481호
-                    li 사업자정보확인 l CS센터 1544-9146 (평일 10~18시 / 점심시간 12~13시)
-                p
-                    Copyright © LG Uplus Corp. All Rights Reserved
 
-#modal-1.modal.why-not-detail.why-not-detail--1
+    footer.why-not-footer
+        div
+            p
+                address ㈜엘지유플러스 주소 서울특별시 용산구 한강대로 32
+            ul
+                li 대표이사 황현식
+                li 사업자등록번호 220-81-39938
+                li 통신판매신고 제 2015-서울용산-00481호
+                li 사업자정보확인 l CS센터 1544-9146 (평일 10~18시 / 점심시간 12~13시)
+            p
+                Copyright © LG Uplus Corp. All Rights Reserved
+
+#modal-1.modal.why-not-load-detail.why-not-load-detail--1
         .modal__backdrop
         .modal__dialog
             .modal__container
-                .why-not-detail__container
-                    .why-not-detail__content
+                .why-not-load-detail__container
+                    .why-not-load-detail__content
                         h3 춘천
                         p 와이낫 크루’S 추천 유플러스 고객을 위한 선 넘는 멤버십 혜택
                         ul
@@ -132,13 +225,13 @@ body
                                     1,000원당 100원 할인
                                     (최대 2만원까지 할인)
                         h4 지도보기
-                    p.why-not-detail__map
+                    p.why-not-load-detail__map
                         a(href="https://bit.ly/3MuiTHv" target="_blank")
                             span 지도상세
-                    .why-not-detail__content
+                    .why-not-load-detail__content
                         h5 또하나의 TIP!
                         p 와이낫 크루’s PICK 춘천 여행지도 소개합니다!
-                    p.why-not-detail__tip
+                    p.why-not-load-detail__tip
                         a(href="https://www.youtube.com/watch?v=lxN-pHTiKnA" target="_blank")
                             span 춘천여행 BEST 6
                 .modal__close
