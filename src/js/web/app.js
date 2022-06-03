@@ -36,11 +36,8 @@ const app = () => {
         const triggers = [...nav.querySelectorAll('a')];
         const navNames = triggers.map(trigger => trigger.getAttribute('href').replace('/?content=', ''));
         const paramIndex = navNames.indexOf(url.searchParams.get('content'));
-        let current = paramIndex !== -1 ? navNames[paramIndex] : navNames[0];
-
-        if (url.origin.includes('xn--t20bn3f1tdm0t9mb') || url.origin.includes('와이낫로드')) {
-            current = navNames[1];
-        }
+        let current =
+            paramIndex !== -1 ? navNames[paramIndex] : url.origin.includes('xn--t20bn3f1tdm0t9mb') || url.origin.includes('와이낫로드') ? navNames[1] : navNames[0];
 
         const article = document.getElementById(current);
 
