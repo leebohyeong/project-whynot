@@ -192,8 +192,6 @@ ul {
     }
 
     &__zone {
-        @include backdrop-content(2138, 'why-not-load/p_zone.jpg');
-
         li {
             position: absolute;
             width: percentage(math.div(420, 1242));
@@ -272,6 +270,7 @@ ul {
 
 .why-not-load-detail {
     &__container {
+        position: relative;
         background: {
             repeat: no-repeat;
             position: center top;
@@ -280,6 +279,7 @@ ul {
 
         &::before {
             display: block;
+            padding-top: percentage(math.div(2956, 1187));
             content: "";
         }
     }
@@ -290,6 +290,9 @@ ul {
 
     &__map {
         position: absolute;
+        left: percentage(math.div(71, 1187));
+        bottom: percentage(math.div(516, 2956));
+        width: percentage(math.div(1053, 1187));
 
         span {
             @include visually-hidden;
@@ -303,6 +306,9 @@ ul {
 
     &__tip {
         position: absolute;
+        left: percentage(math.div(234, 1187));
+        bottom: percentage(math.div(87, 2956));
+        width: percentage(math.div(737, 1187));
 
         span {
             @include visually-hidden;
@@ -311,28 +317,6 @@ ul {
         a {
             display: block;
             padding-top: percentage(math.div(101, 737));
-        }
-    }
-
-    &--1 & {
-        &__container {
-            background-image: url("/assets/images/why-not-load/p_list_1.png");
-
-            &::before {
-                padding-top: percentage(math.div(2956, 1187));
-            }
-        }
-
-        &__map {
-            left: percentage(math.div(71, 1187));
-            bottom: percentage(math.div(516, 2956));
-            width: percentage(math.div(1053, 1187));
-        }
-
-        &__tip {
-            left: percentage(math.div(234, 1187));
-            bottom: percentage(math.div(87, 2956));
-            width: percentage(math.div(737, 1187));
         }
     }
 }
@@ -424,4 +408,22 @@ ul {
 .modal-open {
     overflow: hidden;
     height: 100%;
+}
+
+
+
+.why-not-load {
+    &__zone {
+        @include backdrop-content(2138, 'why-not-load/p_zone_220610.jpg');
+    }
+}
+
+.why-not-load-detail {
+    @for $i from 1 through 2 {
+        &--#{$i} & {
+            &__container {
+                background-image: url("/assets/images/why-not-load/p_list_#{$i}.png");
+            }
+        }
+    }
 }
