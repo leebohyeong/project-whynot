@@ -46,7 +46,7 @@ const app = () => {
     })();
 
     (() => {
-        const zone = document.querySelector('.why-not-load__zone');
+        const zone = document.querySelector('.why-not-road__zone');
         const triggers = [...zone.querySelectorAll('a')];
         const details = triggers.map(trigger => document.querySelector(trigger.getAttribute('href')));
         const modal = new Modal(details);

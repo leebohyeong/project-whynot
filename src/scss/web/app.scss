@@ -67,8 +67,8 @@ ul {
         background-image: url("/assets/images/nav_why_not.jpg");
     }
 
-    &--why-not-load {
-        background-image: url("/assets/images/nav_why_not_load.jpg");
+    &--why-not-road {
+        background-image: url("/assets/images/nav_why_not_road.jpg");
     }
 }
 
@@ -89,7 +89,7 @@ ul {
 }
 
 .why-not,
-.why-not-load {
+.why-not-road {
     display: none;
     max-width: 1242px;
     margin: 0 auto;
@@ -186,9 +186,9 @@ ul {
     }
 }
 
-.why-not-load {
+.why-not-road {
     &__header {
-        @include backdrop-content(1648, 'why-not-load/p_header.jpg');
+        @include backdrop-content(1648, 'why-not-road/p_header.jpg');
     }
 
     &__zone {
@@ -242,7 +242,7 @@ ul {
     }
 
     &__about {
-        @include backdrop-content(2024, 'why-not-load/p_about.jpg');
+        @include backdrop-content(2024, 'why-not-road/p_about.jpg');
     }
 
     &__about-movie {
@@ -268,7 +268,7 @@ ul {
     }
 }
 
-.why-not-load-detail {
+.why-not-road-detail {
     &__container {
         position: relative;
         background: {
@@ -412,17 +412,17 @@ ul {
 
 
 
-.why-not-load {
+.why-not-road {
     &__zone {
-        @include backdrop-content(2138, 'why-not-load/p_zone_220610.jpg');
+        @include backdrop-content(2138, 'why-not-road/p_zone_220610.jpg');
     }
 }
 
-.why-not-load-detail {
+.why-not-road-detail {
     @for $i from 1 through 2 {
         &--#{$i} & {
             &__container {
-                background-image: url("/assets/images/why-not-load/p_list_#{$i}.png");
+                background-image: url("/assets/images/why-not-road/p_list_#{$i}.png");
             }
         }
     }
