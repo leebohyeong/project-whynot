@@ -279,7 +279,7 @@ ul {
 
         &::before {
             display: block;
-            padding-top: percentage(math.div(2956, 1187));
+            padding-top: percentage(math.div(3006, 1187));
             content: "";
         }
     }
@@ -291,7 +291,7 @@ ul {
     &__map {
         position: absolute;
         left: percentage(math.div(71, 1187));
-        bottom: percentage(math.div(516, 2956));
+        bottom: percentage(math.div(566, 3006));
         width: percentage(math.div(1053, 1187));
 
         span {
@@ -307,7 +307,7 @@ ul {
     &__tip {
         position: absolute;
         left: percentage(math.div(234, 1187));
-        bottom: percentage(math.div(87, 2956));
+        bottom: percentage(math.div(87, 3006));
         width: percentage(math.div(737, 1187));
 
         span {
