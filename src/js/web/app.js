@@ -59,19 +59,19 @@ const app = () => {
         });
     })();
 
-    (() => {
-        const detail = document.querySelector('.why-not__info-detail--1 a');
-        const movie = document.querySelector('.why-not-road__about-movie iframe');
-        const now = Date.now();
-        let movieId = 'ojEof7DNPt4';
-
-        if (now > new Date(2022, 5, 17, 18, 0, 0)) {
-            movieId = 'xYIYu9ovC48'
-        }
-
-        // detail.href = `https://youtu.be/${movieId}`;
-        movie.src = `https://www.youtube.com/embed/${movieId}?controls=0`;
-    })();
+    // (() => {
+    //     const detail = document.querySelector('.why-not__info-detail--1 a');
+    //     const movie = document.querySelector('.why-not-road__about-movie iframe');
+    //     const now = Date.now();
+    //     let movieId = 'ojEof7DNPt4';
+    //
+    //     if (now > new Date(2022, 5, 17, 18, 0, 0)) {
+    //         movieId = 'xYIYu9ovC48'
+    //     }
+    //
+    //     // detail.href = `https://youtu.be/${movieId}`;
+    //     movie.src = `https://www.youtube.com/embed/${movieId}?controls=0`;
+    // })();
 };
 
 document.addEventListener('DOMContentLoaded', app);
