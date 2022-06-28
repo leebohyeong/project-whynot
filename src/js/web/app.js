@@ -31,6 +31,48 @@ const Modal = class {
 
 const app = () => {
     (() => {
+        const now = Date.now();
+        const reservationDate = {
+            '2022.07.01 18:00': new Date(2022, (7 - 1), 1, 18, 0, 0)
+        };
+        const movieId = {
+            '2022.07.01 18:00': {
+                whyNot: 'ojEof7DNPt4',
+                whyNotRoad: 'xYIYu9ovC48',
+            }
+        };
+        const isReservationDate = reservationDate => now >= reservationDate;
+
+        // 와이낫 로드 > 유플러스 멤버십 zone
+        (() => {
+            if (true && isReservationDate(reservationDate['2022.07.01 18:00'])) {
+                const zone = document.querySelector('.why-not-road__zone');
+                const zoneItem = zone.querySelectorAll('li')[2];
+
+                zone.style.backgroundImage = 'url("/assets/images/why-not-road/p_zone_220701.jpg")';
+                zoneItem.innerHTML = '<a href="#modal-3"><span>인천</span></a>';
+            }
+        })();
+
+        // 와이낫 로드 > 와이낫 크루 영상 보기
+        (() => {
+            if (false && isReservationDate(reservationDate['2022.07.01 18:00'])) {
+                const movie = document.querySelector('.why-not-road__about-movie iframe');
+                movie.src = `https://www.youtube.com/embed/${movieId}?controls=0`;
+            }
+        })();
+
+        // 와이낫 > WHY NOT 프로젝트 소개
+        (() => {
+            if (false && isReservationDate(reservationDate['2022.07.01 18:00'])) {
+                const detail = document.querySelector('.why-not__info-detail--1 a');
+                detail.href = `https://youtu.be/${movieId}`;
+            }
+        })();
+    })();
+
+
+    (() => {
         const url = new URL(location);
         const nav = document.querySelector('.why-not-nav');
         const triggers = [...nav.querySelectorAll('a')];
@@ -58,20 +100,6 @@ const app = () => {
             });
         });
     })();
-
-    // (() => {
-    //     const detail = document.querySelector('.why-not__info-detail--1 a');
-    //     const movie = document.querySelector('.why-not-road__about-movie iframe');
-    //     const now = Date.now();
-    //     let movieId = 'ojEof7DNPt4';
-    //
-    //     if (now > new Date(2022, 5, 17, 18, 0, 0)) {
-    //         movieId = 'xYIYu9ovC48'
-    //     }
-    //
-    //     // detail.href = `https://youtu.be/${movieId}`;
-    //     movie.src = `https://www.youtube.com/embed/${movieId}?controls=0`;
-    // })();
 };
 
 document.addEventListener('DOMContentLoaded', app);

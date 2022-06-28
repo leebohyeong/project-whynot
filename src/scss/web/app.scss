@@ -414,16 +414,30 @@ ul {
 
 .why-not-road {
     &__zone {
-        @include backdrop-content(2138, 'why-not-road/p_zone_220610.jpg');
+        @include backdrop-content(2138, 'why-not-road/p_zone.jpg');
     }
 }
 
 .why-not-road-detail {
-    @for $i from 1 through 2 {
+    @for $i from 1 through 3 {
         &--#{$i} & {
             &__container {
                 background-image: url("/assets/images/why-not-road/p_list_#{$i}.png");
             }
+        }
+    }
+}
+
+.why-not-road-detail {
+    &--3 & {
+        &__container {
+            &::before {
+                padding-top: percentage(math.div(2574, 1187));
+            }
+        }
+
+        &__map {
+            bottom: percentage(math.div(134, 2574));
         }
     }
 }
