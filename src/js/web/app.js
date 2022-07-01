@@ -38,7 +38,7 @@ const app = () => {
         const movieId = {
             '2022.07.01 18:00': {
                 whyNot: 'ojEof7DNPt4',
-                whyNotRoad: 'xYIYu9ovC48',
+                whyNotRoad: 'ILAHD6G5qsE',
             }
         };
         const isReservationDate = reservationDate => now >= reservationDate;
@@ -56,9 +56,9 @@ const app = () => {
 
         // 와이낫 로드 > 와이낫 크루 영상 보기
         (() => {
-            if (false && isReservationDate(reservationDate['2022.07.01 18:00'])) {
+            if (true && isReservationDate(reservationDate['2022.07.01 18:00'])) {
                 const movie = document.querySelector('.why-not-road__about-movie iframe');
-                movie.src = `https://www.youtube.com/embed/${movieId}?controls=0`;
+                movie.src = `https://www.youtube.com/embed/${movieId['2022.07.01 18:00']['whyNotRoad']}?controls=0`;
             }
         })();
 
@@ -66,7 +66,7 @@ const app = () => {
         (() => {
             if (false && isReservationDate(reservationDate['2022.07.01 18:00'])) {
                 const detail = document.querySelector('.why-not__info-detail--1 a');
-                detail.href = `https://youtu.be/${movieId}`;
+                detail.href = `https://youtu.be/${movieId['2022.07.01 18:00']['whyNot']}`;
             }
         })();
     })();
