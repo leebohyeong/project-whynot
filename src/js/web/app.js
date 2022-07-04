@@ -45,7 +45,7 @@ const app = () => {
 
         // 와이낫 로드 > 유플러스 멤버십 zone
         (() => {
-            if (true && isReservationDate(reservationDate['2022.07.01 18:00'])) {
+            if (false && isReservationDate(reservationDate['2022.07.01 18:00'])) {
                 const zone = document.querySelector('.why-not-road__zone');
                 const zoneItem = zone.querySelectorAll('li')[2];
 
@@ -56,7 +56,7 @@ const app = () => {
 
         // 와이낫 로드 > 와이낫 크루 영상 보기
         (() => {
-            if (true && isReservationDate(reservationDate['2022.07.01 18:00'])) {
+            if (false && isReservationDate(reservationDate['2022.07.01 18:00'])) {
                 const movie = document.querySelector('.why-not-road__about-movie iframe');
                 movie.src = `https://www.youtube.com/embed/${movieId['2022.07.01 18:00']['whyNotRoad']}?controls=0`;
             }
