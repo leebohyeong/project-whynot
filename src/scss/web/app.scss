@@ -23,6 +23,11 @@ ul {
     list-style: none;
 }
 
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
 .why-not-nav {
     position: relative;
     max-width: 1242px;
@@ -409,8 +414,6 @@ ul {
     overflow: hidden;
     height: 100%;
 }
-
-
 
 .why-not-road {
     &__zone {

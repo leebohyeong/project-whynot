@@ -33,7 +33,8 @@ const app = () => {
     (() => {
         const now = Date.now();
         const reservationDate = {
-            '2022.07.01 18:00': new Date(2022, (7 - 1), 1, 18, 0, 0)
+            '2022.07.01 18:00': new Date(2022, (7 - 1), 1, 18, 0, 0),
+            '2022.07.11 00:00': new Date(2022, (7 - 1), 11, 0, 0, 0)
         };
         const movieId = {
             '2022.07.01 18:00': {
@@ -67,6 +68,18 @@ const app = () => {
             if (false && isReservationDate(reservationDate['2022.07.01 18:00'])) {
                 const detail = document.querySelector('.why-not__info-detail--1 a');
                 detail.href = `https://youtu.be/${movieId['2022.07.01 18:00']['whyNot']}`;
+            }
+        })();
+
+        // 와이낫 > 상단 이미지 추가
+        (() => {
+            if (true && isReservationDate(reservationDate['2022.07.11 00:00'])) {
+                const whyNot = document.querySelector('.why-not');
+                const div = document.createElement('div');
+
+                div.innerHTML = '<img src="/assets/images/why-not/img_model.jpg">';
+
+                whyNot.prepend(div);
             }
         })();
     })();
