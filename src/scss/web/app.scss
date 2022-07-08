@@ -109,6 +109,16 @@ img {
 }
 
 .why-not {
+    &__subscribe {
+        display: none;
+        padding-top: percentage(math.div(795, 503));
+        background: url("/assets/images/why-not/p_subscribe.jpg") no-repeat center top/cover;
+
+        &--open {
+            display: block;
+        }
+    }
+
     &__header {
         @include backdrop-content(2227, 'why-not/p_header.jpg');
     }

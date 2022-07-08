@@ -74,12 +74,8 @@ const app = () => {
         // 와이낫 > 상단 이미지 추가
         (() => {
             if (true && isReservationDate(reservationDate['2022.07.11 00:00'])) {
-                const whyNot = document.querySelector('.why-not');
-                const div = document.createElement('div');
-
-                div.innerHTML = '<img src="/assets/images/why-not/img_model.jpg">';
-
-                whyNot.prepend(div);
+                const subscribe = document.querySelector('.why-not__subscribe');
+                subscribe.classList.add('why-not__subscribe--open');
             }
         })();
     })();
