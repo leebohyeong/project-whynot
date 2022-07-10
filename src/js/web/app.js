@@ -34,7 +34,7 @@ const app = () => {
         const now = Date.now();
         const reservationDate = {
             '2022.07.01 18:00': new Date(2022, (7 - 1), 1, 18, 0, 0),
-            '2022.07.11 00:00': new Date(2022, (7 - 1), 11, 0, 0, 0)
+            '2022.07.11 14:00': new Date(2022, (7 - 1), 11, 14, 0, 0)
         };
         const movieId = {
             '2022.07.01 18:00': {
@@ -73,7 +73,7 @@ const app = () => {
 
         // 와이낫 > 상단 이미지 추가
         (() => {
-            if (true && isReservationDate(reservationDate['2022.07.11 00:00'])) {
+            if (true && isReservationDate(reservationDate['2022.07.11 14:00'])) {
                 const subscribe = document.querySelector('.why-not__subscribe');
                 subscribe.classList.add('why-not__subscribe--open');
             }
