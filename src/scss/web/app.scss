@@ -185,6 +185,16 @@ img {
             }
         }
 
+        &--3 {
+            bottom: percentage(math.div(204, 2055));
+            left: percentage(math.div(63, 1242));
+            width: percentage(math.div(582, 1242));
+
+            a {
+                padding-top: percentage(math.div(70, 582));
+            }
+        }
+
         a {
             display: block;
         }
