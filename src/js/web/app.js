@@ -34,7 +34,8 @@ const app = () => {
         const now = Date.now();
         const reservationDate = {
             '2022.07.01 18:00': new Date(2022, (7 - 1), 1, 18, 0, 0),
-            '2022.07.11 14:00': new Date(2022, (7 - 1), 11, 14, 0, 0)
+            '2022.07.11 14:00': new Date(2022, (7 - 1), 11, 14, 0, 0),
+            '2022.07.29 00:00': new Date(2022, (7 - 1), 29, 0, 0, 0)
         };
         const movieId = {
             '2022.07.01 18:00': {
@@ -71,11 +72,16 @@ const app = () => {
             }
         })();
 
-        // 와이낫 > 상단 이미지 추가
+        // 와이낫 > 유플러스 X 복순도가 콜라보 막걸리 보러가기
         (() => {
-            if (true && isReservationDate(reservationDate['2022.07.11 14:00'])) {
-                const subscribe = document.querySelector('.why-not__subscribe');
-                subscribe.classList.add('why-not__subscribe--open');
+            if (true && !isReservationDate(reservationDate['2022.07.29 00:00'])) {
+                const detail = document.querySelector('.why-not__info-detail--3 a');
+
+                detail.addEventListener('click', (event) => {
+                    event.preventDefault();
+
+                    alert('복순도가 콜라보레이션은 29일 런칭 됩니다.');
+                });
             }
         })();
     })();
