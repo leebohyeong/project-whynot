@@ -74,7 +74,7 @@ const app = () => {
 
         // 와이낫 > 유플러스 X 복순도가 콜라보 막걸리 보러가기
         (() => {
-            if (true && !isReservationDate(reservationDate['2022.07.29 00:00'])) {
+            if (false && !isReservationDate(reservationDate['2022.07.29 00:00'])) {
                 const detail = document.querySelector('.why-not__info-detail--3 a');
 
                 detail.addEventListener('click', (event) => {

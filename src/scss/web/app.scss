@@ -118,7 +118,7 @@ img {
     }
 
     &__contents {
-        @include backdrop-content(4696, 'why-not/p_contents.jpg');
+        @include backdrop-content(6939, 'why-not/p_contents.jpg');
     }
 
     &__contents-movie {
@@ -127,19 +127,27 @@ img {
         left: percentage(math.div(50, 1242));
 
         &--1 {
-            top: percentage(math.div(375, 4696));
+            top: percentage(math.div(375, 6939));
         }
 
         &--2 {
-            top: percentage(math.div(1350, 4696));
+            top: percentage(math.div(1350, 6939));
         }
 
         &--3 {
-            top: percentage(math.div(2502, 4696));
+            top: percentage(math.div(2615, 6939));
         }
 
         &--4 {
-            bottom: percentage(math.div(298, 4696));
+            top: percentage(math.div(3590, 6939));
+        }
+
+        &--5 {
+            top: percentage(math.div(4742, 6939));
+        }
+
+        &--6 {
+            top: percentage(math.div(5995, 6939));
         }
 
         &::before {
