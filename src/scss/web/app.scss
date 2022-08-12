@@ -469,4 +469,16 @@ img {
             bottom: percentage(math.div(134, 2574));
         }
     }
+
+    &--5 & {
+        &__container {
+            &::before {
+                padding-top: percentage(math.div(2011, 1187));
+            }
+        }
+
+        &__map {
+            bottom: percentage(math.div(134, 2011));
+        }
+    }
 }
