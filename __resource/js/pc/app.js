@@ -3,11 +3,16 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import {findOne, getOffset, on} from '../helper';
 gsap.registerPlugin(ScrollTrigger);
 
+const Tab = class {
+    constructor(element) {
+
+    }
+};
 
 const app = () => {
     (() => {
-        const introduction = findOne('.introduction');
-        const wrap = findOne('.introduction__wrap', introduction);
+        const whyNot = findOne('.why-not');
+        const wrap = findOne('.why-not__wrap', whyNot);
         const info = {
             height: 0,
             start: 0,
@@ -18,8 +23,8 @@ const app = () => {
             isChangeScene: false
         };
         const reset = () => {
-            const height = introduction.clientHeight;
-            const start = getOffset(introduction).top;
+            const height = whyNot.clientHeight;
+            const start = getOffset(whyNot).top;
             const end = start + height;
             const scenesStart = (() => {
                 const sectionHeight = ~~(height / 7);
@@ -66,7 +71,7 @@ const app = () => {
 
         reset();
         getScene();
-        wrap.classList.add(`introduction__wrap--scene-${info.currentScene}`);
+        wrap.classList.add(`hy-not__wrap--scene-${info.currentScene}`);
 
         let scrollY = window.scrollY;
         let currentScene = 0;
@@ -77,8 +82,8 @@ const app = () => {
                 const {isChangeScene, prevScene, currentScene} = info;
 
                 if (isChangeScene) {
-                    wrap.classList.remove(`introduction__wrap--scene-${prevScene}`);
-                    wrap.classList.add(`introduction__wrap--scene-${currentScene}`);
+                    wrap.classList.remove(`hy-not__wrap--scene-${prevScene}`);
+                    wrap.classList.add(`hy-not__wrap--scene-${currentScene}`);
                 }
             }
             // scrollY = window.scrollY;
@@ -87,6 +92,8 @@ const app = () => {
 
         on(window, 'scroll', onMotion);
     })();
+
+
 };
 
 document.addEventListener('DOMContentLoaded', app);
