@@ -1,0 +1,33 @@
+@each $weight, $name in (200, 'Pretendard-ExtraLight'),
+    (300, 'Pretendard-Light'),
+    (400, 'Pretendard-Regular'),
+    (600, 'Pretendard-SemiBold'),
+    (700, 'Pretendard-Bold'),
+    (800, 'Pretendard-ExtraBold') {
+    @font-face {
+        font-style: normal;
+        font-weight: $weight;
+        font-family: "Pretendard";
+        font-display: swap;
+        src: url("/fonts/#{$name}.woff2") format('woff2');
+        text-rendering: optimizeLegibility;
+    }
+}
+
+$font-weight-extralight: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+
+$font-family: "Pretendard", Arial, sans-serif;
+
+
+body {
+    font-size: 16px;
+    font-family: inspect($font-family);
+    line-height: 1.5;
+}
+

@@ -4,6 +4,6 @@ package-lock.json
 .idea/
 node_modules/
 
-dest/assets/css/*
-dest/assets/js/*
-dest/**/*.html
+backup/dest/assets/css/*
+backup/dest/assets/js/*
+backup/dest/**/*.html

@@ -1,0 +1,90 @@
+doctype html
+html(lang="ko")
+    head
+        block head
+            meta(charset="UTF-8")
+            meta(http-equiv="X-UA-Compatible" content="IE=edge")
+            meta(name="viewport" content="width=device-width, initial-scale=1.0")
+            title
+
+            meta(name="author" content="Group IDD 개발그룹")
+            meta(name="description" content="")
+            meta(name="keywords" content="")
+            meta(name="format-detection" content="telephone=no")
+            meta(name="format-detection" content="address=no")
+            meta(name="author" content="")
+
+            meta(property="og:url" content="")
+            meta(property="og:type" content="website")
+            meta(property="og:title" content="")
+            meta(property="og:image" content="")
+            meta(property="og:description" content="")
+            meta(property="og:site_name" content="")
+            meta(property="og:locale" content="ko_KR")
+            meta(property="article:author" content="")
+
+            link(rel="apple-touch-icon" sizes="180x180" href="/favicon.ico")
+            link(rel="icon" type="image/png" sizes="32x32" href="/favicon.ico")
+            link(rel="icon" type="image/png" sizes="16x16" href="/favicon.ico")
+
+            script.
+                if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+                    window.location = 'microsoft-edge:' + window.location;
+                    setTimeout(function () {
+                        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+                    }, 13);
+                }
+
+            link(rel="stylesheet" href="/assets/css/vendors.css")
+            link(rel="stylesheet" href="/assets/css/app.css")
+
+            script(src="https://polyfill.io/v3/polyfill.min.js?features=default")
+            script(src="/assets/js/vendors.js")
+            script(src="/assets/js/app.js")
+    body
+        header
+            h1
+            nav
+                ul
+                    li
+                        a(href="#why-not") WHY NOT?
+                    li
+                        a(href="#brand-film") Brand Film
+                    li
+                        a(href="#pogg") 유독
+                    li
+                        a(href="#why-not-crew") WHY NOT 크루
+                    li
+                        a(href="#why-not-road") WHY NOT ROAD
+                    li
+                        a(href="#collaboration") COLLABORATION
+
+        section#why-not.why-not
+            div.why-not__wrap
+                p 1
+                p 2
+                div.why-not__scene-3
+                    p
+                        span '이 정도면 충분하지'
+                        span '원래 그렇게 하는 거야'
+                    p.
+                        그정도 선에서
+                        #[strong 멈추는 게 맞는 걸까?]
+                p 4
+                p 5
+                p 6
+                p 7
+
+        footer
+            div
+                h1 (주)엘지유플러스
+                p
+                    a(href="#") LG 유플러스 홈페이지 가기
+            div
+                p
+                    address 서울특별시
+                p 대표이사 : 황현식
+            div
+                p 사업
+                p 통신판메
+            p Copyright &copy; LG
