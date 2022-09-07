@@ -9,7 +9,7 @@
         font-weight: $weight;
         font-family: "Pretendard";
         font-display: swap;
-        src: url("/fonts/#{$name}.woff2") format('woff2');
+        src: url("/assets/fonts/#{$name}.woff2") format('woff2');
         text-rendering: optimizeLegibility;
     }
 }

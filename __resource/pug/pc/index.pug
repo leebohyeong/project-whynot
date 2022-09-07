@@ -1,3 +1,11 @@
+mixin tabNav(id, titles)
+    ul.tab__nav(role="tablist")
+        each title, index in titles
+            li.tab__item(data-aos="fade-up" data-aos-delay=index * 50 + 200)
+                button.tab__menu(type="button" id=`tab-${id}-${index + 1}` role="tab" aria-controls=`tab-panel-${id}-${index + 1}` aria-selected=!index ? "true" : "false" data-api="tab")!= title
+mixin tabPanel(id, index)
+    div(id=`tab-panel-${id}-${index}` class="tab__panel" role="tabpanel" aria-labelledby=`tab--${id}-${index}`)
+        block
 doctype html
 html(lang="ko")
     head
@@ -42,92 +50,93 @@ html(lang="ko")
             script(src="/assets/js/vendors.js")
             script(src="/assets/js/app.js")
     body
-        header
-            h1
-                a(href="/")
-                    span WHY NOT?
-            nav
-                ul
-                    li
-                        a(href="#why-not") WHY NOT?
-                    li
-                        a(href="#brand-film") Brand Film
-                    li
-                        a(href="#pogg") 유독
-                    li
-                        a(href="#why-not-crew") WHY NOT 크루
-                    li
-                        a(href="#why-not-road") WHY NOT ROAD
-                    li
-                        a(href="#collaboration") COLLABORATION
-        //section#why-not.why-not
-        //    div.why-not__wrap
-        //        p 1
-        //        p 2
-        //        div.why-not__scene-3
-        //            p
-        //                span '이 정도면 충분하지'
-        //                span '원래 그렇게 하는 거야'
-        //            p.
-        //                그정도 선에서
-        //                #[strong 멈추는 게 맞는 걸까?]
-        //        p 4
-        //        p 5
-        //        p 6
-        //        p 7
+        header.header
+            div
+                h1
+                    a(href="/")
+                        span WHY NOT?
+                nav
+                    ul
+                        li
+                            a.header__link.header__link--active(href="#why-not") WHY NOT?
+                        li
+                            a.header__link(href="#brand-film") Brand Film
+                        li
+                            a.header__link(href="#pogg") 유독
+                        li
+                            a.header__link(href="#why-not-crew") WHY NOT 크루
+                        li
+                            a.header__link(href="#why-not-road") WHY NOT ROAD
+                        li
+                            a.header__link(href="#collaboration") COLLABORATION
         section#why-not.why-not
             div.why-not__wrap
-                p 이런게 유플러스만의 WHY NOT ?
+                div.why-not__scene-1
+                    figure
+                        video(src="/assets/video/logo.mp4" loop muted autoplay playsinline)
+                //p 2
+                //div.why-not__scene-3
+                //    p
+                //        span '이 정도면 충분하지'
+                //        span '원래 그렇게 하는 거야'
+                //    p.
+                //        그정도 선에서
+                //        #[strong 멈추는 게 맞는 걸까?]
+                //p 4
+                //p 5
+                //p 6
+                //p 7
 
         section#brand-film.brand-film
             header
-                h2 WHY NOT #[strong Brand Film]
-                p 와이낫과 함께 하는 브랜드 필름을 확인해보세요
-            ul(role="tablist")
-                -
-                    const brandFilm = [
-                        '나를 위한 구독 서비스 , 유독',
-                        '공간을 넘어 디즈니+와 함께하는 선 넘는 즐거움',
-                        '처음을 이끄는 과감한 도전, Why Not ?'
-                    ];
-                each title, index in brandFilm
-                    li
-                        button(type="button" id=`tab-brand-film-${index + 1}` role="tab" aria-controls=`tab-panel-brand-film-${index + 1}` aria-selected=!index ? "true" : "false")!= title
-            #tab-panel-brand-film-1(role="tabpanel" aria-labelledby="tab-brand-film-1" tabindex="0")
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide
-                            div
-                                h3 [WHY NOT? 자유할인 편]
-                                p.
-                                    “유독 하고싶은 것 다 하는 사람 있어“
-                                    조건 없이, 부담 없이 할수록 더 할인 받을 수 있다면?
-                                    이런 게 유플러스만의 WHY NOT!
-                                iframe()
-                        .swiper-slide
-                            dl
-                                dt [WHY NOT? 편리 편]  “유독 편한 것만 찾는 사람 있어 ” 가입할 때도, 해지할 때도 쉽고 편하게 관리할
-                                dd.
-                                    “유독 편한 것만 찾는 사람 있어 ”
-                                    가입할 때도, 해지할 때도 쉽고 편하게 관리할 수 있다면?
-                                    이런 게 유플러스만의 WHY NOT!
-                    .swiper-button-prev
-                    .swiper-button-next
-            #tab-panel-brand-film-2(role="tabpanel" aria-labelledby="tab-brand-film-2" tabindex="0")
-            #tab-panel-brand-film-3(role="tabpanel" aria-labelledby="tab-brand-film-3" tabindex="0")
+                h2(data-aos="fade-up") WHY NOT #[strong Brand Film]
+                p(data-aos="fade-up" data-aos-delay=100) 와이낫과 함께 하는 브랜드 필름을 확인해보세요
+            .tab
+                +tabNav('brand-film', [
+                    '나를 위한 구독 서비스 , 유독',
+                    '공간을 넘어 디즈니+와 함께하는 선 넘는 즐거움',
+                    '처음을 이끄는 과감한 도전, Why Not ?'
+                ])
+                div(data-aos="fade-up" data-aos-delay=300)
+                    +tabPanel('brand-film', 1)
+                        .swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    div
+                                        h3 [WHY NOT? 자유할인 편]
+                                        p.
+                                            “유독 하고싶은 것 다 하는 사람 있어“
+                                            조건 없이, 부담 없이 할수록 더 할인 받을 수 있다면?
+                                            이런 게 유플러스만의 WHY NOT!
+                                        iframe()
+                                .swiper-slide
+                                    dl
+                                        dt [WHY NOT? 편리 편]  “유독 편한 것만 찾는 사람 있어 ” 가입할 때도, 해지할 때도 쉽고 편하게 관리할
+                                        dd.
+                                            “유독 편한 것만 찾는 사람 있어 ”
+                                            가입할 때도, 해지할 때도 쉽고 편하게 관리할 수 있다면?
+                                            이런 게 유플러스만의 WHY NOT!
+                            .swiper-button-prev
+                            .swiper-button-next
+                    +tabPanel('brand-film', 2)
+                        h1 공간을 넘어 디즈니+와 함께하는 선 넘는 즐거움
+                    +tabPanel('brand-film', 3)
+                        h1 처음을 이끄는 과감한 도전, Why Not ?
         section#pogg.pogg
+            span(data-aos="pogg-line")
+            span(data-aos="pogg-line")
             header
-                h2 WHY NOT #[strong 유독]
-                p 내 일상에 필요한 구독 상품을 고르고 추가 할인까지 받는 나를 위한 구독 서비스 , 유독
+                h2(data-aos="fade-up") WHY NOT #[strong 유독]
+                p(data-aos="fade-up" data-aos-delay=100) 내 일상에 필요한 구독 상품을 고르고 추가 할인까지 받는 나를 위한 구독 서비스 , 유독
             div
-                div
-                    h4 평범한 일상의 순간도 #[strong 더 특별하게]
+                div(data-aos="fade-up" data-aos-delay=200)
+                    h3 평범한 일상의 순간도 #[strong 더 특별하게]
                     p 내 일상에 필요한 서비스를 구독!
                     p
                         a(href="#")
                             span 나만의 구독 시작하기
-                div
-                    h4 유플러스와 함께 한 배우 #[strong 손석구의 화보 촬영]
+                div(data-aos="fade-up" data-aos-delay=300)
+                    h3 유플러스와 함께 한 배우 #[strong 손석구의 화보 촬영]
                     p 더 보러 가고 싶다면?
                     p
                         a(href="#")
@@ -135,52 +144,44 @@ html(lang="ko")
 
         section#why-not-crew.why-not-crew
             header
-                h2 선 넘는 WHY NOT #[strong 크루]
-                p.
+                h2(data-aos="fade-up") 선 넘는 WHY NOT #[strong 크루]
+                p(data-aos="fade-up" data-aos-delay=100).
                     이제껏 볼 수 없었던 4인 방의 선 넘는 도전기가 시작 된다!<br>
                     대한민국 숨겨진 명소를 찾아 선 넘는 미션들을 해결하고 예측 불가한 상황에서 와이낫 라이브를 펼치는<br>
                     뮤직 & 여행 버라이어티!
-            nav
-                ul
-                    li
-                        a(href="#") WHY NOT Song
-                    li
-                        a(href="#") why not 크루 영상 보기
-                    li
-                        a(href="#") WHY NOT ROAD
-            .swiper
-                .swiper-wrapper
-                    .swiper-slide
-                        p LGU+
-                        h4 와이낫 크루가 소개하는 대한민국 핫플 - 부산 -
-                    .swiper-slide
-                        p LGU+
-                        h4 와이낫 크루가 소개하는 대한민국 핫플 - 울산 -
-                    .swiper-slide
-                        p LGU+
-                        h4 와이낫 크루가 소개하는 대한민국 핫플 - 춘천 -
+            .tab
+                +tabNav('why-not-crew', ['WHY NOT Song', 'WHY NOT 크루 영상 보기', 'WHY NOT ROAD'])
+                div(data-aos="fade-up" data-aos-delay=300)
+                    +tabPanel('why-not-crew', 1)
+                        .swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    p LGU+
+                                    h4 와이낫 크루가 소개하는 대한민국 핫플 - 부산 -
+                                .swiper-slide
+                                    p LGU+
+                                    h4 와이낫 크루가 소개하는 대한민국 핫플 - 울산 -
+                                .swiper-slide
+                                    p LGU+
+                                    h4 와이낫 크루가 소개하는 대한민국 핫플 - 춘천 -
+                    +tabPanel('why-not-crew', 2)
+                    +tabPanel('why-not-crew', 3)
 
         section#why-not-road.why-not-road
             header
-                h3 와이낫 크루가 소개하는 #[strong 대한민국 핫플] #[strong WHY NOT ROAD]
-                p 와이낫 크루가 추천하는 와이낫 로드 #[span 각 지역을 클릭하면 다양한 지역정보와 혜택이 한눈에!]
+                h2(data-aos="fade-up") 와이낫 크루가 소개하는 #[strong 대한민국 핫플] #[strong WHY NOT ROAD]
+                p(data-aos="fade-up" data-aos-delay=100) 와이낫 크루가 추천하는 와이낫 로드 #[span 각 지역을 클릭하면 다양한 지역정보와 혜택이 한눈에!]
             div
                 ul
-                    li
-                        a(href="#") 춘천
-                    li
-                        a(href="#") 부산
-                    li
-                        a(href="#") 인천
-                    li
-                        a(href="#") 울산
-                    li
-                        a(href="#") 서울
+                    each location, index in ['춘천', '부산', '인천', '울산', '서울']
+                        li(data-aos="fade-up" data-aos-delay=50 * index + 100)
+                            a(href="#")
+                                span= location
 
         section#collaboration.collaboration
             header
-                h2 선 넘는 #[strong COLLABORATION]
-                p 일상의 변화를 가져올 선 넘는 즐거운 콜라보
+                h2(data-aos="fade-up") 선 넘는 #[strong COLLABORATION]
+                p(data-aos="fade-up" data-aos-delay=100) 일상의 변화를 가져올 선 넘는 즐거운 콜라보
             div
                 div
                     p LG Uplus X 떼껄룩  일상의 즐거운 변화를 원할 때,  #[strong WHY NOT?]
@@ -195,17 +196,17 @@ html(lang="ko")
                             h4 선 넘는 경험, 둘!
                             p 와이낫 크루의 &lt;WHY NOT Song>과 함께  선 넘는 즐거움에 취해보세요.
 
-        footer
+        footer.footer
             div
-                h1 (주)엘지유플러스
-                p
-                    a(href="#") LG 유플러스 홈페이지 가기
-            div
-                p
+                div
+                    h1 (주)엘지유플러스
+                    p
+                        a(href="#") LG 유플러스 홈페이지 가기
+                div
                     address 서울특별시 용산구 한강대로 32
-                p 대표이사 : 황현식
-            div
-                p 사업자등록번호 : 220-81-39938
-                p 통신판매신고 제 2015-서울용산-00481호
-                    a(href="#") 사업자 정보 확인
-            p Copyright &copy; LG Uplus Corp. All Rights Reserved.
+                    p 대표이사 : 황현식
+                div
+                    p 사업자등록번호 : 220-81-39938
+                    p 통신판매신고 제 2015-서울용산-00481호
+                        a(href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208139938" target="_blank") 사업자 정보 확인
+                p Copyright &copy; LG Uplus Corp. All Rights Reserved.

@@ -41,7 +41,7 @@ $deviceType: "pc" !default;
     &__container {
         overflow: hidden;
         position: relative;
-        width: calc(100% - 40px);
+        width: calc(100% - 38px);
         max-width: 840px;
         margin: 0 auto;
         @if $deviceType == pc {

@@ -32,9 +32,10 @@
         "webpack-dev-server": "^4.7.4"
     },
     "dependencies": {
-        "aos": "^2.3.4",
+        "aos": "^3.0.0-beta.6",
         "gsap": "^3.11.0",
         "normalize.css": "^8.0.1",
+        "sal.js": "^0.8.5",
         "swiper": "^8.3.2"
     }
 }
