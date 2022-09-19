@@ -111,6 +111,14 @@ img {
 .why-not {
     &__subscribe {
         @include backdrop-content(1963, 'why-not/p_subscribe.jpg');
+
+        a {
+            position: absolute;
+            right: percentage(math.div(180, 1242));
+            bottom: percentage(math.div(128, 1963));
+            left: percentage(math.div(180, 1242));
+            height: percentage(math.div(232, 1963));
+        }
     }
 
     &__header {
