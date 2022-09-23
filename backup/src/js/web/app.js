@@ -30,6 +30,17 @@ const Modal = class {
 };
 
 const app = () => {
+    // 유독 x 손석구 [유독 끌리는 미공개 화보컷] 보러가기
+    (() => {
+        const link = document.querySelector('.why-not__subscribe a');
+
+        link.addEventListener('click', () => {
+            gtag('event', '화보페이지 랜딩 버튼', {
+                'event_category': '메인_티징이미지'
+            });
+        });
+    })();
+
     (() => {
         const now = Date.now();
         const reservationDate = {
@@ -85,7 +96,6 @@ const app = () => {
             }
         })();
     })();
-
 
     (() => {
         const url = new URL(location);
