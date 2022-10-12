@@ -1,9 +1,12 @@
+import Swiper, {Navigation, Pagination } from 'swiper';
+Swiper.use([Navigation, Pagination]);
 import AOS from 'aos';
 import sal from 'sal.js'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import {findOne, find, getOffset, on} from '../helper';
 import Tab from '../Tab';
+import Modal from "../Modal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,137 +59,100 @@ const app = () => {
         on(window, 'scroll', toggleLink);
     })();
 
-    // WHY NOT?
-    (() => {
-        const whyNot = findOne('.why-not');
-        const wrap = findOne('.why-not__wrap', whyNot);
-        const info = {
-            height: 0,
-            start: 0,
-            end: 0,
-            scenesStart: [],
-            prevScene: -1,
-            currentScene: 0,
-            isChangeScene: false
-        };
-        const reset = () => {
-            const height = whyNot.clientHeight;
-            const start = getOffset(whyNot).top;
-            const end = start + height;
-            const scenesStart = (() => {
-                const sectionHeight = ~~(height / 7);
-                const starts = Array(7).fill(0).map((_, index) => {
-                    return start + index * sectionHeight;
-                });
-                return starts;
-            })();
-
-            Object.assign(info, {
-                height,
-                start,
-                end,
-                scenesStart
-            });
-        };
-        const isIn = () => {
-            const scrollY = window.scrollY;
-            const {start, end} = info;
-
-            return scrollY >= start && scrollY <= end;
-        };
-        const getScene = () => {
-            const scrollY = window.scrollY;
-            const {scenesStart, currentScene} = info;
-            let current = scenesStart.length - 1;
-
-            while (current) {
-                if (scrollY >= scenesStart[current]) {
-                    break;
-                }
-
-                current--;
-            }
-
-            if (currentScene !== current) {
-                info.prevScene = currentScene;
-                info.currentScene = current;
-                info.isChangeScene = true;
-            } else {
-                info.isChangeScene = false;
-            }
-        };
-
-        reset();
-        getScene();
-        wrap.classList.add(`why-not__wrap--scene-${info.currentScene}`);
-
-        let scrollY = window.scrollY;
-        let currentScene = 0;
-        let enterNewScene = false;
-        const onMotion = () => {
-            if (isIn()) {
-                getScene();
-                const {isChangeScene, prevScene, currentScene} = info;
-
-                if (isChangeScene) {
-                    wrap.classList.remove(`why-not__wrap--scene-${prevScene}`);
-                    wrap.classList.add(`why-not__wrap--scene-${currentScene}`);
-
-                    if (currentScene === 0) {
-                        scene1();
-                    }
-                }
-            }
-            // scrollY = window.scrollY;
-            // enterNewScene = false;
-        };
-        const scene1 = (() => {
-            const movie = findOne('.why-not__scene-1 video');
-            on(movie, 'timeupdate', () => {
-                if (movie.currentTime > 5) {
-                    movie.pause();
-                }
-            });
-            return () => {
-                movie.currentTime = 0;
-                movie.play();
-            }
-        })();
-
-        on(window, 'scroll', onMotion);
-    })();
-
     // Brand Film
     (() => {
         const brandFilm = findOne('.brand-film');
         const tab = new Tab(findOne('.tab', brandFilm));
         tab.menus[0].click();
-    })();
 
-    // 유독
-    (() => {
-        const pogg = findOne('.pogg');
-
-        pogg.addEventListener('sal:in', ({ detail }) => {
-            console.log('animated in', detail);
+        const brandFilmCarousel = new Swiper('.brand-film .swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 50,
+            centeredSlides: true,
+            observer: true,
+            observeParents: true,
+            allowTouchMove: false,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
 
-        pogg.addEventListener('sal:out', ({ detail }) => {
-            console.log('animated out', detail);
-        });
     })();
 
-    // document.addEventListener('sal:out', ({ detail }) => {
-    //     console.log('exiting', detail.target);
-    // });
-
-    // WHY NOT 크루
+    // WHY NOT ROAD
     (() => {
-        const whyNotCrew = findOne('.why-not-crew');
-        const tab = new Tab(findOne('.tab', whyNotCrew));
+        const iframes = find('.showroom-apps__content-swiper iframe');
+        //console.log(iframes)
+        let iframeSrc = [];
+        iframes.forEach((iframe) => {
+            iframeSrc.push(iframe.src);
+        });
+
+        const roadCarousel = new Swiper('.road .swiper', {
+            loop: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            allowTouchMove: false,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            on : {
+
+            }
+
+        });
+
+
+        // const roadCarousel = new Swiper('.road .swiper', {
+        //     loop: true,
+        //     slidesPerView: 'auto',
+        //     centeredSlides: true,
+        //     allowTouchMove: false,
+        //     navigation: {
+        //         nextEl: ".swiper-button-next",
+        //         prevEl: ".swiper-button-prev",
+        //     },
+        // });
+
+
+        (() => {
+            const modal = new Modal();
+            const triggers = find('.road__link');
+            const getId = trigger => trigger.getAttribute('href');
+            const contents = triggers.reduce((contents, trigger) => {
+                const id = getId(trigger);
+                const content = findOne(id);
+
+                contents[id] = content;
+
+                return contents;
+            }, {});
+
+            triggers.forEach((trigger) => {
+                on(trigger, 'click', (event) => {
+                    event.preventDefault();
+
+                    const id = getId(trigger);
+                    const content = contents[id];
+
+                    modal.open(content);
+                });
+            });
+
+            //triggers[4].click();
+        })();
+
+    })();
+
+    // WHY NOT CONTENTS
+    (() => {
+        const contents = findOne('.contents');
+        const tab = new Tab(findOne('.tab', contents));
         tab.menus[0].click();
     })();
-
 
 
 };

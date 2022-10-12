@@ -35,53 +35,52 @@ html(lang="ko")
             link(rel="icon" type="image/png" sizes="32x32" href="/favicon.ico")
             link(rel="icon" type="image/png" sizes="16x16" href="/favicon.ico")
 
-            script.
-                if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
-                    window.location = 'microsoft-edge:' + window.location;
-                    setTimeout(function () {
-                        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
-                    }, 13);
-                }
+            link(rel="stylesheet" href="/m/assets/css/vendors.css")
+            link(rel="stylesheet" href="/m/assets/css/app.css")
 
-            link(rel="stylesheet" href="/assets/css/vendors.css")
-            link(rel="stylesheet" href="/assets/css/app.css")
-
-            script(src="/assets/js/vendors.js")
-            script(src="/assets/js/app.js")
+            script(src="/m/assets/js/vendors.js")
+            script(src="/m/assets/js/app.js")
     body
         header.header
             div
-                h1
-                    a(href="/")
-                        span WHY NOT?
-                nav
-                    ul
-                        li
-                            a.header__link.header__link--active(href="#why-not") WHY NOT?
-                        li
-                            a.header__link(href="#brand-film") Brand Film
-                        li
-                            a.header__link(href="#experience") EXPERIENCE
-                        li
-                            a.header__link(href="#road") ROAD
-                        li
-                            a.header__link(href="#contents") CONTENTS
-                        li
-                            a.header__link(href="#collaboration") COLLABORATION
+                h1.header__logo
+                    a.header__logo-link(href="/")
+                        span.header__logo-text WHY NOT?
+                nav.header-menu
+                    a.header-menu__button
+                        span.header-menu__button-bar
+                        span.header-menu__button-bar
+                        span.header-menu__button-bar
+                        span.header-menu__button-text menu
+
+                    div.header-menu__container
+                        ul.header-menu__list
+                            li.header-menu__item
+                                a.header__link(href="#why-not") WHY NOT?
+                            li.header-menu__item
+                                a.header__link(href="#brand-film") Brand Film
+                            li.header-menu__item
+                                a.header__link(href="#experience") EXPERIENCE
+                            li.header-menu__item
+                                a.header__link(href="#road") ROAD
+                            li.header-menu__item
+                                a.header__link(href="#contents") CONTENTS
+                            li.header-menu__item
+                                a.header__link(href="#collaboration") COLLABORATION
+
         section#why-not.why-not
             .why-not__wrap
                 div.why-not__text.why-not__text01
-                    h2(data-aos="fade-right").
+                    h2.
                         유플러스의 <br>
                         WHY NOT?
-                    p(data-aos="fade-right" data-aos-delay=150).
+                    p.
                         일상의 편견을 깨는 과감한 생각과 도전, <br>
                         고객의 #[strong 일상에 즐거운 변화]를 만들어 가는 <br>
-                        LG유플러스만의 실천 캠페인 <br>
-                        #[strong WHY NOT]을 소개합니다.
+                        LG유플러스만의 실천 캠페인 #[strong WHY NOT]을 소개합니다.
 
                 div.why-not__text.why-not__text02
-                    p(data-aos="fade-left" data-aos-delay=300).
+                    p.
                         선 넘는 즐거움 <br>
                         이런 게 유플러스만의
                         #[div(data-aos="fade-left" data-aos-delay=500)(style="background-image: url('/assets/images/img_why_not.png')")]
@@ -89,7 +88,8 @@ html(lang="ko")
         section#brand-film.brand-film
             header
                 h2(data-aos="fade-up") WHY NOT #[strong Brand Film]
-                p(data-aos="fade-up" data-aos-delay=100) 남다른 생각과 도전으로 선 넘는 즐거움을 제공하는 유플러스의 스토리를 소개합니다.
+                p(data-aos="fade-up" data-aos-delay=100).
+                    남다른 생각과 도전으로 선 넘는 즐거움을 제공하는 <br> 유플러스의 스토리를 소개합니다.
 
             .tab
                 +tabNav('brand-film', [
@@ -99,16 +99,15 @@ html(lang="ko")
                 ])
                 div.tab__content
                     +tabPanel('brand-film', 1)
-                        .swiper
+                        .swiperv
                             .swiper-wrapper
                                 .swiper-slide
                                     div
                                         h3 [처음을 이끄는 과감한 도전, Why Not ?]
                                         p.
-                                            “할 수 있겠어?” <br>
-                                            “그게 될까?” <br>
-                                            일상의 즐거운 변화를 위해 편견을 깨고 <br>
-                                            과감한 도전들을 먼저 시도하는 유플러스만의 실천 캠페인, “Why Not?”
+                                            “할 수 있겠어?” “그게 될까?” <br>
+                                            일상의 즐거운 변화를 위해 편견을 깨고 과감한 도전들을 먼저 시도하는 <br>
+                                            유플러스만의 실천 캠페인, “Why Not?”
                                         iframe(src="https://www.youtube.com/embed/CWOgnaDjzcs?controls=0" title="와이낫 런칭편")
                             .swiper-button-control
                                 .swiper-button-prev
@@ -169,7 +168,7 @@ html(lang="ko")
         section#experience.experience
             header
                 h2(data-aos="fade-up") WHY NOT #[strong EXPERIENCE]
-                p(data-aos="fade-up" data-aos-delay=100) WHY NOT 관점으로 고객의 PAIN POINT를 개선해 나가는 유플러스의 서비스들을 소개합니다.
+                p(data-aos="fade-up" data-aos-delay=100) WHY NOT 관점으로 고객의 PAIN POINT를 <br> 개선해 나가는 유플러스의 서비스들을 소개합니다.
 
             div.experience__wrap
                 div.experience__imgWrap
@@ -186,8 +185,8 @@ html(lang="ko")
 
                 div.experience__textWrap
                     p(data-aos="fade-left" data-aos-delay=700).
-                        일상에 필요한 구독 서비스를 담아 추가 할인까지 받는 <br>
-                        나를 위한 구독 서비스 ‘유독’을 소개합니다. <br>
+                        일상에 필요한 구독 서비스를 담아 추가 할인까지 <br>
+                        받는 나를 위한 구독 서비스 ‘유독’을 소개합니다. <br>
                         #[strong 평범한 일상의 순간도 더 특별하게] <br>
                         #[span 내 일상에 필요한 서비스를 구독!]
                     p(data-aos="fade-left" data-aos-delay=800)
@@ -202,10 +201,10 @@ html(lang="ko")
                     #[strong 유플러스의 혜택이 담긴 대한민국 핫플을 클릭해 보세요!]
 
             ul.road__list
-                 each location, index in ['춘천', '부산', '인천', '울산', '서울']
-                     li.road__item
-                         a(href=`#road-v${index + 1}`).road__link
-                             span= location
+                each location, index in ['춘천', '부산', '인천', '울산', '서울']
+                    li.road__item
+                        a(href=`#road-v${index + 1}`).road__link
+                            span= location
 
             div.road__textBox
                 h3.
@@ -232,7 +231,7 @@ html(lang="ko")
             span(data-aos="contents-line")
             header
                 h2(data-aos="fade-up") WHY NOT #[strong CONTENTS]
-                p(data-aos="fade-up" data-aos-delay=100) 고객의 일상에 즐거운 변화를 만드는 유플러스의 활동을 소개합니다.
+                p(data-aos="fade-up" data-aos-delay=100) 고객의 일상에 즐거운 변화를 만드는 <br> 유플러스의 활동을 소개합니다.
 
             .tab
                 -
@@ -294,27 +293,27 @@ html(lang="ko")
                 const collaborationList = [
                     {
                         title: '유플러스 × 때껄룩',
-                        content: '일상의 즐거움을 위한 <br> 통신사의 선 넘는콜라보',
+                        content: '일상의 즐거움을 위한 <br> 통신사의 <br> 선 넘는콜라보',
                         link: 'https://youtu.be/V-Q9SucX1wI',
                     },
                     {
                         title: '유플러스 × 프릳츠',
-                        content: '가장 한국적인 커피 브랜드 프릳츠와 <br> 선 넘는 콜라보',
+                        content: '가장 한국적인 <br> 커피 브랜드 프릳츠와 <br> 선 넘는 콜라보',
                         link: '',
                     },
                     {
                         title: '유플러스 × 모나미',
-                        content: '필기구의 대명사 국민 브랜드 모나미와 <br> 선 넘는 콜라보',
+                        content: '필기구의 대명사 <br> 국민 브랜드 모나미와 <br> 선 넘는 콜라보',
                         link: '',
                     },
                     {
                         title: '유플러스 × 복순도가',
-                        content: '통신사가 막걸리를? 대한민국 대표 손 막걸리 <br> 복순도가와 선 넘는 콜라보 ',
+                        content: '일상의 즐거움을 위한 <br> 통신사의 선 넘는콜라보',
                         link: '',
                     },
                     {
                         title: '유플러스 × 단하',
-                        content: '전통과 현대를 넘나드는 한복 브랜드와  <br> 선 넘는 콜라보!',
+                        content: '전통과 현대를 <br> 넘나드는 한복 브랜드와  <br> 선 넘는 콜라보!',
                         link: '',
                     },
                     {
@@ -719,16 +718,16 @@ html(lang="ko")
                         button.modal__close-button(type="button")
                             span.modal__close-text 닫기
         footer.footer
-                    div.footer__wrap
-                        div
-                            h1 (주)엘지유플러스
-                            p
-                                a(href="https://www.lguplus.com/") LG 유플러스 홈페이지 가기
-                        div
-                            address 서울특별시 용산구 한강대로 32
-                            p 대표이사 : 황현식
-                        div
-                            p 사업자등록번호 : 220-81-39938
-                            p 통신판매신고 제 2015-서울용산-00481호
-                                a(href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208139938" target="_blank") 사업자 정보 확인
-                        p Copyright &copy; LG Uplus Corp. All Rights Reserved.
+            div.footer__wrap
+                div
+                    h1 (주)엘지유플러스
+                    p
+                        a(href="https://www.lguplus.com/") LG 유플러스 홈페이지 가기
+                div
+                    address 서울특별시 용산구 한강대로 32
+                    p 대표이사 : 황현식
+                div
+                    p 사업자등록번호 : 220-81-39938
+                    p 통신판매신고 제 2015-서울용산-00481호
+                        a(href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208139938" target="_blank") 사업자 정보 확인
+                p Copyright &copy; LG Uplus Corp. All Rights Reserved.
