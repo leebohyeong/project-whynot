@@ -82,12 +82,12 @@ const app = () => {
 
     // WHY NOT ROAD
     (() => {
-        const iframes = find('.showroom-apps__content-swiper iframe');
-        //console.log(iframes)
-        let iframeSrc = [];
-        iframes.forEach((iframe) => {
-            iframeSrc.push(iframe.src);
-        });
+        // const iframes = find('.showroom-apps__content-swiper iframe');
+        // //console.log(iframes)
+        // let iframeSrc = [];
+        // iframes.forEach((iframe) => {
+        //     iframeSrc.push(iframe.src);
+        // });
 
         const roadCarousel = new Swiper('.road .swiper', {
             loop: true,

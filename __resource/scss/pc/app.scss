@@ -447,7 +447,7 @@ section {
         background: url("/assets/images/img_experience_phone.png") no-repeat 230px top;
     }
 
-    &__textWrap {
+    &__text {
         padding-top: 55px;
 
         p {
@@ -490,7 +490,7 @@ section {
         }
     }
 
-    &__imgWrap {
+    &__img {
         position: absolute;
         top: 0;
         left: 0;
@@ -577,7 +577,7 @@ section {
             &:nth-child(#{$i}) {
                 width: 226px;
                 height: 317px;
-                background: url('/assets/images/img_road_0#{$i}.jpg');
+                background: url('/assets/images/img_road_#{$i}.jpg');
                 background-position: center;
                 background-repeat: no-repeat;
             }
@@ -846,7 +846,7 @@ section {
                 &:nth-child(#{$i}) .textbox {
                     //width: 599px;
                     height: 335px;
-                    background: url('/assets/images/img_contents_0#{$i}.jpg');
+                    background: url('/assets/images/img_contents_#{$i}.jpg');
                     background-position: center right;
                     background-repeat: no-repeat;
                 }

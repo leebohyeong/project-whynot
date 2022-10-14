@@ -42,12 +42,12 @@ html(lang="ko")
             script(src="/m/assets/js/app.js")
     body
         header.header
-            div
+            div.header__container
                 h1.header__logo
                     a.header__logo-link(href="/")
                         span.header__logo-text WHY NOT?
                 nav.header-menu
-                    a.header-menu__button
+                    a.header-menu__button(href="#")
                         span.header-menu__button-bar
                         span.header-menu__button-bar
                         span.header-menu__button-bar
@@ -56,17 +56,17 @@ html(lang="ko")
                     div.header-menu__container
                         ul.header-menu__list
                             li.header-menu__item
-                                a.header__link(href="#why-not") WHY NOT?
+                                a.header-menu__link(href="#why-not") WHY NOT?
                             li.header-menu__item
-                                a.header__link(href="#brand-film") Brand Film
+                                a.header-menu__link(href="#brand-film") Brand Film
                             li.header-menu__item
-                                a.header__link(href="#experience") EXPERIENCE
+                                a.header-menu__link(href="#experience") EXPERIENCE
                             li.header-menu__item
-                                a.header__link(href="#road") ROAD
+                                a.header-menu__link(href="#road") ROAD
                             li.header-menu__item
-                                a.header__link(href="#contents") CONTENTS
+                                a.header-menu__link(href="#contents") CONTENTS
                             li.header-menu__item
-                                a.header__link(href="#collaboration") COLLABORATION
+                                a.header-menu__link(href="#collaboration") COLLABORATION
 
         section#why-not.why-not
             .why-not__wrap
@@ -83,13 +83,13 @@ html(lang="ko")
                     p.
                         선 넘는 즐거움 <br>
                         이런 게 유플러스만의
-                        #[div(data-aos="fade-left" data-aos-delay=500)(style="background-image: url('/assets/images/img_why_not.png')")]
+                        #[div(style="background-image: url('/m/assets/images/img_why_not.png')")]
+
 
         section#brand-film.brand-film
             header
-                h2(data-aos="fade-up") WHY NOT #[strong Brand Film]
-                p(data-aos="fade-up" data-aos-delay=100).
-                    남다른 생각과 도전으로 선 넘는 즐거움을 제공하는 <br> 유플러스의 스토리를 소개합니다.
+                h2 WHY NOT Brand Film
+                p 남다른 생각과 도전으로 선 넘는 즐거움을 제공하는 <br> 유플러스의 스토리를 소개합니다.
 
             .tab
                 +tabNav('brand-film', [
@@ -99,7 +99,7 @@ html(lang="ko")
                 ])
                 div.tab__content
                     +tabPanel('brand-film', 1)
-                        .swiperv
+                        .swiper
                             .swiper-wrapper
                                 .swiper-slide
                                     div
@@ -109,11 +109,7 @@ html(lang="ko")
                                             일상의 즐거운 변화를 위해 편견을 깨고 과감한 도전들을 먼저 시도하는 <br>
                                             유플러스만의 실천 캠페인, “Why Not?”
                                         iframe(src="https://www.youtube.com/embed/CWOgnaDjzcs?controls=0" title="와이낫 런칭편")
-                            .swiper-button-control
-                                .swiper-button-prev
-                                    span prev
-                                .swiper-button-next
-                                    span next
+
                     +tabPanel('brand-film', 2)
                         .swiper
                             .swiper-wrapper
@@ -134,11 +130,6 @@ html(lang="ko")
                                             이런 게 유플러스만의 WHY NOT!
                                         iframe(src="https://www.youtube.com/embed/Gh4fA2SYlgM?controls=0" title="칠공주 편")
 
-                            .swiper-button-control
-                                .swiper-button-prev
-                                    span prev
-                                .swiper-button-next
-                                    span next
                     +tabPanel('brand-film', 3)
                         .swiper
                             .swiper-wrapper
@@ -159,67 +150,69 @@ html(lang="ko")
                                             이런 게 유플러스만의 WHY NOT!
                                         iframe(src="https://www.youtube.com/embed/4ZWmDljpgNY?controls=0" title="편리 편")
 
-                            .swiper-button-control
-                                .swiper-button-prev
-                                    span prev
-                                .swiper-button-next
-                                    span next
 
         section#experience.experience
             header
-                h2(data-aos="fade-up") WHY NOT #[strong EXPERIENCE]
-                p(data-aos="fade-up" data-aos-delay=100) WHY NOT 관점으로 고객의 PAIN POINT를 <br> 개선해 나가는 유플러스의 서비스들을 소개합니다.
+                h2 WHY NOT EXPERIENCE
+                p WHY NOT 관점으로 고객의 PAIN POINT를 <br> 개선해 나가는 유플러스의 서비스들을 소개합니다.
 
             div.experience__wrap
-                div.experience__imgWrap
-                    p(data-aos="fade-up" data-aos-delay=200)
+                div.experience__img
+                    p
                         img(src="/assets/images/img_experience_01.png" alt="티빙")
-                    p(data-aos="fade-up" data-aos-delay=300)
+                    p
                         img(src="/assets/images/img_experience_02.png" alt="요기요")
-                    p(data-aos="fade-up" data-aos-delay=400)
+                    p
                         img(src="/assets/images/img_experience_03.png" alt="넷플릭스")
-                    p(data-aos="fade-up" data-aos-delay=500)
+                    p
                         img(src="/assets/images/img_experience_04.png" alt="윌라")
-                    p(data-aos="fade-up" data-aos-delay=600)
+                    p
                         img(src="/assets/images/img_experience_05.png" alt="일리")
 
-                div.experience__textWrap
-                    p(data-aos="fade-left" data-aos-delay=700).
+                div.experience__text
+                    p.
                         일상에 필요한 구독 서비스를 담아 추가 할인까지 <br>
                         받는 나를 위한 구독 서비스 ‘유독’을 소개합니다. <br>
                         #[strong 평범한 일상의 순간도 더 특별하게] <br>
                         #[span 내 일상에 필요한 서비스를 구독!]
-                    p(data-aos="fade-left" data-aos-delay=800)
+                    p
                         a(href="https://www.lguplus.com/pogg" target="_blank") 나만의 구독 시작하기
 
         section#road.road
             header
-                h2(data-aos="fade-up") WHY NOT #[strong ROAD]
-                p(data-aos="fade-up" data-aos-delay=100).
+                h2 WHY NOT ROAD
+                p.
                     유플러스의  선 넘는 지역활성화 프로젝트 WHY NOT ROAD ! <br>
                     지자체와 함께 대한민국 전국 8도를 소개합니다. <br>
                     #[strong 유플러스의 혜택이 담긴 대한민국 핫플을 클릭해 보세요!]
+            div
+                .road__tab
+                    .swiper-pagination
 
-            ul.road__list
-                each location, index in ['춘천', '부산', '인천', '울산', '서울']
-                    li.road__item
-                        a(href=`#road-v${index + 1}`).road__link
-                            span= location
+                .road__list
+                    .road__carousel_1
+                        .swiper
+                            .swiper-wrapper
+                                each location, index in ['춘천', '부산', '인천', '울산', '서울']
+                                    .swiper-slide
+                                        a(href=`#road-v${index + 1}` style=`background-image: url('/m/assets/images/img_road_${index + 1}.jpg')`)
+                                            p= location
 
-            div.road__textBox
+
+            div.road__video
                 h3.
                     선넘는 즐거움과 혜택이 가득한 <br>
                     지역을 소개합니다.
 
-            div.road__carousel
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide
-                            iframe(src="https://www.youtube.com/embed/lxN-pHTiKnA?controls=0" title="춘천")
-                        .swiper-slide
-                            iframe(src="https://www.youtube.com/embed/c3c_KNatUbc?controls=0" title="부산")
-                        .swiper-slide
-                            iframe(src="https://www.youtube.com/embed/U6WU-Z7gCI0?controls=0" title="울산")
+                div.road__carousel_2
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                iframe(src="https://www.youtube.com/embed/lxN-pHTiKnA?controls=0" title="춘천")
+                            .swiper-slide
+                                iframe(src="https://www.youtube.com/embed/c3c_KNatUbc?controls=0" title="부산")
+                            .swiper-slide
+                                iframe(src="https://www.youtube.com/embed/U6WU-Z7gCI0?controls=0" title="울산")
 
                     .swiper-button-prev
                         span prev
@@ -227,67 +220,65 @@ html(lang="ko")
                         span next
 
         section#contents.contents
-            span(data-aos="contents-line")
-            span(data-aos="contents-line")
             header
-                h2(data-aos="fade-up") WHY NOT #[strong CONTENTS]
-                p(data-aos="fade-up" data-aos-delay=100) 고객의 일상에 즐거운 변화를 만드는 <br> 유플러스의 활동을 소개합니다.
+                h2 WHY NOT CONTENTS
+                p 고객의 일상에 즐거운 변화를 만드는 <br> 유플러스의 활동을 소개합니다.
 
-            .tab
-                -
-                    const contentsList = [
-                        {
-                            title: '유독 Behind 화보',
-                            content: '유독 ~ 끌리는 <br>유플러스 모델 손석구의 Behind 화보 대공개',
-                            link: 'https://udokgallery.lguplus.com',
-                            linkName: '유독 Behind 화보 보러가기'
-                        },
-                        {
-                            title: '브랜드 화보',
-                            content: '뻔하지 않은 생각으로 일상의 즐거움을 만들어가는 <br> 사람들의 STORY <strong>WHY NOT 브랜드화보 !</strong>',
-                            link: 'https://www.instagram.com/magazine_whynot',
-                            linkName: '영상 보러 보러가기'
-                        },
-                        {
-                            title: '와이낫크루',
-                            content: '대한민국 숨겨진 명소를 찾아 <br> 선넘는 즐거움을 제시하다!',
-                            link: 'https://www.youtube.com/watch?v=y_XMQBYcCtk&list=PLrpBDj0lFe8gQuLfpR54BARC0g5-YTHCr',
-                            linkName: '영상 보러 보러가기'
-                        },
-                        {
-                            title: '와이낫송',
-                            content: '선 넘는 도전을 응원하는 <br> 본업천재 와이낫크루의 HOT한 신곡!',
-                            link: 'https://youtu.be/CXLuNiVMNlc',
-                            linkName: '영상 보러 보러가기'
-                        },
-                        {
-                            title: '캐치유',
-                            content: '유플러스 고객들의 <br> 솔직한 찐소리를 찾아서!',
-                            link: 'https://www.youtube.com/watch?v=gSEWgbrAgfg&list=PLrpBDj0lFe8hKcV6xlVmS2qY0CuP7lsvP',
-                            linkName: '영상 보러 보러가기'
-                        },
-                        {
-                            title: '도전은행',
-                            content: '나의 도전이 세상이 자산이 되는',
-                            link: 'https://www.youtube.com/watch?v=O02bX3vPXE8',
-                            linkName: '영상 보러 보러가기'
-                        }
-                    ]
+            div
+                .contents__tab
+                    .swiper-pagination
 
-                +tabNav('contents', contentsList.map(item => item.title))
-                div.tab__content
-                    each item, index in contentsList
-                        +tabPanel('contents', index + 1)
-                            div.textbox
-                                p!= item.content
-                                h3!= item.title
-                                p
-                                    a(href=`${item.link}`)!= item.linkName
+                .contents__list
+                    .swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                .contents__content(style="background-image:url('/assets/images/img_contents_1.jpg')")
+                                    div
+                                        p 유독 ~ 끌리는 <br>유플러스 모델 손석구의 Behind 화보 대공개
+                                        h3(data-pagination-name="유독 Behind 화보") 유독 Behind 화보
+                                        p
+                                            a(href="https://udokgallery.lguplus.com") 유독 Behind 화보 보러가기
+                            .swiper-slide
+                                .contents__content(style="background-image:url('/assets/images/img_contents_2.jpg')")
+                                    div
+                                        p 뻔하지 않은 생각으로 일상의 즐거움을 <br> 만들어가는 사람들의 STORY
+                                        h3(data-pagination-name="브랜드화보") WHY NOT 브랜드화보 !
+                                        p
+                                            a(href="https://www.instagram.com/magazine_whynot") 영상 보러가기
+                            .swiper-slide
+                                .contents__content(style="background-image:url('/assets/images/img_contents_3.jpg')")
+                                    div
+                                        p 대한민국 숨겨진 명소를 찾아 <br> 선넘는 즐거움을 제시하다!
+                                        h3(data-pagination-name="와이낫크루") 와이낫크루
+                                        p
+                                            a(href="https://www.youtube.com/watch?v=y_XMQBYcCtk&list=PLrpBDj0lFe8gQuLfpR54BARC0g5-YTHCr") 영상 보러가기
+                            .swiper-slide
+                                .contents__content(style="background-image:url('/assets/images/img_contents_4.jpg')")
+                                    div
+                                        p 선 넘는 도전을 응원하는 <br> 본업천재 와이낫크루의 HOT한 신곡!
+                                        h3(data-pagination-name="와이낫송") 와이낫송
+                                        p
+                                            a(href="https://youtu.be/CXLuNiVMNlc") 영상 보러가기
+                            .swiper-slide
+                                .contents__content(style="background-image:url('/assets/images/img_contents_5.jpg')")
+                                    div
+                                        p 유플러스 고객들의 <br> 솔직한 찐소리를 찾아서!
+                                        h3(data-pagination-name="캐치유") 웹예능 캐치유
+                                        p
+                                            a(href="https://www.youtube.com/watch?v=gSEWgbrAgfg&list=PLrpBDj0lFe8hKcV6xlVmS2qY0CuP7lsvP") 영상 보러가기
+                            .swiper-slide
+                                .contents__content(style="background-image:url('/assets/images/img_contents_6.jpg')")
+                                    div
+                                        p 나의 도전이 <br> 세상이 자산이 되는
+                                        h3(data-pagination-name="도전은행") 유플러스 도전은행 !
+                                        p
+                                            a(href="https://www.youtube.com/watch?v=O02bX3vPXE8") 영상 보러가기
+
 
         section#collaboration.collaboration
             header
-                h2(data-aos="fade-up") 선 넘는 #[strong COLLABORATION]
-                p(data-aos="fade-up" data-aos-delay=100) 일상의 변화를 가져올 선 넘는 즐거운 콜라보
+                h2 선 넘는 COLLABORATION
+                p 일상의 변화를 가져올 선 넘는 즐거운 콜라보
 
             -
                 const collaborationList = [
