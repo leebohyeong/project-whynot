@@ -7,6 +7,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import {findOne, find, getOffset, on} from '../helper';
 import Tab from '../Tab';
 import Modal from "../Modal";
+import * as events from "events";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,66 +16,35 @@ const app = () => {
         once: true
     });
 
-    //header scroll
+    //header
     (() => {
-        const header  = findOne('header');
+        const siteHeader  = findOne('header');
+        const siteMenu = findOne('.header-menu__button', siteHeader);
+        const siteMenuItems = find('.header-menu__link', siteHeader);
 
-        const visualCommon = findOne('.visual-common');
-
-        if (!visualCommon) {
-            return false
-        }
         const changeHeader = () => {
-            siteheader.classList[window.pageYOffset >= siteheader.offsetHeight ? 'add' : 'remove']('fixed');
-            visualCommon.classList[window.pageYOffset >= siteheader.offsetHeight ? 'add' : 'remove']('fixed');
+            siteHeader.classList[window.pageYOffset >= siteHeader.offsetHeight ? 'add' : 'remove']('fixed');
         };
         on(window, 'scroll', changeHeader);
-    })();
 
+        siteMenu.addEventListener('click', (event) => {
+            event.preventDefault();
 
-
-    // ScrollSpy
-    (() => {
-        const header = findOne('.header');
-        const headerHeight = header.clientHeight;
-        const links = find('.header__link', header);
-        const sections = links.map(link => findOne(link.getAttribute('href')));
-        const sectionsStart = [];
-        const getSectionsStart = () => sections.forEach((section, index) => sectionsStart[index] = ~~(getOffset(section).top - headerHeight));
-        const toggleLink = () => {
-            const scrollY = window.scrollY;
-            let currentIndex = sectionsStart.length - 1;
-
-            while (currentIndex) {
-                if (scrollY >= sectionsStart[currentIndex]) break;
-
-                currentIndex--;
+            if(siteHeader.classList.contains('header-menu--open')) {
+                siteHeader.classList.remove('header-menu--open');
+                siteHeader.classList.remove('fixed');
+            } else {
+                siteHeader.classList.add('header-menu--open');
+                siteHeader.classList.add('fixed');
             }
-
-            links.forEach((link, index) => {
-                link.classList[index === currentIndex ? 'add' : 'remove']('header__link--active');
-            });
-        };
-        const moveSection = (index) => {
-            window.scroll({
-                top: sectionsStart[index],
-                behavior: 'smooth'
-            });
-        };
-
-        getSectionsStart();
-
-        links.forEach((link, index) => {
-            on(link, 'click', (event) => {
-                event.preventDefault();
-                moveSection(index);
-                toggleLink();
-            });
         });
 
-        on(window, 'load', getSectionsStart);
-        on(window, 'resize', getSectionsStart);
-        on(window, 'scroll', toggleLink);
+        siteMenuItems.forEach((siteMenuItem) => {
+            siteMenuItem.addEventListener("click", () => {
+                siteHeader.classList.remove('header-menu--open');
+            })
+        })
+
     })();
 
     // Brand Film
@@ -152,7 +122,7 @@ const app = () => {
                 });
             });
 
-            //triggers[4].click();
+            // triggers[3].click();
         })();
 
     })();

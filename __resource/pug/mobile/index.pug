@@ -44,7 +44,7 @@ html(lang="ko")
         header.header
             div.header__container
                 h1.header__logo
-                    a.header__logo-link(href="/")
+                    a.header__logo-link(href="/m")
                         span.header__logo-text WHY NOT?
                 nav.header-menu
                     a.header-menu__button(href="#")
@@ -71,16 +71,16 @@ html(lang="ko")
         section#why-not.why-not
             .why-not__wrap
                 div.why-not__text.why-not__text01
-                    h2.
+                    h2(data-aos="fade-up").
                         유플러스의 <br>
                         WHY NOT?
-                    p.
+                    p(data-aos="fade-up" data-aos-delay="150").
                         일상의 편견을 깨는 과감한 생각과 도전, <br>
                         고객의 #[strong 일상에 즐거운 변화]를 만들어 가는 <br>
                         LG유플러스만의 실천 캠페인 #[strong WHY NOT]을 소개합니다.
 
                 div.why-not__text.why-not__text02
-                    p.
+                    p(data-aos="fade-up" data-aos-delay="250").
                         선 넘는 즐거움 <br>
                         이런 게 유플러스만의
                         #[div(style="background-image: url('/m/assets/images/img_why_not.png')")]
@@ -88,8 +88,8 @@ html(lang="ko")
 
         section#brand-film.brand-film
             header
-                h2 WHY NOT Brand Film
-                p 남다른 생각과 도전으로 선 넘는 즐거움을 제공하는 <br> 유플러스의 스토리를 소개합니다.
+                h2(data-aos="fade-up") WHY NOT Brand Film
+                p(data-aos="fade-up" data-aos-delay="100") 남다른 생각과 도전으로 선 넘는 즐거움을 제공하는 <br> 유플러스의 스토리를 소개합니다.
 
             .tab
                 +tabNav('brand-film', [
@@ -153,8 +153,8 @@ html(lang="ko")
 
         section#experience.experience
             header
-                h2 WHY NOT EXPERIENCE
-                p WHY NOT 관점으로 고객의 PAIN POINT를 <br> 개선해 나가는 유플러스의 서비스들을 소개합니다.
+                h2(data-aos="fade-up") WHY NOT EXPERIENCE
+                p(data-aos="fade-up" data-aos-delay="100") WHY NOT 관점으로 고객의 PAIN POINT를 <br> 개선해 나가는 유플러스의 서비스들을 소개합니다.
 
             div.experience__wrap
                 div.experience__img
@@ -170,18 +170,18 @@ html(lang="ko")
                         img(src="/assets/images/img_experience_05.png" alt="일리")
 
                 div.experience__text
-                    p.
+                    p(data-aos="fade-up" data-aos-delay="200").
                         일상에 필요한 구독 서비스를 담아 추가 할인까지 <br>
                         받는 나를 위한 구독 서비스 ‘유독’을 소개합니다. <br>
                         #[strong 평범한 일상의 순간도 더 특별하게] <br>
                         #[span 내 일상에 필요한 서비스를 구독!]
-                    p
+                    p(data-aos="fade-up" data-aos-delay="300")
                         a(href="https://www.lguplus.com/pogg" target="_blank") 나만의 구독 시작하기
 
         section#road.road
             header
-                h2 WHY NOT ROAD
-                p.
+                h2(data-aos="fade-up") WHY NOT ROAD
+                p(data-aos="fade-up" data-aos-delay="100").
                     유플러스의  선 넘는 지역활성화 프로젝트 WHY NOT ROAD ! <br>
                     지자체와 함께 대한민국 전국 8도를 소개합니다. <br>
                     #[strong 유플러스의 혜택이 담긴 대한민국 핫플을 클릭해 보세요!]
@@ -195,12 +195,12 @@ html(lang="ko")
                             .swiper-wrapper
                                 each location, index in ['춘천', '부산', '인천', '울산', '서울']
                                     .swiper-slide
-                                        a(href=`#road-v${index + 1}` style=`background-image: url('/m/assets/images/img_road_${index + 1}.jpg')`)
+                                        a.road__link(href=`#road-v${index + 1}` style=`background-image: url('/m/assets/images/img_road_${index + 1}.jpg')`)
                                             p= location
 
 
             div.road__video
-                h3.
+                h3(data-aos="fade-up" data-aos-delay="100").
                     선넘는 즐거움과 혜택이 가득한 <br>
                     지역을 소개합니다.
 
@@ -221,8 +221,8 @@ html(lang="ko")
 
         section#contents.contents
             header
-                h2 WHY NOT CONTENTS
-                p 고객의 일상에 즐거운 변화를 만드는 <br> 유플러스의 활동을 소개합니다.
+                h2(data-aos="fade-up") WHY NOT CONTENTS
+                p(data-aos="fade-up" data-aos-delay="100") 고객의 일상에 즐거운 변화를 만드는 <br> 유플러스의 활동을 소개합니다.
 
             div
                 .contents__tab
@@ -277,8 +277,8 @@ html(lang="ko")
 
         section#collaboration.collaboration
             header
-                h2 선 넘는 COLLABORATION
-                p 일상의 변화를 가져올 선 넘는 즐거운 콜라보
+                h2(data-aos="fade-up") 선 넘는 COLLABORATION
+                p(data-aos="fade-up" data-aos-delay="100") 일상의 변화를 가져올 선 넘는 즐거운 콜라보
 
             -
                 const collaborationList = [
@@ -342,39 +342,43 @@ html(lang="ko")
                                 li(style="background-image: url('/assets/images/img_modal_1_item_1.jpg')")
                                 li(style="background-image: url('/assets/images/img_modal_1_item_2.jpg')")
 
-                            h4 춘천 1편 [레고랜드]
+                            h4 #[span 춘천 1편] 레고랜드
                             p.
-                                #[strong 주소지] 강원 춘천시 하중도길 128   레고랜드 코리아 리조트 <br>
-                                어린이와 가족들을 위한 최고의 LEGO 국내 첫 글로벌 테마파크
+                                #[strong 주소지] 강원 춘천시 하중도길 128  레고랜드 코리아 리조트 <br><br>
+                                어린이와 가족들을 위한 최고의 LEGO 국내 첫 글로벌 <br> 테마파크
                         div.modal-road__benefit-box
                             p.
-                                #[strong 유플러스 멤버십 혜택 <br> #[span 레고랜드 코리아 1일 이용권 20% 상시 할인]] <br>
-                                주중 20% 주말 10% 할인 본인 포함 동반 4인까지 최대 48,000원 할인
+                                #[strong 유플러스 멤버십 혜택 <br> #[span 레고랜드 코리아 1일 이용권 20% 상시 할인]]<br>
+                                주중 20% 주말 10% 할인 본인 포함 <br>
+                                 동반 4인까지 최대 48,000원 할인
 
                         div.modal-road__item
                             h3 평양 막국수 & 혜정 닭갈비
                             ul
                                 li(style="background-image: url('/assets/images/img_modal_1_item_3.jpg')")
-                                    h4 춘천 2편 <평양 막국수>
-                                    p #[strong 주소지] 강원 춘천시 명주길5번길 13-1
+                                    h4 #[span 춘천 2편] 평양 막국수
+                                    p #[strong 주소지] 강원 춘천시 <br> 명주길5번길 13-1
                                     p.
-                                        #[strong 인기메뉴] 막국수, 감자전 <br>
-                                        안 먹어보면 후회하는 감칠맛이 좋은 막국수
+                                        #[strong 인기메뉴] 막국수, 감자전 <br><br>
+                                        안 먹어보면 후회하는 <br>
+                                        감칠맛이 좋은 막국수
                                 li(style="background-image: url('/assets/images/img_modal_1_item_4.jpg')")
-                                    h4 춘천 2편 <혜정 닭갈비>
-                                    p #[strong 주소지] 강원 춘천시 금강로62번길 11-1
+                                    h4 #[span 춘천 2편] 혜정 닭갈비
+                                    p #[strong 주소지] 강원 춘천시 금강로 <br> 62번길 11-1
                                     p.
-                                        안 먹어본 사람은 있어도 한번만 <br>
-                                        먹어본 적 없다는 그 맛! <br>
-                                        착한 가격에 푸짐한 양을 혜정 닭갈비
+                                        안 먹어본 사람은 있어도 한번 <br>
+                                        만 먹어본 적 없다는 그 맛! <br>
+                                        착한 가격에 푸짐한 양을 <br>
+                                        혜정 닭갈비
                                     div.modal-road__benefit-box
                                         p.
                                             #[strong 유플러스 멤버십 혜택] <br>
-                                            유플러스 멤버십 회원 1,000원 당 <br>
-                                            100원 할인 (최대 2만원 할인)
+                                            유플러스 멤버십 회원 <br>
+                                            1,000원 당 100원 할인 <br>
+                                            (최대 2만원 할인)
 
                         section.modal-road__benefit
-                            h3 유플러스 고객을 위한 선 넘는 <춘천> 멤버십 혜택
+                            h3 유플러스 고객을 위한 선 넘는 #[span 춘천 멤버십 혜택]
                             ul
                                 li(style="background-image: url('/assets/images/img_modal_1_list_1.jpg')")
                                     h4 레고랜드 코리아
@@ -409,13 +413,13 @@ html(lang="ko")
                         div.modal-road__benefit-box.modal-road__benefit-box2
                             p.
                                 #[strong 멤버십 혜택 이용 방법] <br>
-                                1. 와이낫로드 유플러스 멤버십 zone에서 제휴 매장 확인하기 <br>
+                                1. 와이낫로드 유플러스 멤버십 zone에서 <br> 제휴 매장 확인하기 <br>
                                 2. 와이낫로드 제휴 매장 방문하기 <br>
                                 3. 결제 시 멤버스앱 > 바코드 제시하고 할인받기
 
-                    .modal__close
-                        button.modal__close-button(type="button")
-                            span.modal__close-text 닫기
+            .modal__close
+                button.modal__close-button(type="button")
+                    span.modal__close-text 닫기
 
         section#road-v2.modal.modal-road
             .modal__backdrop
@@ -430,26 +434,31 @@ html(lang="ko")
                             h3 부산 해운대
                             ul
                                 li(style="background-image: url('/assets/images/img_modal_2_item_1.jpg')")
-                                    h4 부산 1편 [해운대 해수욕장]
+                                    h4 #[span 부산 1편] 해운대 해수욕장
                                     p.
-                                        주변의 빼어난 자연 경관과 어우러진 <br>
-                                        전국 제일의 해수욕
+                                        주변의 빼어난 자연 경관과 <br>
+                                        어우러진 전국 제일의 <br>
+                                        해수욕
                                     p.
                                         2020, 2021년의 경우 <br>
-                                        코로나로 인해 축제가 취소되었으나 <br>
-                                        2022년에 다시 개최됨
+                                        코로나로 인해 축제가 취소 <br>
+                                        되었으나 2022년에 다시 <br>
+                                        개최됨
                                 li(style="background-image: url('/assets/images/img_modal_2_item_2.jpg')")
-                                    h4 부산 1편 [투어지]
+                                    h4 #[span 부산 1편] 투어지
                                     p.
-                                        #[strong 주소지] 부산 해운대구 APEC로 30 벡스코 <br>
-                                        제2전시장 1층 108호 투어지
+                                        #[strong 주소지] 부산 해운대구 <br>
+                                        APEC로 30 벡스코 제2전시장 <br>
+                                        1층 108호 투어지
                                     p.
-                                        타는 순간 여행이 되는, 좋은 친환경 퍼스널 <br>
-                                        모빌리티 투어지!
+                                        타는 순간 여행이 되는, <br>
+                                        좋은 친환경 퍼스널 모빌리티 <br>
+                                        투어지!
                                     div.modal-road__benefit-box
                                         p.
                                             #[strong 유플러스 멤버십 혜택] <br>
-                                            유플러스 멤버십 회원 20% 할인
+                                            유플러스 멤버십 회원 <br>
+                                            20% 할인
 
                         div.modal-road__item
                             h3 부산 엑스 더 스카이
@@ -457,17 +466,19 @@ html(lang="ko")
                             ul
                                 li(style="background-image: url('/assets/images/img_modal_2_item_3.jpg')")
                                 li(style="background-image: url('/assets/images/img_modal_2_item_4.jpg')")
-                            h4 부산 2편 [부산 엑스 더 스카이]
+                            h4 #[span 부산 2편] 부산 엑스 더 스카이
                             p.
                                 #[strong 주소지] 부산 해운대구 달맞이길 30 <br>
-                                부산 최고의 랜드마크이자 부산 전경을 한눈에 담을 수 있는 하늘 위의 바다
+                                부산 최고의 랜드마크이자 부산 전경을 <br>
+                                한눈에 담을 수 있는 하늘 위의 바다
                         div.modal-road__benefit-box
                             p.
                                 #[strong 유플러스 멤버십 혜택] <br>
-                                유플러스 멤버십 회원 전망대 입장료 25% 할인 동반 1인까지 현장 할인
+                                유플러스 멤버십 회원 전망대 입장료 25% 할인 <br>
+                                동반 1인까지 현장 할인
 
                         section.modal-road__benefit
-                            h3 유플러스 고객을 위한 선 넘는 <부산> 멤버십 혜택
+                            h3 유플러스 고객을 위한 선 넘는 #[span 부산 멤버십 혜택]
 
                             ul
                                 li(style="background-image: url('/assets/images/img_modal_2_list_1.jpg')")
@@ -502,13 +513,13 @@ html(lang="ko")
                         div.modal-road__benefit-box.modal-road__benefit-box2
                             p.
                                 #[strong 멤버십 혜택 이용 방법] <br>
-                                1. 와이낫로드 유플러스 멤버십 zone에서 제휴 매장 확인하기 <br>
+                                1. 와이낫로드 유플러스 멤버십 zone에서 <br> 제휴 매장 확인하기 <br>
                                 2. 와이낫로드 제휴 매장 방문하기 <br>
                                 3. 결제 시 멤버스앱 > 바코드 제시하고 할인받기
 
-                    .modal__close
-                        button.modal__close-button(type="button")
-                            span.modal__close-text 닫기
+            .modal__close
+                button.modal__close-button(type="button")
+                    span.modal__close-text 닫기
 
         section#road-v3.modal.modal-road
             .modal__backdrop
@@ -523,22 +534,25 @@ html(lang="ko")
                             h3 개항로 통닭
                             ul
                                 li(style="background-image: url('/assets/images/img_modal_3_item_1.jpg')")
-                            h4 인천 1편 [개항로 통닭]
+                            h4 #[span 인천 1편] 개항로 통닭
                             p #[strong 주소지] 인천 중구 참외전로 164
                             p.
-                                #[strong 인기메뉴] 오리지날 통닭, 치즈 통닭, 이태리 통닭, 반반 통닭 등 <br>
-                                레트로 감성이 물씬 풍기는 세대 구별 없이 어울려 즐기는 전기 구이 통닭집
+                                #[strong 인기메뉴] 오리지날 통닭, 치즈 통닭, 이태리 통닭, <br>
+                                반반 통닭 등 <br><br>
+                                레트로 감성이 물씬 풍기는 세대 구별 없이 어울려 즐기는 <br>
+                                전기 구이 통닭집
                         div.modal-road__item
                             h3 국제 롤러스케이트장
                             ul
                                 li(style="background-image: url('/assets/images/img_modal_3_item_2.jpg')")
-                            h4 인천 2편 [국제 롤러스케이트장]
+                            h4 #[span 인천 2편] 국제 롤러스케이트장
                             p.
-                                #[strong 주소지] 인천 서구 청라에메랄드로 99 <br>
-                                아이들도 어른들도 노래에 맞춰 롤러타기를 즐길 수 있는 레트로 롤러장
+                                #[strong 주소지] 인천 서구 청라에메랄드로 99 <br><br>
+                                아이들도 어른들도 노래에 맞춰 롤러타기를 즐길 수 있는 <br>
+                                레트로 롤러장
 
                         section.modal-road__benefit
-                            h3 유플러스 고객을 위한 선 넘는 <인천> 멤버십 혜택
+                            h3 유플러스 고객을 위한 선 넘는 #[span 인천 멤버십 혜택]
                             ul
                                 li(style="background-image: url('/assets/images/img_modal_3_list_1.jpg')")
                                     h4 꽁커피
@@ -564,13 +578,13 @@ html(lang="ko")
                         div.modal-road__benefit-box.modal-road__benefit-box2
                             p.
                                 #[strong 멤버십 혜택 이용 방법] <br>
-                                1. 와이낫로드 유플러스 멤버십 zone에서 제휴 매장 확인하기 <br>
+                                1. 와이낫로드 유플러스 멤버십 zone에서 <br> 제휴 매장 확인하기 <br>
                                 2. 와이낫로드 제휴 매장 방문하기 <br>
                                 3. 결제 시 멤버스앱 > 바코드 제시하고 할인받기
 
-                    .modal__close
-                        button.modal__close-button(type="button")
-                            span.modal__close-text 닫기
+            .modal__close
+                button.modal__close-button(type="button")
+                    span.modal__close-text 닫기
 
         section#road-v4.modal.modal-road
             .modal__backdrop
@@ -585,37 +599,41 @@ html(lang="ko")
                             h3 장생포 고래문화마을
                             ul
                                 li(style="background-image: url('/assets/images/img_modal_4_item_1.jpg')")
-                            h4 울산 1편 [장생포 고래문화마을]
+                            h4 #[span 울산 1편] 장생포 고래문화마을
                             p #[strong 주소지] 울산 남구 장생포고래로 244
                             p.
-                                장생포 고래잡이어촌의 모습을 그대로 재현했으며 고래 광장, 장생포 옛마을, <br>
-                                선사시대 고래마당, 고래 조각 정원, 수생 식물원 등 다양한 <br>
-                                테마와 이야기를 담은 공원을 둘러볼 수 있는 공간
+                                장생포 고래잡이어촌의 모습을 그대로 재현했으며 고래 광장, <br>
+                                장생포 옛마을, 선사시대 고래마당, 고래 조각 정원, <br>
+                                수생 식물원 등 다양한 테마와 이야기를 담은 <br>
+                                공원을 둘러볼 수 있는 공간
                         div.modal-road__item
                             h3 언양불고기한마당한우촌 & 복순도가
-                            ul(style="display:flex; justify-content:space-between; grid-gap:inherit;")
+                            ul
                                 li(style="background-image: url('/assets/images/img_modal_4_item_2.jpg')")
-                                    h4 울산 2편 [언양불고기한마당한우촌]
-                                    p #[strong 주소지] 울산 울주군 언양읍 웃방천5길 10
+                                    h4 #[span 울산 2편] 언양불고기한마당한우촌
+                                    p #[strong 주소지] 울산 울주군 언양읍 <br> 웃방천5길 10
                                     p.
-                                        #[strong 인기메뉴] 갈비살 육회, 언양원조 참숯불고기 <br>
-                                        두말이 필요 없는 울산 최고의 언양 불고기를 <br>
-                                        즐길 수 있는 한우 암소 전문점
+                                        #[strong 인기메뉴] 갈비살 육회, <br>
+                                        언양원조 참숯불고기 <br><br>
+                                        두말이 필요 없는 울산 최고의 <br>
+                                        언양 불고기를 즐길 수 있는 <br>
+                                        한우 암소 전문점
                                     div.modal-road__benefit-box
                                         p.
                                             #[strong 유플러스 멤버십 혜택] <br>
-                                            유플러스 멤버십 회원 1,000원 당 <br>
-                                            100원 할인 (최대 2만원 할인)
+                                            유플러스 멤버십 회원 <br>
+                                            1,000원 당 100원 할인 <br>
+                                            (최대 2만원 할인)
 
                                 li(style="background-image: url('/assets/images/img_modal_4_item_3.jpg')")
-                                    h4 울산 2편 [복순도가]
-                                    p #[strong 주소지] 울산 울주군 상북면 향산동길 48
+                                    h4 #[span 울산 2편] 복순도가
+                                    p #[strong 주소지] 울산 울주군 상북면 <br> 향산동길 48
                                     p.
-                                        울산을 대표하는 천연 탄산 손막걸리 양조장, <br>
-                                        복순도가
+                                        울산을 대표하는 천연 탄산 <br>
+                                        손막걸리 양조장, 복순도가
 
                         section.modal-road__benefit
-                            h3 유플러스 고객을 위한 선 넘는 <울산> 멤버십 혜택
+                            h3 유플러스 고객을 위한 선 넘는 #[span 울산 멤버십 혜택]
                             ul
                                 li(style="background-image: url('/assets/images/img_modal_4_list_1.jpg')")
                                     h4 강변수구레국밥
@@ -650,13 +668,13 @@ html(lang="ko")
                         div.modal-road__benefit-box.modal-road__benefit-box2
                             p.
                                 #[strong 멤버십 혜택 이용 방법] <br>
-                                1. 와이낫로드 유플러스 멤버십 zone에서 제휴 매장 확인하기 <br>
+                                1. 와이낫로드 유플러스 멤버십 zone에서 <br> 제휴 매장 확인하기 <br>
                                 2. 와이낫로드 제휴 매장 방문하기 <br>
                                 3. 결제 시 멤버스앱 > 바코드 제시하고 할인받기
 
-                    .modal__close
-                        button.modal__close-button(type="button")
-                            span.modal__close-text 닫기
+            .modal__close
+                button.modal__close-button(type="button")
+                    span.modal__close-text 닫기
 
         section#road-v5.modal.modal-road
             .modal__backdrop
@@ -673,13 +691,14 @@ html(lang="ko")
                                 li(style="background-image: url('/assets/images/img_modal_5_item_1.jpg')")
                                 li(style="background-image: url('/assets/images/img_modal_5_item_2.jpg')")
 
-                            h4 서울 1편 [LG 유플러스 마곡 사옥]
+                            h4 #[span 서울 1편] LG 유플러스 마곡 사옥
                             p.
                                 #[strong 주소지] 서울 강서구 마곡중앙8로 71 <br>
-                                마곡에 위치한 LG 유플러스의 마곡 사옥으로 LG아트센터를 보유
+                                마곡에 위치한 LG 유플러스의 마곡 사옥으로 <br>
+                                LG아트센터를 보유
 
                         section.modal-road__benefit
-                            h3 유플러스 고객을 위한 선 넘는 <서울> 멤버십 혜택
+                            h3 유플러스 고객을 위한 선 넘는 #[span 서울 멤버십 혜택]
                             ul
                                 li(style="background-image: url('/assets/images/img_modal_5_list_1.jpg')")
                                     h4 공병득 쉐프
@@ -700,14 +719,14 @@ html(lang="ko")
                         div.modal-road__benefit-box.modal-road__benefit-box2
                             p.
                                 #[strong 멤버십 혜택 이용 방법] <br>
-                                1. 와이낫로드 유플러스 멤버십 zone에서 제휴 매장 확인하기 <br>
+                                1. 와이낫로드 유플러스 멤버십 zone에서 <br> 제휴 매장 확인하기 <br>
                                 2. 와이낫로드 제휴 매장 방문하기 <br>
                                 3. 결제 시 멤버스앱 > 바코드 제시하고 할인받기
 
 
-                    .modal__close
-                        button.modal__close-button(type="button")
-                            span.modal__close-text 닫기
+            .modal__close
+                button.modal__close-button(type="button")
+                    span.modal__close-text 닫기
         footer.footer
             div.footer__wrap
                 div
