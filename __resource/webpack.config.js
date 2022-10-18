@@ -133,7 +133,7 @@ const config = (env, options) => {
             ],
             historyApiFallback: true,
             compress: true,
-            port: 8881
+            port: device === 'pc' ? 8881 : 8882
         },
         plugins: [
             new webpack.LoaderOptionsPlugin({

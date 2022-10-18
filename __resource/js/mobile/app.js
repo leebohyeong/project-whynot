@@ -19,14 +19,27 @@ const app = () => {
     //header
     (() => {
         const siteHeader  = findOne('header');
+        const headerHeight = siteHeader.clientHeight;
         const siteMenu = findOne('.header-menu__button', siteHeader);
         const siteMenuItems = find('.header-menu__link', siteHeader);
+        const sections = siteMenuItems.map(link => findOne(link.getAttribute('href')));
+        const sectionsStart = [];
+        const getSectionsStart = () => sections.forEach((section, index) => sectionsStart[index] = ~~(getOffset(section).top - headerHeight)+1);
 
+        const moveSection = (index) => {
+            window.scroll({
+                top: sectionsStart[index],
+                behavior: 'smooth'
+            });
+        };
+
+        //header fixed
         const changeHeader = () => {
             siteHeader.classList[window.pageYOffset >= siteHeader.offsetHeight ? 'add' : 'remove']('fixed');
         };
         on(window, 'scroll', changeHeader);
 
+        //메뉴 open,close
         siteMenu.addEventListener('click', (event) => {
             event.preventDefault();
 
@@ -39,11 +52,18 @@ const app = () => {
             }
         });
 
-        siteMenuItems.forEach((siteMenuItem) => {
-            siteMenuItem.addEventListener("click", () => {
+        getSectionsStart();
+
+        siteMenuItems.forEach((siteMenuItem,index) => {
+            siteMenuItem.addEventListener("click", (event) => {
+                event.preventDefault();
                 siteHeader.classList.remove('header-menu--open');
+                moveSection(index);
             })
         })
+
+        on(window, 'load', getSectionsStart);
+        on(window, 'resize', getSectionsStart);
 
     })();
 
