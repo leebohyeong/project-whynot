@@ -40,6 +40,15 @@ html(lang="ko")
 
             script(src="/m/assets/js/vendors.js")
             script(src="/m/assets/js/app.js")
+
+            script.
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-233743431-1');
+
     body
         header.header
             div.header__container
