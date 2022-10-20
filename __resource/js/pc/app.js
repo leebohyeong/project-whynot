@@ -22,7 +22,7 @@ const app = () => {
         const links = find('.header__link', header);
         const sections = links.map(link => findOne(link.getAttribute('href')));
         const sectionsStart = [];
-        const getSectionsStart = () => sections.forEach((section, index) => sectionsStart[index] = ~~(getOffset(section).top - headerHeight));
+        const getSectionsStart = () => sections.forEach((section, index) => sectionsStart[index] = ~~(getOffset(section).top - headerHeight)+5);
         const toggleLink = () => {
             const scrollY = window.scrollY;
             let currentIndex = sectionsStart.length - 1;
