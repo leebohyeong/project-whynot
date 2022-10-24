@@ -1,11 +1,11 @@
 <?php
 $mobile_agent = "/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/";
 if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
-?>
-<script>
-    location.href = "/m/index.html";
-</script>
-<?php
+    ?>
+    <script>
+        location.href = "/m/index.html";
+    </script>
+    <?php
 }
 ?>
 <!DOCTYPE html>
@@ -14,21 +14,21 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>LG U+</title>
     <meta name="author" content="Group IDD 개발그룹">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="와이낫크루가 추천하는 대한민국 핫플과 혜택을 만나보세요">
+    <meta name="keywords" content="LG U+, 와이낫 로드">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
     <meta name="author" content="">
-    <meta property="og:url" content="">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="">
-    <meta property="og:image" content="">
-    <meta property="og:description" content="">
-    <meta property="og:site_name" content="">
+    <meta property="og:title" content="와이낫 로드">
+    <meta property="og:url" content="https://와이낫로드.com">
+    <meta property="og:description" content="와이낫크루가 추천하는 대한민국 핫플과 혜택을 만나보세요">
+    <meta property="og:image" content="http://whynotroad.groupidd.com//assets/images/og_image.png">
+    <meta property="og:site_name" content="와이낫 로드">
     <meta property="og:locale" content="ko_KR">
-    <meta property="article:author" content="">
+    <meta property="article:author" content="LG U+">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
@@ -45,7 +45,9 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
     <link rel="stylesheet" href="/assets/css/app.css">
     <script src="/assets/js/vendors.js"></script>
     <script src="/assets/js/app.js"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-233743431-1"></script>
     <script>
+        window.dataLayer = window.dataLayer || [];
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -301,42 +303,42 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                 <div class="textbox">
                     <p>유독 ~ 끌리는 <br>유플러스 모델 손석구의 Behind 화보 대공개</p>
                     <h3>유독 Behind 화보</h3>
-                    <p><a href="https://udokgallery.lguplus.com">유독 Behind 화보 보러가기</a></p>
+                    <p><a href="https://udokgallery.lguplus.com">영상 보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-2" role="tabpanel" aria-labelledby="tab--contents-2">
                 <div class="textbox">
                     <p>뻔하지 않은 생각으로 일상의 즐거움을 만들어가는 <br> 사람들의 STORY <strong>WHY NOT 브랜드화보 !</strong></p>
                     <h3>브랜드 화보</h3>
-                    <p><a href="https://www.instagram.com/magazine_whynot">영상 보러 보러가기</a></p>
+                    <p><a href="https://www.instagram.com/magazine_whynot">화보 보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-3" role="tabpanel" aria-labelledby="tab--contents-3">
                 <div class="textbox">
                     <p>대한민국 숨겨진 명소를 찾아 <br> 선넘는 즐거움을 제시하다!</p>
                     <h3>와이낫크루</h3>
-                    <p><a href="https://www.youtube.com/watch?v=y_XMQBYcCtk&amp;list=PLrpBDj0lFe8gQuLfpR54BARC0g5-YTHCr">영상 보러 보러가기</a></p>
+                    <p><a href="https://www.youtube.com/watch?v=y_XMQBYcCtk&amp;list=PLrpBDj0lFe8gQuLfpR54BARC0g5-YTHCr">영상 보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-4" role="tabpanel" aria-labelledby="tab--contents-4">
                 <div class="textbox">
                     <p>선 넘는 도전을 응원하는 <br> 본업천재 와이낫크루의 HOT한 신곡!</p>
                     <h3>와이낫송</h3>
-                    <p><a href="https://youtu.be/CXLuNiVMNlc">영상 보러 보러가기</a></p>
+                    <p><a href="https://youtu.be/CXLuNiVMNlc">영상 보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-5" role="tabpanel" aria-labelledby="tab--contents-5">
                 <div class="textbox">
                     <p>유플러스 고객들의 <br> 솔직한 찐소리를 찾아서!</p>
                     <h3>캐치유</h3>
-                    <p><a href="https://www.youtube.com/watch?v=gSEWgbrAgfg&amp;list=PLrpBDj0lFe8hKcV6xlVmS2qY0CuP7lsvP">영상 보러 보러가기</a></p>
+                    <p><a href="https://www.youtube.com/watch?v=gSEWgbrAgfg&amp;list=PLrpBDj0lFe8hKcV6xlVmS2qY0CuP7lsvP">영상 보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-6" role="tabpanel" aria-labelledby="tab--contents-6">
                 <div class="textbox">
                     <p>나의 도전이 세상이 자산이 되는</p>
                     <h3>도전은행</h3>
-                    <p><a href="https://www.youtube.com/watch?v=O02bX3vPXE8">영상 보러 보러가기</a></p>
+                    <p><a href="https://www.youtube.com/watch?v=O02bX3vPXE8">영상 보러가기</a></p>
                 </div>
             </div>
         </div>
@@ -865,7 +867,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
     <div class="footer__wrap">
         <div>
             <h1>(주)엘지유플러스</h1>
-            <p><a href="https://www.lguplus.com/">LG 유플러스 홈페이지 가기</a></p>
+            <p><a href="https://www.lguplus.com/" target="_blank">LG 유플러스 홈페이지 가기</a></p>
         </div>
         <div>
             <address>서울특별시 용산구 한강대로 32</address>
