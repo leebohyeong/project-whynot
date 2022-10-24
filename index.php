@@ -877,7 +877,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
             <p>사업자등록번호 : 220-81-39938</p>
             <p>통신판매신고 제 2015-서울용산-00481호<a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208139938" target="_blank">사업자 정보 확인</a></p>
         </div>
-        <p>Copyright &copy; LG Uplus Corp. All Rights Reserved.</p>
+        <p>Copyright © 2022 LG Uplus Corp. All Rights Reserved.</p>
     </div>
 </footer>
 </body>
