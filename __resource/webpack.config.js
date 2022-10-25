@@ -17,12 +17,12 @@ const deviceOptions = {
                 filename: 'assets/css/[name].css'
             }),
 
-            new HtmlWebpackPlugin({
-                template: 'pug/pc/index.pug',
-                filename: 'index.html',
-                inject: false,
-                minify: false
-            }),
+            // new HtmlWebpackPlugin({
+            //     template: 'pug/pc/index.pug',
+            //     filename: 'index.html',
+            //     inject: false,
+            //     minify: false
+            // }),
         ]
     },
     mobile: {
@@ -37,12 +37,12 @@ const deviceOptions = {
                 filename: 'm/assets/css/[name].css'
             }),
 
-            new HtmlWebpackPlugin({
-                template: 'pug/mobile/index.pug',
-                filename: 'm/index.html',
-                inject: false,
-                minify: false
-            }),
+            // new HtmlWebpackPlugin({
+            //     template: 'pug/mobile/index.pug',
+            //     filename: 'm/index.html',
+            //     inject: false,
+            //     minify: false
+            // }),
         ]
     }
 };

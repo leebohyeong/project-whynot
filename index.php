@@ -63,12 +63,12 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
         <h1><a href="/"><span>WHY NOT?</span></a></h1>
         <nav>
             <ul>
-                <li><a class="header__link header__link--active" href="#why-not">WHY NOT?</a></li>
-                <li><a class="header__link" href="#brand-film">Brand Film</a></li>
-                <li><a class="header__link" href="#experience">EXPERIENCE</a></li>
-                <li><a class="header__link" href="#road">ROAD</a></li>
-                <li><a class="header__link" href="#contents">CONTENTS</a></li>
-                <li><a class="header__link" href="#collaboration">COLLABORATION</a></li>
+                <li><a class="header__link header__link--active" href="#why-not" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT?'})">WHY NOT?</a></li>
+                <li><a class="header__link" href="#brand-film" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'Brand Flim'})">Brand Film</a></li>
+                <li><a class="header__link" href="#experience" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'EXPERIENCE'})">EXPERIENCE</a></li>
+                <li><a class="header__link" href="#road" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'ROAD'})">ROAD</a></li>
+                <li><a class="header__link" href="#contents" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CONTENTS'})">CONTENTS</a></li>
+                <li><a class="header__link" href="#collaboration" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'COLLABORATION'})">COLLABORATION</a></li>
             </ul>
         </nav>
     </div>
@@ -92,9 +92,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
             <p data-aos="fade-left" data-aos-delay="300">
                 선 넘는 즐거움 <br>
                 이런 게 유플러스만의
-
             <div data-aos="fade-left" data-aos-delay="500" style="background-image: url('/assets/images/img_why_not.png')"></div>
-
             </p>
         </div>
     </div>
@@ -107,13 +105,19 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
     <div class="tab">
         <ul class="tab__nav" role="tablist">
             <li class="tab__item">
-                <button class="tab__menu" type="button" id="tab-brand-film-1" role="tab" aria-controls="tab-panel-brand-film-1" aria-selected="true" data-api="tab">Why Not 런칭 편</button>
+                <button class="tab__menu" type="button" id="tab-brand-film-1" role="tab"
+                        aria-controls="tab-panel-brand-film-1" aria-selected="true" data-api="tab" onclick="gtag('event','WHY NOT Brand Film',{'event_category' : '와이낫페이지' ,'event_label' : 'Why Not 런칭 편'})">Why Not 런칭 편
+                </button>
             </li>
             <li class="tab__item">
-                <button class="tab__menu" type="button" id="tab-brand-film-2" role="tab" aria-controls="tab-panel-brand-film-2" aria-selected="false" data-api="tab">WHY NOT 디즈니플러스 편</button>
+                <button class="tab__menu" type="button" id="tab-brand-film-2" role="tab"
+                        aria-controls="tab-panel-brand-film-2" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT Brand Film',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT 디즈니플러스 편'})">WHY NOT 디즈니플러스 편
+                </button>
             </li>
             <li class="tab__item">
-                <button class="tab__menu" type="button" id="tab-brand-film-3" role="tab" aria-controls="tab-panel-brand-film-3" aria-selected="false" data-api="tab">WHY NOT 유독 편</button>
+                <button class="tab__menu" type="button" id="tab-brand-film-3" role="tab"
+                        aria-controls="tab-panel-brand-film-3" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT Brand Film',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT 유독 편'})">WHY NOT 유독 편
+                </button>
             </li>
         </ul>
         <div class="tab__content">
@@ -129,7 +133,8 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                                     일상의 즐거운 변화를 위해 편견을 깨고 <br>
                                     과감한 도전들을 먼저 시도하는 유플러스만의 실천 캠페인, “Why Not?”
                                 </p>
-                                <iframe src="https://www.youtube.com/embed/CWOgnaDjzcs?controls=0" title="와이낫 런칭편"></iframe>
+                                <iframe src="https://www.youtube.com/embed/CWOgnaDjzcs?controls=0"
+                                        title="와이낫 런칭편"></iframe>
                             </div>
                         </div>
                     </div>
@@ -150,7 +155,8 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                                     어린시절 내가 좋아했던 콘텐츠를,우리 아이와 함께 즐길 수 있다면? <br>
                                     이런 게 유플러스만의 WHY NOT!
                                 </p>
-                                <iframe src="https://www.youtube.com/embed/HK0YHM1a-_w?controls=0" title="아빠와 아들 편"></iframe>
+                                <iframe src="https://www.youtube.com/embed/HK0YHM1a-_w?controls=0"
+                                        title="아빠와 아들 편"></iframe>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -161,7 +167,8 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                                     멀리 떨어져있어도 같이 있는것 같은 생생한 즐거움!✨ <br>
                                     이런 게 유플러스만의 WHY NOT!
                                 </p>
-                                <iframe src="https://www.youtube.com/embed/Gh4fA2SYlgM?controls=0" title="칠공주 편"></iframe>
+                                <iframe src="https://www.youtube.com/embed/Gh4fA2SYlgM?controls=0"
+                                        title="칠공주 편"></iframe>
                             </div>
                         </div>
                     </div>
@@ -182,7 +189,8 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                                     조건 없이, 부담 없이 할수록 더 할인 받을 수 있다면? <br>
                                     이런 게 유플러스만의 WHY NOT!
                                 </p>
-                                <iframe src="https://www.youtube.com/embed/lhVcEIhND0M?controls=0" title="자유할인 편"></iframe>
+                                <iframe src="https://www.youtube.com/embed/lhVcEIhND0M?controls=0"
+                                        title="자유할인 편"></iframe>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -193,7 +201,8 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                                     가입할 때도, 해지할 때도 쉽고 편하게 관리할 수 있다면? <br>
                                     이런 게 유플러스만의 WHY NOT!
                                 </p>
-                                <iframe src="https://www.youtube.com/embed/4ZWmDljpgNY?controls=0" title="편리 편"></iframe>
+                                <iframe src="https://www.youtube.com/embed/4ZWmDljpgNY?controls=0"
+                                        title="편리 편"></iframe>
                             </div>
                         </div>
                     </div>
@@ -226,7 +235,8 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                 <strong>평범한 일상의 순간도 더 특별하게</strong> <br>
                 <span>내 일상에 필요한 서비스를 구독!</span>
             </p>
-            <p data-aos="fade-left" data-aos-delay="800"><a href="https://www.lguplus.com/pogg" target="_blank">나만의 구독 시작하기</a></p>
+            <p data-aos="fade-left" data-aos-delay="800"><a href="https://www.lguplus.com/pogg" target="_blank" onclick="gtag('event','WHY NOT EXPERIENCE',{'event_category' : '와이낫페이지' ,'event_label' : '나만의 구독 시작하기'})">나만의 구독
+                    시작하기</a></p>
         </div>
     </div>
 </section>
@@ -234,18 +244,18 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
     <header>
         <h2 data-aos="fade-up">WHY NOT <strong>ROAD</strong></h2>
         <p data-aos="fade-up" data-aos-delay="100">
-            유플러스의  선 넘는 지역활성화 프로젝트 WHY NOT ROAD ! <br>
+            유플러스의 선 넘는 지역활성화 프로젝트 WHY NOT ROAD ! <br>
             지자체와 함께 대한민국 전국 8도를 소개합니다. <br>
             <strong>유플러스의 혜택이 담긴 대한민국 핫플을 클릭해 보세요!</strong>
 
         </p>
     </header>
     <ul class="road__list">
-        <li class="road__item"><a class="road__link" href="#road-v1"><span>춘천</span></a></li>
-        <li class="road__item"><a class="road__link" href="#road-v2"><span>부산</span></a></li>
-        <li class="road__item"><a class="road__link" href="#road-v3"><span>인천</span></a></li>
-        <li class="road__item"><a class="road__link" href="#road-v4"><span>울산</span></a></li>
-        <li class="road__item"><a class="road__link" href="#road-v5"><span>서울</span></a></li>
+        <li class="road__item"><a class="road__link" href="#road-v1" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '춘천'})"><span>춘천</span></a></li>
+        <li class="road__item"><a class="road__link" href="#road-v2" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '부산'})"><span>부산</span></a></li>
+        <li class="road__item"><a class="road__link" href="#road-v3" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '인천'})"><span>인천</span></a></li>
+        <li class="road__item"><a class="road__link" href="#road-v4" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '울산'})"><span>울산</span></a></li>
+        <li class="road__item"><a class="road__link" href="#road-v5" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '서울'})"><span>서울</span></a></li>
     </ul>
     <div class="road__textBox">
         <h3>
@@ -280,22 +290,34 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
     <div class="tab">
         <ul class="tab__nav" role="tablist">
             <li class="tab__item">
-                <button class="tab__menu" type="button" id="tab-contents-1" role="tab" aria-controls="tab-panel-contents-1" aria-selected="true" data-api="tab">유독 Behind 화보</button>
+                <button class="tab__menu" type="button" id="tab-contents-1" role="tab"
+                        aria-controls="tab-panel-contents-1" aria-selected="true" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보'})">유독 Behind 화보
+                </button>
             </li>
             <li class="tab__item">
-                <button class="tab__menu" type="button" id="tab-contents-2" role="tab" aria-controls="tab-panel-contents-2" aria-selected="false" data-api="tab">브랜드 화보</button>
+                <button class="tab__menu" type="button" id="tab-contents-2" role="tab"
+                        aria-controls="tab-panel-contents-2" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '브랜드 화보'})">브랜드 화보
+                </button>
             </li>
             <li class="tab__item">
-                <button class="tab__menu" type="button" id="tab-contents-3" role="tab" aria-controls="tab-panel-contents-3" aria-selected="false" data-api="tab">와이낫크루</button>
+                <button class="tab__menu" type="button" id="tab-contents-3" role="tab"
+                        aria-controls="tab-panel-contents-3" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫크루'})">와이낫크루
+                </button>
             </li>
             <li class="tab__item">
-                <button class="tab__menu" type="button" id="tab-contents-4" role="tab" aria-controls="tab-panel-contents-4" aria-selected="false" data-api="tab">와이낫송</button>
+                <button class="tab__menu" type="button" id="tab-contents-4" role="tab"
+                        aria-controls="tab-panel-contents-4" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫송'})">와이낫송
+                </button>
             </li>
             <li class="tab__item">
-                <button class="tab__menu" type="button" id="tab-contents-5" role="tab" aria-controls="tab-panel-contents-5" aria-selected="false" data-api="tab">캐치유</button>
+                <button class="tab__menu" type="button" id="tab-contents-5" role="tab"
+                        aria-controls="tab-panel-contents-5" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '캐치유'})">캐치유
+                </button>
             </li>
             <li class="tab__item">
-                <button class="tab__menu" type="button" id="tab-contents-6" role="tab" aria-controls="tab-panel-contents-6" aria-selected="false" data-api="tab">도전은행</button>
+                <button class="tab__menu" type="button" id="tab-contents-6" role="tab"
+                        aria-controls="tab-panel-contents-6" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '도전은행'})">도전은행
+                </button>
             </li>
         </ul>
         <div class="tab__content">
@@ -303,42 +325,46 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                 <div class="textbox">
                     <p>유독 ~ 끌리는 <br>유플러스 모델 손석구의 Behind 화보 대공개</p>
                     <h3>유독 Behind 화보</h3>
-                    <p><a href="https://udokgallery.lguplus.com">영상 보러가기</a></p>
+                    <p><a href="https://udokgallery.lguplus.com" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보_화보 보러가기'})">영상 보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-2" role="tabpanel" aria-labelledby="tab--contents-2">
                 <div class="textbox">
                     <p>뻔하지 않은 생각으로 일상의 즐거움을 만들어가는 <br> 사람들의 STORY <strong>WHY NOT 브랜드화보 !</strong></p>
                     <h3>브랜드 화보</h3>
-                    <p><a href="https://www.instagram.com/magazine_whynot">화보 보러가기</a></p>
+                    <p><a href="https://www.instagram.com/magazine_whynot" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '브랜드 화보_화보 보러가기'})">화보 보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-3" role="tabpanel" aria-labelledby="tab--contents-3">
                 <div class="textbox">
                     <p>대한민국 숨겨진 명소를 찾아 <br> 선넘는 즐거움을 제시하다!</p>
                     <h3>와이낫크루</h3>
-                    <p><a href="https://www.youtube.com/watch?v=y_XMQBYcCtk&amp;list=PLrpBDj0lFe8gQuLfpR54BARC0g5-YTHCr">영상 보러가기</a></p>
+                    <p>
+                        <a href="https://www.youtube.com/watch?v=y_XMQBYcCtk&amp;list=PLrpBDj0lFe8gQuLfpR54BARC0g5-YTHCr" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫 크루_영상 보러가기'})">영상
+                            보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-4" role="tabpanel" aria-labelledby="tab--contents-4">
                 <div class="textbox">
                     <p>선 넘는 도전을 응원하는 <br> 본업천재 와이낫크루의 HOT한 신곡!</p>
                     <h3>와이낫송</h3>
-                    <p><a href="https://youtu.be/CXLuNiVMNlc">영상 보러가기</a></p>
+                    <p><a href="https://youtu.be/CXLuNiVMNlc" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫송_영상 보러가기'})">영상 보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-5" role="tabpanel" aria-labelledby="tab--contents-5">
                 <div class="textbox">
                     <p>유플러스 고객들의 <br> 솔직한 찐소리를 찾아서!</p>
                     <h3>캐치유</h3>
-                    <p><a href="https://www.youtube.com/watch?v=gSEWgbrAgfg&amp;list=PLrpBDj0lFe8hKcV6xlVmS2qY0CuP7lsvP">영상 보러가기</a></p>
+                    <p>
+                        <a href="https://www.youtube.com/watch?v=gSEWgbrAgfg&amp;list=PLrpBDj0lFe8hKcV6xlVmS2qY0CuP7lsvP" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '캐치유_영상 보러가기'})">영상
+                            보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-6" role="tabpanel" aria-labelledby="tab--contents-6">
                 <div class="textbox">
                     <p>나의 도전이 세상이 자산이 되는</p>
                     <h3>도전은행</h3>
-                    <p><a href="https://www.youtube.com/watch?v=O02bX3vPXE8">영상 보러가기</a></p>
+                    <p><a href="https://www.youtube.com/watch?v=O02bX3vPXE8" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '도전은행_영상 보러가기'})">영상 보러가기</a></p>
                 </div>
             </div>
         </div>
@@ -350,7 +376,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
         <p data-aos="fade-up" data-aos-delay="100">일상의 변화를 가져올 선 넘는 즐거운 콜라보</p>
     </header>
     <ul>
-        <li><a href="https://youtu.be/V-Q9SucX1wI" target="_blank">
+        <li><a href="https://youtu.be/V-Q9SucX1wI" target="_blank" onclick="gtag('event','선 넘는 COLLABORATION',{'event_category' : '와이낫페이지' ,'event_label' : '유플러스 X 떼껄룩'})">
                 <h3>유플러스 × 때껄룩</h3>
                 <p>일상의 즐거움을 위한 <br> 통신사의 선 넘는콜라보</p></a>
         </li>
@@ -375,7 +401,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
         <li>
             <div>
                 <h3>유플러스 × 단하</h3>
-                <p>전통과 현대를 넘나드는 한복 브랜드와  <br> 선 넘는 콜라보!</p>
+                <p>전통과 현대를 넘나드는 한복 브랜드와 <br> 선 넘는 콜라보!</p>
             </div>
         </li>
         <li>
@@ -404,7 +430,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                         <li style="background-image: url('/assets/images/img_modal_1_item_2.jpg')"></li>
                     </ul>
                     <h4>춘천 1편 [레고랜드]</h4>
-                    <p><strong>주소지</strong> 강원 춘천시 하중도길 128   레고랜드 코리아 리조트 <br>
+                    <p><strong>주소지</strong> 강원 춘천시 하중도길 128 레고랜드 코리아 리조트 <br>
                         어린이와 가족들을 위한 최고의 LEGO 국내 첫 글로벌 테마파크
                     </p>
                 </div>
@@ -418,14 +444,18 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                     <h3>평양 막국수 & 혜정 닭갈비</h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_1_item_3.jpg')">
-                            <h4>춘천 2편 <평양 막국수></h4>
+                            <h4>춘천 2편
+                                <span>평양 막국수</span>
+                            </h4>
                             <p><strong>주소지</strong> 강원 춘천시 명주길5번길 13-1</p>
                             <p><strong>인기메뉴</strong> 막국수, 감자전 <br>
                                 안 먹어보면 후회하는 감칠맛이 좋은 막국수
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_1_item_4.jpg')">
-                            <h4>춘천 2편 <혜정 닭갈비></h4>
+                            <h4>춘천 2편
+                                <span>혜정 닭갈비</span>
+                            </h4>
                             <p><strong>주소지</strong> 강원 춘천시 금강로62번길 11-1</p>
                             <p>
                                 안 먹어본 사람은 있어도 한번만 <br>
@@ -443,11 +473,14 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                     </ul>
                 </div>
                 <section class="modal-road__benefit">
-                    <h3>유플러스 고객을 위한 선 넘는 <춘천> 멤버십 혜택</h3>
+                    <h3>유플러스 고객을 위한 선 넘는
+                        <span>춘천 멤버십 혜택</span>
+                    </h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_1_list_1.jpg')">
                             <h4>레고랜드 코리아</h4>
-                            <p><strong><span>1일 이용권 20% 상시 할인</span> <br> *주중 20%,주말 10%할인 <br>  본인포함동반 4인까지</strong> <br>
+                            <p><strong><span>1일 이용권 20% 상시 할인</span> <br> *주중 20%,주말 10%할인 <br> 본인포함동반 4인까지</strong>
+                                <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
@@ -560,7 +593,9 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                     </p>
                 </div>
                 <section class="modal-road__benefit">
-                    <h3>유플러스 고객을 위한 선 넘는 <부산> 멤버십 혜택</h3>
+                    <h3>유플러스 고객을 위한 선 넘는
+                        <span>부산 멤버십 혜택</span>
+                    </h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_2_list_1.jpg')">
                             <h4>엑스 더 스카이 전망대</h4>
@@ -647,7 +682,9 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                     </p>
                 </div>
                 <section class="modal-road__benefit">
-                    <h3>유플러스 고객을 위한 선 넘는 <인천> 멤버십 혜택</h3>
+                    <h3>유플러스 고객을 위한 선 넘는
+                        <span>인천 멤버십 혜택</span>
+                    </h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_3_list_1.jpg')">
                             <h4>꽁커피</h4>
@@ -745,7 +782,9 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                     </ul>
                 </div>
                 <section class="modal-road__benefit">
-                    <h3>유플러스 고객을 위한 선 넘는 <울산> 멤버십 혜택</h3>
+                    <h3>유플러스 고객을 위한 선 넘는
+                        <span>울산 멤버십 혜택</span>
+                    </h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_4_list_1.jpg')">
                             <h4>강변수구레국밥</h4>
@@ -824,7 +863,9 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                     </p>
                 </div>
                 <section class="modal-road__benefit">
-                    <h3>유플러스 고객을 위한 선 넘는 <서울> 멤버십 혜택</h3>
+                    <h3>유플러스 고객을 위한 선 넘는
+                        <span>서울 멤버십 혜택</span>
+                    </h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_5_list_1.jpg')">
                             <h4>공병득 쉐프</h4>
@@ -867,7 +908,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
     <div class="footer__wrap">
         <div>
             <h1>(주)엘지유플러스</h1>
-            <p><a href="https://www.lguplus.com/" target="_blank">LG 유플러스 홈페이지 가기</a></p>
+            <p><a href="https://www.lguplus.com/" target="_blank" onclick="gtag('event','Footer',{'event_category' : '와이낫페이지' ,'event_label' : 'LG 유플러스 홈페이지 가기'})">LG 유플러스 홈페이지 가기</a></p>
         </div>
         <div>
             <address>서울특별시 용산구 한강대로 32</address>
@@ -875,7 +916,8 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
         </div>
         <div>
             <p>사업자등록번호 : 220-81-39938</p>
-            <p>통신판매신고 제 2015-서울용산-00481호<a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208139938" target="_blank">사업자 정보 확인</a></p>
+            <p>통신판매신고 제 2015-서울용산-00481호<a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208139938"
+                                           target="_blank">사업자 정보 확인</a></p>
         </div>
         <p>Copyright © 2022 LG Uplus Corp. All Rights Reserved.</p>
     </div>

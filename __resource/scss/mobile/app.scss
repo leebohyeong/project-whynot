@@ -1115,11 +1115,13 @@ section {
         h3 {
             max-width: 550px;
             height: 60px;
+            margin: 0 auto;
             color: #000;
             font-weight: $font-weight-bold;
             font-size: 20px;
             line-height: math.div(40, 30);
             text-align: center;
+
 
             span {
                 display: block;
