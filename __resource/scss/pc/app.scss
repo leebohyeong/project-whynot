@@ -766,7 +766,8 @@ section {
             position: relative;
             padding: 10px 0;
             color: #acacac;
-            font-weight: $font-weight-bold;
+            font-family: "Pretendard", Arial, sans-serif;
+            font-weight: $font-weight-medium;
             font-size: 18px;
             transition: all .2s;
 
@@ -785,6 +786,7 @@ section {
             &:hover,
             &--active {
                 color: $pink;
+                font-weight: $font-weight-extrabold;
             }
 
             &:hover::after,
