@@ -123,6 +123,7 @@ $pink: #e6007e;
     &__link {
         display: block;
         color: #fff;
+        font-weight: $font-weight-medium;
         font-size: getSize(40px);
 
         &:hover {
@@ -149,7 +150,6 @@ $pink: #e6007e;
         > p {
             padding-top: getSize(19px);
             color: #b1b1b1;
-            font-weight: $font-weight-light;
             font-size: getSize(20px);
         }
 
@@ -158,7 +158,7 @@ $pink: #e6007e;
             align-items: center;
 
             > * {
-                font-weight: $font-weight-semibold;
+                font-weight: $font-weight-bold;
                 font-size: getSize(26px);
             }
 
@@ -171,7 +171,7 @@ $pink: #e6007e;
         div:nth-of-type(3) {
             > * {
                 color: #e0e0e0;
-                font-weight: $font-weight-semibold;
+                font-weight: $font-weight-bold;
                 font-size: getSize(24px);
                 line-height: math.div(31, 22);
             }
@@ -241,7 +241,7 @@ section {
 
         h2 {
             color: $pink;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-extrabold;
             font-size: getSize(55px);
             line-height: 1;
         }
@@ -249,12 +249,12 @@ section {
         p {
             padding-top: getSize(13px);
             color: #000;
-            font-weight: $font-weight-light;
+            font-weight: $font-weight-medium;
             font-size: getSize(26px);
             line-height: math.div(38, 26);
 
             strong {
-                font-weight: $font-weight-bold;
+                font-weight: $font-weight-extrabold;
             }
         }
     }
@@ -270,7 +270,6 @@ section {
 
         h2, p {
             color: #fff;
-            font-weight: $font-weight-light;
             font-size: getSize(70px);
             line-height: 1.3;
         }
@@ -336,7 +335,7 @@ section {
             height: getSize(84px);
             background-color: #fff;
             color: #acacac;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-extrabold;
             font-size: getSize(28px);
             line-height: math.div(39, 28);
             transition: all .2s;
@@ -399,7 +398,7 @@ section {
             h3 {
                 padding-top: 20px;
                 color: #000;
-                font-weight: $font-weight-bold;
+                font-weight: $font-weight-extrabold;
                 font-size: getSize(30px);
                 line-height: 1;
             }
@@ -407,7 +406,7 @@ section {
             p {
                 padding-top: 10px;
                 color: #656565;
-                font-weight: $font-weight-light;
+                font-weight: $font-weight-medium;
                 font-size: getSize(24px);
                 line-height: math.div(36, 24);
             }
@@ -485,18 +484,18 @@ section {
 
         p {
             color: #fff;
-            font-weight: $font-weight-light;
             font-size: getSize(28px);
             line-height: math.div(40, 28);
 
             strong {
-                font-weight: $font-weight-bold;
+                font-weight: $font-weight-extrabold;
             }
 
             span {
                 display: block;
                 padding-top: getSize(27px);
                 color: #d2d2d2;
+                font-weight: $font-weight-medium;
                 font-size: getSize(24px);
             }
         }
@@ -514,7 +513,7 @@ section {
             margin: 0 auto;
             background: $pink;
             color: #fff;
-            font-weight: $font-weight-semibold;
+            font-weight: $font-weight-bold;
             font-size: getSize(24px);
 
             &::after {
@@ -562,7 +561,6 @@ section {
             height: 40px;
             padding: 0 10px;
             color: rgba(28,28,28,.8);
-            font-weight: $font-weight-light;
             font-size: getSize(30px);
             line-height: 40px;
             white-space: nowrap;
@@ -587,7 +585,7 @@ section {
         }
 
         .swiper-pagination-bullet-active {
-            font-weight: $font-weight-medium;
+            font-weight: $font-weight-bold;
             color: #000;
 
             &::after {
@@ -651,7 +649,7 @@ section {
 
         p {
             position: relative;
-            font-weight: $font-weight-semibold;
+            font-weight: $font-weight-bold;
             font-size: getSize(28px);
             line-height: 32px;
             padding-right: getSize(21px);
@@ -670,7 +668,6 @@ section {
 
         h3 {
             color: #fff;
-            font-weight: $font-weight-light;
             font-size: getSize(35px);
             text-align: center;
         }
@@ -794,7 +791,6 @@ section {
     .swiper-pagination-bullet {
         height: 40px;
         color: #acacac;
-        font-weight: $font-weight-light;
         font-size: getSize(30px);
         line-height: 40px;
         white-space: nowrap;
@@ -807,7 +803,7 @@ section {
     .swiper-pagination-bullet-active {
         box-shadow: inset 0 -2px $pink;
         color: $pink;
-        font-weight: $font-weight-medium;
+        font-weight: $font-weight-semibold;
     }
 
     &__content {
@@ -833,7 +829,6 @@ section {
 
             p {
                 color: #000;
-                font-weight: $font-weight-light;
                 line-height: math.div(36, 24);
                 letter-spacing: -0.02em;
             }
@@ -849,7 +844,7 @@ section {
                 position: relative;
                 padding-top: getSize(34px);
                 color: #d70071;
-                font-weight: $font-weight-medium;
+                font-weight: $font-weight-semibold;
 
                 &::after {
                     display: inline-block;
@@ -925,16 +920,17 @@ section {
         justify-content: center;
         min-height: getSize(199px);
         background: #fff;
-        font-weight: $font-weight-light;
         text-align: center;
 
         h3 {
             color: #000;
+            font-weight: $font-weight-extrabold;
             font-size: getSize(26px);
         }
 
         p {
             color: #656565;
+            font-weight: $font-weight-medium;
             font-size: getSize(24px);
             line-height: math.div(32, 24);
         }
@@ -957,14 +953,13 @@ section {
 
         h2 {
             color: #fff;
-            font-weight: $font-weight-light;
             font-size: getSize(32px);
             transform: skewY(-5deg);
 
             span {
                 display: block;
                 padding-left: 60px;
-                font-weight: $font-weight-bold;
+                font-weight: $font-weight-extrabold;
                 font-size: 25px;
             }
 
@@ -992,7 +987,7 @@ section {
 
         h3 {
             color: #000;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-extrabold;
             font-size: getSize(30px);
         }
 
@@ -1013,7 +1008,7 @@ section {
         h4 {
             padding-top: 16px;
             color: #e6007e;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-extrabold;
             font-size: getSize(26px);
             line-height: 1;
 
@@ -1026,21 +1021,20 @@ section {
                 margin-bottom: 12px;
                 background-color: $pink;
                 color: #fff;
-                font-weight: $font-weight-medium;
+                font-weight: $font-weight-semibold;
                 font-size: getSize(24px);
             }
         }
 
         p {
             color: #000;
-            font-weight: $font-weight-light;
             font-size: getSize(24px);
             line-height: math.div(32, 24);
             //letter-spacing: -0.035em;
 
             strong {
                 margin-right: 8px;
-                font-weight: $font-weight-bold;
+                font-weight: $font-weight-extrabold;
             }
 
         }
@@ -1080,7 +1074,6 @@ section {
         background: #f6f6f6;
 
         p {
-            font-weight: $font-weight-light;
             font-size: getSize(24px);
         }
 
@@ -1088,7 +1081,7 @@ section {
             display: inline-block;
             padding-bottom: 5px;
             color: #e6007e;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-extrabold;
             font-size: getSize(26px);
         }
 
@@ -1117,7 +1110,7 @@ section {
             height: 60px;
             margin: 0 auto;
             color: #000;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-extrabold;
             font-size: 20px;
             line-height: math.div(40, 30);
             text-align: center;
@@ -1153,20 +1146,19 @@ section {
         h4 {
             padding-top: getSize(13px);
             color: #171c35;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-extrabold;
             font-size: getSize(28px);
             text-align: center;
         }
 
         p {
             padding-top: 1px;
-            font-weight: $font-weight-light;
             font-size: getSize(24px);
             line-height: math.div(32, 24);
             text-align: center;
 
             strong {
-                font-weight: $font-weight-semibold;
+                font-weight: $font-weight-bold;
             }
 
             span {
