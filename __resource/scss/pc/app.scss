@@ -149,6 +149,24 @@ body.modal-road--active {
     }
 }
 
+.section-logo {
+    width: 148px;
+    height: 26px;
+    margin: 0 auto 9px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 26px;
+
+    &--black {
+        background-image: url("/assets/images/logo_header_title_black.png");
+    }
+
+    &--white {
+        background-image: url("/assets/images/logo_header_title_white.png");
+    }
+
+}
+
 section {
     header {
         padding: 85px 0 35px;
@@ -156,13 +174,15 @@ section {
 
         h2 {
             color: $pink;
-            font-weight: $font-weight-light;
+            font-weight: $font-weight-extrabold;
             font-size: 55px;
             line-height: 1;
+            text-transform: uppercase;
 
-            strong {
-                font-weight: $font-weight-extrabold;
+            span{
+                @include visually-hidden;
             }
+
         }
 
         p {
@@ -983,6 +1003,10 @@ section {
             padding-top: 6px;
             font-weight: $font-weight-medium;
             line-height: math.div(26, 16);
+        }
+
+        p + p {
+            font-size: 18px;
         }
 
         &:hover::before {

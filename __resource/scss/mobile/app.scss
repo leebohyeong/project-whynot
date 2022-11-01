@@ -19,8 +19,9 @@ $pink: #e6007e;
     z-index: 500;
 
     &__logo {
-        width: getSize(214px);
+        width: getSize(222px);
         height: getSize(112px);
+        margin: 0 auto;
     }
 
     &__logo-link {
@@ -29,7 +30,7 @@ $pink: #e6007e;
         background-image: url("/m/assets/images/logo_why_not.png");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: auto 35px;
+        background-size: auto 19px;
 
     }
 
@@ -234,6 +235,28 @@ $pink: #e6007e;
     }
 }
 
+.section-logo {
+    width: getSize(148px);
+    height: getSize(26px);
+    margin: 0 auto 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto getSize(26px);
+
+    &--black {
+        background-image: url("/assets/images/logo_header_title_black.png");
+    }
+
+    &--white {
+        background-image: url("/assets/images/logo_header_title_white.png");
+    }
+
+    &--white2 {
+        background-image: url("/assets/images/logo_header_title_white2.png");
+    }
+
+}
+
 section {
     header {
         padding: getSize(85px) 0 getSize(45px) 0;
@@ -244,6 +267,11 @@ section {
             font-weight: $font-weight-extrabold;
             font-size: getSize(55px);
             line-height: 1;
+            text-transform: uppercase;
+
+            span{
+                @include visually-hidden;
+            }
         }
 
         p {
@@ -757,7 +785,7 @@ section {
 .contents {
 
     &__tab {
-        height: 40px;
+
     }
 
     .swiper {
@@ -781,11 +809,11 @@ section {
     }
 
     .swiper-pagination {
-        display: flex;
-        overflow: hidden;
-        overflow-x: auto;
-        height: 60px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
         padding: 0 20px;
+        text-align: center;
     }
 
     .swiper-pagination-bullet {
@@ -794,10 +822,6 @@ section {
         font-size: getSize(30px);
         line-height: 40px;
         white-space: nowrap;
-
-        &:not(:first-child) {
-            margin-left: 15px;
-        }
     }
 
     .swiper-pagination-bullet-active {

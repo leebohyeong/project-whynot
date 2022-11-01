@@ -99,7 +99,12 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
 </section>
 <section class="brand-film" id="brand-film">
     <header>
-        <h2 data-aos="fade-up">WHY NOT <strong>Brand Film</strong></h2>
+        <h2 data-aos="fade-up">
+            <div class="section-logo section-logo--black">
+                <span>why not</span>
+            </div>
+            Brand Film
+        </h2>
         <p data-aos="fade-up" data-aos-delay="100">남다른 생각과 도전으로 선 넘는 즐거움을 제공하는 유플러스의 스토리를 소개합니다.</p>
     </header>
     <div class="tab">
@@ -217,7 +222,12 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
 </section>
 <section class="experience" id="experience">
     <header>
-        <h2 data-aos="fade-up">WHY NOT <strong>EXPERIENCE</strong></h2>
+        <h2 data-aos="fade-up">
+            <div class="section-logo section-logo--white">
+                <span>why not</span>
+            </div>
+            EXPERIENCE
+        </h2>
         <p data-aos="fade-up" data-aos-delay="100">WHY NOT 관점으로 고객의 PAIN POINT를 개선해 나가는 유플러스의 서비스들을 소개합니다.</p>
     </header>
     <div class="experience__wrap">
@@ -242,7 +252,12 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
 </section>
 <section class="road" id="road">
     <header>
-        <h2 data-aos="fade-up">WHY NOT <strong>ROAD</strong></h2>
+        <h2 data-aos="fade-up">
+            <div class="section-logo section-logo--black">
+                <span>why not</span>
+            </div>
+            ROAD
+        </h2>
         <p data-aos="fade-up" data-aos-delay="100">
             유플러스의 선 넘는 지역활성화 프로젝트 WHY NOT ROAD ! <br>
             지자체와 함께 대한민국 전국 8도를 소개합니다. <br>
@@ -261,7 +276,6 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
         <h3>
             선넘는 즐거움과 혜택이 가득한 <br>
             지역을 소개합니다.
-
         </h3>
     </div>
     <div class="road__carousel">
@@ -284,7 +298,12 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
 </section>
 <section class="contents" id="contents"><span data-aos="contents-line"></span><span data-aos="contents-line"></span>
     <header>
-        <h2 data-aos="fade-up">WHY NOT <strong>CONTENTS</strong></h2>
+        <h2 data-aos="fade-up">
+            <div class="section-logo section-logo--black">
+                <span>why not</span>
+            </div>
+            CONTENTS
+        </h2>
         <p data-aos="fade-up" data-aos-delay="100">고객의 일상에 즐거운 변화를 만드는 유플러스의 활동을 소개합니다.</p>
     </header>
     <div class="tab">
@@ -325,14 +344,14 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                 <div class="textbox">
                     <p>유독 ~ 끌리는 <br>유플러스 모델 손석구의 Behind 화보 대공개</p>
                     <h3>유독 Behind 화보</h3>
-                    <p><a href="https://udokgallery.lguplus.com" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보_화보 보러가기'})">화보 보러가기</a></p>
+                    <p><a href="https://udokgallery.lguplus.com" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보_화보 보러가기'})">화보 보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-2" role="tabpanel" aria-labelledby="tab--contents-2">
                 <div class="textbox">
                     <p>뻔하지 않은 생각으로 일상의 즐거움을 만들어가는 <br> 사람들의 STORY <strong>WHY NOT 브랜드화보 !</strong></p>
                     <h3>브랜드 화보</h3>
-                    <p><a href="https://www.instagram.com/magazine_whynot" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '브랜드 화보_화보 보러가기'})">화보 보러가기</a></p>
+                    <p><a href="https://www.instagram.com/magazine_whynot" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '브랜드 화보_화보 보러가기'})">화보 보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-3" role="tabpanel" aria-labelledby="tab--contents-3">
@@ -340,7 +359,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                     <p>대한민국 숨겨진 명소를 찾아 <br> 선넘는 즐거움을 제시하다!</p>
                     <h3>와이낫크루</h3>
                     <p>
-                        <a href="https://www.youtube.com/watch?v=y_XMQBYcCtk&amp;list=PLrpBDj0lFe8gQuLfpR54BARC0g5-YTHCr" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫 크루_영상 보러가기'})">영상
+                        <a href="https://www.youtube.com/watch?v=y_XMQBYcCtk&amp;list=PLrpBDj0lFe8gQuLfpR54BARC0g5-YTHCr" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫 크루_영상 보러가기'})">영상
                             보러가기</a></p>
                 </div>
             </div>
@@ -348,7 +367,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                 <div class="textbox">
                     <p>선 넘는 도전을 응원하는 <br> 본업천재 와이낫크루의 HOT한 신곡!</p>
                     <h3>와이낫송</h3>
-                    <p><a href="https://youtu.be/CXLuNiVMNlc" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫송_영상 보러가기'})">영상 보러가기</a></p>
+                    <p><a href="https://youtu.be/CXLuNiVMNlc" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫송_영상 보러가기'})">영상 보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-5" role="tabpanel" aria-labelledby="tab--contents-5">
@@ -356,7 +375,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                     <p>유플러스 고객들의 <br> 솔직한 찐소리를 찾아서!</p>
                     <h3>캐치유</h3>
                     <p>
-                        <a href="https://www.youtube.com/watch?v=gSEWgbrAgfg&amp;list=PLrpBDj0lFe8hKcV6xlVmS2qY0CuP7lsvP" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '캐치유_영상 보러가기'})">영상
+                        <a href="https://www.youtube.com/watch?v=gSEWgbrAgfg&amp;list=PLrpBDj0lFe8hKcV6xlVmS2qY0CuP7lsvP" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '캐치유_영상 보러가기'})">영상
                             보러가기</a></p>
                 </div>
             </div>
@@ -364,7 +383,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                 <div class="textbox">
                     <p>나의 도전이 세상이 자산이 되는</p>
                     <h3>도전은행</h3>
-                    <p><a href="https://www.youtube.com/watch?v=O02bX3vPXE8" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '도전은행_영상 보러가기'})">영상 보러가기</a></p>
+                    <p><a href="https://www.youtube.com/watch?v=O02bX3vPXE8" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '도전은행_영상 보러가기'})">영상 보러가기</a></p>
                 </div>
             </div>
         </div>
@@ -372,13 +391,24 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
 </section>
 <section class="collaboration" id="collaboration">
     <header>
-        <h2 data-aos="fade-up">선 넘는 <strong>COLLABORATION</strong></h2>
+        <h2 data-aos="fade-up">
+            <div class="section-logo section-logo--white">
+                <span>why not</span>
+            </div>
+            COLLABORATION
+        </h2>
         <p data-aos="fade-up" data-aos-delay="100">일상의 변화를 가져올 선 넘는 즐거운 콜라보</p>
     </header>
     <ul>
-        <li><a href="https://youtu.be/V-Q9SucX1wI" target="_blank" onclick="gtag('event','선 넘는 COLLABORATION',{'event_category' : '와이낫페이지' ,'event_label' : '유플러스 X 떼껄룩'})">
+        <li>
+            <a href="https://youtu.be/V-Q9SucX1wI" target="_blank" onclick="gtag('event','선 넘는 COLLABORATION',{'event_category' : '와이낫페이지' ,'event_label' : '유플러스 X 떼껄룩'})">
                 <h3>유플러스 × 때껄룩</h3>
-                <p>일상의 즐거움을 위한 <br> 통신사의 선 넘는콜라보</p></a>
+                <p>
+                    일상의 즐거움을 위한 <br>
+                    통신사의 선 넘는콜라보
+                </p>
+                <p>바로가기</p>
+            </a>
         </li>
         <li>
             <div>
@@ -387,10 +417,11 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
             </div>
         </li>
         <li>
-            <div>
+            <a href="https://smartstore.naver.com/holemancrew/products/7464891590" target="_blank" onclick="gtag('event','선 넘는 COLLABORATION',{'event_category' : '와이낫페이지' ,'event_label' : '유플러스 × 모나미'})">
                 <h3>유플러스 × 모나미</h3>
                 <p>필기구의 대명사 국민 브랜드 모나미와 <br> 선 넘는 콜라보</p>
-            </div>
+                <p>바로가기</p>
+            </a>
         </li>
         <li>
             <div>
@@ -405,10 +436,11 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
             </div>
         </li>
         <li>
-            <div>
+            <a href="https://smartstore.naver.com/holemancrew/products/7284116862" target="_blank" onclick="gtag('event','선 넘는 COLLABORATION',{'event_category' : '와이낫페이지' ,'event_label' : '유플러스 × 곤지암 디퓨저'})">
                 <h3>유플러스 × 곤지암 디퓨저</h3>
                 <p>자연의 향을 담은 <br> 선 넘는 콜라보!</p>
-            </div>
+                <p>바로가기</p>
+            </a>
         </li>
     </ul>
 </section>
