@@ -62,7 +62,7 @@ $pink: #e6007e;
     }
 
     &.header-menu--open .header-menu__container {
-        opacity: 1;
+        display: block;
         height: 100%;
     }
 
@@ -97,7 +97,7 @@ $pink: #e6007e;
     }
 
     &__container {
-        opacity: 0;
+        display: none;
         position: fixed;
         top: 56px;
         left: 0;
