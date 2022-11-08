@@ -23,9 +23,9 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
     <meta name="author" content="">
     <meta property="og:type" content="website">
     <meta property="og:title" content="와이낫 로드">
-    <meta property="og:url" content="https://와이낫로드.com">
+    <meta property="og:url" content="https://whynotroad.groupidd.com">
     <meta property="og:description" content="와이낫크루가 추천하는 대한민국 핫플과 혜택을 만나보세요">
-    <meta property="og:image" content="http://whynotroad.groupidd.com//assets/images/og_image.png">
+    <meta property="og:image" content="http://whynotroad.groupidd.com//assets/images/og_image.jpg">
     <meta property="og:site_name" content="와이낫 로드">
     <meta property="og:locale" content="ko_KR">
     <meta property="article:author" content="LG U+">
