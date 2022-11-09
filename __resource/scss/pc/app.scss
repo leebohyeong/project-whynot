@@ -835,6 +835,7 @@ section {
                 }
 
                 p {
+                    min-height: 56px;
                     font-weight: $font-weight-medium;
                     line-height: math.div(28, 16);
                     letter-spacing: -0.02em;
