@@ -188,14 +188,24 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div>
+                                <h3>[WHY NOT] 이석구와 함께 유독할래요?  feat.이상준</h3>
+                                <p>
+                                    이제는 통신사 상관없이 누구나! <br>
+                                    매달 원하는 구독으로 바꾸고 할인까지 받는 <br>
+                                    선 넘는 구독생활, 유독
+                                </p>
+                                <iframe src="https://www.youtube.com/embed/XhMpaOLWWXQ?controls=0" title="이석구와 함께 유독할래요? 편"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
                                 <h3>[WHY NOT? 자유할인 편]</h3>
                                 <p>
                                     “유독 하고싶은 것 다 하는 사람 있어“ <br>
                                     조건 없이, 부담 없이 할수록 더 할인 받을 수 있다면? <br>
                                     이런 게 유플러스만의 WHY NOT!
                                 </p>
-                                <iframe src="https://www.youtube.com/embed/lhVcEIhND0M?controls=0"
-                                        title="자유할인 편"></iframe>
+                                <iframe src="https://www.youtube.com/embed/lhVcEIhND0M?controls=0" title="자유할인 편"></iframe>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -206,8 +216,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                                     가입할 때도, 해지할 때도 쉽고 편하게 관리할 수 있다면? <br>
                                     이런 게 유플러스만의 WHY NOT!
                                 </p>
-                                <iframe src="https://www.youtube.com/embed/4ZWmDljpgNY?controls=0"
-                                        title="편리 편"></iframe>
+                                <iframe src="https://www.youtube.com/embed/4ZWmDljpgNY?controls=0" title="편리 편"></iframe>
                             </div>
                         </div>
                     </div>

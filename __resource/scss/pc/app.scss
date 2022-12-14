@@ -316,7 +316,7 @@ section {
     background: #f6f6f6;
 
     .swiper-wrapper {
-        padding-left: 134px;
+        padding-left: 136px;
     }
 
     .swiper-slide {
@@ -350,7 +350,7 @@ section {
     .swiper-button-control {
         position: absolute;
         top: 366px;
-        left: calc(50% + 336px);
+        left: calc(50% + 337px);
         width: 159px;
         height: 68px;
         z-index: 9999;
@@ -405,6 +405,7 @@ section {
             top: 244px;
             left: 0;
             width: calc(50% - 225px);
+            height: 550px;
             padding-right: 50px;
             background: #f6f6f6;
             box-sizing: border-box;
