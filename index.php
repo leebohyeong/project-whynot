@@ -970,6 +970,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
         <div>
             <address>서울특별시 용산구 한강대로 32</address>
             <p>대표이사 : 황현식</p>
+            <p>고객센터 : 101(무료)</p>
         </div>
         <div>
             <p>사업자등록번호 : 220-81-39938</p>

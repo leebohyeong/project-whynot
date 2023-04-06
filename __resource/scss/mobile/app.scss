@@ -182,33 +182,41 @@ $pink: #e6007e;
             display: flex;
             align-items: center;
             padding-top: getSize(43px);
-
-            address {
-                &::after{
-                    display: inline-block;
-                    vertical-align: middle;
-                    width: 1px;
-                    height: 10px;
-                    margin: -2px getSize(15px) 0;
-                    background: #e0e0e0;
-                    content:'';
-                }
-            }
+            grid-column-gap: 10px;
         }
 
         div:nth-of-type(3) {
             padding-top: getSize(4px);
 
-            p:first-of-type {
-                &::after{
-                    display: inline-block;
-                    vertical-align: middle;
-                    width: 1px;
-                    height: 10px;
-                    margin: -2px getSize(15px) 0;
-                    background: #e0e0e0;
-                    content:'';
+            div {
+                grid-column-gap: 20px;
+
+                p:nth-of-type(n+2) {
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        left: -10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 1px;
+                        height: 10px;
+                        background: #e0e0e0;
+                        content:'';
+                    }
                 }
+            }
+
+            p:first-of-type {
+                //&::after{
+                //    display: inline-block;
+                //    vertical-align: middle;
+                //    width: 1px;
+                //    height: 10px;
+                //    margin: -2px getSize(15px) 0;
+                //    background: #e0e0e0;
+                //    content:'';
+                //}
             }
 
             a{
