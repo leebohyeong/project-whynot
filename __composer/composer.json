@@ -1,0 +1,16 @@
+{
+  	"config": {
+          "vendor-dir": "../vendor"
+    },
+  "require":{
+    "maximebf/debugbar": "1.*",
+    "phpoffice/phpspreadsheet": "^1.28"
+  },
+  "autoload": {
+    "psr-4": {
+      "Groupidd\\": "../src/Groupidd/"
+    },
+    "files": ["../src/config.php"]
+
+  }
+}

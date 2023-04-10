@@ -7,3 +7,10 @@ node_modules/
 backup/dest/assets/css/*
 backup/dest/assets/js/*
 backup/dest/**/*.html
+
+vendor/
+logs/
+composer.lock
+composer.phar
+property.php
+src/config.php
