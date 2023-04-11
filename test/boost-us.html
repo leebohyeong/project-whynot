@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 30px;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        [type="text"] {
+            width: 320px;
+            height: 28px;
+        }
+
+        textarea {
+            width: 320px;
+        }
+
+        select {
+            width: 320px;
+            height: 28px;
+        }
+
+        form > div > span {
+            width: 100px;
+        }
+
+        form > div div span + input {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<form method="post" action="/api/boost-us-proc.php">
+    <div>
+        <span>이름</span>
+        <input type="text" name="name">
+    </div>
+    <div>
+        <span>통신사</span>
+        <select name="comm_id">
+            <option value="SKM">SKM</option>
+            <option value="LGM">LGM</option>
+            <option value="KTM">KTM</option>
+        </select>
+    </div>
+    <div>
+        <span>휴대전화</span>
+        <input type="text" name="hphone">
+    </div>
+    <div>
+        <span>생년월일</span>
+        <input type="text" name="birthday">
+    </div>
+    <div>
+        <span>채널</span>
+        <div>
+            <input type="radio" name="channel" value="youtube">
+            <span>유튜브</span>
+            <input type="radio" name="channel" value="instagram">
+            <span>인스타</span>
+        </div>
+    </div>
+    <div>
+        <span>URL</span>
+        <input type="text" name="url">
+    </div>
+    <div>
+        <span>컨셉</span>
+        <textarea rows="5" name="concept"></textarea>
+    </div>
+    <div>
+        <span>지원동기</span>
+        <textarea rows="5" name="reason"></textarea>
+    </div>
+    <div>
+        <input type="hidden" name="agree1" value="Y" checked>
+        <input type="hidden" name="agree2" value="Y" checked>
+        <input type="hidden" name="agree1_ver" value="1.0">
+        <input type="hidden" name="agree2_ver" value="1.0">
+    </div>
+
+    <button type="submit">지원하기</button>
+</form>
+
+<script>
+    document.querySelector('[name="name"]').value = '가나다라마바사아자차카타파하'.split('').sort(() => Math.random() - 0.5).slice(0, 3).join('');
+    document.querySelector('[name="comm_id"]').selectedIndex = ~~(Math.random() * 3);
+    document.querySelector('[name="hphone"]').value = `010${(~~(Math.random() * 9999) + '').padEnd(4, '0')}${(~~(Math.random() * 9999) + '').padEnd(4, '0')}`;
+    document.querySelector('[name="birthday"]').value = `19${(~~(Math.random() * 100) + '').padEnd(2, '0')}${(~~(Math.random() * 12) + 1 + '').padStart(2, '0')}${(~~(Math.random() * 31) + 1 + '').padStart(2, '0')}`;
+    document.querySelectorAll('[name="channel"]')[~~(Math.random() * 2)].checked = true;
+    document.querySelector('[name="url"]').value = `${'abcdefghijklmnopqrstuvwxyz'.split('').sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 15) + 1).join('')}@${'abcdefghijklmnopqrstuvwxyz'.split('').sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 10) + 1).join('')}.com`;
+    document.querySelector('[name="concept"]').value = [...'가나다라마바사아자차카타파하abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ          '.split(''), '\n', '\n', '\n', '\n', '\n', '\n', '\n'].sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 50) + 10).join('');
+    document.querySelector('[name="reason"]').value = [...'가나다라마바사아자차카타파하abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ          '.split(''), '\n', '\n', '\n', '\n', '\n', '\n', '\n'].sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 50) + 10).join('');
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: form.method,
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                location.reload();
+            });
+    });
+</script>
+</body>
+</html>
