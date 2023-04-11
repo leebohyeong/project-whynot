@@ -36,13 +36,13 @@ global $SITE_NAME_;
 global $HOST_HTTP_, $HOST_SSL_, $HOST_HTTP_M_, $COOKIE_HOST_, $COOKIE_SECURE_;
 global $DB_HOST_, $DB_USER_, $DB_PASSWORD_, $DB_NAME_, $DB_ENCODING_;
 global $OG_KEYWORDS_, $OG_TITLE_, $OG_DESCRIPTION_, $OG_IMAGE_, $OG_URL_;
-global $OG_IMAGE_PARAM_;
 global $API_FACEBOOK_, $API_NAVER_, $API_KAKAO_;
 global $SNS_ID_, $SNS_TYPE_, $ADMIN_ID_, $ADMIN_NM_, $ADMIN_LV_, $USER_IP_;
 global $ROOT_PATH_, $PHP_SELF_, $REQUEST_URI_, $ARR_REQUEST_URI_, $QUERY_STRING_, $DATE_;
 global $ENCRYPT_KEY_;
 global $DEVICE_TYPE_, $MOBILE_DETECT_, $DEBUGBAR_;
 global $SCODE_, $TRAVEL_TYPE_;
+global $KCP_SITE_CODE_, $KCP_ENC_KEY_, $KCP_SITE_ID;
 
 
 // property setting
@@ -67,12 +67,15 @@ $OG_KEYWORDS_       = $setting->SITE['OG_KEYWORDS'];
 $OG_TITLE_          = $setting->SITE['OG_TITLE'];
 $OG_DESCRIPTION_    = $setting->SITE['OG_DESCRIPTION'];
 $OG_IMAGE_          = $HOST_HTTP_ . $setting->SITE['OG_IMAGE'];
-$OG_IMAGE_PARAM_    = $HOST_HTTP_ . $setting->SITE['OG_IMAGE_PARAM'];
 $OG_URL_            = $HOST_HTTP_;
 
 $API_FACEBOOK_      = $setting->API['API_FACEBOOK'];
 $API_NAVER_         = $setting->API['API_NAVER'];
 $API_KAKAO_         = $setting->API['API_KAKAO'];
+
+$KCP_SITE_CODE_     = $setting->KCP['KCP_SITE_CODE'];
+$KCP_ENC_KEY_       = $setting->KCP['KCP_ENC_KEY'];
+$KCP_SITE_ID_       = $setting->KCP['KCP_SITE_ID'];
 
 // $_SERVER['SERVER_ADDR']
 // basic path
@@ -100,7 +103,7 @@ $DATE_              = date('YmdH', time());
 
 
 // base class call ----------------------
-$DEBUGBAR_          = new Debugbar($ENVIRONMENT_);
+
 $MOBILE_DETECT_     = new Mobile_Detect;
 // base class call ----------------------
 
@@ -136,3 +139,5 @@ if ($DEVICE_TYPE_ == "W" && $ARR_REQUEST_URI_[0] == "m" ){      // 웹에서는 
 if ($ENVIRONMENT_ == 'development' && $ARR_REQUEST_URI_[0] == 'sitemanager'){
     //if ($USER_IP_ != '211.40.240.10' && $USER_IP_ != '211.40.240.2') exit();
 }
+
+//if ($USER_IP_ != '125.131.114.58') exit();
