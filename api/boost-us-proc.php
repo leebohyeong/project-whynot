@@ -30,6 +30,7 @@ $requestInfo = array(
     'name' => $_POST['name'] ?? '',
     'comm_id' => $_POST['comm_id'] ?? '',
     'hphone' => $_POST['hphone'] ?? '',
+    'birthday' => $_POST['birthday'] ?? '',
     'channel' => $_POST['channel'] ?? '',
     'url' => $_POST['url'] ?? '',
     'concept' => $_POST['concept'] ?? '',
