@@ -43,6 +43,7 @@ $requestInfo = array(
     'user_ip' => $USER_IP_                                                   // 사용자 아이피
 );
 
+/*
 $requestInfo['name']    = '김동임';
 $requestInfo['comm_id']    = 'KTF';     // SKT, LGT, KTF, 알뜰폰 : SKM, LGM, KTM
 $requestInfo['hphone']    = '01027897151';
@@ -54,8 +55,8 @@ $requestInfo['reason']    = '지원이유';
 $requestInfo['agree1']    = 'Y';
 $requestInfo['agree1_ver']    = '1.0';
 $requestInfo['agree2']    = 'Y';
-$requestInfo['agree1_ver']    = '2.0';
-
+$requestInfo['agree1_ver']    = '1.0';
+*/
 
 $validator = new Validator($requestInfo);
 $validator->rule('required', 'name')->message('이름 정보가 올바르지 않습니다.');
@@ -89,6 +90,8 @@ $db = new ModelBase();
 $db->beginTransaction();
 $db->from("BOOSTUS_APPLY");
 if ($db->insert($requestInfo)) {
+    $db->executeTransaction();
+
     $event_seq = $db->lastInsertId();
 
     $response['result'] = true;
