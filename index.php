@@ -757,7 +757,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             </div>
             <div class="modal-boost-us__content2">
                 <form name="form_auth" method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form">
-                    <input type="hidden" name="ordr_idxx" class="frminput" value=""/>
+                    <input type="hidden" name="ordr_idxx" value=""/>
                     <input type="hidden" name="enc_cert_data2"  value=""/>
                     <input type="hidden" name="cert_no" id="cert_no" value="23732000946920"/><!-- 지워야할 값 -->
                     <input type="hidden" name="dn_hash" value=""/>
@@ -790,7 +790,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
                     <!-- web_siteid 을 위한 필드 -->
                     <input type="hidden" name="web_siteid_hashYN" value="Y"/>
-                    <input type="hidden" name="birthday" value="810412"><!-- 지워야할 값 -->
+                    <input type="hidden" name="birthday" value="19810412"><!-- 지워야할 값 -->
 
 
 
