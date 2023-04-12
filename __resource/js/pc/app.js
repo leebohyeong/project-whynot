@@ -191,6 +191,8 @@ const app = () => {
 
             const formData = new FormData(form);
             const youtube = findOne('#youtube', form);
+            const cert_no = findOne('#cert_no', form);
+            const hphone = findOne('#hphone', form);
             const instagram = findOne('#instagram', form);
             const url = findOne('.modal-boost-us__url input', form);
             let regex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
@@ -202,6 +204,11 @@ const app = () => {
             // const precautionsDisagree = findOne('#disagree2');
 
             // console.log(regex.test(url.value));
+
+            if(cert_no.value == "" || hphone.value == "") {
+                alert('본인인증을 진행해 주세요.');
+                return false;
+            };
 
             if(!youtube.checked && !instagram.checked) {
                 alert('활동채널을 체크해 주세요.');
@@ -251,8 +258,12 @@ const app = () => {
             })
                 .then(response => response.json())
                 .then(data => {
-                    alert(data.message);
-                    location.reload();
+                    if (data.result == false){
+                        alert(data.message);
+                    }else{
+                        alert(data.message);
+                        location.reload();
+                    }
                 });
         });
 

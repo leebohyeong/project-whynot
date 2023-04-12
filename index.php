@@ -759,8 +759,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <form name="form_auth" method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form">
                     <input type="hidden" name="ordr_idxx" class="frminput" value=""/>
                     <input type="hidden" name="enc_cert_data2"  value=""/>
-                    <input type="hidden" name="cert_no"  value=""/>
-                    <input type="hidden" name="dn_hash"  value=""/>
+                    <input type="hidden" name="cert_no" id="cert_no" value="23732000946920"/><!-- 지워야할 값 -->
+                    <input type="hidden" name="dn_hash" value=""/>
                     <!-- 요청종류 -->
                     <input type="hidden" name="req_tx"       value="cert"/>
                     <!-- 요청구분 -->
@@ -790,7 +790,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
                     <!-- web_siteid 을 위한 필드 -->
                     <input type="hidden" name="web_siteid_hashYN" value="Y"/>
-                    <input type="hidden" name="birthday" value="19810412"><!-- 지워야할 값 -->
+                    <input type="hidden" name="birthday" value="810412"><!-- 지워야할 값 -->
 
 
 
@@ -803,9 +803,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <span>휴대전화</span>
                         <div>
                             <input type="hidden" name="comm_id" value="KTF"><!-- 지워야할 값 -->
-                            <input type="text" name="hphone" readonly value="01012345678"><!-- 지워야할 값 -->
+                            <input type="text" name="hphone" id="hphone" readonly value="01012345678"><!-- 지워야할 값 -->
                             <button type="button" onclick="return auth_type_check();">인증하기</button>
-<!--                            <button onclick="return auth_type_check();" width="108" height="37" alt="본인인증">본인인증</button>-->
+<!--                            <button type="submit" onclick="return auth_type_check();" width="108" height="37" alt="본인인증">본인인증</button>-->
                         </div>
                     </div>
                     <div class="modal-boost-us__box modal-boost-us__channel">
@@ -946,7 +946,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             <input type="hidden" name="agree2_ver" value="1.0">
                         </div>
                     </div>
-                    <button type="submit">지원하기</button>
+<!--                    <button type="submit">지원하기</button>-->
                 </form>
             </div>
             <div class="modal__close modal-boost-us__close">
