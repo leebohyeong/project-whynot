@@ -757,7 +757,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             </div>
             <div class="modal-boost-us__content2">
                 <form name="form_auth" method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form">
-                    <input type="hidden" name="ordr_idxx" class="frminput" value="" size="40" readonly="readonly" maxlength="40"/>
+                    <input type="hidden" name="ordr_idxx" class="frminput" value=""/>
                     <input type="hidden" name="enc_cert_data2"  value=""/>
                     <input type="hidden" name="cert_no"  value=""/>
                     <input type="hidden" name="dn_hash"  value=""/>
@@ -767,10 +767,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <input type="hidden" name="cert_method"  value="01"/>
                     <!-- 웹사이트아이디 : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
                     <input type="hidden" name="web_siteid"   value="<?= $g_conf_web_siteid ?>"/>
-                    <!-- 노출 통신사 default 처리시 아래의 주석을 해제하고 사용하십시요
-                         SKT : SKT , KT : KTF , LGU+ : LGT
-                    <input type="hidden" name="fix_commid"      value="KTF"/>
-                    -->
+
                     <!-- 사이트코드 : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
                     <input type="hidden" name="site_cd"      value="<?= $g_conf_site_cd ?>" />
                     <!-- Ret_URL : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
@@ -793,20 +790,20 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
                     <!-- web_siteid 을 위한 필드 -->
                     <input type="hidden" name="web_siteid_hashYN" value="Y"/>
-                    <input type="hidden" name="birthday">
+                    <input type="hidden" name="birthday" value="19810412"><!-- 지워야할 값 -->
 
 
 
 
                     <div class="modal-boost-us__box modal-boost-us__name">
                         <span>이름</span>
-                        <input type="text" name="name" readonly>
+                        <input type="text" name="name" readonly value="홍길동"><!-- 지워야할 값 -->
                     </div>
                     <div class="modal-boost-us__box">
                         <span>휴대전화</span>
                         <div>
-                            <input type="hidden" name="comm_id">
-                            <input type="text" name="hphone" readonly>
+                            <input type="hidden" name="comm_id" value="KTF"><!-- 지워야할 값 -->
+                            <input type="text" name="hphone" readonly value="01012345678"><!-- 지워야할 값 -->
                             <button type="button" onclick="return auth_type_check();">인증하기</button>
 <!--                            <button onclick="return auth_type_check();" width="108" height="37" alt="본인인증">본인인증</button>-->
                         </div>
