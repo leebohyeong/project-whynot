@@ -58,6 +58,7 @@ header('Content-Type:text/html; charset=UTF-8');
     $cert_able_yn  = "";
     $web_siteid    = "";
     $web_siteid_hashYN    = "";
+    $sbParam        = "";
 
     $up_hash       = "";
 	/*------------------------------------------------------------------------*/
