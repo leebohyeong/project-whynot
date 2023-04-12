@@ -642,7 +642,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                             <button type="button">인증하기</button>
                         </div>
                     </div>
-                    <div class="modal-boost-us__box">
+                    <div class="modal-boost-us__box modal-boost-us__channel">
                         <span>활동채널</span>
                         <div>
                             <label for="youtube">
@@ -660,11 +660,11 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                         <span>URL</span>
                         <input type="text" name="url">
                     </div>
-                    <div class="modal-boost-us__box">
+                    <div class="modal-boost-us__box modal-boost-us__concept">
                         <span>채널컨셉</span>
                         <textarea rows="5" name="concept" placeholder="최대 30자 이내" maxlength="30"></textarea>
                     </div>
-                    <div class="modal-boost-us__box">
+                    <div class="modal-boost-us__box modal-boost-us__reason">
                         <span>지원동기</span>
                         <textarea rows="5" name="reason" placeholder="최대 50자 이내" maxlength="50"></textarea>
                     </div>

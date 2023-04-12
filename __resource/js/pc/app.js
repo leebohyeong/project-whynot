@@ -190,16 +190,70 @@ const app = () => {
             event.preventDefault();
 
             const formData = new FormData(form);
+            const youtube = findOne('#youtube', form);
+            const instagram = findOne('#instagram', form);
+            const url = findOne('.modal-boost-us__url input', form);
+            let regex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+            const concept = findOne('.modal-boost-us__concept textarea', form);
+            const reason = findOne('.modal-boost-us__reason textarea', form);
+            const informationAgree = findOne('#agree1');
+            // const informationDisagree = findOne('#disagree1');
+            const precautionsAgree = findOne('#agree2');
+            // const precautionsDisagree = findOne('#disagree2');
+
+            // console.log(regex.test(url.value));
+
+            if(!youtube.checked && !instagram.checked) {
+                alert('활동채널을 체크해 주세요.');
+                youtube.focus();
+                return false;
+            }
+
+            if(url.value == "") {
+                alert('url을 입력해 주세요.');
+                url.focus();
+                return false;
+            };
+
+            if(!regex.test(url.value)) {
+                alert('url을 정확히 입력해 주세요.');
+                url.focus();
+                return false;
+            };
+
+            if(concept.value == "") {
+                alert('채널컨셉을 입력해 주세요.');
+                concept.focus();
+                return false;
+            };
+
+            if(reason.value == "") {
+                alert('지원동기를 입력해 주세요.');
+                reason.focus();
+                return false;
+            };
+
+            if(!informationAgree.checked) {
+                alert('개인정보 수집 및 활용 동의를 체크해 주세요.');
+                informationAgree.focus();
+                return false;
+            }
+
+            if(!precautionsAgree.checked) {
+                alert('지원/참여자 유의사항을 체크해 주세요.');
+                informationAgree.focus();
+                return false;
+            }
 
             fetch(form.action, {
                 method: form.method,
                 body: formData
             })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.message);
-                location.reload();
-            });
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    location.reload();
+                });
         });
 
     })();
