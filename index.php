@@ -804,7 +804,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <div>
                             <input type="hidden" name="comm_id" value="KTF"><!-- 지워야할 값 -->
                             <input type="text" name="hphone" id="hphone" readonly value="01012345678"><!-- 지워야할 값 -->
-                            <button type="button" onclick="return auth_type_check();">인증하기</button>
+                            <button onclick="return auth_type_check();">인증하기</button>
+<!--                            <button type="button" onclick="return auth_type_check();">인증하기</button>-->
 <!--                            <button type="submit" onclick="return auth_type_check();" width="108" height="37" alt="본인인증">본인인증</button>-->
                         </div>
                     </div>
@@ -946,7 +947,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             <input type="hidden" name="agree2_ver" value="1.0">
                         </div>
                     </div>
-<!--                    <button type="submit">지원하기</button>-->
+                    <button type="submit">지원하기</button>
                 </form>
             </div>
             <div class="modal__close modal-boost-us__close">
