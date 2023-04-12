@@ -146,7 +146,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     auth_form.target = "auth_popup";
                 }
 
-                auth_form.action = "/kcp/proc_req.php"; // 인증창 호출 및 결과값 리턴 페이지 주소
+                auth_form.action = "/kcp/SMART_ENC/proc_req.php"; // 인증창 호출 및 결과값 리턴 페이지 주소
 
                 return true;
             }
