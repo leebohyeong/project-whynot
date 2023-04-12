@@ -67,6 +67,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
             <ul>
                 <li><a class="header__link header__link--active" href="#why-not" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT?'})">WHY NOT?</a></li>
                 <li><a class="header__link" href="#brand-film" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'Brand Flim'})">BRAND FILM</a></li>
+                <li><a class="header__link" href="#boost-us" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'BOOST US'})">BOOST US</a></li>
                 <li><a class="header__link" href="#experience" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'EXPERIENCE'})">EXPERIENCE</a></li>
                 <li><a class="header__link" href="#road" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'ROAD'})">ROAD</a></li>
                 <li><a class="header__link" href="#contents" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CONTENTS'})">CONTENTS</a></li>
@@ -91,11 +92,11 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
             </p>
         </div>
         <div class="why-not__text why-not__text02">
-            <p data-aos="fade-left" data-aos-delay="300">
-                선 넘는 즐거움 <br>
-                이런 게 유플러스만의
-            <div data-aos="fade-left" data-aos-delay="500" style="background-image: url('/assets/images/img_why_not.png')"></div>
-            </p>
+<!--            <p data-aos="fade-left" data-aos-delay="300">-->
+<!--                선 넘는 즐거움 <br>-->
+<!--                이런 게 유플러스만의-->
+<!--            </p>-->
+            <div data-aos="fade-left" data-aos-delay="300" style="background-image: url('/assets/images/img_why_not.png')"></div>
         </div>
     </div>
 </section>
@@ -242,6 +243,125 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
         </div>
     </div>
 </section>
+<section class="boost-us" id="boost-us">
+    <span data-aos="contents-line"></span>
+    <span data-aos="contents-line"></span>
+    <header>
+        <h2 data-aos="fade-up">
+            <div class="section-logo section-logo--black">
+                <span>why not</span>
+            </div>
+            BOOST US
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="100">크리에이터와 함께 도전하는 100일간의 부스트 프로젝트</p>
+    </header>
+    <div class="boost-us__video">
+        <iframe src="https://www.youtube.com/embed/lxN-pHTiKnA?controls=0"></iframe>
+    </div>
+    <div class="tab">
+        <ul class="tab__nav" role="tablist">
+            <li class="tab__item">
+                <button class="tab__menu" type="button" id="tab-boost-us-1" role="tab"
+                        aria-controls="tab-panel-boost-us-1" onclick="gtag('event','WHY NOT BOOST US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 소개'})">부스터스 소개
+                </button>
+            </li>
+            <li class="tab__item">
+                <button class="tab__menu" type="button" id="tab-boost-us-2" role="tab"
+                        aria-controls="tab-panel-boost-us-2" onclick="gtag('event','WHY NOT BOOST US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 프로그램'})">부스터스 프로그램
+                </button>
+            </li>
+            <li class="tab__item">
+                <button class="tab__menu" type="button" id="tab-boost-us-3" role="tab"
+                        aria-controls="tab-panel-boost-us-3" onclick="gtag('event','WHY NOT BOOST US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 혜택'})">부스터스 혜택
+                </button>
+            </li>
+        </ul>
+        <div class="tab__content">
+            <div class="tab__panel" id="tab-panel-boost-us-1" role="tabpanel">
+                <h2>준비는 끝났다. 이제는 올라갈 타이밍!</h2>
+                <div class="textbox">
+                    <div>
+                        <p>
+                            크리에이터를 위한 크리에이터에 의한 <br>
+                            파워 크리에이터가 될 수 있는 100일간의 도전 프로젝트
+
+                        </p>
+                        <p>WHY NOT 부스터스 지금 절판 모집 중!</p>
+                        <p>
+                            <strong>
+                                모집 기간 : 4월 17일(월) ~ 4월 25일(화) <br>
+                                선발 인원 : 120명 <br>
+                                발표 일정 : 4월 28일(금) 와이낫 홈페이지 발표
+                            </strong>
+                        </p>
+                        <p>* 선정자에 한해서 개별 연락 예정</p>
+                        <p><a href="#boost-us-v1" class="boost-us__inquiry">지원문의</a></p>
+                    </div>
+                    <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank">지원하기</a></p>
+                    <!--                    <p><a href="https://udokgallery.lguplus.com" target="_blank" onclick="gtag('event','WHY NOT BOOST US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 지원하기'})">지원하기</a></p>-->
+                </div>
+            </div>
+            <div class="tab__panel" id="tab-panel-boost-us-2" role="tabpanel">
+                <div class="boost-us__list-wrap">
+                    <ul class="boost-us__list">
+                        <li class="boost-us__item">
+                            <p class="boost-us__link">
+                                크리에이터 <br>
+                                진용진의 멘토링
+                            </p>
+                        </li>
+                        <li class="boost-us__item">
+                            <p class="boost-us__link">
+                                META 파트너십 <br>
+                                강의 프로그램
+                            </p>
+                        </li>
+                        <li class="boost-us__item">
+                            <p class="boost-us__link">
+                                100일 동안 <br>
+                                5번의 미션 수행
+                            </p>
+                        </li>
+                        <li class="boost-us__item">
+                            <p class="boost-us__link">
+                                시상식 및 <br>
+                                네트워크 파티
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab__panel" id="tab-panel-boost-us-3" role="tabpanel">
+                <ul class="boost-us__list">
+                    <li class="boost-us__item">
+                        <p class="boost-us__link">
+                            <strong>활동지원금 총 100만원</strong>
+                            1인 당, 미션완수 기준
+                        </p>
+                    </li>
+                    <li class="boost-us__item">
+                        <p class="boost-us__link">
+                            <strong>부스터스 활동 PACK</strong>
+                            음원 플랫폼 & 유독서비스 지원
+                        </p>
+                    </li>
+                    <li class="boost-us__item">
+                        <p class="boost-us__link">
+                            <strong>총 상금 1,500만원</strong>
+                            우수참여자 대상
+                        </p>
+                    </li>
+                    <li class="boost-us__item">
+                        <p class="boost-us__link">
+                            <strong>전속 계약 혜택</strong>
+                            유플러스 광고 및 메타 파트너십 등
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="experience" id="experience">
     <header>
         <h2 data-aos="fade-up">
@@ -332,22 +452,22 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
         <ul class="tab__nav" role="tablist">
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-contents-1" role="tab"
-                        aria-controls="tab-panel-contents-1" aria-selected="true" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보'})">유독 Behind 화보
+                        aria-controls="tab-panel-contents-1" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '브랜드 화보'})">브랜드 화보
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-contents-2" role="tab"
-                        aria-controls="tab-panel-contents-2" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '브랜드 화보'})">브랜드 화보
+                        aria-controls="tab-panel-contents-2" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫크루'})">와이낫크루
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-contents-3" role="tab"
-                        aria-controls="tab-panel-contents-3" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫크루'})">와이낫크루
+                        aria-controls="tab-panel-contents-3" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫송'})">와이낫송
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-contents-4" role="tab"
-                        aria-controls="tab-panel-contents-4" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫송'})">와이낫송
+                        aria-controls="tab-panel-contents-4" aria-selected="true" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보'})">유독 Behind 화보
                 </button>
             </li>
             <li class="tab__item">
@@ -362,21 +482,14 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
             </li>
         </ul>
         <div class="tab__content">
-            <div class="tab__panel" id="tab-panel-contents-1" role="tabpanel" aria-labelledby="tab--contents-1">
-                <div class="textbox">
-                    <p>유독 ~ 끌리는 <br>유플러스 모델 손석구의 Behind 화보 대공개</p>
-                    <h3>유독 Behind 화보</h3>
-                    <p><a href="https://udokgallery.lguplus.com" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보_화보 보러가기'})">화보 보러가기</a></p>
-                </div>
-            </div>
-            <div class="tab__panel" id="tab-panel-contents-2" role="tabpanel" aria-labelledby="tab--contents-2">
+            <div class="tab__panel" id="tab-panel-contents-1" role="tabpanel">
                 <div class="textbox">
                     <p>뻔하지 않은 생각으로 일상의 즐거움을 만들어가는 <br> 사람들의 STORY <strong>WHY NOT 브랜드화보 !</strong></p>
                     <h3>브랜드 화보</h3>
                     <p><a href="https://www.instagram.com/magazine_whynot" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '브랜드 화보_화보 보러가기'})">화보 보러가기</a></p>
                 </div>
             </div>
-            <div class="tab__panel" id="tab-panel-contents-3" role="tabpanel" aria-labelledby="tab--contents-3">
+            <div class="tab__panel" id="tab-panel-contents-2" role="tabpanel">
                 <div class="textbox">
                     <p>대한민국 숨겨진 명소를 찾아 <br> 선넘는 즐거움을 제시하다!</p>
                     <h3>와이낫크루</h3>
@@ -385,14 +498,21 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                             보러가기</a></p>
                 </div>
             </div>
-            <div class="tab__panel" id="tab-panel-contents-4" role="tabpanel" aria-labelledby="tab--contents-4">
+            <div class="tab__panel" id="tab-panel-contents-3" role="tabpanel">
                 <div class="textbox">
                     <p>선 넘는 도전을 응원하는 <br> 본업천재 와이낫크루의 HOT한 신곡!</p>
                     <h3>와이낫송</h3>
                     <p><a href="https://youtu.be/CXLuNiVMNlc" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫송_영상 보러가기'})">영상 보러가기</a></p>
                 </div>
             </div>
-            <div class="tab__panel" id="tab-panel-contents-5" role="tabpanel" aria-labelledby="tab--contents-5">
+            <div class="tab__panel" id="tab-panel-contents-4" role="tabpanel">
+                <div class="textbox">
+                    <p>유독 ~ 끌리는 <br>유플러스 모델 손석구의 Behind 화보 대공개</p>
+                    <h3>유독 Behind 화보</h3>
+                    <p><a href="https://udokgallery.lguplus.com" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보_화보 보러가기'})">화보 보러가기</a></p>
+                </div>
+            </div>
+            <div class="tab__panel" id="tab-panel-contents-5" role="tabpanel">
                 <div class="textbox">
                     <p>유플러스 고객들의 <br> 솔직한 찐소리를 찾아서!</p>
                     <h3>캐치유</h3>
@@ -401,7 +521,7 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
                             보러가기</a></p>
                 </div>
             </div>
-            <div class="tab__panel" id="tab-panel-contents-6" role="tabpanel" aria-labelledby="tab--contents-6">
+            <div class="tab__panel" id="tab-panel-contents-6" role="tabpanel">
                 <div class="textbox">
                     <p>나의 도전이 세상이 자산이 되는</p>
                     <h3>도전은행</h3>
@@ -465,6 +585,209 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
             </a>
         </li>
     </ul>
+</section>
+<section class="modal modal-boost-us" id="boost-us-v1">
+    <div class="modal__backdrop"></div>
+    <div class="modal__dialog modal-boost-us__dialog">
+        <div class="modal__container modal-boost-us__container">
+            <div class="modal-boost-us__title">
+                <h2>
+                    문의처 | Boost-us@freebr.co.kr
+                </h2>
+            </div>
+            <div class="modal-boost-us__content">
+                <p>
+                    위 메일로 문의 시 문의사항 확인 및 답변을 위해 문의주신 이메일 주소가 <br>
+                    개인정보로 수집됩니다.
+                </p>
+                <ul>
+                    <li>
+                        수집 항목 : 이메일 주소 (문의를 위한 개인정보 요청 및 수집 동의 요청이 <br>
+                        있기 전까지는 개인정보 노출되지 않도록 주의하여 주십시오.)
+                    </li>
+                    <li>수집 · 이용 목적 : 문의 내용 처리, 상담 결과 통보 등</li>
+                    <li>보유, 이용 기간 : 3년 (소비자 불만 또는 분쟁 처리에 관한 기록 관련법 의거)</li>
+                    <li>
+                        고객은 동의를 거부할 권리가 있으며, 추후 문의를 위한 개인정보 수집에 <br>
+                        동의하지 않을 경우 문의 업무가 제한될 수 있습니다.
+                    </li>
+                </ul>
+            </div>
+            <div class="modal__close modal-boost-us__close">
+                <button class="modal__close-button" type="button"><span class="modal__close-text">닫기</span></button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="modal modal-boost-us" id="boost-us-v2">
+    <div class="modal__backdrop"></div>
+    <div class="modal__dialog">
+        <div class="modal__container modal-boost-us__container">
+            <div class="modal-boost-us__title">
+                <h2>
+                    와이낫 부스터스 지원하기
+                </h2>
+            </div>
+            <div class="modal-boost-us__content2">
+                <form method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form">
+                    <div class="modal-boost-us__box modal-boost-us__name">
+                        <span>이름</span>
+                        <input type="text" name="name" readonly>
+                    </div>
+                    <div class="modal-boost-us__box">
+                        <span>휴대전화</span>
+                        <div>
+                            <input type="hidden" name="comm_id">
+                            <input type="text" name="hphone" readonly>
+                            <button type="button">인증하기</button>
+                        </div>
+                    </div>
+                    <div class="modal-boost-us__box">
+                        <span>활동채널</span>
+                        <div>
+                            <label for="youtube">
+                                <input type="radio" name="channel" value="youtube" id="youtube">
+                                <span>유튜브</span>
+                            </label>
+                            <label for="instagram">
+                                <input type="radio" name="channel" value="instagram" id="instagram">
+                                <span>인스타</span>
+                            </label>
+                            <p class="modal-boost-us__form-text">(구독자/팔로워 500명 이상이면 누구나 지원 가능)</p>
+                        </div>
+                    </div>
+                    <div class="modal-boost-us__box modal-boost-us__url">
+                        <span>URL</span>
+                        <input type="text" name="url">
+                    </div>
+                    <div class="modal-boost-us__box">
+                        <span>채널컨셉</span>
+                        <textarea rows="5" name="concept" placeholder="최대 30자 이내" maxlength="30"></textarea>
+                    </div>
+                    <div class="modal-boost-us__box">
+                        <span>지원동기</span>
+                        <textarea rows="5" name="reason" placeholder="최대 50자 이내" maxlength="50"></textarea>
+                    </div>
+                    <div class="modal-boost-us__information">
+                        <p>개인정보 수집 및 할용 동의</p>
+                        <section>
+                            <div>
+                                <p><strong>개인정보 수집 이용 동의</strong></p>
+                                <table class="table">
+                                    <colgroup>
+                                        <col width="33.333333%">
+                                        <col width="33.333333%">
+                                        <col width="33.333333%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>목적</th>
+                                            <th>항목</th>
+                                            <th>보유기간</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>부스터스 모집 및 선발을 위한 본인 확인과 지원내역 확인</td>
+                                            <td>이름, 전화번호, 생년월일, SNS계정, 사이트 내 고객 행태정보</td>
+                                            <td>개인정보 수집일로부터 4개월까지 보유 후 파기</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>※ 개인정보 수집 시 필수 항목의 수집·이용에 대한 동의를 거부하실 수 있으며, 다만 동의를 거부하실 경우 서비스 이용이 제한될 수 있습니다. 선택 항목의 수집·이용 동의를 거부하실 경우에는 서비스 이용은 제한되지 않습니다.</p>
+                                <p>※ 사이트 이용과정이나 모집 신청과정에서 Google Analytics를 통해 아래와 같은 정보들이 자동으로 생성되어 수집될 수 있습니다. 사용 목적은 이용자가 방문한 웹페이지에 대한 방문 이용행태, 보안접속 여부 등을 파악하기 위함입니다.</p>
+                                <p>- 방문기록, 쿠키, 이용자의 브라우저 종류 및 OS</p>
+                                <p>※ 14세 미만 고객의 경우 지원이 불가능하며, 이 때 지원창에 입력한 14세 미만 고객의 개인정보는 수집되지 않습니다. </p>
+                            </div>
+                            <div>
+                                <p><strong>개인정보 처리 위탁 고지</strong></p>
+                                <p>※ 필수 위탁 고지</p>
+                                <p>: ㈜엘지유플러스는 개인정보 취급업무 중 서비스 제공에 필요한 필수적 업무를 아래와 같이 외부 전문업체에 위탁하여 운영하고 있습니다.</p>
+                                <table class="table">
+                                    <colgroup>
+                                        <col width="33.333333%">
+                                        <col width="33.333333%">
+                                        <col width="33.333333%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>수탁업체</th>
+                                            <th>수탁 업무 내용</th>
+                                            <th>개인정보 보유 및 이용시간</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>㈜에이치에스애드</td>
+                                            <td>부스터스와 관련된 업무</td>
+                                            <td rowspan="3">목적달성 완료 혹은 개인정보 수집일로부터 4개월까지 보유 후 파기</td>
+                                        </tr>
+                                        <tr>
+                                            <td>㈜프리비알</td>
+                                            <td>부스터스 모집 및 활동 관련 안내</td>
+                                        </tr>
+                                        <tr>
+                                            <td>㈜그룹아이디디</td>
+                                            <td>부스터스 사이트 개발 및 운영</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <div>
+                            <p>※ 비동의시 지원 불가</p>
+                            <label for="agree1">
+                                <input type="radio" name="agree1" value="Y" id="agree1">
+                                <span>동의</span>
+                            </label>
+                            <label for="disagree1">
+                                <input type="radio" name="agree1" value="N" id="disagree1">
+                                <span>비동의</span>
+                            </label>
+                        </div>
+                        <input type="hidden" name="agree1_ver" value="1.0">
+                    </div>
+                    <div class="modal-boost-us__precautions">
+                        <p>지원/참여자 유의사항</p>
+                        <section>
+                            <p style="padding-bottom: 15px;">
+                                <strong>※부스터스에 지원하기 전 꼭 확인해주세요</strong>
+                            </p>
+                            <p>- ㈜엘지유플러스 사정에 따라 제공 내역은 미리 알리지 않고 내용이 변경되거나 취소될 수 있습니다</p>
+                            <p>- 비정상적이거나 불법적인 방법으로 참여하신 경우 부스터스 선정이 취소될 수 있습니다.</p>
+                            <p>- 부스터스 선정 발표는 홈페이지를 통해 발표하며, 선정되신 분들에 한해서 개별적으로 연락 드립니다 </p>
+                            <p>- 활동 지원금은 미션 완료 시마다 20만원씩 5회 지급합니다.</p>
+                            <p>- 5만원 초과 경품에 발생하는 제세공과금(22%)는 ㈜엘지유플러스에서 부담합니다. </p>
+                            <p>- 휴대폰 번호를 잘못 입력했거나 스팸 등록되어 문자메시지를 확인하지 못하는 경우, 또는 고객님의 개인 사정으로 문자메시지를 확인하지 못하는 경우 선정이 취소될 수 있으며, 결과에 대해 ㈜엘지유플러스가 책임지지 않습니다.</p>
+                            <p>- 선발되신 분들에 한 해 부스터스 혜택에 대하여 개별 안내 드릴 예정입니다</p>
+                            <p>- 미션 확인 및 멘토링 프로그램 참여를 위해 부스터스 공식 카페에 의무 가입하여만 합니다 </p>
+                            <p>- 구독자(팔로워) 1,000명 미만인 경우, 우수활동자로 선발 시 제공되는 메타 파트너십 혜택 제한이 있을 수 있습니다.</p>
+                            <p>- 부스터스 미션 콘텐츠는 업로드 기간으로부터 1년 동안 공개상태로 유지되어야 하며, 중도 삭제/수정이 있을 경우 유플러스는 원복을 요청할 수 있습니다.</p>
+                            <p> - 본 프로젝트의 당첨 발표 및 안내 목적으로 개인정보가 활용될 수 있으며, 종료된 후 모든 정보는 폐기됩니다. </p>
+                            <p>- ㈜엘지유플러스는 부스터스 콘텐츠를 마케팅 목적으로 활용할 수 있으며, 2차 활용을 위한 편집 및 수정 시 개별 안내될 예정입니다</p>
+                            <p>- 자세한 내용은 boost-us@freebr.co.kr 으로 문의주시기 바랍니다</p>
+                        </section>
+                        <div>
+                            <p>※ 비동의시 지원 불가</p>
+                            <label for="agree2">
+                                <input type="radio" name="agree2" value="Y" id="agree2">
+                                <span>동의</span>
+                            </label>
+                            <label for="disagree2">
+                                <input type="radio" name="agree2" value="N" id="disagree2">
+                                <span>비동의</span>
+                            </label>
+                            <input type="hidden" name="agree2_ver" value="1.0">
+                        </div>
+                    </div>
+                    <button type="submit">지원하기</button>
+                </form>
+            </div>
+            <div class="modal__close modal-boost-us__close">
+                <button class="modal__close-button" type="button"><span class="modal__close-text">닫기</span></button>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="modal modal-road" id="road-v1">
     <div class="modal__backdrop"></div>
@@ -963,11 +1286,289 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
         </div>
     </div>
 </section>
+<section class="modal modal-footer-privacy" id="privacy-modal">
+    <div class="modal__backdrop"></div>
+    <div class="modal__dialog">
+        <div class="modal__container modal-footer-privacy__container">
+            <div class="modal-footer-privacy__title">
+                <h2>
+                    개인정보 처리 방침
+                </h2>
+            </div>
+            <div class="modal-footer-privacy__content">
+                <section>
+                    <div>
+                        <p>㈜엘지유플러스 와이낫 웹사이트(https://whynot.lguplus.com/, 이하 “회사”)는 이용자의 개인 정보를 보호하기 위하여 「정보통신망 이용 촉진 및 정보보호 등에 관한 법률」 및 「개인정보보호법」 등 관련 법령상의 개인정보 보호 규정을 준수하고 있으며 다음과 같은 개인정보 처리 방침을 가지고 있습니다.</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>회사는 개인정보 처리방침을 통하여 이용자의 개인정보가 어떠한 목적과 방식으로 수집, 이용되고 있으며, 이용자의 개인정보 보호를 위해 회사가 어떠한 조치를 취하고 있는지 알려드립니다.</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>본 개인정보 처리 방침은 관련 법의 개정이나 회사의 정책에 따라 변경될 수 있으며, 회사는 웹사이트를 통하여 이를 알려드리오니, 웹사이트 이용 시에 수시로 확인하여 주시기 바랍니다.</p>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>1. 처리하는 개인정보의 항목</strong>
+                        </p>
+                        <p>회사는 웹사이트에서 운영되는 이벤트 참여 시 이용자로부터 개인정보를 수집하고 있습니다.</p>
+                        <p>1.수집항목</p>
+                        <p>와이낫 부스터스 캠페인 참여자 모집 이벤트</p>
+                        <table class="table">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="50%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>상세내용</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>필수항목</td>
+                                <td>이름, 휴대전화 번호, SNS계정</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>2.개인정보 수집 시 필수 항목의 수집·이용에 대한 동의를 거부하실 수 있으며, 다만 동의를 거부하실 경우 서비스 이용이 제한될 수 있습니다. 선택 항목의 수집·이용 동의를 거부하실 경우에는 서비스 이용은 제한되지 않습니다.</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>3.수집방법</p>
+                        <p>- 웹사이트에서 운영되는 이벤트 참여를 통한 수집</p>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>2. 개인정보의 처리 목적</strong>
+                        </p>
+                        <p>회사는 수집한 개인정보를 이벤트 참여 목적을 위해 활용합니다.</p>
+                        <table class="table">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="50%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>목적</th>
+                                <th>상세내용</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>와이낫 부스터스 캠페인</td>
+                                <td>
+                                    본인 확인, 선발결과 고지, <br>
+                                    선발 후 활동안내
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>3. 개인정보의 보유 및 이용 기간</strong>
+                        </p>
+                        <p>회사는 원칙적으로 수집한 개인정보를 이벤트 종료일로부터 3개월까지 보유 및 이용하며 동의 받은 보유 기간이 도래하면 해당 정보를 지체 없이 파기합니다.</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>다만 상법, 국세기본법, 전자상거래 등에서의 소비자 보호에 관한 법률 등 관련 법령의 규정에 의하여 다음과 같이 거래 관련 권리 의무 관계의 확인 등을 이유로 일정기간 보유하여야 할 필요가 있을 경우에는 일정기간 보유합니다. 이 경우 회사는 보관하는 개인정보를 그 보관의 목적으로만 이용하며 보존 기간 및 보존 항목은 아래와 같습니다.</p>
+                        <p>
+                            <br>
+                        </p>
+                        <div>
+                            <p>- 계약 또는 청약철회 등에 관한 기록 : 5 년(전자상거래 등에서의 소비자보호에 관한 법률)</p>
+                            <p>- 대금 결제 및 재화 등의 공급에 관한 기록 : 5년(전자상거래 등에서의 소비자보호에 관한 법률)</p>
+                            <p>- 소비자 불만 또는 분쟁 처리에 관한 기록 : 3년(전자상거래 등에서의 소비자보호에 관한 법률)</p>
+                            <p>- 납세 증거에 관한 기록 : 5년(국세 기본법)</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>4. 개인정보 파기에 관한 사항</strong>
+                        </p>
+                        <p>1. 파기 절차</p>
+                        <p>서비스 이용을 위해 입력하신 정보는 목적이 달성된 후 기타 관련 법령에 의한 개인정보보관 사유에 해당하지 않는 한 지체 없이 파기됩니다.</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>2. 파기 방법</p>
+                        <p>종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기하고, 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.</p>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>5. 개인정보 제3자 제공에 관한 사항</strong>
+                        </p>
+                        <p>회사는 이용자의 동의가 있거나 관련 법령의 규정에 의한 경우를 제외하고는 어떠한 경우에도 "1. 처리하는 개인정보의 항목", "2. 개인정보의 처리 목적"에서 고지한 범위를 넘어 이용자의 개인정보를 이용하거나 제3자에게 제공하지 않습니다. 다만, 다음의 경우에는 예외로 합니다.</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>가. 이용자가 사전에 동의한 경우</p>
+                        <p>나. 관련 법령의 규정에 의하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</p>
+                        <p>다. 서비스 제공에 따른 요금정산을 위해 필요한 경우</p>
+                        <p>라. 계약 이행을 위해 필요한 경우</p>
+                        <p>마. 타인에게 정신적, 물질적 피해를 줌으로써 그에 대한 법적 조치를 취하기 위해 이용자의 정보를 공개해야 한다고 판단되는 충분한 근거가 있는 경우</p>
+                        <p>바. 통계 작성, 마케팅 분석 또는 시장조사를 위해 필요한 경우로 특정 개인을 식별할 수 없는 형태로 가공하여 외부 기관 또는 단체 등에 제공하는 경우</p>
+                        <p>사. 서비스의 제공에 관한 계약의 이행을 위하여 필요한 개인정보로써 경제적/기술적인 사유로 통상의 동의를 받는 것이 현저히 곤란한 경우</p>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>6. 개인정보의 위탁에 관한 사항</strong>
+                        </p>
+                        <p>회사는 서비스 이행을 위해 개인정보 처리업무를 아래와 같이 외부 전문 업체에 위탁하여 운영하고 있습니다.</p>
+                        <table class="table">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="50%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>위탁업체</th>
+                                <th>위탁 업무 내용</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>㈜에이치에스애드</td>
+                                <td>부스터스와 관련된 업무</td>
+                            </tr>
+                            <tr>
+                                <td>㈜프리비알</td>
+                                <td>부스터스 운영 관련 안내</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>7. 개인정보 자동 수집의 목적 및 거부에 관한 사항</strong>
+                        </p>
+                        <p>회사는 이용자의 정보를 수시로 저장하고 찾아내는 '쿠키(cookie)', 'ActiveX' 등 개인정보를 자동으로 수집하는 장치(이하 “쿠키 등”)를 설치 운용합니다. 쿠키란 LG유플러스 웹사이트를 운영하는데 이용되는 서버가 이용자의 브라우저에 보내는 아주 작은 텍스트 파일로서 이용자의 컴퓨터 하드디스크에 저장됩니다.</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>가. 쿠키등 사용 목적</p>
+                        <p>① 이용자의 접속빈도 또는 머문 시간 등을 분석하여 이용자의 취향과 관심분야를 파악하여 서비스 개선에 활용</p>
+                        <p>② 웹사이트 방문 품목들에 대한 정보와 관심 있게 둘러본 품목들에 대한 자취를 추적하여 다음 번 웹사이트 방문 때 제품 정보를 제공</p>
+                        <p>나. 쿠키 설정 거부 방법</p>
+                        <p>① 이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다. 따라서, 쿠키 설정을 거부하는 방법으로는 사용하시는 웹 브라우저의 옵션을 선택함으로써 모든 쿠키를 허용하거나 쿠키를 저장할 때마다 확인을 거치거나, 모든 쿠키의 저장을 거부할 수 있습니다.</p>
+                        <p>② 설정방법의 예시(웹 브라우저의 경우) : 웹 브라우저 상단의 도구 > 인터넷 옵션 > 개인정보에서 변경. 단, 이용자께서 쿠키 설치를 거부하였을 경우 서비스 제공에 어려움이 있을 수 있습니다.</p>
+                        <p>③ ActiveX 설정 거부 방법</p>
+                        <p>A. 이용자는 ActiveX 설치에 대한 선택권을 가지고 있습니다. ActiveX 설정을 거부하는 방법은 다음과 같습니다.</p>
+                        <div>
+                            <p>1) 웹 브라우저 상단의 도구 > 인터넷 옵션 > 보안 탭 클릭하여 하단의 사용자 지정수준 클릭 > ActiveX 컨트롤 및 플러그 인 항목에서 아래와 같이 체크함</p>
+                            <p>- 바이너리 및 스크립트 동작 => 사용안함</p>
+                            <p>- 서명 된 ActiveX 컨트롤 다운로드 => 사용안함</p>
+                            <p>- 스크립팅하기 안전하지 않은 것으로 표시된 ActiveX 컨트롤 초기화 및 스크립팅 => 사용안함</p>
+                            <p>- 스크립팅하기 안전한 것으로 표시된 ActiveX 컨트롤 스크립트 => 사용안함</p>
+                            <p>- ActiveX 컨트롤 및 플러그인 실행 => 사용안함</p>
+                            <p>- ActiveX 컨트롤을 자동으로 사용자에게 확인 => 사용안함</p>
+                            <p>2) 새 웹 브라우저 창을 여신 후, 다시 접속해 주시기 바랍니다. 접속이 원활하게 되지 않을 경우에는 바이러스 및 악성 코드 제거 프로그램으로 바이러스와 악성코드를 제거 후에 다시 시도해 주시기 바랍니다.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>8. 개인정보의 안전성 확보조치에 관한 사항</strong>
+                        <p>회사는 이용자의 개인정보를 처리함에 있어 개인정보가 분실, 도난, 유출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술적, 관리적 대책을 마련하고 있습니다.</p>
+                        </p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>1) 기술적 보호조치</p>
+                        <p>① 이용자의 개인정보는 비밀번호에 의해 보호되며 암호 알고리즘을 이용하여 네트워크 상의 개인정보를 안전하게 전송할 수 있는 보안장치(SSL)를 채택하고 있습니다.</p>
+                        <p>② 해킹 등 외부 침입에 대비하여 각 서버마다 접근제어솔루션 등을 이용하여 외부로부터의 무단 접근을 통제하고 있으며, 기타 시스템적으로 보안성을 확보하기 위한 가능한 기술적 장치를 갖추어 개인정보 보안에 만전을 기하고 있습니다.</p>
+                        <p>③ 패스워드 등 본인임을 인증하는 정보에 대해서는 복호화되지 아니하도록 일방향 암호화하여 저장합니다.</p>
+                        <p>④ 개인정보 처리 시스템에서 개인정보의 출력 시(인쇄, 화면표시, 파일생성 등) 용도를 특정하며, 용도에 따라 출력 항목을 최소화합니다.</p>
+                        <p>⑤ 개인정보 처리자가 개인 정보를 종이로 인쇄하거나, 디스켓, 콤팩트디스크 등 이동 가능한 저장매체에 복사할 경우 개인정보보호 책임자의 사전 승인을 받도록 조치합니다. 출력, 복사물로부터 다시 출력 또는 복사하는 경우도 또한 같습니다.</p>
+                        <p>2) 관리적 보호조치</p>
+                        <p>① 이용자의 개인정보에 대한 접근 권한을 최소한의 인원으로 제한하고 있습니다.</p>
+                        <p>② 전보 또는 퇴직 등 인사 이동이 발생하여 개인정보처리자가 변경되었을 경우 지체 없이 개인 정보처리시스템의 접근 권한을 변경 또는 말소합니다. 이 경우 권한 부여, 변경 또는 말소에 대한 내역을 기록하고, 그 기록을 최소 5년간 보관합니다.</p>
+                        <p>③ 처리중인 개인정보가 인터넷 홈페이지, P2P, 공유설정 등을 통하여 권한이 없는 자에게 공개되지 않도록 개인정보처리 시스템 및 개인정보처리자의 PC를 설정합니다.</p>
+                        <p>④ 개인정보 수집, 활용 및 파기 시 그에 대한 법률이 권고하는 기준(정보통신망 이용촉진 및 정보보호 등에 관한 법률 및 개인정보보호법 등 관련 법령)에 따라 수집한 근거를 남기도록 하고 있으며, 이와 관련하여 내부 정책과 프로세스를 규정하고 교육을 실시합니다.</p>
+                        <p>⑤ 입사시 전 직원의 보안서약서를 통하여 사람에 의한 정보유출을 사전에 방지하고 개인정보보호정책에 대한 이행사항 및 직원의 준수여부를 감시하기 위한 내부절차를 마련하고 있습니다.</p>
+                        <p>⑥ 개인정보 관련 처리자의 업무 인수인계는 보안이 유지된 상태에서 철저하게 이뤄지고 있으며 입사 및 퇴사 후 개인정보 사고에 대한 책임을 명확히 하고 있습니다.</p>
+                        <p>⑦ 개인정보와 일반 데이터를 혼합하여 보관하지 않고 별도의 서버를 통해 분리하여 보관하고 있습니다.</p>
+                        <p>⑧ 전산실 및 자료 보관실 등을 특별 보호구역으로 설정하여 출입을 통제하고 있습니다.</p>
+                        <p>⑨ 당사는 이용자 개인의 실수나 기본적인 인터넷의 위험성 때문에 일어나는 일들에 대해 책임을 지지 않습니다.</p>
+                        <p>⑩ 그 외 내부 관리자의 실수나 기술관리 상의 사고로 인해 개인정보의 상실, 유출, 변조, 훼손이 유발될 경우 당사는 즉각 이용자께 사실을 알리고 적절한 대책과 보상을 강구할 것입니다.</p>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>
+                                9. 정보주체의 권리, 의무 및 그 행사방법에 관한 사항
+                            </strong>
+                        </p>
+                        <p>이용자 및 법정대리인의 개인정보를 최신의 상태로 정확하게 입력하여 불의의 사고를 예방해 주시기 바랍니다. 이용자 및 법정대리인이 입력한 부정확한 정보로 인해 발생하는 사고의 책임은 이용자 및 법정대리인 자신에게 있으며 타인 정보의 도용 등 허위 정보를 입력할 경우 서비스 이용이 제한될 수 있습니다. 이용자 및 법정대리인은 개인정보를 보호받을 권리와 함께 스스로를 보호하고 타인의 정보를 침해하지 않을 의무도 가지고 있습니다. 이용자 및 법정대리인의 개인 정보가 유출되지 않도록 조심하시고 게시물을 포함한 타인의 개인정보를 훼손하지 않도록 유의해 주십시오. 만약 이 같은 책임을 다하지 못하고 타인의 정보 및 존엄성을 훼손할 시에는 『정보통신망 이용촉진 및 정보보호 등에 관한 법률』, 『개인정보보호법』 등에 의해 처벌받을 수 있습니다.</p>
+                        <p>1) 개인정보 열람, 정정, 삭제 요구의 권리:</p>
+                        <p>이용자 및 법정대리인은 언제든지 등록되어 있는 자신의 개인정보를 열람하거나 정정, 삭제하실 수 있습니다. 개인정보 열람 및 정정, 삭제를 하고자 할 경우에는 개인정보보호책임자 및 담당자에게 서면, 전화 또는 전자우편주소로 연락하시면 지체 없이 조치하겠습니다.</p>
+                        <p>2) 개인정보 수집, 이용, 제공에 대한 동의 철회의 권리:</p>
+                        <p>이용자 및 법정대리인은 서비스 이용을 위해 입력하신 개인정보의 수집, 이용, 제공, 저장에 대해 동의하신 내용을 철회하실 수 있습니다.</p>
+                        <p>동의 철회는 개인정보보호 담당자에게 서면, 전화 또는 전자우편주소로 연락하시면 본인 확인 절차 후 개인정보의 삭제 등 필요한 조치를 하겠습니다.</p>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>10. 개인정보의 열람 청구를 접수, 처리하는 부서</strong>
+                        </p>
+                        <p>개인정보 관련한 민원처리는 이용자의 개인정보를 보호하고 개인정보와 관련한 의문사항을 처리하기 위하여 다음과 같이 민원처리 콜센터를 운영하고 있습니다.</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>① 전자우편 : securitypol@lguplus.co.kr</p>
+                        <p>② 전화번호 : 1544-0010,101,114(이동전화)</p>
+                        <p>③ 등기우편 : 서울특별시 용산구 한강대로 32 ㈜LG유플러스 빌딩</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>또한, 기타 개인정보에 관한 상담이 필요한 경우에는 개인정보침해 신고센터, 개인정보분쟁조정위원회, 대검찰청 사이버수사과, 경찰청 사이버안전국 등으로 문의하실 수 있습니다.</p>
+                        <p>1) 개인정보침해신고센터</p>
+                        <p>- 전화 : (국번없이) 118</p>
+                        <p>- URL : http://privacy.kisa.or.kr</p>
+                        <p>2) 개인정보분쟁조정위원회</p>
+                        <p>- 전화 : 1833-6972</p>
+                        <p>- URL : http://www.kopico.go.kr</p>
+                        <p>3) 대검찰청 사이버수사과</p>
+                        <p>- 전화 : (국번없이) 1301</p>
+                        <p>- URL : http://www.spo.go.kr</p>
+                        <p>4) 경찰청 사이버안전국</p>
+                        <p>- 전화 : (국번없이) 182</p>
+                        <p>- URL : http://cyberbureau.police.go.kr</p>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>11. 개인정보보호 책임자</strong>
+                        </p>
+                        <p>회사는 고객의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 개인정보 보호 책임자를 두고 있습니다.</p>
+                        <p>- 개인정보보호 책임자 : (운영사 담당자 이름 기재 예정)</p>
+                        <p>- 이메일 주소 : (운영사 담당자 이름 기재 예정)</p>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>12. 개인정보 처리방침의 변경에 관한 사항</strong>
+                        </p>
+                        <p>이 개인정보처리방침은 법령·정책 또는 보안 기술의 변경에 따라 내용의 추가·삭제 및 수정이 있을 시에는 아래와 같은 방법으로 사전 공지하도록 하겠습니다.</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>- 인터넷 홈페이지 첫 화면 공지 사항 란 또는 별도의 창을 통하여 수정내용 공지</p>
+                        <p>시행일자 2023년 4월 17일</p>
+                    </div>
+                </section>
+            </div>
+            <div class="modal__close">
+                <button class="modal__close-button" type="button"><span class="modal__close-text">닫기</span></button>
+            </div>
+        </div>
+    </div>
+</section>
 <footer class="footer">
     <div class="footer__wrap">
         <div>
             <h1>(주)엘지유플러스</h1>
             <p><a href="https://www.lguplus.com/" target="_blank" onclick="gtag('event','Footer',{'event_category' : '와이낫페이지' ,'event_label' : 'LG 유플러스 홈페이지 가기'})">LG 유플러스 홈페이지 가기</a></p>
+            <p><a href="#" class="footer__privacy">개인정보 처리 방침</a></p>
         </div>
         <div>
             <address>서울특별시 용산구 한강대로 32</address>

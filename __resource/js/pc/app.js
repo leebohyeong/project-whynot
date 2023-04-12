@@ -154,6 +154,70 @@ const app = () => {
         tab.menus[0].click();
     })();
 
+    // BOOST US
+    (() => {
+        const boostUs = findOne('.boost-us');
+        const tab = new Tab(findOne('.tab', boostUs));
+        const modal = new Modal();
+        const triggers = find('a', boostUs);
+        const getId = trigger => trigger.getAttribute('href');
+        const contents = triggers.reduce((contents, trigger) => {
+            const id = getId(trigger);
+            const content = findOne(id);
+
+            contents[id] = content;
+
+            return contents;
+        }, {});
+
+        triggers.forEach((trigger) => {
+            on(trigger, 'click', (event) => {
+                event.preventDefault();
+
+                const id = getId(trigger);
+                const content = contents[id];
+
+                modal.open(content);
+            });
+        });
+
+        tab.menus[0].click();
+
+        const boostUsModal = findOne('.modal-boost-us');
+        const form = document.querySelector('form', boostUsModal);
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                location.reload();
+            });
+        });
+
+    })();
+
+    //footer 개인정보 처리 방침
+    (() => {
+        const footer = findOne('footer');
+        const privacy = findOne('.footer__privacy', footer);
+        const privacyModal = findOne('.modal-footer-privacy');
+        const modal = new Modal();
+
+
+        privacy.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            modal.open(privacyModal);
+        })
+    })();
 
 };
 

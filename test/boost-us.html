@@ -98,30 +98,54 @@
 </form>
 
 <script>
-    document.querySelector('[name="name"]').value = '가나다라마바사아자차카타파하'.split('').sort(() => Math.random() - 0.5).slice(0, 3).join('');
-    document.querySelector('[name="comm_id"]').selectedIndex = ~~(Math.random() * 3);
-    document.querySelector('[name="hphone"]').value = `010${(~~(Math.random() * 9999) + '').padEnd(4, '0')}${(~~(Math.random() * 9999) + '').padEnd(4, '0')}`;
-    document.querySelector('[name="birthday"]').value = `19${(~~(Math.random() * 100) + '').padEnd(2, '0')}${(~~(Math.random() * 12) + 1 + '').padStart(2, '0')}${(~~(Math.random() * 31) + 1 + '').padStart(2, '0')}`;
-    document.querySelectorAll('[name="channel"]')[~~(Math.random() * 2)].checked = true;
-    document.querySelector('[name="url"]').value = `${'abcdefghijklmnopqrstuvwxyz'.split('').sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 15) + 1).join('')}@${'abcdefghijklmnopqrstuvwxyz'.split('').sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 10) + 1).join('')}.com`;
-    document.querySelector('[name="concept"]').value = [...'가나다라마바사아자차카타파하abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ          '.split(''), '\n', '\n', '\n', '\n', '\n', '\n', '\n'].sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 20) + 10).join('');
-    document.querySelector('[name="reason"]').value = [...'가나다라마바사아자차카타파하abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ          '.split(''), '\n', '\n', '\n', '\n', '\n', '\n', '\n'].sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 40) + 10).join('');
+    // document.querySelector('[name="name"]').value = '가나다라마바사아자차카타파하'.split('').sort(() => Math.random() - 0.5).slice(0, 3).join('');
+    // document.querySelector('[name="comm_id"]').selectedIndex = ~~(Math.random() * 3);
+    // document.querySelector('[name="hphone"]').value = `010${(~~(Math.random() * 9999) + '').padEnd(4, '0')}${(~~(Math.random() * 9999) + '').padEnd(4, '0')}`;
+    // document.querySelector('[name="birthday"]').value = `19${(~~(Math.random() * 100) + '').padEnd(2, '0')}${(~~(Math.random() * 12) + 1 + '').padStart(2, '0')}${(~~(Math.random() * 31) + 1 + '').padStart(2, '0')}`;
+    // document.querySelectorAll('[name="channel"]')[~~(Math.random() * 2)].checked = true;
+    // document.querySelector('[name="url"]').value = `${'abcdefghijklmnopqrstuvwxyz'.split('').sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 15) + 1).join('')}@${'abcdefghijklmnopqrstuvwxyz'.split('').sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 10) + 1).join('')}.com`;
+    // document.querySelector('[name="concept"]').value = [...'가나다라마바사아자차카타파하abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ          '.split(''), '\n', '\n', '\n', '\n', '\n', '\n', '\n'].sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 20) + 10).join('');
+    // document.querySelector('[name="reason"]').value = [...'가나다라마바사아자차카타파하abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ          '.split(''), '\n', '\n', '\n', '\n', '\n', '\n', '\n'].sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 40) + 10).join('');
+    //
+    // const form = document.querySelector('form');
+    // form.addEventListener('submit', (event) => {
+    //     event.preventDefault();
+    //
+    //     const formData = new FormData(form);
+    //
+    //     fetch(form.action, {
+    //         method: form.method,
+    //         body: formData
+    //     })
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             alert(data.message);
+    //             location.reload();
+    //         });
+    // });
 
-    const form = document.querySelector('form');
-    form.addEventListener('submit', (event) => {
+
+
+
+    const form = document.querySelector('form')
+    const url = document.querySelector('input[name="url"]');
+    const name = document.querySelector('input[name="name"]');
+    const button = document.querySelector('button[type="submit"]');
+    console.log(url);
+    console.log(name);
+    console.log(button);
+
+    button.addEventListener('click', (event) => {
         event.preventDefault();
 
-        const formData = new FormData(form);
+        // console.log('text');
+        if( url.name == "" ) {
 
-        fetch(form.action, {
-            method: form.method,
-            body: formData
-        })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.message);
-                location.reload();
-            });
+            url.name.focus();
+            alert("성명을 입력해 주십시오.");
+
+            return false;
+        }
     });
 </script>
 </body>
