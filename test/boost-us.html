@@ -104,8 +104,8 @@
     document.querySelector('[name="birthday"]').value = `19${(~~(Math.random() * 100) + '').padEnd(2, '0')}${(~~(Math.random() * 12) + 1 + '').padStart(2, '0')}${(~~(Math.random() * 31) + 1 + '').padStart(2, '0')}`;
     document.querySelectorAll('[name="channel"]')[~~(Math.random() * 2)].checked = true;
     document.querySelector('[name="url"]').value = `${'abcdefghijklmnopqrstuvwxyz'.split('').sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 15) + 1).join('')}@${'abcdefghijklmnopqrstuvwxyz'.split('').sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 10) + 1).join('')}.com`;
-    document.querySelector('[name="concept"]').value = [...'가나다라마바사아자차카타파하abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ          '.split(''), '\n', '\n', '\n', '\n', '\n', '\n', '\n'].sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 50) + 10).join('');
-    document.querySelector('[name="reason"]').value = [...'가나다라마바사아자차카타파하abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ          '.split(''), '\n', '\n', '\n', '\n', '\n', '\n', '\n'].sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 50) + 10).join('');
+    document.querySelector('[name="concept"]').value = [...'가나다라마바사아자차카타파하abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ          '.split(''), '\n', '\n', '\n', '\n', '\n', '\n', '\n'].sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 20) + 10).join('');
+    document.querySelector('[name="reason"]').value = [...'가나다라마바사아자차카타파하abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ          '.split(''), '\n', '\n', '\n', '\n', '\n', '\n', '\n'].sort(() => Math.random() - 0.5).slice(0, ~~(Math.random() * 40) + 10).join('');
 
     const form = document.querySelector('form');
     form.addEventListener('submit', (event) => {
