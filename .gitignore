@@ -19,3 +19,7 @@ composer.lock
 composer.phar
 property.php
 src/config.php
+
+test/bin/ct_cli
+test/bin/ct_cli_exe.exe
+kcp/lib/ct_cli_lib.php
