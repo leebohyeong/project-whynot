@@ -752,7 +752,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <form name="form_auth" method="post">
                         <input type="hidden" name="ordr_idxx" value="<?=$ordr_idxx?>">
                         <input type="hidden" name="enc_cert_data2">
-                        <input type="text" name="cert_no" value="">
+                        <input type="hidden" name="cert_no" value="">
                         <input type="hidden" name="dn_hash">
                         <!-- 요청종류 -->
                         <input type="hidden" name="req_tx" value="cert">
@@ -794,7 +794,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <form name="form_boost_us" method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form register-form">
                     <input type="hidden" name="ordr_idxx" value="<?=$ordr_idxx?>"/>
                     <input type="hidden" name="enc_cert_data2"  value=""/>
-                    <input type="text" name="cert_no" value=""/>
+                    <input type="hidden" name="cert_no" value=""/>
                     <input type="hidden" name="dn_hash" value=""/>
                     <!-- 요청종류 -->
                     <input type="hidden" name="req_tx" value="cert"/>

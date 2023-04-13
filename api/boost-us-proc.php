@@ -28,10 +28,6 @@ $response['result'] = false;
 $response['message'] = '이벤트에 참여하실 수 없습니다.';
 
 $requestInfo = array(
-    'name' => $_POST['name'] ?? '',
-    'comm_id' => $_POST['comm_id'] ?? '',
-    'hphone' => $_POST['hphone'] ?? '',
-    'birthday' => $_POST['birthday'] ?? '',
     'channel' => $_POST['channel'] ?? '',
     'url' => $_POST['url'] ?? '',
     'concept' => $_POST['concept'] ?? '',
@@ -50,28 +46,8 @@ $kcpCertInfo = array(
     'enc_cert_data2' => $_POST['enc_cert_data2'] ?? '',
 );
 
-
-/*
-$requestInfo['name']    = '김동임';
-$requestInfo['comm_id']    = 'KTF';     // SKT, LGT, KTF, 알뜰폰 : SKM, LGM, KTM
-$requestInfo['hphone']    = '01027897151';
-$requestInfo['birthday']    = '19810518';
-$requestInfo['channel']    = 'youtube';
-$requestInfo['url']    = 'http://www.naver.com';
-$requestInfo['concept']    = '컨셉';
-$requestInfo['reason']    = '지원이유';
-$requestInfo['agree1']    = 'Y';
-$requestInfo['agree1_ver']    = '1.0';
-$requestInfo['agree2']    = 'Y';
-$requestInfo['agree1_ver']    = '1.0';
-*/
-
-/*
-$requestInfo['ordr_idxx']       = "202304121681290006161";
-$requestInfo['cert_no']         = "23732000946920";
-$requestInfo['dn_hash']         = "C87D49B930BB902782E64D9318A7715808E24564";
-$requestInfo['enc_cert_data2']  = ".1.E67EE66607E5EAE263F9D395C7919D7E491EE0A74783E4117C440591CFD8699ABC4A2B57BD2795B3B430A30FD8A928A379CE6FC38AB7445E2BC742EF4423AD55C738EC053E243AFFFA46A1D6C87E4F733D7EEBEFD231A862766B1B8787A992EF8C9AC3D57184CB05E315D731628ABD8F0A7C4AC766F57324851B9E6D6A151BE67E8C922D491AD085E3ABF168DDF52C269B76DFF0DDE7DA54652A4B3EB5608D5E28E91D82830804D834EDCFF68C537A37306EC226FC38097576DC75A7A89246771183E6EC3A1734CD36EECE61124BB34C2653AE683B4BF3C3A703914BF411F6D2501AE4021D050F2383EBA4260AC144B615FD8A94886368FF82D9D07A3D75FF52764511BBE6C4DABC714AE289AC8644FB9CD4F5A217EF9305C24C7D8F916D94BB460D76E94C0BBE95814E21B8EC5B3CF2044B5852CF663C1C225DB5B2F1A48CFE0C89ECC62A0DFA036DC9A957571D207CC929F3B7FEE613F1D75661ED5BC75F4965ABBE265884D4277AC94C77EC8C869F.fbny4y5H3tPWg-MkiQfT0MxoUCnbwRfKCHruD7Ndb3V_glVPQItpNySfIdKYeO3NYqH72TfXrroA_3lttgerqcakDR3IeqPl1xx8_vvMuTKgygIHVpDN6sv4ic7vCZFSQBOWuvnkejpWpT2n0XEF9-JEQbvmYbBa3YmktwkhAH24XXTM6_j3-bq_Oj-7POlWAsacHy4qr87h6u6jY7iRHhHnB06SmiwmovNOmFVtiFOHWL13EXh1AYQ4PFt0UCt15o_n4XxSr2OENHhk7-AQM-jW3qiFOpQIJXs_VVUxOHm39faeYGNDH7X1YccjlSxuLCNhlF7B_YogoZh1f8rjdA.MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmO92ZYkJNYMn80Q982_psNFMIS3Zm_oCtEQMfKbap7y3YE9TxCxGWiTlCpsMmmy0WdiJQVJoMLec2Z7O436hSN2praZAQzXVNYq50Y4bhrVZhNlN3KPyM4YjLIldqTuyvgY1xxfrpLLwk1KuDufm5jJf05UcRGsnkWRM6GxhyAqZjTdDYkaP1XXlkMHKi39fPqCoyyF6tlW4byS_mjeVopbFXoCH4DcrVJiO7j9V8oE4ZQiztNPRYr5SoCDOzhGK9zlD4Cz2DMl-XRqrSrvY0-8wLr9bL6UfS9yJPoexXDzcWfrQXIruvCZghg7uwicEqeE6koz2ZXJd62JfbmaQKQIDAQAB.IhVIw0p_EkCVgzeylzNPEk_snuYYaX5CeOzaCKmjFZqD9D_jOVOM1qI7bhZSARhpwf8ORls7HTJ2za4Xek-fm2DqhqOBrJZSIdasM-K0n0kuu9r_S4-oLs0GS66CP27iqKK92gUs1nQ7KxI1CYP4k-B5qiim3h9OY2Zt0pAS3dBNWSYYdkaGE_YHq2C0RokEEn1RKunqng7aAH21Yr0XOtWPgtYNG3CSIFFPBsvIOO5brqy7H8LUECHqdhF7e20Xbw_O8XceMsPvzcpOzTBh1IfTOWAkJ2lX7uBieA8rcD8db3Xezw-gT6gAvYwZvXE88Xh5cEtXq1UJdubQbaA4vg";
-*/
+include "../kcp/cfg/cert_conf.php";
+require "../kcp/lib/ct_cli_lib.php";
 
 $validator = new Validator($kcpCertInfo);
 $validator->rule('required', 'ordr_idxx')->message('본인인증을 진행해주시기 바랍니다.');
@@ -79,6 +55,42 @@ $validator->rule('required', 'cert_no')->message('본인인증을 진행해주�
 $validator->rule('required', 'dn_hash')->message('본인인증을 진행해주시기 바랍니다.');
 $validator->rule('required', 'enc_cert_data2')->message('본인인증을 진행해주시기 바랍니다.');
 if ($validator->validate()) {
+    $ct_cert = new C_CT_CLI;
+    $ct_cert->mf_clear();
+
+    $site_cd        = $g_conf_site_cd;
+    $ordr_idxx      = $kcpCertInfo['ordr_idxx'];
+    $cert_no	    = $kcpCertInfo['cert_no'];
+    $dn_hash	    = $kcpCertInfo['dn_hash'];
+    $enc_cert_data2	= $kcpCertInfo['enc_cert_data2'];
+
+    // dn_hash 검증
+    // KCP 가 리턴해 드리는 dn_hash 와 사이트 코드, 요청번호 , 인증번호를 검증하여
+    // 해당 데이터의 위변조를 방지합니다
+    $veri_str = $site_cd.$ordr_idxx.$cert_no; // 사이트 코드 + 요청번호 + 인증거래번호
+
+    if ( $ct_cert->check_valid_hash ( $g_conf_home_dir , $g_conf_ENC_KEY , $dn_hash , $veri_str ) != "1" )
+    {
+        $response['message']    = "dn_hash 변조 위험있음";
+        $response['result']     = false;
+        echo json_encode($response);
+        exit;
+        // 오류 처리 ( dn_hash 변조 위험있음)
+    }
+
+    // 인증데이터 복호화 함수
+    // 해당 함수는 암호화된 enc_cert_data2 를
+    // site_cd 와 cert_no 를 가지고 복화화 하는 함수 입니다.
+    // 정상적으로 복호화 된경우에만 인증데이터를 가져올수 있습니다.
+    $opt = "1" ; // 복호화 인코딩 옵션 ( UTF - 8 사용시 "1" )
+    $ct_cert->decrypt_enc_cert( $g_conf_home_dir , $g_conf_ENC_KEY , $site_cd , $cert_no , $enc_cert_data2 , $opt );
+
+    $requestInfo['name']        = $ct_cert->mf_get_key_value("user_name"  );        // 이름
+    $requestInfo['hphone']      = $ct_cert->mf_get_key_value("phone_no"   );        // 전화번호
+    $requestInfo['comm_id']     = $ct_cert->mf_get_key_value("comm_id"   );         // 이동통신사 코드
+    $requestInfo['birthday']    = $ct_cert->mf_get_key_value("birth_day"  );        // 생년월일
+
+    $ct_cert->mf_clear();
 } else {
     foreach ($validator->errors() as $key => $message) {
         $response['message'] = $message[0];
@@ -92,6 +104,7 @@ if ($validator->validate()) {
 
 $validator = new Validator($requestInfo);
 $validator->rule('required', 'name')->message('이름 정보가 올바르지 않습니다.');
+$validator->rule('required', 'comm_id')->message('연락처 정보가 올바르지 않습니다.');
 $validator->rule('required', 'hphone')->message('연락처 정보가 올바르지 않습니다.');
 $validator->rule('required', 'birthday')->message('생년월일 정보가 올바르지 않습니다.');
 $validator->rule('length', 'birthday', 8)->message('생년월일 정보가 올바르지 않습니다.');
