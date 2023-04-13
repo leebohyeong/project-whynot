@@ -192,14 +192,14 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             const year = today.getFullYear() - 14;
             const month = today.getMonth();
             const date = today.getDate();
-            const newDate = new Date(year, month, date).getTime() - (24 * 60 * 60 * 1000);
+            const newDate = new Date(year, month, date).getTime();
 
             const birthDayYear = (birthDay + '').substring(0, 4);
             const birthDayMonth = (birthDay + '').substring(4, 6) - 1;
             const birthDayDate = (birthDay + '').substring(6, 8);
-            const newBirthDay = new Date(birthDayYear, birthDayMonth, birthDayDate).getTime();
+            const newBirthDay = new Date(birthDayYear, birthDayMonth, birthDayDate).getTime() + (24 * 60 * 60 * 1000);
 
-            return (newDate - newBirthDay) < 0;
+            return (newDate - newBirthDay) >= 0;
         }
     </script>
 </head>
