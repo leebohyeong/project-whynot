@@ -177,6 +177,7 @@ const app = () => {
                 const id = getId(trigger);
                 const content = contents[id];
 
+                form.reset();
                 modal.open(content);
             });
         });
