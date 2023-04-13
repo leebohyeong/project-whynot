@@ -67,7 +67,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     </script>
 
 
-    <script type="text/javascript">
+    <script>
 
         // 인증창 종료후 인증데이터 리턴 함수
         function auth_data( frm )
@@ -111,79 +111,61 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         }
 
         // 인증창 호출 함수
-        function auth_type_check()
-        {
-            var auth_form = document.form_auth;
+        const auth_type_check = () => {
+            const auth_form = document.form_auth;
 
-            if( auth_form.ordr_idxx.value == "" )
-            {
-                alert( "요청번호는 필수 입니다." );
+            if (!auth_form.ordr_idxx.value.trim()) {
+                alert('요청번호는 필수 입니다.');
 
                 return false;
-            }
-            else
-            {
-                if( navigator.userAgent.indexOf("Android") > - 1 || navigator.userAgent.indexOf("iPhone") > - 1 )
-                {
-                    auth_form.target = "kcp_cert";
+            } else {
+                if (navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('iPhone') > -1) {
+                    auth_form.target = 'kcp_cert';
 
-                    document.getElementById( "cert_info" ).style.display = "none";
-                    document.getElementById( "kcp_cert"  ).style.display = "";
-                }
-                else
-                {
-                    var return_gubun;
-                    var width  = 410;
-                    var height = 500;
+                    document.getElementById('cert_info').style.display = 'none';
+                    document.getElementById('kcp_cert').style.display = "";
+                } else {
+                    // let return_gubun;
+                    const width = 410;
+                    const height = 500;
+                    const top = (screen.height - height) / 2;
+                    const left = (screen.width - width) / 2;
 
-                    var leftpos = screen.width  / 2 - ( width  / 2 );
-                    var toppos  = screen.height / 2 - ( height / 2 );
+                    const winopts = 'width=' + width + ',height=' + height + ',toolbar=no,status=no,statusbar=no,menubar=no,scrollbars=no,resizable=no';
+                    const position = ',left=' + left + ',top=' + top;
+                    const AUTH_POP = window.open('', 'auth_popup', winopts + position);
 
-                    var winopts  = "width=" + width   + ", height=" + height + ", toolbar=no,status=no,statusbar=no,menubar=no,scrollbars=no,resizable=no";
-                    var position = ",left=" + leftpos + ", top="    + toppos;
-                    var AUTH_POP = window.open('','auth_popup', winopts + position);
-
-                    auth_form.target = "auth_popup";
+                    auth_form.target = 'auth_popup';
                 }
 
-                auth_form.action = "/kcp/SMART_ENC/proc_req.php"; // 인증창 호출 및 결과값 리턴 페이지 주소
+                auth_form.action = '/kcp/SMART_ENC/proc_req.php'; // 인증창 호출 및 결과값 리턴 페이지 주소
 
                 return true;
             }
-        }
+        };
 
         /* 예제 */
-        window.onload=function()
-        {
-            var today            = new Date();
-            var year             = today.getFullYear();
-            var month            = today.getMonth() + 1;
-            var date             = today.getDate();
-            var time             = today.getTime();
-
+        window.addEventListener('load', () => {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = today.getMonth() + 1;
+            const date = today.getDate();
+            const time = today.getTime();
 
             init_orderid(); // 요청번호 샘플 생성
-        }
+        });
 
         // 요청번호 생성 예제 ( up_hash 생성시 필요 )
-        function init_orderid()
-        {
-            var today = new Date();
-            var year  = today.getFullYear();
-            var month = today.getMonth()+ 1;
-            var date  = today.getDate();
-            var time  = today.getTime();
-
-            if(parseInt(month) < 10)
-            {
-                month = "0" + month;
-            }
-
-            var vOrderID = year + "" + month + "" + date + "" + time;
+        const init_orderid = () => {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const date = today.getDate(); // ?
+            const time = today.getTime();
+            const vOrderID = year + month + date + time;
 
             document.form_auth.ordr_idxx.value = vOrderID;
         }
-
     </script>
 </head>
 <body>
@@ -756,22 +738,62 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 </h2>
             </div>
             <div class="modal-boost-us__content2">
-                <form name="form_auth" method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form">
+                <div class="certified-box">
+                    <form name="form_auth" method="post">
+                        <input type="hidden" name="ordr_idxx">
+                        <input type="hidden" name="enc_cert_data2">
+                        <input type="hidden" name="cert_no" id="cert_no" value="23732000946920"><!-- 지워야할 값 -->
+                        <input type="hidden" name="dn_hash">
+                        <!-- 요청종류 -->
+                        <input type="hidden" name="req_tx" value="cert">
+                        <!-- 요청구분 -->
+                        <input type="hidden" name="cert_method" value="01">
+                        <!-- 웹사이트아이디 : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
+                        <input type="hidden" name="web_siteid" value="<?= $g_conf_web_siteid ?>">
+
+                        <!-- 사이트코드 : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
+                        <input type="hidden" name="site_cd" value="<?= $g_conf_site_cd ?>">
+                        <!-- Ret_URL : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
+                        <input type="hidden" name="Ret_URL" value="<?= $g_conf_Ret_URL ?>">
+                        <!-- cert_otp_use 필수 ( 메뉴얼 참고)
+                             Y : 실명 확인 + OTP 점유 확인 , N : 실명 확인 only
+                        -->
+                        <input type="hidden" name="cert_otp_use" value="Y">
+                        <!-- 리턴 암호화 고도화 -->
+                        <input type="hidden" name="cert_enc_use_ext" value="Y">
+
+                        <!-- cert_able_yn input 비활성화 설정 -->
+                        <input type="hidden" name="cert_able_yn">
+
+                        <input type="hidden" name="res_cd">
+                        <input type="hidden" name="res_msg">
+
+                        <!-- up_hash 검증 을 위한 필드 -->
+                        <input type="hidden" name="veri_up_hash">
+
+                        <!-- web_siteid 을 위한 필드 -->
+                        <input type="hidden" name="web_siteid_hashYN" value="Y">
+                        <input type="hidden" name="birthday" value="19810412"><!-- 지워야할 값 -->
+                        <button type="submit" onclick="auth_type_check();" class="certified-box__button">인증하기</button>
+                    </form>
+                </div>
+
+                <form method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form register-form">
                     <input type="hidden" name="ordr_idxx" value=""/>
                     <input type="hidden" name="enc_cert_data2"  value=""/>
                     <input type="hidden" name="cert_no" id="cert_no" value="23732000946920"/><!-- 지워야할 값 -->
                     <input type="hidden" name="dn_hash" value=""/>
                     <!-- 요청종류 -->
-                    <input type="hidden" name="req_tx"       value="cert"/>
+                    <input type="hidden" name="req_tx" value="cert"/>
                     <!-- 요청구분 -->
-                    <input type="hidden" name="cert_method"  value="01"/>
+                    <input type="hidden" name="cert_method" value="01"/>
                     <!-- 웹사이트아이디 : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
-                    <input type="hidden" name="web_siteid"   value="<?= $g_conf_web_siteid ?>"/>
+                    <input type="hidden" name="web_siteid" value="<?= $g_conf_web_siteid ?>"/>
 
                     <!-- 사이트코드 : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
-                    <input type="hidden" name="site_cd"      value="<?= $g_conf_site_cd ?>" />
+                    <input type="hidden" name="site_cd" value="<?= $g_conf_site_cd ?>" />
                     <!-- Ret_URL : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
-                    <input type="hidden" name="Ret_URL"      value="<?= $g_conf_Ret_URL ?>" />
+                    <input type="hidden" name="Ret_URL" value="<?= $g_conf_Ret_URL ?>" />
                     <!-- cert_otp_use 필수 ( 메뉴얼 참고)
                          Y : 실명 확인 + OTP 점유 확인 , N : 실명 확인 only
                     -->
@@ -782,8 +804,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <!-- cert_able_yn input 비활성화 설정 -->
                     <input type="hidden" name="cert_able_yn" value=""/>
 
-                    <input type="hidden" name="res_cd"       value=""/><br>
-                    <input type="hidden" name="res_msg"      value=""/>
+                    <input type="hidden" name="res_cd" value=""/><br>
+                    <input type="hidden" name="res_msg" value=""/>
 
                     <!-- up_hash 검증 을 위한 필드 -->
                     <input type="hidden" name="veri_up_hash" value=""/>
@@ -791,9 +813,6 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <!-- web_siteid 을 위한 필드 -->
                     <input type="hidden" name="web_siteid_hashYN" value="Y"/>
                     <input type="hidden" name="birthday" value="19810412"><!-- 지워야할 값 -->
-
-
-
 
                     <div class="modal-boost-us__box modal-boost-us__name">
                         <span>이름</span>
@@ -804,20 +823,17 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <div>
                             <input type="hidden" name="comm_id" value="KTF"><!-- 지워야할 값 -->
                             <input type="text" name="hphone" id="hphone" readonly value="01012345678"><!-- 지워야할 값 -->
-                            <button onclick="return auth_type_check();">인증하기</button>
-<!--                            <button type="button" onclick="return auth_type_check();">인증하기</button>-->
-<!--                            <button type="submit" onclick="return auth_type_check();" width="108" height="37" alt="본인인증">본인인증</button>-->
                         </div>
                     </div>
                     <div class="modal-boost-us__box modal-boost-us__channel">
                         <span>활동채널</span>
                         <div>
-                            <label for="youtube">
-                                <input type="radio" name="channel" value="youtube" id="youtube">
+                            <label>
+                                <input type="radio" name="channel" value="youtube">
                                 <span>유튜브</span>
                             </label>
-                            <label for="instagram">
-                                <input type="radio" name="channel" value="instagram" id="instagram">
+                            <label>
+                                <input type="radio" name="channel" value="instagram">
                                 <span>인스타</span>
                             </label>
                             <p class="modal-boost-us__form-text">(구독자/팔로워 500명 이상이면 누구나 지원 가능)</p>
@@ -903,12 +919,12 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </section>
                         <div>
                             <p>※ 비동의시 지원 불가</p>
-                            <label for="agree1">
-                                <input type="radio" name="agree1" value="Y" id="agree1">
+                            <label>
+                                <input type="radio" name="agree1" value="Y">
                                 <span>동의</span>
                             </label>
-                            <label for="disagree1">
-                                <input type="radio" name="agree1" value="N" id="disagree1">
+                            <label>
+                                <input type="radio" name="agree1" value="N">
                                 <span>비동의</span>
                             </label>
                         </div>

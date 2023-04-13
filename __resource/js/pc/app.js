@@ -183,88 +183,89 @@ const app = () => {
 
         tab.menus[0].click();
 
-        const boostUsModal = findOne('.modal-boost-us');
-        const form = document.querySelector('form', boostUsModal);
+        const boostUsModal = findOne('#boost-us-v2');
+        const form = findOne('.register-form', boostUsModal);
+        const formCertNo = findOne('[name="cert_no"]', form);
+        const formHphone = findOne('[name="hphone"]', form);
+        const formChannel = find('[name="channel"]', form);
+        const formUrl = findOne('[name="url"]', form);
+        const urlRegex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+        const formConcept = findOne('[name="concept"]', form);
+        const formReason = findOne('[name="reason"]', form);
+        const formAgree1 = findOne('[name="agree1"]', form);
+        const formAgree2 = findOne('[name="agree2"]', form);
 
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            const formData = new FormData(form);
-            const youtube = findOne('#youtube', form);
-            const cert_no = findOne('#cert_no', form);
-            const hphone = findOne('#hphone', form);
-            const instagram = findOne('#instagram', form);
-            const url = findOne('.modal-boost-us__url input', form);
-            let regex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-            const concept = findOne('.modal-boost-us__concept textarea', form);
-            const reason = findOne('.modal-boost-us__reason textarea', form);
-            const informationAgree = findOne('#agree1');
-            // const informationDisagree = findOne('#disagree1');
-            const precautionsAgree = findOne('#agree2');
-            // const precautionsDisagree = findOne('#disagree2');
-
-            // console.log(regex.test(url.value));
-
-            if(cert_no.value == "" || hphone.value == "") {
+        const isValid = () => {
+            if(formCertNo.value == "" || formHphone.value == "") {
                 alert('본인인증을 진행해 주세요.');
                 return false;
             };
 
-            if(!youtube.checked && !instagram.checked) {
+            if (formChannel.every(input => !input.checked)) {
                 alert('활동채널을 체크해 주세요.');
-                youtube.focus();
+                formChannel[0].focus();
                 return false;
             }
 
-            if(url.value == "") {
-                alert('url을 입력해 주세요.');
-                url.focus();
+            if (!formUrl.value.trim()) {
+                alert('URL을 입력해 주세요.');
+                formUrl.focus();
+                return false;
+            }
+
+            if(!urlRegex.test(formUrl.value)) {
+                alert('URL을 정확히 입력해 주세요.');
+                formUrl.focus();
                 return false;
             };
 
-            if(!regex.test(url.value)) {
-                alert('url을 정확히 입력해 주세요.');
-                url.focus();
-                return false;
-            };
-
-            if(concept.value == "") {
+            if (!formConcept.value.trim()) {
                 alert('채널컨셉을 입력해 주세요.');
-                concept.focus();
+                formConcept.focus();
                 return false;
-            };
+            }
 
-            if(reason.value == "") {
+            if(!formReason.value.trim()) {
                 alert('지원동기를 입력해 주세요.');
-                reason.focus();
+                formReason.focus();
                 return false;
             };
 
-            if(!informationAgree.checked) {
+            if (!formAgree1.checked) {
                 alert('개인정보 수집 및 활용 동의를 체크해 주세요.');
-                informationAgree.focus();
+                formAgree1.focus();
                 return false;
             }
 
-            if(!precautionsAgree.checked) {
+            if (!formAgree2.checked) {
                 alert('지원/참여자 유의사항을 체크해 주세요.');
-                informationAgree.focus();
+                formAgree1.focus();
                 return false;
             }
 
-            fetch(form.action, {
-                method: form.method,
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.result == false){
-                        alert(data.message);
-                    }else{
-                        alert(data.message);
-                        location.reload();
-                    }
-                });
+            return true;
+        }
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            if (isValid()) {
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: form.method,
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.result == false){
+                            alert(data.message);
+                        }else{
+                            alert(data.message);
+                            location.reload();
+                        }
+                    });
+            }
         });
 
     })();

@@ -1524,10 +1524,30 @@ section {
     }
 
     &__content2 {
+        position: relative;
         margin: 15px 0 37px 0;
         padding: 30px 36px 47px;
         background-color: #fff;
         border-radius: 10px;
+
+        .certified-box {
+            position: absolute;
+            top: 153px;
+            right: 50px;
+
+            &__button {
+                display: block;
+                width: 107px;
+                height: 54px;
+                background-color: $pink;
+                color: #fff;
+                font: {
+                    weight: $font-weight-bold;
+                }
+                line-height: 44px;
+                text-align: center;
+            }
+        }
     }
 
     //&__content2::-webkit-scrollbar {
@@ -1604,20 +1624,6 @@ section {
             height: 54px;
         }
 
-        input + button {
-            display: block;
-            width: 107px;
-            height: 44px;
-            margin-top: 10px;
-            background-color: $pink;
-            color: #fff;
-            font: {
-                weight: $font-weight-bold;
-            }
-            line-height: 44px;
-            text-align: center;
-        }
-
         label {
             cursor: pointer;
         }
@@ -1645,6 +1651,7 @@ section {
             }
         }
     }
+
 }
 
 .modal-boost-us__information,
@@ -1756,16 +1763,20 @@ section {
     }
 
     &__content {
-        max-height: 800px;
+        //max-height: 800px;
         margin: 30px 0 40px 0;
         padding: 44px;
         background-color: #fff;
         border-radius: 10px;
 
         section {
-            overflow-y: scroll;
-            height: 711px;
-            background-color: #f7f7f7;
+            //overflow-y: scroll;
+            //height: 711px;
+            //background-color: #f7f7f7;
+            overflow: auto;
+            height: auto;
+            border: none;
         }
+
     }
 }
