@@ -8,6 +8,11 @@ backup/dest/assets/css/*
 backup/dest/assets/js/*
 backup/dest/**/*.html
 
+assets/css/*
+assets/js/*
+m/assets/css/*
+m/assets/js/*
+
 vendor/
 logs/
 composer.lock
