@@ -108,6 +108,13 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             document.form_auth.enc_cert_data2.value	= frm.enc_cert_data2.value;
             document.form_auth.cert_no.value = frm.cert_no.value;
             document.form_auth.dn_hash.value = frm.dn_hash.value;
+
+            document.form_boost_us.comm_id.value = frm.comm_id.value;
+            document.form_boost_us.name.value = frm.res_username.value;
+            document.form_boost_us.hphone.value = frm.res_hphone.value;
+            document.form_boost_us.enc_cert_data2.value	= frm.enc_cert_data2.value;
+            document.form_boost_us.cert_no.value = frm.cert_no.value;
+            document.form_boost_us.dn_hash.value = frm.dn_hash.value;
         }
 
         // 인증창 호출 함수
@@ -742,7 +749,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <form name="form_auth" method="post">
                         <input type="hidden" name="ordr_idxx">
                         <input type="hidden" name="enc_cert_data2">
-                        <input type="hidden" name="cert_no" id="cert_no" value="23732000946920"><!-- 지워야할 값 -->
+                        <input type="hidden" name="cert_no" id="cert_no" value=""><!-- 지워야할 값 -->
                         <input type="hidden" name="dn_hash">
                         <!-- 요청종류 -->
                         <input type="hidden" name="req_tx" value="cert">
@@ -773,12 +780,15 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
                         <!-- web_siteid 을 위한 필드 -->
                         <input type="hidden" name="web_siteid_hashYN" value="Y">
-                        <input type="hidden" name="birthday" value="19810412"><!-- 지워야할 값 -->
+                        <input type="hidden" name="birthday" value=""><!-- 지워야할 값 -->
+                        <input type="hidden" name="comm_id" value=""><!-- 지워야할 값 -->
+                        <input type="hidden" name="name" readonly value=""><!-- 지워야할 값 -->
+                        <input type="hidden" name="hphone" id="hphone" readonly value=""><!-- 지워야할 값 -->
                         <button type="submit" onclick="auth_type_check();" class="certified-box__button">인증하기</button>
                     </form>
                 </div>
 
-                <form method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form register-form">
+                <form name="form_boost_us" method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form register-form">
                     <input type="hidden" name="ordr_idxx" value=""/>
                     <input type="hidden" name="enc_cert_data2"  value=""/>
                     <input type="hidden" name="cert_no" id="cert_no" value="23732000946920"/><!-- 지워야할 값 -->
@@ -812,17 +822,17 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
                     <!-- web_siteid 을 위한 필드 -->
                     <input type="hidden" name="web_siteid_hashYN" value="Y"/>
-                    <input type="hidden" name="birthday" value="19810412"><!-- 지워야할 값 -->
+                    <input type="hidden" name="birthday" value=""><!-- 지워야할 값 -->
 
                     <div class="modal-boost-us__box modal-boost-us__name">
                         <span>이름</span>
-                        <input type="text" name="name" readonly value="홍길동"><!-- 지워야할 값 -->
+                        <input type="text" name="name" readonly value=""><!-- 지워야할 값 -->
                     </div>
                     <div class="modal-boost-us__box">
                         <span>휴대전화</span>
                         <div>
-                            <input type="hidden" name="comm_id" value="KTF"><!-- 지워야할 값 -->
-                            <input type="text" name="hphone" id="hphone" readonly value="01012345678"><!-- 지워야할 값 -->
+                            <input type="hidden" name="comm_id" value=""><!-- 지워야할 값 -->
+                            <input type="text" name="hphone" id="hphone" readonly value=""><!-- 지워야할 값 -->
                         </div>
                     </div>
                     <div class="modal-boost-us__box modal-boost-us__channel">
