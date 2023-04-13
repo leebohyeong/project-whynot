@@ -198,6 +198,7 @@ const app = () => {
         const isValid = () => {
             if(formCertNo.value == "" || formHphone.value == "") {
                 alert('본인인증을 진행해 주세요.');
+                formHphone.focus();
                 return false;
             };
 
