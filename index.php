@@ -399,13 +399,12 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <div>
                         <p>
                             크리에이터를 위한 크리에이터에 의한 <br>
-                            파워 크리에이터가 될 수 있는 100일간의 도전 프로젝트
-
+                            <strong>파워 크리에이터</strong>가 될 수 있는 <strong>100일간</strong>의 도전 프로젝트
                         </p>
                         <p>WHY NOT 부스터스 지금 절판 모집 중!</p>
                         <p>
                             <strong>
-                                모집 기간 : 4월 17일(월) ~ 4월 25일(화) <br>
+                                모집 기간 : 4월 18일(화) ~ 4월 25일(화) <br>
                                 선발 인원 : 120명 <br>
                                 발표 일정 : 4월 28일(금) 와이낫 홈페이지 발표
                             </strong>
@@ -523,18 +522,18 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
         </p>
     </header>
-    <ul class="road__list">
-        <li class="road__item"><a class="road__link" href="#road-v1" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '춘천'})"><span>춘천</span></a></li>
-        <li class="road__item"><a class="road__link" href="#road-v2" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '부산'})"><span>부산</span></a></li>
-        <li class="road__item"><a class="road__link" href="#road-v3" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '인천'})"><span>인천</span></a></li>
-        <li class="road__item"><a class="road__link" href="#road-v4" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '울산'})"><span>울산</span></a></li>
-        <li class="road__item"><a class="road__link" href="#road-v5" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '서울'})"><span>서울</span></a></li>
-    </ul>
-    <div class="road__textBox">
-        <h3>
+    <div class="road__list-box">
+        <ul class="road__list">
+            <li class="road__item"><a class="road__link" href="#road-v1" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '춘천'})"><span>춘천</span></a></li>
+            <li class="road__item"><a class="road__link" href="#road-v2" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '부산'})"><span>부산</span></a></li>
+            <li class="road__item"><a class="road__link" href="#road-v3" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '인천'})"><span>인천</span></a></li>
+            <li class="road__item"><a class="road__link" href="#road-v4" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '울산'})"><span>울산</span></a></li>
+            <li class="road__item"><a class="road__link" href="#road-v5" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '서울'})"><span>서울</span></a></li>
+        </ul>
+        <p>
             선넘는 즐거움과 혜택이 가득한 <br>
             지역을 소개합니다.
-        </h3>
+        </p>
     </div>
     <div class="road__carousel">
         <div class="swiper">
@@ -625,7 +624,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div class="textbox">
                     <p>유독 ~ 끌리는 <br>유플러스 모델 손석구의 Behind 화보 대공개</p>
                     <h3>유독 Behind 화보</h3>
-                    <p><a href="https://udokgallery.lguplus.com" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보_화보 보러가기'})">화보 보러가기</a></p>
+<!--                    <p><a href="https://udokgallery.lguplus.com" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보_화보 보러가기'})">화보 보러가기</a></p>-->
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-5" role="tabpanel">
@@ -714,18 +713,19 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             <div class="modal-boost-us__content">
                 <p>
                     위 메일로 문의 시 문의사항 확인 및 답변을 위해 문의주신 이메일 주소가 <br>
-                    개인정보로 수집됩니다.
+                    개인정보로 수집됩니다. 다음 내용을 확인하시고 문의 바라며, 문의 시 <br>
+                    개인정보 수집에 동의하신 걸로 간주됩니다.
                 </p>
                 <ul>
                     <li>
-                        수집 항목 : 이메일 주소 (문의를 위한 개인정보 요청 및 수집 동의 요청이 <br>
+                        수집 항목 : [필수] 이메일 주소 (문의를 위한 개인정보 요청 및 수집 동의 요청이 <br>
                         있기 전까지는 개인정보 노출되지 않도록 주의하여 주십시오.)
                     </li>
-                    <li>수집 · 이용 목적 : 문의 내용 처리, 상담 결과 통보 등</li>
+                    <li>수집 · 이용 목적 : 문의 내용 처리, 상담 결과 통보 업무</li>
                     <li>보유, 이용 기간 : 3년 (소비자 불만 또는 분쟁 처리에 관한 기록 관련법 의거)</li>
                     <li>
-                        고객은 동의를 거부할 권리가 있으며, 추후 문의를 위한 개인정보 수집에 <br>
-                        동의하지 않을 경우 문의 업무가 제한될 수 있습니다.
+                        고객은 동의를 거부할 권리가 있으며, 추후 문의를 위한 개인정보 수집에 동의하지 <br>
+                        않을 경우 문의 업무가 제한될 수 있습니다.
                     </li>
                 </ul>
             </div>
@@ -749,7 +749,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <form name="form_auth" method="post">
                         <input type="hidden" name="ordr_idxx">
                         <input type="hidden" name="enc_cert_data2">
-                        <input type="hidden" name="cert_no" id="cert_no" value=""><!-- 지워야할 값 -->
+                        <input type="hidden" name="cert_no" id="cert_no" value="">
                         <input type="hidden" name="dn_hash">
                         <!-- 요청종류 -->
                         <input type="hidden" name="req_tx" value="cert">
@@ -780,18 +780,18 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
                         <!-- web_siteid 을 위한 필드 -->
                         <input type="hidden" name="web_siteid_hashYN" value="Y">
-                        <input type="hidden" name="birthday" value=""><!-- 지워야할 값 -->
-                        <input type="hidden" name="comm_id" value=""><!-- 지워야할 값 -->
-                        <input type="hidden" name="name" readonly value=""><!-- 지워야할 값 -->
-                        <input type="hidden" name="hphone" id="hphone" readonly value=""><!-- 지워야할 값 -->
-                        <button type="submit" onclick="auth_type_check();" class="certified-box__button">인증하기</button>
+                        <input type="hidden" name="birthday" value="">
+                        <input type="hidden" name="comm_id" value="">
+                        <input type="hidden" name="name" readonly value="">
+                        <input type="hidden" name="hphone" id="hphone" readonly value="">
+                        <button type="submit" onclick="auth_type_check();" class="certified-box__button">본인인증</button>
                     </form>
                 </div>
 
                 <form name="form_boost_us" method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form register-form">
                     <input type="hidden" name="ordr_idxx" value=""/>
                     <input type="hidden" name="enc_cert_data2"  value=""/>
-                    <input type="hidden" name="cert_no" id="cert_no" value="23732000946920"/><!-- 지워야할 값 -->
+                    <input type="hidden" name="cert_no" id="cert_no" value=""/>
                     <input type="hidden" name="dn_hash" value=""/>
                     <!-- 요청종류 -->
                     <input type="hidden" name="req_tx" value="cert"/>
@@ -822,17 +822,17 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
                     <!-- web_siteid 을 위한 필드 -->
                     <input type="hidden" name="web_siteid_hashYN" value="Y"/>
-                    <input type="hidden" name="birthday" value=""><!-- 지워야할 값 -->
+                    <input type="hidden" name="birthday" value="">
 
                     <div class="modal-boost-us__box modal-boost-us__name">
                         <span>이름</span>
-                        <input type="text" name="name" readonly value=""><!-- 지워야할 값 -->
+                        <input type="text" name="name" readonly value="" placeholder="휴대전화 본인인증 시 자동으로 입력됩니다.">
                     </div>
                     <div class="modal-boost-us__box">
                         <span>휴대전화</span>
                         <div>
-                            <input type="hidden" name="comm_id" value=""><!-- 지워야할 값 -->
-                            <input type="text" name="hphone" id="hphone" readonly value=""><!-- 지워야할 값 -->
+                            <input type="hidden" name="comm_id" value="">
+                            <input type="text" name="hphone" id="hphone" readonly value="">
                         </div>
                     </div>
                     <div class="modal-boost-us__box modal-boost-us__channel">
@@ -862,10 +862,10 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <textarea rows="5" name="reason" placeholder="최대 50자 이내" maxlength="50"></textarea>
                     </div>
                     <div class="modal-boost-us__information">
-                        <p>개인정보 수집 및 할용 동의</p>
+                        <p>개인정보 수집·이용 동의</p>
                         <section>
                             <div>
-                                <p><strong>개인정보 수집 이용 동의</strong></p>
+                                <p><strong>개인정보 수집·이용 동의</strong></p>
                                 <table class="table">
                                     <colgroup>
                                         <col width="33.333333%">
@@ -1485,7 +1485,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <div class="modal__container modal-footer-privacy__container">
             <div class="modal-footer-privacy__title">
                 <h2>
-                    개인정보 처리 방침
+                    개인정보 처리방침
                 </h2>
             </div>
             <div class="modal-footer-privacy__content">
@@ -1761,7 +1761,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <div>
             <h1>(주)엘지유플러스</h1>
             <p><a href="https://www.lguplus.com/" target="_blank" onclick="gtag('event','Footer',{'event_category' : '와이낫페이지' ,'event_label' : 'LG 유플러스 홈페이지 가기'})">LG 유플러스 홈페이지 가기</a></p>
-            <p><a href="#" class="footer__privacy">개인정보 처리 방침</a></p>
+            <p><a href="#" class="footer__privacy">개인정보 처리방침</a></p>
         </div>
         <div>
             <address>서울특별시 용산구 한강대로 32</address>
@@ -1776,8 +1776,6 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <p>Copyright © 2022 LG Uplus Corp. All Rights Reserved.</p>
     </div>
 </footer>
-
-
 
 <iframe id="kcp_cert" name="kcp_cert" width="100%" height="700" frameborder="0" scrolling="no" style="display:none"></iframe>
 </body>

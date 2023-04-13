@@ -337,8 +337,9 @@ section {
 
 .brand-film {
     position: relative;
-    height: 873px;
+    //height: 873px;
     background: #f6f6f6;
+    padding-bottom: 60px;
 
     .swiper-wrapper {
         padding-left: 136px;
@@ -581,7 +582,7 @@ section {
                 background: url(/assets/images/img_boost-us_tab1.jpg) no-repeat left top;
 
                 div {
-                    padding-left: 30px;
+                    padding: 20px 0 0 30px;
 
                     p {
                         color: #000000;
@@ -745,8 +746,9 @@ section {
     &__wrap {
         position: relative;
         max-width: 1190px;
-        height: 402px;
+        //height: 402px;
         margin: 0 auto;
+        padding: 0 0 132px 655px;
         padding-left: 655px;
         box-sizing: border-box;
         background: url("/assets/images/img_experience_phone.png") no-repeat 230px top;
@@ -839,7 +841,7 @@ section {
 
 .road {
     position: relative;
-    height: 1186px;
+    //height: 1186px;
 
     header {
         p strong {
@@ -856,6 +858,31 @@ section {
                 background: url(/assets/images/icon_road_click.png);
                 content: '';
             }
+        }
+    }
+
+    &__list-box {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100%;
+            max-width: 1400px;
+            height: 315px;
+            transform: translateX(-50%);
+            background-color: $pink;
+            content:'';
+        }
+
+        p {
+            position: relative;
+            padding: 62px 0 42px 0;
+            color: #fff;
+            font-size: 35px;
+            text-align: center;
+            z-index: 1;
         }
     }
 
@@ -924,28 +951,6 @@ section {
         }
     }
 
-    &__textBox {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: -1;
-        width: 100%;
-        max-width: 1400px;
-        height: 720px;
-        margin: 0 auto;
-        background: #e6007e;
-
-        h3 {
-            padding-top: 180px;
-            color: #fff;
-            font-size: 35px;
-            text-align: center;
-        }
-    }
-
     iframe {
         width: 100%;
         border: none;
@@ -953,12 +958,9 @@ section {
     }
 
     &__carousel {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
         width: 100%;
         max-width: 1920px;
+        margin: 0 auto;
 
         .swiper-slide {
             width: 720px;
@@ -1007,7 +1009,6 @@ section {
             left: calc(50% + 375px);
             background: url("/assets/images/icon_road_button_next.png") no-repeat center;
         }
-
     }
 
 }
@@ -1111,7 +1112,7 @@ section {
 .collaboration {
     overflow: hidden;
     position: relative;
-    height: 1158px;
+    //height: 1158px;
     padding-bottom: 83px;
     background: #171c35;
 
@@ -1504,7 +1505,7 @@ section {
 
             li {
                 position: relative;
-                padding: 0 20px;
+                padding-left: 20px;
                 color: #fff;
                 font-size: 20px;
                 line-height: math.div(30, 20);
@@ -1611,6 +1612,10 @@ section {
             width: 462px;
             height: 134px;
             resize: none;
+        }
+
+        input::placeholder {
+            text-align: center;
         }
 
         textarea::placeholder {
@@ -1767,19 +1772,17 @@ section {
     }
 
     &__content {
-        //max-height: 800px;
         margin: 30px 0 40px 0;
         padding: 44px;
         background-color: #fff;
         border-radius: 10px;
 
         section {
-            //overflow-y: scroll;
-            //height: 711px;
-            //background-color: #f7f7f7;
-            overflow: auto;
-            height: auto;
-            border: none;
+            overflow-y: scroll;
+            height: 711px;
+            //overflow: auto;
+            //height: auto;
+            //border: none;
         }
 
     }

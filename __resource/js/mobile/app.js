@@ -173,7 +173,20 @@ const app = () => {
     })();
 
 
+    //footer 개인정보 처리 방침
+    (() => {
+        const footer = findOne('footer');
+        const privacy = findOne('.footer__privacy', footer);
+        const privacyModal = findOne('.modal-footer-privacy');
+        const modal = new Modal();
 
+
+        privacy.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            modal.open(privacyModal);
+        })
+    })();
 
 };
 
