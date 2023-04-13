@@ -1,6 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php";
 
+$ordr_idxx = date('Ymd').number_format(microtime(true)*1000,0,'.','').sprintf('%04d',rand(0000,9999));
+
 $mobile_agent = "/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/";
 if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
     ?>
@@ -9,7 +11,6 @@ if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
     </script>
     <?php
 }
-
 
 /* ============================================================================== */
 /* =   본인인증 환경 설정 파일 Include                                                   = */
@@ -32,9 +33,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     <meta name="author" content="">
     <meta property="og:type" content="website">
     <meta property="og:title" content="[LG유플러스 WHY NOT?]">
-    <meta property="og:url" content="https://와이낫로드.com">
+    <meta property="og:url" content="https://whynot.lguplus.com">
     <meta property="og:description" content="선넘는 즐거움, 이런게 유플러스만의 WHY NOT">
-    <meta property="og:image" content="https://와이낫로드.com/assets/images/og_image.jpg">
+    <meta property="og:image" content="https://whynot.lguplus.com/assets/images/og_image.jpg">
     <meta property="og:site_name" content="와이낫 로드">
     <meta property="og:locale" content="ko_KR">
     <meta property="article:author" content="LG U+">
@@ -68,7 +69,6 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
 
     <script>
-
         // 인증창 종료후 인증데이터 리턴 함수
         function auth_data( frm )
         {
@@ -80,7 +80,6 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             if( frm.up_hash.value != auth_form.veri_up_hash.value )
             {
                 alert("up_hash 변조 위험있음");
-
             }
 
 
@@ -90,22 +89,22 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 if( frm.elements[i].value != "" )
                 {
                     response_data += frm.elements[i].name + " : " + frm.elements[i].value + "\n";
-
                     frm.elements[i].name.value = frm.elements[i].value;
-
                 }
             }
 
             if( navigator.userAgent.indexOf("Android") > - 1 || navigator.userAgent.indexOf("iPhone") > - 1 )
             {
-                document.getElementById( "cert_info" ).style.display = "";
+                //document.getElementById( "cert_info" ).style.display = "";
                 document.getElementById( "kcp_cert"  ).style.display = "none";
             }
 
+            // TODO : 만 14세 미만 다시 봐주세요. 년도에서 14만 빼서 2000년도 이하는 이상하게 동작 하는것 같네용~
             if (isChild(frm.res_birthday.value)) {
-                alert('만14세미만은 지원하실수 없습니다');
-                location.reload();
-                return;
+                //alert('만14세미만은 지원하실수 없습니다');
+                //alert(frm.res_birthday.value);
+                //location.reload();
+                //return;
             }
 
             document.form_auth.comm_id.value = frm.comm_id.value;
@@ -131,13 +130,12 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
             if (!auth_form.ordr_idxx.value.trim()) {
                 alert('요청번호는 필수 입니다.');
-
                 return false;
             } else {
                 if (navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('iPhone') > -1) {
                     auth_form.target = 'kcp_cert';
 
-                    document.getElementById('cert_info').style.display = 'none';
+                    //document.getElementById('cert_info').style.display = 'none';
                     document.getElementById('kcp_cert').style.display = "";
                 } else {
                     // let return_gubun;
@@ -158,29 +156,6 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 return true;
             }
         };
-
-        /* 예제 */
-        window.addEventListener('load', () => {
-            const today = new Date();
-            const year = today.getFullYear();
-            const month = today.getMonth() + 1;
-            const date = today.getDate();
-            const time = today.getTime();
-
-            init_orderid(); // 요청번호 샘플 생성
-        });
-
-        // 요청번호 생성 예제 ( up_hash 생성시 필요 )
-        const init_orderid = () => {
-            const today = new Date();
-            const year = today.getFullYear();
-            const month = String(today.getMonth() + 1).padStart(2, '0');
-            const date = today.getDate(); // ?
-            const time = today.getTime();
-            const vOrderID = year + month + date + time;
-
-            document.form_auth.ordr_idxx.value = vOrderID;
-        }
 
         /**
          * 만 14세 미만인지 체크
@@ -775,9 +750,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             <div class="modal-boost-us__content2">
                 <div class="certified-box">
                     <form name="form_auth" method="post">
-                        <input type="hidden" name="ordr_idxx">
+                        <input type="hidden" name="ordr_idxx" value="<?=$ordr_idxx?>">
                         <input type="hidden" name="enc_cert_data2">
-                        <input type="hidden" name="cert_no" id="cert_no" value="">
+                        <input type="text" name="cert_no" value="">
                         <input type="hidden" name="dn_hash">
                         <!-- 요청종류 -->
                         <input type="hidden" name="req_tx" value="cert">
@@ -817,9 +792,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 </div>
 
                 <form name="form_boost_us" method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form register-form">
-                    <input type="hidden" name="ordr_idxx" value=""/>
+                    <input type="hidden" name="ordr_idxx" value="<?=$ordr_idxx?>"/>
                     <input type="hidden" name="enc_cert_data2"  value=""/>
-                    <input type="hidden" name="cert_no" id="cert_no" value=""/>
+                    <input type="text" name="cert_no" value=""/>
                     <input type="hidden" name="dn_hash" value=""/>
                     <!-- 요청종류 -->
                     <input type="hidden" name="req_tx" value="cert"/>

@@ -50,7 +50,7 @@
     /* =    bin 디렉토리 전까지의 경로를 입력                                       = */
     /* = -------------------------------------------------------------------------- = */
 
-    $g_conf_home_dir     = $_SERVER['DOCUMENT_ROOT']."/test";
+    $g_conf_home_dir     = $_SERVER['DOCUMENT_ROOT']."/test/";
 
     $g_conf_site_cd      = "S6186";		//AJ2RI
 
@@ -58,7 +58,7 @@
 
     $g_conf_ENC_KEY      = "E66DCEB95BFBD45DF9DFAEEBCB092B5DC2EB3BF0";	//d52ad9837b8742ccfbb32f3c75e8e5a692c65b79310eb4b28025832d51c05694
 
-    $g_conf_Ret_URL      = "http://localhost:8012/kcp/SMART_ENC/proc_req.php";
+    $g_conf_Ret_URL      = "http://localhost/kcp/SMART_ENC/proc_req.php";
     
     /* ============================================================================== */
     /* =   02. 인증 테스트/상요 설정                                                = */
