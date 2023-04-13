@@ -266,6 +266,9 @@ const app = () => {
                             alert(data.message);
                             location.reload();
                         }
+                    })
+                    .catch(error => {
+                        console.error(error);
                     });
             }
         });

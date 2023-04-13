@@ -102,9 +102,16 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 document.getElementById( "kcp_cert"  ).style.display = "none";
             }
 
+            if (isChild(frm.res_birthday.value)) {
+                alert('만14세미만은 지원하실수 없습니다');
+                location.reload();
+                return;
+            }
+
             document.form_auth.comm_id.value = frm.comm_id.value;
             document.form_auth.name.value = frm.res_username.value;
             document.form_auth.hphone.value = frm.res_hphone.value;
+            document.form_auth.birthday.value = frm.res_birthday.value;
             document.form_auth.enc_cert_data2.value	= frm.enc_cert_data2.value;
             document.form_auth.cert_no.value = frm.cert_no.value;
             document.form_auth.dn_hash.value = frm.dn_hash.value;
@@ -112,6 +119,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             document.form_boost_us.comm_id.value = frm.comm_id.value;
             document.form_boost_us.name.value = frm.res_username.value;
             document.form_boost_us.hphone.value = frm.res_hphone.value;
+            document.form_boost_us.birthday.value = frm.res_birthday.value;
             document.form_boost_us.enc_cert_data2.value	= frm.enc_cert_data2.value;
             document.form_boost_us.cert_no.value = frm.cert_no.value;
             document.form_boost_us.dn_hash.value = frm.dn_hash.value;
@@ -172,6 +180,26 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             const vOrderID = year + month + date + time;
 
             document.form_auth.ordr_idxx.value = vOrderID;
+        }
+
+        /**
+         * 만 14세 미만인지 체크
+         * @param birthDay yyyyMMdd
+         * @returns true:만14세미만 어린이
+         */
+        const isChild = (birthDay) => {
+            const today = new Date();
+            const year = today.getFullYear() - 14;
+            const month = today.getMonth();
+            const date = today.getDate();
+            const newDate = new Date(year, month, date).getTime();
+
+            const birthDayYear = (birthDay + '').substring(0, 4);
+            const birthDayMonth = (birthDay + '').substring(4, 6) - 1;
+            const birthDayDate = (birthDay + '').substring(6, 8);
+            const newBirthDay = new Date(birthDayYear, birthDayMonth, birthDayDate).getTime() + (24 * 60 * 60 * 1000);
+
+            return (newDate - newBirthDay) >= 0;
         }
     </script>
 </head>

@@ -50,7 +50,7 @@
     /* =    bin 디렉토리 전까지의 경로를 입력                                       = */
     /* = -------------------------------------------------------------------------- = */
 
-    $g_conf_home_dir     = $_SERVER['DOCUMENT_ROOT']."/test/";
+    $g_conf_home_dir     = $_SERVER['DOCUMENT_ROOT']."/test";
 
     $g_conf_site_cd      = "S6186";		//AJ2RI
 

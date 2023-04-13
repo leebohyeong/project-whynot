@@ -8,9 +8,18 @@ backup/dest/assets/css/*
 backup/dest/assets/js/*
 backup/dest/**/*.html
 
+assets/css/*
+assets/js/*
+m/assets/css/*
+m/assets/js/*
+
 vendor/
 logs/
 composer.lock
 composer.phar
 property.php
 src/config.php
+
+test/bin/ct_cli
+test/bin/ct_cli_exe.exe
+kcp/lib/ct_cli_lib.php
