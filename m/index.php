@@ -3,14 +3,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php";
 
 $ordr_idxx = date('Ymd').number_format(microtime(true)*1000,0,'.','').sprintf('%04d',rand(0000,9999));
 
-//$mobile_agent = "/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/";
-//if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
-//    ?>
-<!--    <script>-->
-<!--        location.href = "/m/index.html";-->
-<!--    </script>-->
-<!--    --><?php
-//}
+$mobile_agent = "/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/";
+if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
+    ?>
+    <script>
+        location.href = "/m/index.html";
+    </script>
+    <?php
+}
 
 /* ============================================================================== */
 /* =   본인인증 환경 설정 파일 Include                                                   = */
@@ -92,10 +92,10 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
             // TODO : 만 14세 미만 다시 봐주세요. 년도에서 14만 빼서 2000년도 이하는 이상하게 동작 하는것 같네용~
             if (isChild(frm.res_birthday.value)) {
-                //alert('만14세미만은 지원하실수 없습니다');
-                //alert(frm.res_birthday.value);
-                //location.reload();
-                //return;
+                alert('만14세미만은 지원하실수 없습니다');
+                alert(frm.res_birthday.value);
+                location.reload();
+                return;
             }
 
             document.form_auth.comm_id.value = frm.comm_id.value;
@@ -160,12 +160,12 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             const date = today.getDate();
             const newDate = new Date(year, month, date).getTime();
 
-            const birthDayYear = (birthDay + '').substring(0, 4);
+            const birthDayYear = (birthDay + '').substring(0, 4) * 1;
             const birthDayMonth = (birthDay + '').substring(4, 6) - 1;
-            const birthDayDate = (birthDay + '').substring(6, 8);
+            const birthDayDate = (birthDay + '').substring(6, 8) * 1;
             const newBirthDay = new Date(birthDayYear, birthDayMonth, birthDayDate).getTime() + (24 * 60 * 60 * 1000);
 
-            return (newDate - newBirthDay) >= 0;
+            return newDate < newBirthDay;
         }
     </script>
 </head>
@@ -1328,6 +1328,6 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     </div>
 </footer>
 
-<iframe id="kcp_cert" name="kcp_cert"  frameborder="0" scrolling="no" style="display:none; position: fixed; left: 0; top: 0; z-index: 10000; width:100%; height: 100%; "></iframe>
+<iframe id="kcp_cert" name="kcp_cert" width="100%" height="700" frameborder="0" scrolling="no" style="display:none"></iframe>
 </body>
 </html>
