@@ -373,7 +373,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             </div>
             BOOST US
         </h2>
-        <p data-aos="fade-up" data-aos-delay="100">크리에이터와 함께 도전하는 100일간의 부스트 프로젝트</p>
+        <p data-aos="fade-up" data-aos-delay="100"><strong>파워 크리에이터</strong>가 될 수 있는 <strong>100일간</strong>의 도전 프로젝트!</p>
     </header>
     <div class="boost-us__video">
         <iframe src="https://www.youtube.com/embed/lxN-pHTiKnA?controls=0"></iframe>
