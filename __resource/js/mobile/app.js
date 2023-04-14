@@ -284,7 +284,7 @@ const app = () => {
                         }else{
                             alert(data.message);
                             // location.reload();
-                            location.href='/#boost-us';
+                            location.href='/m/#boost-us';
                             location.reload();
                         }
                     })
