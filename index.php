@@ -101,10 +101,10 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
             // TODO : 만 14세 미만 다시 봐주세요. 년도에서 14만 빼서 2000년도 이하는 이상하게 동작 하는것 같네용~
             if (isChild(frm.res_birthday.value)) {
-                //alert('만14세미만은 지원하실수 없습니다');
-                //alert(frm.res_birthday.value);
-                //location.reload();
-                //return;
+                alert('만14세미만은 지원하실수 없습니다');
+                alert(frm.res_birthday.value);
+                location.reload();
+                return;
             }
 
             document.form_auth.comm_id.value = frm.comm_id.value;
@@ -169,12 +169,12 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             const date = today.getDate();
             const newDate = new Date(year, month, date).getTime();
 
-            const birthDayYear = (birthDay + '').substring(0, 4);
+            const birthDayYear = (birthDay + '').substring(0, 4) * 1;
             const birthDayMonth = (birthDay + '').substring(4, 6) - 1;
-            const birthDayDate = (birthDay + '').substring(6, 8);
+            const birthDayDate = (birthDay + '').substring(6, 8) * 1;
             const newBirthDay = new Date(birthDayYear, birthDayMonth, birthDayDate).getTime() + (24 * 60 * 60 * 1000);
 
-            return (newDate - newBirthDay) >= 0;
+            return newDate < newBirthDay;
         }
     </script>
 </head>

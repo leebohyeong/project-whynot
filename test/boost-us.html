@@ -125,5 +125,29 @@
             });
     });
 </script>
+
+
+<script>
+    const isChild = (birthDay) => {
+        const today = new Date();
+        const year = today.getFullYear() - 14;
+        const month = today.getMonth();
+        const date = today.getDate();
+        const newDate = new Date(year, month, date).getTime();
+
+        const birthDayYear = (birthDay + '').substring(0, 4) * 1;
+        const birthDayMonth = (birthDay + '').substring(4, 6) - 1;
+        const birthDayDate = (birthDay + '').substring(6, 8) * 1;
+        const newBirthDay = new Date(birthDayYear, birthDayMonth, birthDayDate).getTime() + (24 * 60 * 60 * 1000);
+
+        return newDate < newBirthDay;
+    }
+
+    console.log('19541012', isChild(19541012));
+    console.log('20001012', isChild(20001012));
+    console.log('20090413', isChild(20090413));
+    console.log('20090414', isChild(20090414));
+    console.log('20200512', isChild(20200512));
+</script>
 </body>
 </html>
