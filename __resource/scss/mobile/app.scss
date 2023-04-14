@@ -1442,9 +1442,11 @@ section {
 
 }
 
+
 .modal-boost-us__information,
 .modal-boost-us__precautions,
 .modal-footer-privacy__content {
+    padding-top: 20px;
 
     .table-wrap {
         overflow-x: scroll;
@@ -1623,14 +1625,14 @@ section {
     &__content2 {
         position: relative;
         margin: 15px 0 37px 0;
-        padding: getSize(30px) getSize(40px) getSize(40px) getSize(10px);
+        padding: getSize(40px) getSize(20px);
         background-color: #fff;
         border-radius: 10px;
 
         .certified-box {
             position: absolute;
-            top: 81px;
-            right: 20px;
+            top: 86px;
+            right: 10px;
 
             &__button {
                 display: block;
@@ -1663,13 +1665,13 @@ section {
 
         > div.modal-boost-us__name {
             span {
-
+                letter-spacing: 8px;
             }
         }
 
         > div.modal-boost-us__url {
             span {
-
+                letter-spacing: 9px;
             }
         }
 
@@ -1726,10 +1728,11 @@ section {
 
         label {
             cursor: pointer;
+            padding-top: 2px;
 
             span {
                 display: inline-block;
-                vertical-align: middle;
+                vertical-align: text-top;
                 font-size: getSize(24px);
             }
         }

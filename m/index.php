@@ -811,7 +811,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <input type="hidden" name="birthday" value="">
 
                     <div class="modal-boost-us__box modal-boost-us__name">
-                        <span>이름</span>
+                        <span>이 름</span>
                         <input type="text" name="name" readonly value="" placeholder="휴대전화 본인인증 시 자동으로 입력됩니다.">
                     </div>
                     <div class="modal-boost-us__box modal-boost-us__hphone">
