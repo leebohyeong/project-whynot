@@ -8,7 +8,7 @@ ENVIRONMENT     = "development"
 SITE_NAME       = "와이낫 로드"
 OG_KEYWORDS     = "LG U+, 와이낫 로드"
 OG_TITLE        = "[LG유플러스 WHY NOT?]"
-OG_DESCRIPTION  = "와이낫크루가 추천하는 대한민국 핫플과 혜택을 만나보세요"
+OG_DESCRIPTION  = "선넘는 즐거움, 이런게 유플러스만의 WHY NOT"
 OG_IMAGE        = "/assets/images/og_image.jpg"
 
 [DOMAIN]

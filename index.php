@@ -36,7 +36,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     <meta property="og:title" content="<?=$OG_TITLE_?>">
     <meta property="og:url" content="<?=$HOST_HTTP_?>">
     <meta property="og:description" content="<?=$OG_DESCRIPTION_?>">
-    <meta property="og:image" content="<?=$HOST_HTTP_?>/assets/images/og_image.jpg">
+    <meta property="og:image" content="<?=$HOST_HTTP_?><?=$OG_IMAGE_?>">
     <meta property="og:site_name" content="<?=$SITE_NAME_?>">
     <meta property="og:locale" content="ko_KR">
     <meta property="article:author" content="LG U+">
