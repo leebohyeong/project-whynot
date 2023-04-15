@@ -647,7 +647,7 @@ class CommonFunc
         }
     }
 
-    function str_mask($str, $start = 0, $length = null)
+    public static function str_mask($str, $start = 0, $length = null)
     {
         $mask = preg_replace("/\S/", "*", $str);
         if (is_null($length)) {
