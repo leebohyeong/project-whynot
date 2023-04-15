@@ -178,6 +178,7 @@ const app = () => {
                 const content = contents[id];
 
                 form.reset();
+                formCertNo.value = '';
                 modal.open(content);
             });
         });
