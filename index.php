@@ -117,8 +117,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             document.form_auth.cert_no.value = frm.cert_no.value;
             document.form_auth.dn_hash.value = frm.dn_hash.value;
 
-            document.getElementById('modal-boost-usname').value = frm.res_username.value;
-            document.getElementById('modal-boost-ushphone').value = frm.res_hphone.value;
+            document.getElementById('modal-boost-us-name').value = frm.res_username.value;
+            document.getElementById('modal-boost-us-hphone').value = frm.res_hphone.value;
             document.form_boost_us.enc_cert_data2.value	= frm.enc_cert_data2.value;
             document.form_boost_us.cert_no.value = frm.cert_no.value;
             document.form_boost_us.dn_hash.value = frm.dn_hash.value;
