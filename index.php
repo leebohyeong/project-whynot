@@ -117,10 +117,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             document.form_auth.cert_no.value = frm.cert_no.value;
             document.form_auth.dn_hash.value = frm.dn_hash.value;
 
-            document.form_boost_us.comm_id.value = frm.comm_id.value;
-            document.form_boost_us.name.value = frm.res_username.value;
-            document.form_boost_us.hphone.value = frm.res_hphone.value;
-            document.form_boost_us.birthday.value = frm.res_birthday.value;
+            document.getElementById('modal-boost-usname').value = frm.res_username.value;
+            document.getElementById('modal-boost-ushphone').value = frm.res_hphone.value;
             document.form_boost_us.enc_cert_data2.value	= frm.enc_cert_data2.value;
             document.form_boost_us.cert_no.value = frm.cert_no.value;
             document.form_boost_us.dn_hash.value = frm.dn_hash.value;
@@ -794,50 +792,19 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 </div>
 
                 <form name="form_boost_us" method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form register-form">
-                    <input type="hidden" name="ordr_idxx" value="<?=$ordr_idxx?>"/>
-                    <input type="hidden" name="enc_cert_data2"  value=""/>
-                    <input type="hidden" name="cert_no" value=""/>
-                    <input type="hidden" name="dn_hash" value=""/>
-                    <!-- 요청종류 -->
-                    <input type="hidden" name="req_tx" value="cert"/>
-                    <!-- 요청구분 -->
-                    <input type="hidden" name="cert_method" value="01"/>
-                    <!-- 웹사이트아이디 : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
-                    <input type="hidden" name="web_siteid" value="<?= $g_conf_web_siteid ?>"/>
-
-                    <!-- 사이트코드 : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
-                    <input type="hidden" name="site_cd" value="<?= $g_conf_site_cd ?>" />
-                    <!-- Ret_URL : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
-                    <input type="hidden" name="Ret_URL" value="<?= $g_conf_Ret_URL ?>" />
-                    <!-- cert_otp_use 필수 ( 메뉴얼 참고)
-                         Y : 실명 확인 + OTP 점유 확인 , N : 실명 확인 only
-                    -->
-                    <input type="hidden" name="cert_otp_use" value="Y"/>
-                    <!-- 리턴 암호화 고도화 -->
-                    <input type="hidden" name="cert_enc_use_ext" value="Y"/>
-
-                    <!-- cert_able_yn input 비활성화 설정 -->
-                    <input type="hidden" name="cert_able_yn" value=""/>
-
-                    <input type="hidden" name="res_cd" value=""/><br>
-                    <input type="hidden" name="res_msg" value=""/>
-
-                    <!-- up_hash 검증 을 위한 필드 -->
-                    <input type="hidden" name="veri_up_hash" value=""/>
-
-                    <!-- web_siteid 을 위한 필드 -->
-                    <input type="hidden" name="web_siteid_hashYN" value="Y"/>
-                    <input type="hidden" name="birthday" value="">
+                    <input type="hidden" name="ordr_idxx" value="<?=$ordr_idxx?>">
+                    <input type="hidden" name="enc_cert_data2">
+                    <input type="hidden" name="cert_no">
+                    <input type="hidden" name="dn_hash">
 
                     <div class="modal-boost-us__box modal-boost-us__name">
                         <span>이름</span>
-                        <input type="text" name="name" readonly value="" placeholder="휴대전화 본인인증 시 자동으로 입력됩니다.">
+                        <input type="text" id="modal-boost-us-name" readonly placeholder="휴대전화 본인인증 시 자동으로 입력됩니다.">
                     </div>
                     <div class="modal-boost-us__box">
                         <span>휴대전화</span>
                         <div>
-                            <input type="hidden" name="comm_id" value="">
-                            <input type="text" name="hphone" id="hphone" readonly value="">
+                            <input type="text" id="modal-boost-us-hphone" readonly>
                         </div>
                     </div>
                     <div class="modal-boost-us__box modal-boost-us__channel">

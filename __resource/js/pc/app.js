@@ -187,7 +187,6 @@ const app = () => {
         const boostUsModal = findOne('#boost-us-v2');
         const form = findOne('.register-form', boostUsModal);
         const formCertNo = findOne('[name="cert_no"]', form);
-        const formHphone = findOne('[name="hphone"]', form);
         const formChannel = find('[name="channel"]', form);
         const formUrl = findOne('[name="url"]', form);
         const urlRegex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
@@ -197,7 +196,7 @@ const app = () => {
         const formAgree2 = findOne('[name="agree2"]', form);
 
         const isValid = () => {
-            if(formCertNo.value == "" || formHphone.value == "") {
+            if (!formCertNo.value.trim()) {
                 alert('본인인증을 진행해 주세요.');
                 formHphone.focus();
                 return false;
