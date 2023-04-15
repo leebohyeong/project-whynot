@@ -27,16 +27,16 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     <title>LG U+</title>
     <meta name="author" content="Group IDD 개발그룹">
     <meta name="description" content="와이낫크루가 추천하는 대한민국 핫플과 혜택을 만나보세요">
-    <meta name="keywords" content="LG U+, 와이낫 로드">
+    <meta name="keywords" content="<?=$OG_KEYWORDS_?>">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
     <meta name="author" content="">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="[LG유플러스 WHY NOT?]">
-    <meta property="og:url" content="https://와이낫로드.com">
-    <meta property="og:description" content="선넘는 즐거움, 이런게 유플러스만의 WHY NOT">
-    <meta property="og:image" content="https://와이낫로드.com/assets/images/og_image.jpg">
-    <meta property="og:site_name" content="와이낫 로드">
+    <meta property="og:title" content="<?=$OG_TITLE_?>">
+    <meta property="og:url" content="<?=$HOST_HTTP_?>">
+    <meta property="og:description" content="<?=$OG_DESCRIPTION_?>">
+    <meta property="og:image" content="<?=$HOST_HTTP_?>/assets/images/og_image.jpg">
+    <meta property="og:site_name" content="<?=$SITE_NAME_?>">
     <meta property="og:locale" content="ko_KR">
     <meta property="article:author" content="LG U+">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
@@ -70,7 +70,9 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             // up_hash 검증
             if( frm.up_hash.value != auth_form.veri_up_hash.value )
             {
-                alert("up_hash 변조 위험있음");
+                //alert("up_hash 변조 위험있음");
+                alert('본인인증 다시 시도해주시기 바랍니다.');
+                location.reload();
             }
 
 
@@ -90,7 +92,6 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 document.body.classList.remove('modal-open');
             }
 
-            // TODO : 만 14세 미만 다시 봐주세요. 년도에서 14만 빼서 2000년도 이하는 이상하게 동작 하는것 같네용~
             if (isChild(frm.res_birthday.value)) {
                 alert('만14세미만은 지원하실수 없습니다');
                 alert(frm.res_birthday.value);
