@@ -26,7 +26,7 @@ if ($today_date > '2023-04-25') {
 // 결과값 리턴
 $response = array();
 $response['result'] = false;
-$response['message'] = '이벤트에 참여하실 수 없습니다.';
+$response['message'] = '지원하기에 참여하실 수 없습니다.';
 
 $requestInfo = array(
     'channel' => $_POST['channel'] ?? '',
@@ -72,7 +72,7 @@ if ($validator->validate()) {
 
     if ( $ct_cert->check_valid_hash ( $g_conf_home_dir , $g_conf_ENC_KEY , $dn_hash , $veri_str ) != "1" )
     {
-        $response['message']    = "dn_hash 변조 위험있음";
+        $response['message']    = "dn_hash 변조 위험있으므로 다시 시도해주시기 바랍니다.";
         $response['result']     = false;
         echo json_encode($response);
         exit;
@@ -147,7 +147,7 @@ if ($db->insert($requestInfo)) {
     $event_seq = $db->lastInsertId();
 
     $response['result'] = true;
-    $response['message'] = '이벤트에 정상적으로 참여되었습니다.';
+    $response['message'] = '모집에 정상적으로 지원되었습니다.';
 
     echo json_encode($response);
     exit();
