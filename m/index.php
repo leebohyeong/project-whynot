@@ -886,7 +886,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                             <tr>
                                                 <td>㈜에이치에스애드</td>
                                                 <td>부스터스와 관련된 업무</td>
-                                                <td rowspan="3">목적달성 완료 혹은 개인정보 수집일로부터 4개월까지 보유 후 파기</td>
+                                                <td rowspan="4">목적달성 완료 혹은 개인정보 수집일로부터 4개월까지 보유 후 파기</td>
                                             </tr>
                                             <tr>
                                                 <td>㈜프리비알</td>
