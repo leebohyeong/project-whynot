@@ -177,7 +177,6 @@ const app = () => {
                 const id = getId(trigger);
                 const content = contents[id];
 
-                form.reset();
                 formCertNo.value = '';
                 modal.open(content);
             });
@@ -185,9 +184,8 @@ const app = () => {
 
         tab.menus[0].click();
 
+        const boostUsModal = findOne('.modal-boost-us-v2');
         const formHphone = findOne('[name="form_auth"] [type="submit"]', boostUsModal);
-
-        const boostUsModal = findOne('#boost-us-v2');
         const form = findOne('.register-form', boostUsModal);
         const formCertNo = findOne('[name="cert_no"]', form);
         const formChannel = find('[name="channel"]', form);
@@ -268,7 +266,10 @@ const app = () => {
                             alert(data.message);
                             // location.reload();
                             location.href='/#boost-us';
-                            location.reload();
+
+                            setTimeout(() => {
+                                location.reload();
+                            }, 3000)
                         }
                     })
                     .catch(error => {
