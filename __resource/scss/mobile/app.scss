@@ -641,6 +641,7 @@ section {
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        position: relative;
                         width: 100%;
                         height: getSize(85px);
                         margin-top: 10px;
@@ -650,6 +651,17 @@ section {
                             weight: $font-weight-semibold;
                             size: getSize(24px);
                         }
+
+                        &::after {
+                            display: inline-block;
+                            vertical-align: middle;
+                            padding-left: 20px;
+                            width: 6px;
+                            height: 8px;
+                            background: url(/assets/images/icon_boost-us_arrow.png) no-repeat center/contain;
+                            content: "";
+                        }
+
                     }
                 }
             }
