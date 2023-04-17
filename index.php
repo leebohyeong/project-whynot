@@ -375,7 +375,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <p data-aos="fade-up" data-aos-delay="100"><strong>파워 크리에이터</strong>가 될 수 있는 <strong>100일간</strong>의 도전 프로젝트!</p>
     </header>
     <div class="boost-us__video">
-        <iframe src="https://www.youtube.com/embed/lxN-pHTiKnA?controls=0"></iframe>
+        <iframe src="https://www.youtube.com/embed/EOoKmVMSrlE"></iframe>
     </div>
     <div class="tab">
         <ul class="tab__nav" role="tablist">
@@ -401,10 +401,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div class="textbox">
                     <div>
                         <p>
-                            크리에이터를 위한 크리에이터에 의한 <br>
                             <strong>파워 크리에이터</strong>가 될 수 있는 <strong>100일간</strong>의 도전 프로젝트
                         </p>
-                        <p>WHY NOT 부스터스 지금 절판 모집 중!</p>
+                        <p>WHY NOT 부스터스에 지금 바로 지원해보세요!</p>
                         <p>
                             <strong>
                                 모집 기간 : 4월 18일(화) ~ 4월 25일(화) <br>
@@ -412,7 +411,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 발표 일정 : 4월 28일(금) 와이낫 홈페이지 발표
                             </strong>
                         </p>
-                        <p>* 선정자에 한해서 개별 연락 예정</p>
+                        <p>* 최종 선정자에 한해 개별 연락 예정</p>
                         <p><a href="#boost-us-v1" class="boost-us__inquiry">지원문의</a></p>
                     </div>
                     <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>
@@ -436,7 +435,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <li class="boost-us__item">
                             <p class="boost-us__link">
                                 100일 동안 <br>
-                                5번의 미션 수행
+                                5번의 미션 콘텐츠 제작
                             </p>
                         </li>
                         <li class="boost-us__item">
@@ -464,14 +463,14 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     </li>
                     <li class="boost-us__item">
                         <p class="boost-us__link">
-                            <strong>총 상금 1,500만원</strong>
+                            <strong>최대 1500만원의 상금</strong>
                             우수참여자 대상
                         </p>
                     </li>
                     <li class="boost-us__item">
                         <p class="boost-us__link">
                             <strong>전속 계약 혜택</strong>
-                            유플러스 광고 및 메타 파트너십 등
+                            유플러스 광고 & META 파트너십
                         </p>
                     </li>
                 </ul>
@@ -709,14 +708,15 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <div class="modal__container modal-boost-us__container">
             <div class="modal-boost-us__title">
                 <h2>
-                    문의처 | Boost-us@freebr.co.kr
+                    문의처 | boost-us@freebr.co.kr
                 </h2>
+                <p>궁금한 사항은 공식 메일로 문의해주세요</p>
             </div>
             <div class="modal-boost-us__content">
                 <p>
-                    위 메일로 문의 시 문의사항 확인 및 답변을 위해 문의주신 이메일 주소가 <br>
-                    개인정보로 수집됩니다. 다음 내용을 확인하시고 문의 바라며, 문의 시 <br>
-                    개인정보 수집에 동의하신 걸로 간주됩니다.
+                    문의 시 발송된 이메일주소가 개인정보로 수집됩니다. <br>
+                    아래 내용 확인 부탁드리며, 문의 시 개인정보(이메일) 수집에 동의한 것으로 <br>
+                    간주됩니다
                 </p>
                 <ul>
                     <li>
@@ -800,10 +800,10 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <span>이름</span>
                         <input type="text" id="modal-boost-us-name" readonly placeholder="휴대전화 본인인증 시 자동으로 입력됩니다.">
                     </div>
-                    <div class="modal-boost-us__box">
+                    <div class="modal-boost-us__box modal-boost-us__hphone">
                         <span>휴대전화</span>
                         <div>
-                            <input type="text" id="modal-boost-us-hphone" readonly>
+                            <input type="text" id="modal-boost-us-hphone" readonly placeholder="본인인증 버튼을 클릭하세요.">
                         </div>
                     </div>
                     <div class="modal-boost-us__box modal-boost-us__channel">
@@ -821,7 +821,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </div>
                     </div>
                     <div class="modal-boost-us__box modal-boost-us__url">
-                        <span>URL</span>
+                        <span>채널명/ <br> 계정명</span>
                         <input type="text" name="url">
                     </div>
                     <div class="modal-boost-us__box modal-boost-us__concept">
@@ -877,7 +877,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 <p>※ 개인정보 수집 시 필수 항목의 수집·이용에 대한 동의를 거부하실 수 있으며, 다만 동의를 거부하실 경우 서비스 이용이 제한될 수 있습니다. 선택 항목의 수집·이용 동의를 거부하실 경우에는 서비스 이용은 제한되지 않습니다.</p>
                                 <p>※ 사이트 이용과정이나 모집 신청과정에서 Google Analytics를 통해 아래와 같은 정보들이 자동으로 생성되어 수집될 수 있습니다. 사용 목적은 이용자가 방문한 웹페이지에 대한 방문 이용행태, 보안접속 여부 등을 파악하기 위함입니다.</p>
                                 <p>- 방문기록, 쿠키, 이용자의 브라우저 종류 및 OS</p>
-                                <p>※ 14세 미만 고객의 경우 지원이 불가능하며, 이 때 지원창에 입력한 14세 미만 고객의 개인정보는 수집되지 않습니다. </p>
+                                <p>※ 14세 미만 고객의 경우 지원이 불가능하며, 이 때 지원창에 입력한 14세 미만 고객의 개인정보는 수집되지 않습니다.</p>
                                 <p>
                                     <br>
                                 </p>
@@ -910,6 +910,10 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                         <tr>
                                             <td>㈜그룹아이디디</td>
                                             <td>부스터스 사이트 개발 및 운영</td>
+                                        </tr>
+                                        <tr>
+                                            <td>㈜NHN KCP</td>
+                                            <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1647,6 +1651,10 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                     <td>㈜그룹아이디디</td>
                                     <td>부스터스 사이트 개발 및 운영</td>
                                 </tr>
+                                <tr>
+                                    <td>㈜NHN KCP</td>
+                                    <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -1754,7 +1762,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <p>12. 개인정보 처리방침의 변경에 관한 사항</p>
                         <p>이 개인정보처리방침은 법령·정책 또는 보안 기술의 변경에 따라 내용의 추가·삭제 및 수정이 있을 시에는 아래와 같은 방법으로 사전 공지하도록 하겠습니다.</p>
                         <p>- 인터넷 홈페이지 첫 화면 공지 사항 란 또는 별도의 창을 통하여 수정내용 공지</p>
-                        <p>시행일자 2023년 4월 17일</p>
+                        <p>시행일자 2023년 4월 18일</p>
                     </div>
                 </section>
             </div>

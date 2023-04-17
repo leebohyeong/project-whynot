@@ -501,6 +501,17 @@ section {
                     background-color: $pink;
                     content:'';
                 }
+
+                &::before {
+                    position: absolute;
+                    top: -4px;
+                    right: -10px;
+                    width: getSize(13px);
+                    height: getSize(13px);
+                    background-color: #f3d112;
+                    border-radius: 50%;
+                    content:'';
+                }
             }
         }
 
@@ -1584,15 +1595,21 @@ section {
     }
 
     &__title {
+        padding: getSize(25px) 0;
+        border-bottom: 2px dashed #fff;
+        text-align: center;
+        
         h2 {
-            padding: getSize(45px) 0 getSize(28px) 0;
-            border-bottom: 2px dashed #fff;
             color: #fff;
             font: {
                 weight: $font-weight-bold;
                 size: getSize(36px);
             }
-            text-align: center;
+        }
+        
+        h2 + p {
+            color: #fff;
+            font-size: getSize(20px);
         }
     }
 
@@ -1666,12 +1683,6 @@ section {
         > div.modal-boost-us__name {
             span {
                 letter-spacing: 8px;
-            }
-        }
-
-        > div.modal-boost-us__url {
-            span {
-                letter-spacing: 9px;
             }
         }
 
