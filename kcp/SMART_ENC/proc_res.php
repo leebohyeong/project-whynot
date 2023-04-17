@@ -113,10 +113,10 @@ header('Content-Type:text/html; charset=UTF-8');
             }
 
             // 가맹점 DB 처리 페이지 영역
-            echo "========================= 리턴 데이터 ======================="       ."<br>";
-            echo "사이트 코드            :" . $site_cd                                 ."<br>";
-            echo "인증 번호              :" . $cert_no                                 ."<br>";
-            echo "암호된 인증정보        :" . $enc_cert_data2                          ."<br>";
+//            echo "========================= 리턴 데이터 ======================="       ."<br>";
+//            echo "사이트 코드            :" . $site_cd                                 ."<br>";
+//            echo "인증 번호              :" . $cert_no                                 ."<br>";
+//            echo "암호된 인증정보        :" . $enc_cert_data2                          ."<br>";
 
             // 인증데이터 복호화 함수
             // 해당 함수는 암호화된 enc_cert_data2 를
@@ -125,21 +125,21 @@ header('Content-Type:text/html; charset=UTF-8');
             $opt = "1" ; // 복호화 인코딩 옵션 ( UTF - 8 사용시 "1" ) 
             $ct_cert->decrypt_enc_cert( $g_conf_home_dir , $g_conf_ENC_KEY , $site_cd , $cert_no , $enc_cert_data2 , $opt );
             
-            echo "========================= 복호화 데이터 ====================="       ."<br>";
-            echo "복호화 이동통신사 코드 :" . $ct_cert->mf_get_key_value("comm_id"    )."<br>"; // 이동통신사 코드   
-            //echo "복호화 전화번호        :" . $ct_cert->mf_get_key_value("phone_no"   )."<br>"; // 전화번호          
-            //echo "복호화 이름            :" . $ct_cert->mf_get_key_value("user_name"  )."<br>"; // 이름              
+//            echo "========================= 복호화 데이터 ====================="       ."<br>";
+//            echo "복호화 이동통신사 코드 :" . $ct_cert->mf_get_key_value("comm_id"    )."<br>"; // 이동통신사 코드
+//            //echo "복호화 전화번호        :" . $ct_cert->mf_get_key_value("phone_no"   )."<br>"; // 전화번호
+//            //echo "복호화 이름            :" . $ct_cert->mf_get_key_value("user_name"  )."<br>"; // 이름
 			$res_username		= $ct_cert->mf_get_key_value("user_name"  );
 			$res_birthday		= $ct_cert->mf_get_key_value("birth_day"  );
 			$res_hphone			= $ct_cert->mf_get_key_value("phone_no"   );
-            echo "복호화 생년월일        :" . $ct_cert->mf_get_key_value("birth_day"  )."<br>"; // 생년월일          
-            echo "복호화 성별코드        :" . $ct_cert->mf_get_key_value("sex_code"   )."<br>"; // 성별코드          
-            echo "복호화 내/외국인 정보  :" . $ct_cert->mf_get_key_value("local_code" )."<br>"; // 내/외국인 정보    
-            echo "복호화 CI              :" . $ct_cert->mf_get_key_value("ci_url"     )."<br>"; // CI                
-            echo "복호화 DI              :" . $ct_cert->mf_get_key_value("di_url"     )."<br>"; // DI 중복가입 확인값
-            echo "복호화 WEB_SITEID      :" . $ct_cert->mf_get_key_value("web_siteid" )."<br>"; // WEB_SITEID
-            echo "복호화 결과코드        :" . $ct_cert->mf_get_key_value("res_cd"     )."<br>"; // 암호화된 결과코드
-            echo "복호화 결과메시지      :" . $ct_cert->mf_get_key_value("res_msg"    )."<br>"; // 암호화된 결과메시지
+//            echo "복호화 생년월일        :" . $ct_cert->mf_get_key_value("birth_day"  )."<br>"; // 생년월일
+//            echo "복호화 성별코드        :" . $ct_cert->mf_get_key_value("sex_code"   )."<br>"; // 성별코드
+//            echo "복호화 내/외국인 정보  :" . $ct_cert->mf_get_key_value("local_code" )."<br>"; // 내/외국인 정보
+//            echo "복호화 CI              :" . $ct_cert->mf_get_key_value("ci_url"     )."<br>"; // CI
+//            echo "복호화 DI              :" . $ct_cert->mf_get_key_value("di_url"     )."<br>"; // DI 중복가입 확인값
+//            echo "복호화 WEB_SITEID      :" . $ct_cert->mf_get_key_value("web_siteid" )."<br>"; // WEB_SITEID
+//            echo "복호화 결과코드        :" . $ct_cert->mf_get_key_value("res_cd"     )."<br>"; // 암호화된 결과코드
+//            echo "복호화 결과메시지      :" . $ct_cert->mf_get_key_value("res_msg"    )."<br>"; // 암호화된 결과메시지
 			
         }
         else/*if( res_cd.equals( "0000" ) != true )*/

@@ -27,16 +27,16 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     <title>LG U+</title>
     <meta name="author" content="Group IDD 개발그룹">
     <meta name="description" content="와이낫크루가 추천하는 대한민국 핫플과 혜택을 만나보세요">
-    <meta name="keywords" content="LG U+, 와이낫 로드">
+    <meta name="keywords" content="<?=$OG_KEYWORDS_?>">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
     <meta name="author" content="">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="[LG유플러스 WHY NOT?]">
-    <meta property="og:url" content="https://와이낫로드.com">
-    <meta property="og:description" content="선넘는 즐거움, 이런게 유플러스만의 WHY NOT">
-    <meta property="og:image" content="https://와이낫로드.com/assets/images/og_image.jpg">
-    <meta property="og:site_name" content="와이낫 로드">
+    <meta property="og:title" content="<?=$OG_TITLE_?>">
+    <meta property="og:url" content="<?=$HOST_HTTP_?>">
+    <meta property="og:description" content="<?=$OG_DESCRIPTION_?>">
+    <meta property="og:image" content="<?=$HOST_HTTP_?><?=$OG_IMAGE_?>">
+    <meta property="og:site_name" content="<?=$SITE_NAME_?>">
     <meta property="og:locale" content="ko_KR">
     <meta property="article:author" content="LG U+">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
@@ -70,7 +70,9 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             // up_hash 검증
             if( frm.up_hash.value != auth_form.veri_up_hash.value )
             {
-                alert("up_hash 변조 위험있음");
+                //alert("up_hash 변조 위험있음");
+                alert('본인인증 다시 시도해주시기 바랍니다.');
+                location.reload();
             }
 
 
@@ -90,7 +92,6 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 document.body.classList.remove('modal-open');
             }
 
-            // TODO : 만 14세 미만 다시 봐주세요. 년도에서 14만 빼서 2000년도 이하는 이상하게 동작 하는것 같네용~
             if (isChild(frm.res_birthday.value)) {
                 alert('만14세미만은 지원하실수 없습니다');
                 alert(frm.res_birthday.value);
@@ -106,10 +107,8 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             document.form_auth.cert_no.value = frm.cert_no.value;
             document.form_auth.dn_hash.value = frm.dn_hash.value;
 
-            document.form_boost_us.comm_id.value = frm.comm_id.value;
-            document.form_boost_us.name.value = frm.res_username.value;
-            document.form_boost_us.hphone.value = frm.res_hphone.value;
-            document.form_boost_us.birthday.value = frm.res_birthday.value;
+            document.getElementById('modal-boost-us-name').value = frm.res_username.value;
+            document.getElementById('modal-boost-us-hphone').value = frm.res_hphone.value;
             document.form_boost_us.enc_cert_data2.value	= frm.enc_cert_data2.value;
             document.form_boost_us.cert_no.value = frm.cert_no.value;
             document.form_boost_us.dn_hash.value = frm.dn_hash.value;
@@ -774,50 +773,19 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 </div>
 
                 <form name="form_boost_us" method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form register-form">
-                    <input type="hidden" name="ordr_idxx" value="<?=$ordr_idxx?>"/>
-                    <input type="hidden" name="enc_cert_data2"  value=""/>
-                    <input type="hidden" name="cert_no" value=""/>
-                    <input type="hidden" name="dn_hash" value=""/>
-                    <!-- 요청종류 -->
-                    <input type="hidden" name="req_tx" value="cert"/>
-                    <!-- 요청구분 -->
-                    <input type="hidden" name="cert_method" value="01"/>
-                    <!-- 웹사이트아이디 : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
-                    <input type="hidden" name="web_siteid" value="<?= $g_conf_web_siteid ?>"/>
-
-                    <!-- 사이트코드 : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
-                    <input type="hidden" name="site_cd" value="<?= $g_conf_site_cd ?>" />
-                    <!-- Ret_URL : ../cfg/cert_conf.php 파일에서 설정해주세요 -->
-                    <input type="hidden" name="Ret_URL" value="<?= $g_conf_Ret_URL ?>" />
-                    <!-- cert_otp_use 필수 ( 메뉴얼 참고)
-                         Y : 실명 확인 + OTP 점유 확인 , N : 실명 확인 only
-                    -->
-                    <input type="hidden" name="cert_otp_use" value="Y"/>
-                    <!-- 리턴 암호화 고도화 -->
-                    <input type="hidden" name="cert_enc_use_ext" value="Y"/>
-
-                    <!-- cert_able_yn input 비활성화 설정 -->
-                    <input type="hidden" name="cert_able_yn" value=""/>
-
-                    <input type="hidden" name="res_cd" value=""/><br>
-                    <input type="hidden" name="res_msg" value=""/>
-
-                    <!-- up_hash 검증 을 위한 필드 -->
-                    <input type="hidden" name="veri_up_hash" value=""/>
-
-                    <!-- web_siteid 을 위한 필드 -->
-                    <input type="hidden" name="web_siteid_hashYN" value="Y"/>
-                    <input type="hidden" name="birthday" value="">
+                    <input type="hidden" name="ordr_idxx" value="<?=$ordr_idxx?>">
+                    <input type="hidden" name="enc_cert_data2">
+                    <input type="hidden" name="cert_no">
+                    <input type="hidden" name="dn_hash">
 
                     <div class="modal-boost-us__box modal-boost-us__name">
                         <span>이 름</span>
-                        <input type="text" name="name" readonly value="" placeholder="휴대전화 본인인증 시 자동으로 입력됩니다.">
+                        <input type="text" id="modal-boost-us-name" readonly placeholder="휴대전화 본인인증 시 자동으로 입력됩니다.">
                     </div>
                     <div class="modal-boost-us__box modal-boost-us__hphone">
                         <span>휴대전화</span>
                         <div>
-                            <input type="hidden" name="comm_id" value="">
-                            <input type="text" name="hphone" id="hphone" readonly value="">
+                            <input type="text" id="modal-boost-us-hphone" readonly>
                         </div>
                     </div>
                     <div class="modal-boost-us__box modal-boost-us__channel">

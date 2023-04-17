@@ -9,6 +9,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php";
 
 use \Groupidd\Model\ModelBase;
+use \Groupidd\Common\CommonFunc;
 use \Groupidd\Library\Validator;
 
 header("Content-Type: application/json");
@@ -129,6 +130,12 @@ if ($validator->validate()) {
     echo json_encode($response);
     exit();
 }
+
+// 암호화 처리
+$requestInfo['name']        = CommonFunc::stringEncrypt($requestInfo['name'], $ENCRYPT_KEY_);
+$requestInfo['hphone']      = CommonFunc::stringEncrypt($requestInfo['hphone'], $ENCRYPT_KEY_);
+$requestInfo['birthday']    = CommonFunc::stringEncrypt($requestInfo['birthday'], $ENCRYPT_KEY_);
+
 
 
 $db = new ModelBase();
