@@ -737,7 +737,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         </div>
     </div>
 </section>
-<section class="modal modal-boost-us modal-boost-us-v2" id="boost-us-v2">
+<section class="modal modal-boost-us" id="boost-us-v2">
     <div class="modal__backdrop"></div>
     <div class="modal__dialog">
         <div class="modal__container modal-boost-us__container">
