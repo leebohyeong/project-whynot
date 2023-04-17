@@ -192,7 +192,7 @@ const app = () => {
         const formCertNo = findOne('[name="cert_no"]', form);
         const formChannel = find('[name="channel"]', form);
         const formUrl = findOne('[name="url"]', form);
-        // const urlRegex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+        const urlRegex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
         const formConcept = findOne('[name="concept"]', form);
         const formReason = findOne('[name="reason"]', form);
         const formAgree1 = findOne('[name="agree1"]', form);
@@ -212,16 +212,16 @@ const app = () => {
             }
 
             if (!formUrl.value.trim()) {
-                alert('채널명/계정명을 입력해 주세요.');
+                alert('URL을 입력해 주세요.');
                 formUrl.focus();
                 return false;
             }
 
-            // if(!urlRegex.test(formUrl.value)) {
-            //     alert('URL을 정확히 입력해 주세요.');
-            //     formUrl.focus();
-            //     return false;
-            // };
+            if(!urlRegex.test(formUrl.value)) {
+                alert('URL을 정확히 입력해 주세요.');
+                formUrl.focus();
+                return false;
+            };
 
             if (!formConcept.value.trim()) {
                 alert('채널컨셉을 입력해 주세요.');
