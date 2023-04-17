@@ -173,20 +173,20 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 <body>
 <header class="header">
     <div class="header__container">
-        <h1 class="header__logo"><a class="header__logo-link" href="/m"><span class="header__logo-text">WHY NOT?</span></a></h1>
-        <nav class="header-menu"><a class="header-menu__button" href="#"><span class="header-menu__button-bar"></span><span class="header-menu__button-bar"></span><span class="header-menu__button-bar"></span><span class="header-menu__button-text">menu</span></a>
-            <div class="header-menu__container">
-                <ul class="header-menu__list">
-                    <li class="header-menu__item"><a class="header-menu__link" href="#why-not" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT?'})">WHY NOT?</a></li>
-                    <li class="header-menu__item"><a class="header-menu__link" href="#brand-film" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'Brand Flim'})">BRAND FILM</a></li>
-                    <li class="header-menu__item"><a class="header-menu__link" href="#boost-us" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'Boost Us'})">BOOST US</a></li>
-                    <li class="header-menu__item"><a class="header-menu__link" href="#experience" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'EXPERIENCE'})">EXPERIENCE</a></li>
-                    <li class="header-menu__item"><a class="header-menu__link" href="#road" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'ROAD'})">ROAD</a></li>
-                    <li class="header-menu__item"><a class="header-menu__link" href="#contents" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CONTENTS'})">CONTENTS</a></li>
-                    <li class="header-menu__item"><a class="header-menu__link" href="#collaboration" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'COLLABORATION'})">COLLABORATION</a></li>
-                </ul>
-            </div>
-        </nav>
+    <h1 class="header__logo"><a class="header__logo-link" href="/m"><span class="header__logo-text">WHY NOT?</span></a></h1>
+    <nav class="header-menu"><a class="header-menu__button" href="#"><span class="header-menu__button-bar"></span><span class="header-menu__button-bar"></span><span class="header-menu__button-bar"></span><span class="header-menu__button-text">menu</span></a>
+        <div class="header-menu__container">
+            <ul class="header-menu__list">
+                <li class="header-menu__item"><a class="header-menu__link" href="#why-not" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT?'})">WHY NOT?</a></li>
+                <li class="header-menu__item"><a class="header-menu__link" href="#brand-film" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'Brand Flim'})">BRAND FILM</a></li>
+                <li class="header-menu__item"><a class="header-menu__link" href="#boost-us" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT BOOST-US'})">BOOST US</a></li>
+                <li class="header-menu__item"><a class="header-menu__link" href="#experience" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'EXPERIENCE'})">EXPERIENCE</a></li>
+                <li class="header-menu__item"><a class="header-menu__link" href="#road" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'ROAD'})">ROAD</a></li>
+                <li class="header-menu__item"><a class="header-menu__link" href="#contents" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CONTENTS'})">CONTENTS</a></li>
+                <li class="header-menu__item"><a class="header-menu__link" href="#collaboration" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'COLLABORATION'})">COLLABORATION</a></li>
+            </ul>
+        </div>
+    </nav>
     </div>
 </header>
 <section class="why-not" id="why-not">
@@ -350,17 +350,17 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <ul class="tab__nav" role="tablist">
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-boost-us-1" role="tab"
-                        aria-controls="tab-panel-boost-us-1" onclick="gtag('event','WHY NOT BOOST US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 소개'})">부스터스 소개
+                        aria-controls="tab-panel-boost-us-1" onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 소개'})">부스터스 소개
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-boost-us-2" role="tab"
-                        aria-controls="tab-panel-boost-us-2" onclick="gtag('event','WHY NOT BOOST US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 프로그램'})">부스터스 프로그램
+                        aria-controls="tab-panel-boost-us-2" onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 프로그램'})">부스터스 프로그램
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-boost-us-3" role="tab"
-                        aria-controls="tab-panel-boost-us-3" onclick="gtag('event','WHY NOT BOOST US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 혜택'})">부스터스 혜택
+                        aria-controls="tab-panel-boost-us-3" onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 혜택'})">부스터스 혜택
                 </button>
             </li>
         </ul>
@@ -385,8 +385,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             <p>* 선정자에 한해서 개별 연락 예정</p>
                             <p><a href="#boost-us-v1" class="boost-us__inquiry">지원문의</a></p>
                         </div>
-                        <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank">지원하기</a></p>
-                        <!--                    <p><a href="https://udokgallery.lguplus.com" target="_blank" onclick="gtag('event','WHY NOT BOOST US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 지원하기'})">지원하기</a></p>-->
+                        <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank" onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>
                     </div>
                 </div>
             </div>
@@ -770,7 +769,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <input type="hidden" name="comm_id" value="">
                         <input type="hidden" name="name" readonly value="">
                         <input type="hidden" name="hphone" id="hphone" readonly value="">
-                        <button type="submit" onclick="auth_type_check();" class="certified-box__button">본인인증</button>
+                        <button type="submit" onclick="auth_type_check(); gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '본인인증'});" class="certified-box__button">본인인증</button>
                     </form>
                 </div>
 
@@ -979,7 +978,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             <input type="hidden" name="agree2_ver" value="1.0">
                         </div>
                     </div>
-                    <button type="submit">지원하기</button>
+                    <button type="submit" onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</button>
                 </form>
             </div>
         </div>
@@ -1797,7 +1796,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <h1>(주)엘지유플러스</h1>
         <div>
             <p><a href="https://www.lguplus.com/" target="_blank" onclick="gtag('event','Footer',{'event_category' : '와이낫페이지' ,'event_label' : 'LG 유플러스 홈페이지 가기'})">LG 유플러스 홈페이지 가기</a></p>
-            <p><a href="#" class="footer__privacy">개인정보 처리방침</a></p>
+            <p><a href="#" class="footer__privacy" onclick="gtag('event','Footer',{'event_category' : '와이낫페이지' ,'event_label' : '개인정보 처리방침'})">개인정보 처리방침</a></p>
         </div>
         <div>
             <address>서울특별시 용산구 한강대로 32</address>
