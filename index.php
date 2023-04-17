@@ -3,16 +3,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php";
 
 $ordr_idxx = date('Ymd').number_format(microtime(true)*1000,0,'.','').sprintf('%04d',rand(0000,9999));
 
-
-$mobile_agent = "/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/";
-if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
-    ?>
-    <script>
-        location.href = "/m/index.php";
-    </script>
-    <?php
-}
-
 /* ============================================================================== */
 /* =   본인인증 환경 설정 파일 Include                                                   = */
 /* = -------------------------------------------------------------------------- = */
@@ -50,7 +40,17 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
             }, 13);
         }
+    </script>
+    <script>
+        (() => {
+            const isMobile = /(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(navigator.userAgent);
 
+            if (isMobile) {
+                const {origin, pathname, hash} = location;
+
+                location.href = origin + pathname + 'm/' + hash;
+            }
+        })();
     </script>
     <link rel="stylesheet" href="/assets/css/vendors.css">
     <link rel="stylesheet" href="/assets/css/app.css">

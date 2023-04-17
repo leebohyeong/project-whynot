@@ -3,15 +3,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php";
 
 $ordr_idxx = date('Ymd').number_format(microtime(true)*1000,0,'.','').sprintf('%04d',rand(0000,9999));
 
-$mobile_agent = "/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/";
-if(!preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])){
-    ?>
-    <script>
-        location.href = "/";
-    </script>
-    <?php
-}
-
 /* ============================================================================== */
 /* =   본인인증 환경 설정 파일 Include                                                   = */
 /* = -------------------------------------------------------------------------- = */
@@ -42,6 +33,17 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+    <script>
+        (() => {
+            const isMobile = /(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(navigator.userAgent);
+
+            if (!isMobile) {
+                const {origin, hash} = location;
+
+                location.href = origin + '/' + hash;
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="/m/assets/css/vendors.css">
     <link rel="stylesheet" href="/m/assets/css/app.css">
     <script src="/m/assets/js/vendors.js"></script>
@@ -55,7 +57,6 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         gtag('js', new Date());
 
         gtag('config', 'UA-233743431-1');
-
     </script>
 
 
