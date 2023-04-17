@@ -187,7 +187,7 @@ const app = () => {
         const boostUsModal = findOne('.modal-boost-us-v2');
         const formHphone = findOne('[name="form_auth"] [type="submit"]', boostUsModal);
         const form = findOne('.register-form', boostUsModal);
-        const formCertNo = findOne('[name="cert_no"]', form);
+        const formCertNo = findOne('[name="cert_no"]', boostUsModal);
         const formChannel = find('[name="channel"]', form);
         const formUrl = findOne('[name="url"]', form);
         // const urlRegex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
