@@ -38,9 +38,9 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             const isMobile = /(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(navigator.userAgent);
 
             if (!isMobile) {
-                const {origin, hash} = location;
+                const {origin, search, hash} = location;
 
-                location.href = origin + '/' + hash;
+                location.href = origin + '/' + search + hash;
             }
         })();
     </script>
