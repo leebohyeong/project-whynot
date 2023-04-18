@@ -8,7 +8,7 @@ header('X-Frame-Options: SAMEORIGIN');
 ini_set('error_reporting', E_ALL | E_STRICT);
 ini_set('display_errors', 'Off');
 ini_set('log_errors', 'On');
-ini_set('error_log', '/home/groupidd/logs/whynot.uplus.com/error_log');
+ini_set('error_log', '/home/groupidd/logs/whynot.lguplus.com/error_log');
 
 header('Content-Type:text/html; charset=UTF-8');
 /* ============================================================================== */
