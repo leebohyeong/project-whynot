@@ -26,7 +26,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     <meta property="og:title" content="<?=$OG_TITLE_?>">
     <meta property="og:url" content="<?=$HOST_HTTP_?>">
     <meta property="og:description" content="<?=$OG_DESCRIPTION_?>">
-    <meta property="og:image" content="<?=$HOST_HTTP_?><?=$OG_IMAGE_?>">
+    <meta property="og:image" content="<?=$OG_IMAGE_?>">
     <meta property="og:site_name" content="<?=$SITE_NAME_?>">
     <meta property="og:locale" content="ko_KR">
     <meta property="article:author" content="LG U+">
@@ -173,20 +173,20 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 <body>
 <header class="header">
     <div class="header__container">
-    <h1 class="header__logo"><a class="header__logo-link" href="/m"><span class="header__logo-text">WHY NOT?</span></a></h1>
-    <nav class="header-menu"><a class="header-menu__button" href="#"><span class="header-menu__button-bar"></span><span class="header-menu__button-bar"></span><span class="header-menu__button-bar"></span><span class="header-menu__button-text">menu</span></a>
-        <div class="header-menu__container">
-            <ul class="header-menu__list">
-                <li class="header-menu__item"><a class="header-menu__link" href="#why-not" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT?'})">WHY NOT?</a></li>
-                <li class="header-menu__item"><a class="header-menu__link" href="#brand-film" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'Brand Flim'})">BRAND FILM</a></li>
-                <li class="header-menu__item"><a class="header-menu__link" href="#boost-us" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT BOOST-US'})">BOOST US</a></li>
-                <li class="header-menu__item"><a class="header-menu__link" href="#experience" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'EXPERIENCE'})">EXPERIENCE</a></li>
-                <li class="header-menu__item"><a class="header-menu__link" href="#road" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'ROAD'})">ROAD</a></li>
-                <li class="header-menu__item"><a class="header-menu__link" href="#contents" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CONTENTS'})">CONTENTS</a></li>
-                <li class="header-menu__item"><a class="header-menu__link" href="#collaboration" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'COLLABORATION'})">COLLABORATION</a></li>
-            </ul>
-        </div>
-    </nav>
+        <h1 class="header__logo"><a class="header__logo-link" href="/m"><span class="header__logo-text">WHY NOT?</span></a></h1>
+        <nav class="header-menu"><a class="header-menu__button" href="#"><span class="header-menu__button-bar"></span><span class="header-menu__button-bar"></span><span class="header-menu__button-bar"></span><span class="header-menu__button-text">menu</span></a>
+            <div class="header-menu__container">
+                <ul class="header-menu__list">
+                    <li class="header-menu__item"><a class="header-menu__link" href="#why-not" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT?'})">WHY NOT?</a></li>
+                    <li class="header-menu__item"><a class="header-menu__link" href="#brand-film" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'Brand Flim'})">BRAND FILM</a></li>
+                    <li class="header-menu__item"><a class="header-menu__link" href="#boost-us" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT BOOST-US'})">BOOST US</a></li>
+                    <li class="header-menu__item"><a class="header-menu__link" href="#experience" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'EXPERIENCE'})">EXPERIENCE</a></li>
+                    <li class="header-menu__item"><a class="header-menu__link" href="#road" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'ROAD'})">ROAD</a></li>
+                    <li class="header-menu__item"><a class="header-menu__link" href="#contents" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CONTENTS'})">CONTENTS</a></li>
+                    <li class="header-menu__item"><a class="header-menu__link" href="#collaboration" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'COLLABORATION'})">COLLABORATION</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
 </header>
 <section class="why-not" id="why-not">
@@ -877,30 +877,30 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                             <col width="33.33333%">
                                         </colgroup>
                                         <thead>
-                                            <tr>
-                                                <th>수탁업체</th>
-                                                <th>수탁 업무 내용</th>
-                                                <th>개인정보 보유 및 이용기간</th>
-                                            </tr>
+                                        <tr>
+                                            <th>수탁업체</th>
+                                            <th>수탁 업무 내용</th>
+                                            <th>개인정보 보유 및 이용기간</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>㈜에이치에스애드</td>
-                                                <td>부스터스와 관련된 업무</td>
-                                                <td rowspan="4">목적달성 완료 혹은 개인정보 수집일로부터 4개월까지 보유 후 파기</td>
-                                            </tr>
-                                            <tr>
-                                                <td>㈜프리비알</td>
-                                                <td>부스터스 모집 및 활동 관련 안내</td>
-                                            </tr>
-                                            <tr>
-                                                <td>㈜그룹아이디디</td>
-                                                <td>부스터스 사이트 개발 및 운영</td>
-                                            </tr>
-                                            <tr>
-                                                <td>㈜NHN KCP</td>
-                                                <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
-                                            </tr>
+                                        <tr>
+                                            <td>㈜에이치에스애드</td>
+                                            <td>부스터스와 관련된 업무</td>
+                                            <td rowspan="4">목적달성 완료 혹은 개인정보 수집일로부터 4개월까지 보유 후 파기</td>
+                                        </tr>
+                                        <tr>
+                                            <td>㈜프리비알</td>
+                                            <td>부스터스 모집 및 활동 관련 안내</td>
+                                        </tr>
+                                        <tr>
+                                            <td>㈜그룹아이디디</td>
+                                            <td>부스터스 사이트 개발 및 운영</td>
+                                        </tr>
+                                        <tr>
+                                            <td>㈜NHN KCP</td>
+                                            <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -1634,22 +1634,22 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>㈜에이치에스애드</td>
-                                        <td>부스터스와 관련된 업무 </td>
-                                    </tr>
-                                    <tr>
-                                        <td>㈜프리비알</td>
-                                        <td>부스터스 모집 및 활동 관련 안내 </td>
-                                    </tr>
-                                    <tr>
-                                        <td>㈜그룹아이디디</td>
-                                        <td>부스터스 사이트 개발 및 운영</td>
-                                    </tr>
-                                    <tr>
-                                        <td>㈜NHN KCP</td>
-                                        <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
-                                    </tr>
+                                <tr>
+                                    <td>㈜에이치에스애드</td>
+                                    <td>부스터스와 관련된 업무 </td>
+                                </tr>
+                                <tr>
+                                    <td>㈜프리비알</td>
+                                    <td>부스터스 모집 및 활동 관련 안내 </td>
+                                </tr>
+                                <tr>
+                                    <td>㈜그룹아이디디</td>
+                                    <td>부스터스 사이트 개발 및 운영</td>
+                                </tr>
+                                <tr>
+                                    <td>㈜NHN KCP</td>
+                                    <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>

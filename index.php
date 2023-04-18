@@ -26,7 +26,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     <meta property="og:title" content="<?=$OG_TITLE_?>">
     <meta property="og:url" content="<?=$HOST_HTTP_?>">
     <meta property="og:description" content="<?=$OG_DESCRIPTION_?>">
-    <meta property="og:image" content="<?=$HOST_HTTP_?><?=$OG_IMAGE_?>">
+    <meta property="og:image" content="<?=$OG_IMAGE_?>">
     <meta property="og:site_name" content="<?=$SITE_NAME_?>">
     <meta property="og:locale" content="ko_KR">
     <meta property="article:author" content="LG U+">
@@ -211,10 +211,10 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             </p>
         </div>
         <div class="why-not__text why-not__text02">
-<!--            <p data-aos="fade-left" data-aos-delay="300">-->
-<!--                선 넘는 즐거움 <br>-->
-<!--                이런 게 유플러스만의-->
-<!--            </p>-->
+            <!--            <p data-aos="fade-left" data-aos-delay="300">-->
+            <!--                선 넘는 즐거움 <br>-->
+            <!--                이런 게 유플러스만의-->
+            <!--            </p>-->
             <div data-aos="fade-left" data-aos-delay="300" style="background-image: url('/assets/images/img_why_not.png')"></div>
         </div>
     </div>
@@ -625,7 +625,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div class="textbox">
                     <p>유독 ~ 끌리는 <br>유플러스 모델 손석구의 Behind 화보 대공개</p>
                     <h3>유독 Behind 화보</h3>
-<!--                    <p><a href="https://udokgallery.lguplus.com" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보_화보 보러가기'})">화보 보러가기</a></p>-->
+                    <!--                    <p><a href="https://udokgallery.lguplus.com" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보_화보 보러가기'})">화보 보러가기</a></p>-->
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-5" role="tabpanel">
@@ -844,34 +844,34 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                         <col width="*">
                                     </colgroup>
                                     <thead>
-                                        <tr>
-                                            <th>수집 목적</th>
-                                            <th>수집 항목</th>
-                                            <th>보유기간</th>
-                                        </tr>
+                                    <tr>
+                                        <th>수집 목적</th>
+                                        <th>수집 항목</th>
+                                        <th>보유기간</th>
+                                    </tr>
                                     </thead>
                                     <tbody style="text-align: left;">
-                                        <tr>
-                                            <td>
-                                                <p>※ 와이낫 부스터스 캠페인 참여자 모집 이벤트 (지원자 대상)
-                                                    : 부스터스 모집 및 선발을 위한 본인 확인과 지원내역 확인, 지원에 대한 문의 접수, 선발결과 고지, 선발 후 활동안내 사이트 내 고객 행태정보 확인
-                                                </p>
-                                                <p>
-                                                    <br>
-                                                </p>
-                                                <p>※ 지원자의 지원 문의
-                                                    : 문의 내용 처리, 상담결과 통보
-                                                </p>
-                                                <p>
-                                                    <br>
-                                                </p>
-                                                <p>※ 선발자의 부스터스 활동
-                                                    : 활동지원금 지급
-                                                </p>
-                                            </td>
-                                            <td>이름, 전화번호, 생년월일, SNS계정, 사이트 내 고객 행태정보</td>
-                                            <td>개인정보 수집일로부터 4개월까지 보유 후 파기</td>
-                                        </tr>
+                                    <tr>
+                                        <td>
+                                            <p>※ 와이낫 부스터스 캠페인 참여자 모집 이벤트 (지원자 대상)
+                                                : 부스터스 모집 및 선발을 위한 본인 확인과 지원내역 확인, 지원에 대한 문의 접수, 선발결과 고지, 선발 후 활동안내 사이트 내 고객 행태정보 확인
+                                            </p>
+                                            <p>
+                                                <br>
+                                            </p>
+                                            <p>※ 지원자의 지원 문의
+                                                : 문의 내용 처리, 상담결과 통보
+                                            </p>
+                                            <p>
+                                                <br>
+                                            </p>
+                                            <p>※ 선발자의 부스터스 활동
+                                                : 활동지원금 지급
+                                            </p>
+                                        </td>
+                                        <td>이름, 전화번호, 생년월일, SNS계정, 사이트 내 고객 행태정보</td>
+                                        <td>개인정보 수집일로부터 4개월까지 보유 후 파기</td>
+                                    </tr>
                                     </tbody>
                                 </table>
                                 <p>※ 개인정보 수집 시 필수 항목의 수집·이용에 대한 동의를 거부하실 수 있으며, 다만 동의를 거부하실 경우 서비스 이용이 제한될 수 있습니다. 선택 항목의 수집·이용 동의를 거부하실 경우에는 서비스 이용은 제한되지 않습니다.</p>
@@ -891,30 +891,30 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                         <col width="33.33333%">
                                     </colgroup>
                                     <thead>
-                                        <tr>
-                                            <th>수탁업체</th>
-                                            <th>수탁 업무 내용</th>
-                                            <th>개인정보 보유 및 이용기간</th>
-                                        </tr>
+                                    <tr>
+                                        <th>수탁업체</th>
+                                        <th>수탁 업무 내용</th>
+                                        <th>개인정보 보유 및 이용기간</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>㈜에이치에스애드</td>
-                                            <td>부스터스와 관련된 업무</td>
-                                            <td rowspan="4">목적달성 완료 혹은 개인정보 수집일로부터 4개월까지 보유 후 파기</td>
-                                        </tr>
-                                        <tr>
-                                            <td>㈜프리비알</td>
-                                            <td>부스터스 모집 및 활동 관련 안내</td>
-                                        </tr>
-                                        <tr>
-                                            <td>㈜그룹아이디디</td>
-                                            <td>부스터스 사이트 개발 및 운영</td>
-                                        </tr>
-                                        <tr>
-                                            <td>㈜NHN KCP</td>
-                                            <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
-                                        </tr>
+                                    <tr>
+                                        <td>㈜에이치에스애드</td>
+                                        <td>부스터스와 관련된 업무</td>
+                                        <td rowspan="4">목적달성 완료 혹은 개인정보 수집일로부터 4개월까지 보유 후 파기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜프리비알</td>
+                                        <td>부스터스 모집 및 활동 관련 안내</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜그룹아이디디</td>
+                                        <td>부스터스 사이트 개발 및 운영</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜NHN KCP</td>
+                                        <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1508,16 +1508,16 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 <col width="70%">
                             </colgroup>
                             <thead>
-                                <tr>
-                                    <th>구분</th>
-                                    <th>상세내용</th>
-                                </tr>
+                            <tr>
+                                <th>구분</th>
+                                <th>상세내용</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>필수항목</td>
-                                    <td>이름, 전화번호, 생년월일, SNS계정, 사이트 내 고객 행태정보</td>
-                                </tr>
+                            <tr>
+                                <td>필수항목</td>
+                                <td>이름, 전화번호, 생년월일, SNS계정, 사이트 내 고객 행태정보</td>
+                            </tr>
                             </tbody>
                         </table>
                         <p>※ 지원문의 (선발자 대상)</p>
@@ -1546,16 +1546,16 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 <col width="70%">
                             </colgroup>
                             <thead>
-                                <tr>
-                                    <th>구분</th>
-                                    <th>상세내용</th>
-                                </tr>
+                            <tr>
+                                <th>구분</th>
+                                <th>상세내용</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>필수항목</td>
-                                    <td>주민등록번호, 개인계좌번호</td>
-                                </tr>
+                            <tr>
+                                <td>필수항목</td>
+                                <td>주민등록번호, 개인계좌번호</td>
+                            </tr>
                             </tbody>
                         </table>
                         <p>※ 14세 미만 고객의 경우 지원이 불가능하며, 이 때 지원창에 입력한 14세 미만 고객의 개인정보는 수집되지 않습니다.</p>
@@ -1633,28 +1633,28 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 <col width="70%">
                             </colgroup>
                             <thead>
-                                <tr>
-                                    <th>수탁업체</th>
-                                    <th>수탁 업무 내용</th>
-                                </tr>
+                            <tr>
+                                <th>수탁업체</th>
+                                <th>수탁 업무 내용</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>㈜에이치에스애드</td>
-                                    <td>부스터스와 관련된 업무 </td>
-                                </tr>
-                                <tr>
-                                    <td>㈜프리비알</td>
-                                    <td>부스터스 모집 및 활동 관련 안내 </td>
-                                </tr>
-                                <tr>
-                                    <td>㈜그룹아이디디</td>
-                                    <td>부스터스 사이트 개발 및 운영</td>
-                                </tr>
-                                <tr>
-                                    <td>㈜NHN KCP</td>
-                                    <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
-                                </tr>
+                            <tr>
+                                <td>㈜에이치에스애드</td>
+                                <td>부스터스와 관련된 업무 </td>
+                            </tr>
+                            <tr>
+                                <td>㈜프리비알</td>
+                                <td>부스터스 모집 및 활동 관련 안내 </td>
+                            </tr>
+                            <tr>
+                                <td>㈜그룹아이디디</td>
+                                <td>부스터스 사이트 개발 및 운영</td>
+                            </tr>
+                            <tr>
+                                <td>㈜NHN KCP</td>
+                                <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
