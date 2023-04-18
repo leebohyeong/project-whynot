@@ -16,7 +16,7 @@ header("Content-Type: application/json");
 
 $today_date = date("Y-m-d");
 
-if ($today_date > '2023-04-25') {
+if ($today_date > '2023-05-01') {
     $response['message'] = '지원하기가 종료되었습니다.';
     $response['result'] = false;
     echo json_encode($response);
