@@ -344,7 +344,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <p data-aos="fade-up" data-aos-delay="100" data-aos-offset="300"><strong>파워 크리에이터</strong>가 될 수 있는 <strong>100일간</strong>의 도전 프로젝트!</p>
     </header>
     <div class="boost-us__video">
-        <iframe src="https://www.youtube.com/embed/EOoKmVMSrlE"></iframe>
+        <iframe src="https://www.youtube.com/embed/gwIQex5yrUI"></iframe>
     </div>
     <div class="tab">
         <ul class="tab__nav" role="tablist">
