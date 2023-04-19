@@ -15,9 +15,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LG U+</title>
+    <title>유플러스의 WHY NOT?</title>
     <meta name="author" content="Group IDD 개발그룹">
-    <meta name="description" content="와이낫크루가 추천하는 대한민국 핫플과 혜택을 만나보세요">
+    <meta name="description" content="고객의 일상에 즐거운 변화를 만들어가는 WHY NOT을 소개합니다">
     <meta name="keywords" content="<?=$OG_KEYWORDS_?>">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
