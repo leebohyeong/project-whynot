@@ -17,7 +17,7 @@ header("Content-Type: application/json");
 $today_date = date("Y-m-d");
 
 if ($today_date > '2023-05-01') {
-    $response['message'] = '지원하기가 종료되었습니다.';
+    $response['message'] = '모집기간이 종료되었습니다.';
     $response['result'] = false;
     echo json_encode($response);
     exit;
@@ -139,6 +139,21 @@ $requestInfo['birthday']    = CommonFunc::stringEncrypt($requestInfo['birthday']
 
 
 $db = new ModelBase();
+
+// 참여 가능여부(횟수 체크) : 1일 1회~최대3회
+$db->select("seq", true);
+$db->from("BOOSTUS_APPLY");
+$db->where("hphone",$requestInfo['hphone']);
+$db->limit(1);
+$result = $db->getOne();
+if( $result ) {
+    $response['result'] = false;
+    $response['message'] = '이미 참여하셨습니다.';    // 등록된 아이피라면 미당첨 처리
+    echo json_encode($response);
+    exit;
+}
+
+
 $db->beginTransaction();
 $db->from("BOOSTUS_APPLY");
 if ($db->insert($requestInfo)) {
