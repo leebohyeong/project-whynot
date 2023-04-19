@@ -40,6 +40,14 @@ $requestInfo = array(
     'device' => $DEVICE_TYPE_
 );
 
+if ($requestInfo['agree1_ver'] == '') {
+    $requestInfo['agree1_ver'] = '1.0';
+}
+
+if ($requestInfo['agree2_ver'] == '') {
+    $requestInfo['agree2_ver'] = '1.0';
+}
+
 $kcpCertInfo = array(
     'ordr_idxx' => $_POST['ordr_idxx'] ?? '',
     'cert_no' => $_POST['cert_no'] ?? '',
