@@ -373,7 +373,10 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             <p>
                                 <strong>파워 크리에이터</strong>가 될 수 있는 <strong>100일간</strong>의 도전 프로젝트
                             </p>
-                            <p>WHY NOT 부스터스에 지금 바로 지원해보세요!</p>
+                            <p>
+                                WHY NOT 부스터스에 지원하고 <br>
+                                숏폼 영상을 통해 여러분의 끼와 재능을 펼쳐보세요
+                            </p>
                             <p>
                                 <strong>
                                     모집 기간 : 4월 18일(화) ~ 5월 1일(월) <br>
@@ -409,8 +412,8 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <li class="boost-us__item">
                         <div>
                             <p class="boost-us__text">
-                                100일 동안 <br>
-                                5번의 미션 콘텐츠 제작
+                                100 일 간 미션 5 회 <br>
+                                숏폼 콘텐츠 제작
                             </p>
                         </div>
                     </li>
@@ -791,11 +794,11 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <div>
                             <label>
                                 <input type="radio" name="channel" value="youtube">
-                                <span>유튜브</span>
+                                <span>유튜브 쇼츠</span>
                             </label>
                             <label>
                                 <input type="radio" name="channel" value="instagram">
-                                <span>인스타</span>
+                                <span>인스타그램 릴스</span>
                             </label>
                             <p class="modal-boost-us__form-text">(구독자/팔로워 500명 이상이면 누구나 지원 가능)</p>
                         </div>
