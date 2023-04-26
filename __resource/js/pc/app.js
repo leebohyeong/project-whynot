@@ -255,7 +255,7 @@ const app = () => {
                 })
                     .then(response => response.json())
                     .then(data => {
-                        if (data.result == false){
+                        if (data.result === false){
                             alert(data.message);
                         }else{
                             alert(data.message);
