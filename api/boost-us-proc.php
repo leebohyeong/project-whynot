@@ -17,7 +17,7 @@ header("Content-Type: application/json");
 $today_date = date("Y-m-d");
 
 if ($today_date > '2023-05-01') {
-    $response['message'] = '모집기간이 종료되었습니다.';
+    $response['message'] = '모집이 종료 되었습니다.';
     $response['result'] = false;
     echo json_encode($response);
     exit;
