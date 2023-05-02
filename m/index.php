@@ -395,6 +395,8 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <?php }else{?>
                             <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>
                         <?php } ?>
+
+<!--                        <p><a href="#boost-us-v3" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '결과발표'})">결과발표</a></p>-->
                     </div>
                 </div>
             </div>
@@ -706,7 +708,9 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             </div>
             <div class="modal-boost-us__content">
                 <p>
-                    문의 시 발송된 이메일주소가 개인정보로 수집됩니다. 아래 내용 확인 부탁드리며, 문의 시 개인정보(이메일) 수집에 동의한것으로 간주됩니다.
+                    문의 시 발송된 이메일주소가 개인정보로 수집됩니다.
+                    아래 내용 확인 부탁드리며, 문의 시 개인정보(이메일) 수집에 동의한 것으로
+                    간주되며, 문의 메일을 통해 부스터스 지원을 취소 할 수 있습니다.
                 </p>
                 <ul>
                     <li>
@@ -714,7 +718,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         있기 전까지는 개인정보 노출되지 않도록 주의하여 주십시오.)
                     </li>
                     <li>수집 · 이용 목적 : 문의 내용 처리, 상담 결과 통보 업무</li>
-                    <li>보유, 이용 기간 : 3년 (소비자 불만 또는 분쟁 처리에 관한 기록 관련법 의거)</li>
+                    <li>보유, 이용 기간 : 개인정보 수집일로부터 4개월까지 보유 후 파기</li>
                     <li>
                         고객은 동의를 거부할 권리가 있으며, 추후 문의를 위한 개인정보 수집에 동의하지
                         않을 경우 문의 업무가 제한될 수 있습니다.
@@ -963,6 +967,25 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     </div>
                     <button type="submit" onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</button>
                 </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal__close modal-boost-us__close">
+        <button class="modal__close-button" type="button"><span class="modal__close-text">닫기</span></button>
+    </div>
+</section>
+<section class="modal modal-boost-us" id="boost-us-v3">
+    <div class="modal__backdrop"></div>
+    <div class="modal__dialog">
+        <div class="modal__container modal-boost-us__container">
+            <div class="modal-boost-us__title">
+                <h2>결과발표</h2>
+                <p>WHY NOT 부스터스에 선정되신 것을 축하드립니다!</p>
+            </div>
+            <div class="modal-boost-us__content2 modal-boost-us__content3">
+                <div>text</div>
+                <div>text</div>
+                <div>text</div>
             </div>
         </div>
     </div>
@@ -1562,7 +1585,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 </tbody>
                             </table>
                         </div>
-                        <p>※ 14세 미만 고객의 경우 지원이 불가능하며, 이 때 지원창에 입력한 14세 미만 고객의 개인정보는 수집되지 않습니다.</p>
+                        <p>※ 만 14세 미만 고객의 경우 지원이 불가능하며, 이 때 지원창에 입력한 만 14세 미만 고객의 개인정보는 수집되지 않습니다.</p>
                         <p>
                             <br>
                         </p>
@@ -1638,28 +1661,28 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                     <col width="70%">
                                 </colgroup>
                                 <thead>
-                                <tr>
-                                    <th>수탁업체</th>
-                                    <th>수탁 업무 내용</th>
-                                </tr>
+                                    <tr>
+                                        <th>수탁업체</th>
+                                        <th>수탁 업무 내용</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>㈜에이치에스애드</td>
-                                    <td>부스터스와 관련된 업무 </td>
-                                </tr>
-                                <tr>
-                                    <td>㈜프리비알</td>
-                                    <td>부스터스 모집 및 활동 관련 안내 </td>
-                                </tr>
-                                <tr>
-                                    <td>㈜그룹아이디디</td>
-                                    <td>부스터스 사이트 개발 및 운영</td>
-                                </tr>
-                                <tr>
-                                    <td>㈜NHN KCP</td>
-                                    <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
-                                </tr>
+                                    <tr>
+                                        <td>㈜에이치에스애드</td>
+                                        <td>부스터스와 관련된 업무 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜프리비알</td>
+                                        <td>부스터스 모집 및 활동 관련 안내 </td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜그룹아이디디</td>
+                                        <td>부스터스 사이트 개발 및 운영</td>
+                                    </tr>
+                                    <tr>
+                                        <td>㈜NHN KCP</td>
+                                        <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

@@ -1561,6 +1561,22 @@ section {
         }
     }
 
+    &__content3 {
+        overflow-y: scroll;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+        justify-items: center;
+        align-items: center;
+        height: 700px;
+
+        & > div {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 18px;
+        }
+    }
+
     //&__content2::-webkit-scrollbar {
     //    position: absolute;
     //    right: 0;
