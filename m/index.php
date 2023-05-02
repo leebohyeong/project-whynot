@@ -387,7 +387,14 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             <p>* 최종 선정자에 한해 개별 연락 예정</p>
                             <p><a href="#boost-us-v1" class="boost-us__inquiry">지원문의</a></p>
                         </div>
-                        <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank" onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>
+
+                        <?php
+                        if (date("Y-m-d") > '2023-05-01') {
+                            ?>
+                            <p><button type="button" class="boost-us__apply" onclick="alert('모집이 종료 되었습니다.');">지원하기</button></p>
+                        <?php }else{?>
+                            <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
