@@ -388,15 +388,15 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             <p><a href="#boost-us-v1" class="boost-us__inquiry">지원문의</a></p>
                         </div>
 
-                        <?php
-                        if (date("Y-m-d") > '2023-05-01') {
-                            ?>
-                            <p><button type="button" class="boost-us__apply" onclick="alert('모집이 종료 되었습니다.');">지원하기</button></p>
-                        <?php }else{?>
-                            <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>
-                        <?php } ?>
+<!--                        --><?php
+//                        if (date("Y-m-d") > '2023-05-01') {
+//                            ?>
+<!--                            <p><button type="button" class="boost-us__apply" onclick="alert('모집이 종료 되었습니다.');">지원하기</button></p>-->
+<!--                        --><?php //}else{?>
+<!--                            <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>-->
+<!--                        --><?php //} ?>
 
-<!--                        <p><a href="#boost-us-v3" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '결과발표'})">결과발표</a></p>-->
+                        <p><a href="#boost-us-v3" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '결과발표'})">결과발표</a></p>
                     </div>
                 </div>
             </div>
@@ -1010,7 +1010,6 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div>김하* (5*09)</div>
                 <div>김학* (4*86)</div>
                 <div>김현* (7*41)</div>
-                <div>김현* (0*35)</div>
                 <div>김혜* (1*89)</div>
                 <div>김혜* (2*53)</div>
                 <div>김환* (0*70)</div>
@@ -1019,6 +1018,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div>노아* (2*66)</div>
                 <div>류채* (4*53)</div>
                 <div>문병* (2*09)</div>
+                <div>박민* (3*11)</div>
                 <div>박서* (9*86)</div>
                 <div>박소* (3*47)</div>
                 <div>박주* (3*28)</div>
@@ -1027,6 +1027,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div>박진* (8*94)</div>
                 <div>방지* (7*36)</div>
                 <div>방효* (9*87)</div>
+                <div>배나* (3*72)</div>
                 <div>배지* (1*99)</div>
                 <div>백세* (1*73)</div>
                 <div>빈혜* (3*35)</div>
@@ -1044,7 +1045,6 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div>왕선* (5*82)</div>
                 <div>원유* (4*26)</div>
                 <div>유연* (9*13)</div>
-                <div>유한* (1*99)</div>
                 <div>유홍* (8*08)</div>
                 <div>윤상* (1*70)</div>
                 <div>이로* (9*66)</div>
@@ -1069,6 +1069,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div>임그* (7*56)</div>
                 <div>임정* (7*25)</div>
                 <div>임종* (4*47)</div>
+                <div>임진* (5*46)</div>
                 <div>장아* (4*11)</div>
                 <div>장예* (1*84)</div>
                 <div>장현* (0*43)</div>
@@ -1092,7 +1093,6 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div>차윤* (9*46)</div>
                 <div>천유* (1*10)</div>
                 <div>천혜* (3*67)</div>
-                <div>최다* (3*14)</div>
                 <div>최범* (8*20)</div>
                 <div>최지* (9*79)</div>
                 <div>최화* (9*75)</div>
