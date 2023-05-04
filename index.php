@@ -592,6 +592,12 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
+                    <iframe src="https://www.youtube.com/embed/ij6E9SNXqmU?controls=0" title="와이낫시즌2"></iframe>
+                </div>
+                <div class="swiper-slide">
+                    <iframe src="https://www.youtube.com/embed/lxN-pHTiKnA?controls=0" title="춘천"></iframe>
+                </div>
+                <div class="swiper-slide">
                     <iframe src="https://www.youtube.com/embed/lxN-pHTiKnA?controls=0" title="춘천"></iframe>
                 </div>
                 <div class="swiper-slide">
