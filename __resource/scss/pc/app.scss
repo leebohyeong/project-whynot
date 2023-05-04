@@ -12,6 +12,7 @@ $pink: #e6007e;
 
 body {
     min-width: 1250px;
+    word-break: keep-all;
 }
 
 body.modal-crew--active {

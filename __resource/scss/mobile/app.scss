@@ -11,6 +11,9 @@ $pink: #e6007e;
 @import "../vendors";
 @import "../modal";
 
+body {
+    word-break: keep-all;
+}
 
 .header {
     position: sticky;
