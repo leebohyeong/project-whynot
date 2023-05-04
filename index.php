@@ -1,7 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php";
 
-$ordr_idxx = date('Ymd').number_format(microtime(true)*1000,0,'.','').sprintf('%04d',rand(0000,9999));
+$ordr_idxx = date('Ymd') . number_format(microtime(true) * 1000, 0, '.', '') . sprintf('%04d', rand(0000, 9999));
 
 /* ============================================================================== */
 /* =   본인인증 환경 설정 파일 Include                                                   = */
@@ -18,16 +18,16 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     <title>유플러스의 WHY NOT?</title>
     <meta name="author" content="Group IDD 개발그룹">
     <meta name="description" content="고객의 일상에 즐거운 변화를 만들어가는 WHY NOT을 소개합니다">
-    <meta name="keywords" content="<?=$OG_KEYWORDS_?>">
+    <meta name="keywords" content="<?= $OG_KEYWORDS_ ?>">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
     <meta name="author" content="">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="<?=$OG_TITLE_?>">
-    <meta property="og:url" content="<?=$HOST_HTTP_?>">
-    <meta property="og:description" content="<?=$OG_DESCRIPTION_?>">
-    <meta property="og:image" content="<?=$OG_IMAGE_?>">
-    <meta property="og:site_name" content="<?=$SITE_NAME_?>">
+    <meta property="og:title" content="<?= $OG_TITLE_ ?>">
+    <meta property="og:url" content="<?= $HOST_HTTP_ ?>">
+    <meta property="og:description" content="<?= $OG_DESCRIPTION_ ?>">
+    <meta property="og:image" content="<?= $OG_IMAGE_ ?>">
+    <meta property="og:site_name" content="<?= $SITE_NAME_ ?>">
     <meta property="og:locale" content="ko_KR">
     <meta property="article:author" content="LG U+">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
@@ -59,9 +59,11 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     <script src="https://www.googletagmanager.com/gtag/js?id=UA-233743431-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-233743431-1');
@@ -71,15 +73,13 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
     <script>
         // 인증창 종료후 인증데이터 리턴 함수
-        function auth_data( frm )
-        {
-            var auth_form     = document.form_auth;
-            var nField        = frm.elements.length;
+        function auth_data(frm) {
+            var auth_form = document.form_auth;
+            var nField = frm.elements.length;
             var response_data = "";
 
             // up_hash 검증
-            if( frm.up_hash.value != auth_form.veri_up_hash.value )
-            {
+            if (frm.up_hash.value != auth_form.veri_up_hash.value) {
                 //alert("up_hash 변조 위험있음");
                 alert('본인인증 다시 시도해주시기 바랍니다.');
                 location.reload();
@@ -87,19 +87,16 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
 
             //스마트폰 처리
-            for ( i = 0; i < nField; i++ )
-            {
-                if( frm.elements[i].value != "" )
-                {
+            for (i = 0; i < nField; i++) {
+                if (frm.elements[i].value != "") {
                     response_data += frm.elements[i].name + " : " + frm.elements[i].value + "\n";
                     frm.elements[i].name.value = frm.elements[i].value;
                 }
             }
 
-            if( navigator.userAgent.indexOf("Android") > - 1 || navigator.userAgent.indexOf("iPhone") > - 1 )
-            {
+            if (navigator.userAgent.indexOf("Android") > -1 || navigator.userAgent.indexOf("iPhone") > -1) {
                 //document.getElementById( "cert_info" ).style.display = "";
-                document.getElementById( "kcp_cert"  ).style.display = "none";
+                document.getElementById("kcp_cert").style.display = "none";
             }
 
             if (isChild(frm.res_birthday.value)) {
@@ -113,13 +110,13 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             document.form_auth.name.value = frm.res_username.value;
             document.form_auth.hphone.value = frm.res_hphone.value;
             document.form_auth.birthday.value = frm.res_birthday.value;
-            document.form_auth.enc_cert_data2.value	= frm.enc_cert_data2.value;
+            document.form_auth.enc_cert_data2.value = frm.enc_cert_data2.value;
             document.form_auth.cert_no.value = frm.cert_no.value;
             document.form_auth.dn_hash.value = frm.dn_hash.value;
 
             document.getElementById('modal-boost-us-name').value = frm.res_username.value;
             document.getElementById('modal-boost-us-hphone').value = frm.res_hphone.value;
-            document.form_boost_us.enc_cert_data2.value	= frm.enc_cert_data2.value;
+            document.form_boost_us.enc_cert_data2.value = frm.enc_cert_data2.value;
             document.form_boost_us.cert_no.value = frm.cert_no.value;
             document.form_boost_us.dn_hash.value = frm.dn_hash.value;
         }
@@ -184,13 +181,26 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <h1><a href="/"><span>WHY NOT?</span></a></h1>
         <nav>
             <ul>
-                <li><a class="header__link header__link--active" href="#why-not" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT?'})">WHY NOT?</a></li>
-                <li><a class="header__link" href="#brand-film" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'Brand Flim'})">BRAND FILM</a></li>
-                <li><a class="header__link" href="#boost-us" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'BOOST-US'})">BOOST US</a></li>
-                <li><a class="header__link" href="#experience" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'EXPERIENCE'})">EXPERIENCE</a></li>
-                <li><a class="header__link" href="#crew" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CREW'})">CREW</a></li>
-                <li><a class="header__link" href="#contents" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CONTENTS'})">CONTENTS</a></li>
-                <li><a class="header__link" href="#collaboration" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'COLLABORATION'})">COLLABORATION</a></li>
+                <li><a class="header__link header__link--active" href="#why-not"
+                       onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT?'})">WHY
+                        NOT?</a></li>
+                <li><a class="header__link" href="#brand-film"
+                       onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'Brand Flim'})">BRAND
+                        FILM</a></li>
+                <li><a class="header__link" href="#boost-us"
+                       onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'BOOST-US'})">BOOST
+                        US</a></li>
+                <li><a class="header__link" href="#experience"
+                       onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'EXPERIENCE'})">EXPERIENCE</a>
+                </li>
+                <li><a class="header__link" href="#crew"
+                       onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CREW'})">CREW</a></li>
+                <li><a class="header__link" href="#contents"
+                       onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CONTENTS'})">CONTENTS</a>
+                </li>
+                <li><a class="header__link" href="#collaboration"
+                       onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'COLLABORATION'})">COLLABORATION</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -215,7 +225,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             <!--                선 넘는 즐거움 <br>-->
             <!--                이런 게 유플러스만의-->
             <!--            </p>-->
-            <div data-aos="fade-left" data-aos-delay="300" style="background-image: url('/assets/images/img_why_not.png')"></div>
+            <div data-aos="fade-left" data-aos-delay="300"
+                 style="background-image: url('/assets/images/img_why_not.png')"></div>
         </div>
     </div>
 </section>
@@ -233,17 +244,23 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <ul class="tab__nav" role="tablist">
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-brand-film-1" role="tab"
-                        aria-controls="tab-panel-brand-film-1" aria-selected="true" data-api="tab" onclick="gtag('event','WHY NOT Brand Film',{'event_category' : '와이낫페이지' ,'event_label' : 'Why Not 런칭 편'})">WHY NOT 런칭 편
+                        aria-controls="tab-panel-brand-film-1" aria-selected="true" data-api="tab"
+                        onclick="gtag('event','WHY NOT Brand Film',{'event_category' : '와이낫페이지' ,'event_label' : 'Why Not 런칭 편'})">
+                    WHY NOT 런칭 편
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-brand-film-2" role="tab"
-                        aria-controls="tab-panel-brand-film-2" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT Brand Film',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT 디즈니플러스 편'})">WHY NOT 디즈니플러스 편
+                        aria-controls="tab-panel-brand-film-2" aria-selected="false" data-api="tab"
+                        onclick="gtag('event','WHY NOT Brand Film',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT 디즈니플러스 편'})">
+                    WHY NOT 디즈니플러스 편
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-brand-film-3" role="tab"
-                        aria-controls="tab-panel-brand-film-3" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT Brand Film',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT 유독 편'})">WHY NOT 유독 편
+                        aria-controls="tab-panel-brand-film-3" aria-selected="false" data-api="tab"
+                        onclick="gtag('event','WHY NOT Brand Film',{'event_category' : '와이낫페이지' ,'event_label' : 'WHY NOT 유독 편'})">
+                    WHY NOT 유독 편
                 </button>
             </li>
         </ul>
@@ -316,18 +333,20 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                     매달 원하는 구독으로 바꾸고 할인까지 받는, <br>
                                     선 넘는 구독 관리 유독
                                 </p>
-                                <iframe src="https://www.youtube.com/embed/h7wK6fhQKAc?controls=0" title="손석구도 춤추게 만든 맞춤 구독 관리 유독"></iframe>
+                                <iframe src="https://www.youtube.com/embed/h7wK6fhQKAc?controls=0"
+                                        title="손석구도 춤추게 만든 맞춤 구독 관리 유독"></iframe>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div>
-                                <h3>[WHY NOT] 이석구와 함께 유독할래요?  feat.이상준</h3>
+                                <h3>[WHY NOT] 이석구와 함께 유독할래요? feat.이상준</h3>
                                 <p>
                                     이제는 통신사 상관없이 누구나! <br>
                                     매달 원하는 구독으로 바꾸고 할인까지 받는 <br>
                                     선 넘는 구독생활, 유독
                                 </p>
-                                <iframe src="https://www.youtube.com/embed/XhMpaOLWWXQ?controls=0" title="이석구와 함께 유독할래요? 편"></iframe>
+                                <iframe src="https://www.youtube.com/embed/XhMpaOLWWXQ?controls=0"
+                                        title="이석구와 함께 유독할래요? 편"></iframe>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -338,7 +357,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                     조건 없이, 부담 없이 할수록 더 할인 받을 수 있다면? <br>
                                     이런 게 유플러스만의 WHY NOT!
                                 </p>
-                                <iframe src="https://www.youtube.com/embed/lhVcEIhND0M?controls=0" title="자유할인 편"></iframe>
+                                <iframe src="https://www.youtube.com/embed/lhVcEIhND0M?controls=0"
+                                        title="자유할인 편"></iframe>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -349,7 +369,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                     가입할 때도, 해지할 때도 쉽고 편하게 관리할 수 있다면? <br>
                                     이런 게 유플러스만의 WHY NOT!
                                 </p>
-                                <iframe src="https://www.youtube.com/embed/4ZWmDljpgNY?controls=0" title="편리 편"></iframe>
+                                <iframe src="https://www.youtube.com/embed/4ZWmDljpgNY?controls=0"
+                                        title="편리 편"></iframe>
                             </div>
                         </div>
                     </div>
@@ -372,7 +393,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             </div>
             BOOST US
         </h2>
-        <p data-aos="fade-up" data-aos-delay="100"><strong>파워 크리에이터</strong>가 될 수 있는 <strong>100일간</strong>의 도전 프로젝트!</p>
+        <p data-aos="fade-up" data-aos-delay="100"><strong>파워 크리에이터</strong>가 될 수 있는 <strong>100일간</strong>의 도전 프로젝트!
+        </p>
     </header>
     <div class="boost-us__video">
         <iframe src="https://www.youtube.com/embed/gwIQex5yrUI"></iframe>
@@ -381,17 +403,23 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <ul class="tab__nav" role="tablist">
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-boost-us-1" role="tab"
-                        aria-controls="tab-panel-boost-us-1" onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 소개'})">부스터스 소개
+                        aria-controls="tab-panel-boost-us-1"
+                        onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 소개'})">
+                    부스터스 소개
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-boost-us-2" role="tab"
-                        aria-controls="tab-panel-boost-us-2" onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 프로그램'})">부스터스 프로그램
+                        aria-controls="tab-panel-boost-us-2"
+                        onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 프로그램'})">
+                    부스터스 프로그램
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-boost-us-3" role="tab"
-                        aria-controls="tab-panel-boost-us-3" onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 혜택'})">부스터스 혜택
+                        aria-controls="tab-panel-boost-us-3"
+                        onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '부스터스 혜택'})">
+                    부스터스 혜택
                 </button>
             </li>
         </ul>
@@ -418,15 +446,17 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <p><a href="#boost-us-v1" class="boost-us__inquiry">지원문의</a></p>
                     </div>
 
-                    <?php
-                    if (date("Y-m-d") > '2023-05-01') {
-                    ?>
-                        <p><button type="button" class="boost-us__apply" onclick="alert('모집이 종료 되었습니다.');">지원하기</button></p>
-                    <?php }else{?>
-                    <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>
-                    <?php } ?>
+                    <!--                    --><?php
+                    //                    if (date("Y-m-d") > '2023-05-01') {
+                    //                    ?>
+                    <!--                        <p><button type="button" class="boost-us__apply" onclick="alert('모집이 종료 되었습니다.');">지원하기</button></p>-->
+                    <!--                    --><?php //}else{?>
+                    <!--                    <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>-->
+                    <!--                    --><?php //} ?>
 
-<!--                    <p><a href="#boost-us-v3" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '결과발표'})">결과발표</a></p>-->
+                    <p><a href="#boost-us-v3" class="boost-us__apply" target="_blank"
+                          onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '결과발표'})">결과발표</a>
+                    </p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-boost-us-2" role="tabpanel">
@@ -515,7 +545,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <strong>평범한 일상의 순간도 더 특별하게</strong> <br>
                 <span>내 일상에 필요한 서비스를 구독!</span>
             </p>
-            <p data-aos="fade-left" data-aos-delay="800"><a href="https://www.lguplus.com/pogg" target="_blank" onclick="gtag('event','WHY NOT EXPERIENCE',{'event_category' : '와이낫페이지' ,'event_label' : '나만의 구독 시작하기'})">나만의 구독
+            <p data-aos="fade-left" data-aos-delay="800"><a href="https://www.lguplus.com/pogg" target="_blank"
+                                                            onclick="gtag('event','WHY NOT EXPERIENCE',{'event_category' : '와이낫페이지' ,'event_label' : '나만의 구독 시작하기'})">나만의
+                    구독
                     시작하기</a></p>
         </div>
     </div>
@@ -526,7 +558,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             <div class="section-logo section-logo--black">
                 <span>why not</span>
             </div>
-            CREW
+            와이낫크루 시즌2
         </h2>
         <p data-aos="fade-up" data-aos-delay="100">
             유플러스와 함께 ESG 실천하는 착한 여행! <br>
@@ -536,11 +568,21 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     </header>
     <div class="crew__list-box">
         <ul class="crew__list">
-            <li class="crew__item"><a class="crew__link" href="#crew-v1" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '춘천'})"><span>춘천</span></a></li>
-            <li class="crew__item"><a class="crew__link" href="#crew-v2" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '부산'})"><span>부산</span></a></li>
-            <li class="crew__item"><a class="crew__link" href="#crew-v3" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '인천'})"><span>인천</span></a></li>
-            <li class="crew__item"><a class="crew__link" href="#crew-v4" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '울산'})"><span>울산</span></a></li>
-            <li class="crew__item"><a class="crew__link" href="#crew-v5" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '서울'})"><span>서울</span></a></li>
+            <li class="crew__item"><a class="crew__link" href="#crew-v1"
+                                      onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '춘천'})"><span>춘천</span></a>
+            </li>
+            <li class="crew__item"><a class="crew__link" href="#crew-v2"
+                                      onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '부산'})"><span>부산</span></a>
+            </li>
+            <li class="crew__item"><a class="crew__link" href="#crew-v3"
+                                      onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '인천'})"><span>인천</span></a>
+            </li>
+            <li class="crew__item"><a class="crew__link" href="#crew-v4"
+                                      onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '울산'})"><span>울산</span></a>
+            </li>
+            <li class="crew__item"><a class="crew__link" href="#crew-v5"
+                                      onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '서울'})"><span>서울</span></a>
+            </li>
         </ul>
         <p>
             유플러스의 혜택과 함께 대한민국 숨겨진 핫플을 방문해보세요!
@@ -578,32 +620,44 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         <ul class="tab__nav" role="tablist">
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-contents-1" role="tab"
-                        aria-controls="tab-panel-contents-1" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '브랜드 화보'})">브랜드 화보
+                        aria-controls="tab-panel-contents-1" aria-selected="false" data-api="tab"
+                        onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '브랜드 화보'})">
+                    브랜드 화보
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-contents-2" role="tab"
-                        aria-controls="tab-panel-contents-2" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫크루'})">와이낫크루
+                        aria-controls="tab-panel-contents-2" aria-selected="false" data-api="tab"
+                        onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫크루'})">
+                    와이낫크루
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-contents-3" role="tab"
-                        aria-controls="tab-panel-contents-3" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫송'})">와이낫송
+                        aria-controls="tab-panel-contents-3" aria-selected="false" data-api="tab"
+                        onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫송'})">
+                    와이낫송
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-contents-4" role="tab"
-                        aria-controls="tab-panel-contents-4" aria-selected="true" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보'})">유독 Behind 화보
+                        aria-controls="tab-panel-contents-4" aria-selected="true" data-api="tab"
+                        onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '유독 Behind 화보'})">
+                    유독 Behind 화보
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-contents-5" role="tab"
-                        aria-controls="tab-panel-contents-5" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '캐치유'})">캐치유
+                        aria-controls="tab-panel-contents-5" aria-selected="false" data-api="tab"
+                        onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '캐치유'})">
+                    캐치유
                 </button>
             </li>
             <li class="tab__item">
                 <button class="tab__menu" type="button" id="tab-contents-6" role="tab"
-                        aria-controls="tab-panel-contents-6" aria-selected="false" data-api="tab" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '도전은행'})">도전은행
+                        aria-controls="tab-panel-contents-6" aria-selected="false" data-api="tab"
+                        onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '도전은행'})">
+                    도전은행
                 </button>
             </li>
         </ul>
@@ -612,7 +666,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div class="textbox">
                     <p>뻔하지 않은 생각으로 일상의 즐거움을 만들어가는 <br> 사람들의 STORY <strong>WHY NOT 브랜드화보 !</strong></p>
                     <h3>브랜드 화보</h3>
-                    <p><a href="https://www.instagram.com/magazine_whynot" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '브랜드 화보_화보 보러가기'})">화보 보러가기</a></p>
+                    <p><a href="https://www.instagram.com/magazine_whynot" target="_blank"
+                          onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '브랜드 화보_화보 보러가기'})">화보
+                            보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-2" role="tabpanel">
@@ -620,7 +676,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <p>대한민국 숨겨진 명소를 찾아 <br> 선넘는 즐거움을 제시하다!</p>
                     <h3>와이낫크루</h3>
                     <p>
-                        <a href="https://www.youtube.com/watch?v=y_XMQBYcCtk&amp;list=PLrpBDj0lFe8gQuLfpR54BARC0g5-YTHCr" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫 크루_영상 보러가기'})">영상
+                        <a href="https://www.youtube.com/watch?v=y_XMQBYcCtk&amp;list=PLrpBDj0lFe8gQuLfpR54BARC0g5-YTHCr"
+                           target="_blank"
+                           onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫 크루_영상 보러가기'})">영상
                             보러가기</a></p>
                 </div>
             </div>
@@ -628,7 +686,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div class="textbox">
                     <p>선 넘는 도전을 응원하는 <br> 본업천재 와이낫크루의 HOT한 신곡!</p>
                     <h3>와이낫송</h3>
-                    <p><a href="https://youtu.be/CXLuNiVMNlc" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫송_영상 보러가기'})">영상 보러가기</a></p>
+                    <p><a href="https://youtu.be/CXLuNiVMNlc" target="_blank"
+                          onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '와이낫송_영상 보러가기'})">영상
+                            보러가기</a></p>
                 </div>
             </div>
             <div class="tab__panel" id="tab-panel-contents-4" role="tabpanel">
@@ -643,7 +703,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <p>유플러스 고객들의 <br> 솔직한 찐소리를 찾아서!</p>
                     <h3>캐치유</h3>
                     <p>
-                        <a href="https://www.youtube.com/watch?v=gSEWgbrAgfg&amp;list=PLrpBDj0lFe8hKcV6xlVmS2qY0CuP7lsvP" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '캐치유_영상 보러가기'})">영상
+                        <a href="https://www.youtube.com/watch?v=gSEWgbrAgfg&amp;list=PLrpBDj0lFe8hKcV6xlVmS2qY0CuP7lsvP"
+                           target="_blank"
+                           onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '캐치유_영상 보러가기'})">영상
                             보러가기</a></p>
                 </div>
             </div>
@@ -651,7 +713,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div class="textbox">
                     <p>나의 도전이 세상이 자산이 되는</p>
                     <h3>도전은행</h3>
-                    <p><a href="https://www.youtube.com/watch?v=O02bX3vPXE8" target="_blank" onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '도전은행_영상 보러가기'})">영상 보러가기</a></p>
+                    <p><a href="https://www.youtube.com/watch?v=O02bX3vPXE8" target="_blank"
+                          onclick="gtag('event','WHY NOT CONTENTS',{'event_category' : '와이낫페이지' ,'event_label' : '도전은행_영상 보러가기'})">영상
+                            보러가기</a></p>
                 </div>
             </div>
         </div>
@@ -669,7 +733,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     </header>
     <ul>
         <li>
-            <a href="https://youtu.be/V-Q9SucX1wI" target="_blank" onclick="gtag('event','선 넘는 COLLABORATION',{'event_category' : '와이낫페이지' ,'event_label' : '유플러스 X 떼껄룩'})">
+            <a href="https://youtu.be/V-Q9SucX1wI" target="_blank"
+               onclick="gtag('event','선 넘는 COLLABORATION',{'event_category' : '와이낫페이지' ,'event_label' : '유플러스 X 떼껄룩'})">
                 <h3>유플러스 × 때껄룩</h3>
                 <p>
                     일상의 즐거움을 위한 <br>
@@ -685,7 +750,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             </div>
         </li>
         <li>
-            <a href="https://smartstore.naver.com/holemancrew/products/7464891590" target="_blank" onclick="gtag('event','선 넘는 COLLABORATION',{'event_category' : '와이낫페이지' ,'event_label' : '유플러스 × 모나미'})">
+            <a href="https://smartstore.naver.com/holemancrew/products/7464891590" target="_blank"
+               onclick="gtag('event','선 넘는 COLLABORATION',{'event_category' : '와이낫페이지' ,'event_label' : '유플러스 × 모나미'})">
                 <h3>유플러스 × 모나미</h3>
                 <p>필기구의 대명사 국민 브랜드 모나미와 <br> 선 넘는 콜라보</p>
                 <p>바로가기</p>
@@ -704,7 +770,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             </div>
         </li>
         <li>
-            <a href="https://smartstore.naver.com/holemancrew/products/7284116862" target="_blank" onclick="gtag('event','선 넘는 COLLABORATION',{'event_category' : '와이낫페이지' ,'event_label' : '유플러스 × 곤지암 디퓨저'})">
+            <a href="https://smartstore.naver.com/holemancrew/products/7284116862" target="_blank"
+               onclick="gtag('event','선 넘는 COLLABORATION',{'event_category' : '와이낫페이지' ,'event_label' : '유플러스 × 곤지암 디퓨저'})">
                 <h3>유플러스 × 곤지암 디퓨저</h3>
                 <p>자연의 향을 담은 <br> 선 넘는 콜라보!</p>
                 <p>바로가기</p>
@@ -759,7 +826,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             <div class="modal-boost-us__content2">
                 <div class="certified-box">
                     <form name="form_auth" method="post">
-                        <input type="hidden" name="ordr_idxx" value="<?=$ordr_idxx?>">
+                        <input type="hidden" name="ordr_idxx" value="<?= $ordr_idxx ?>">
                         <input type="hidden" name="enc_cert_data2">
                         <input type="hidden" name="cert_no" value="">
                         <input type="hidden" name="dn_hash">
@@ -796,12 +863,16 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <input type="hidden" name="comm_id" value="">
                         <input type="hidden" name="name" readonly value="">
                         <input type="hidden" name="hphone" id="hphone" readonly value="">
-                        <button type="submit" onclick="auth_type_check(); gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '본인인증'});" class="certified-box__button">본인인증</button>
+                        <button type="submit"
+                                onclick="auth_type_check(); gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '본인인증'});"
+                                class="certified-box__button">본인인증
+                        </button>
                     </form>
                 </div>
 
-                <form name="form_boost_us" method="post" action="/api/boost-us-proc.php" class="modal-boost-us__form register-form">
-                    <input type="hidden" name="ordr_idxx" value="<?=$ordr_idxx?>">
+                <form name="form_boost_us" method="post" action="/api/boost-us-proc.php"
+                      class="modal-boost-us__form register-form">
+                    <input type="hidden" name="ordr_idxx" value="<?= $ordr_idxx ?>">
                     <input type="hidden" name="enc_cert_data2">
                     <input type="hidden" name="cert_no">
                     <input type="hidden" name="dn_hash">
@@ -864,7 +935,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                     <tr>
                                         <td>
                                             <p>※ 와이낫 부스터스 캠페인 참여자 모집 이벤트 (지원자 대상)
-                                                : 부스터스 모집 및 선발을 위한 본인 확인과 지원내역 확인, 지원에 대한 문의 접수, 선발결과 고지, 선발 후 활동안내 사이트 내 고객 행태정보 확인
+                                                : 부스터스 모집 및 선발을 위한 본인 확인과 지원내역 확인, 지원에 대한 문의 접수, 선발결과 고지, 선발 후 활동안내 사이트
+                                                내 고객 행태정보 확인
                                             </p>
                                             <p>
                                                 <br>
@@ -884,8 +956,10 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                     </tr>
                                     </tbody>
                                 </table>
-                                <p>※ 개인정보 수집 시 필수 항목의 수집·이용에 대한 동의를 거부하실 수 있으며, 다만 동의를 거부하실 경우 서비스 이용이 제한될 수 있습니다. 선택 항목의 수집·이용 동의를 거부하실 경우에는 서비스 이용은 제한되지 않습니다.</p>
-                                <p>※ 사이트 이용과정이나 모집 신청과정에서 Google Analytics를 통해 아래와 같은 정보들이 자동으로 생성되어 수집될 수 있습니다. 사용 목적은 이용자가 방문한 웹페이지에 대한 방문 이용행태, 보안접속 여부 등을 파악하기 위함입니다.</p>
+                                <p>※ 개인정보 수집 시 필수 항목의 수집·이용에 대한 동의를 거부하실 수 있으며, 다만 동의를 거부하실 경우 서비스 이용이 제한될 수 있습니다. 선택
+                                    항목의 수집·이용 동의를 거부하실 경우에는 서비스 이용은 제한되지 않습니다.</p>
+                                <p>※ 사이트 이용과정이나 모집 신청과정에서 Google Analytics를 통해 아래와 같은 정보들이 자동으로 생성되어 수집될 수 있습니다. 사용 목적은
+                                    이용자가 방문한 웹페이지에 대한 방문 이용행태, 보안접속 여부 등을 파악하기 위함입니다.</p>
                                 <p>- 방문기록, 쿠키, 이용자의 브라우저 종류 및 OS</p>
                                 <p>※ 만 14세 미만 고객의 경우 지원이 불가능하며, 이 때 지원창에 입력한 14세 미만 고객의 개인정보는 수집되지 않습니다.</p>
                                 <p>
@@ -950,14 +1024,17 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             </p>
                             <p>- ㈜엘지유플러스 사정에 따라 부스터스 운영 및 상세 활동은 별도의 고지없이 변경될 수 있습니다.</p>
                             <p>- 비정상적이거나 불법적인 방법으로 참여하신 경우 부스터스 선정이 취소될 수 있습니다.</p>
-                            <p style="padding: 0 7px;">(ex. 잘못된 정보를 입력하거나, 타인의 정보를 입력해 지원한 경우 등을 포함해 본인이 직접 지원하지 않은 경우)</p>
+                            <p style="padding: 0 7px;">(ex. 잘못된 정보를 입력하거나, 타인의 정보를 입력해 지원한 경우 등을 포함해 본인이 직접 지원하지 않은
+                                경우)</p>
                             <p>- 부스터스 선정자 발표는 홈페이지를 통해 발표하며, 선정되신 분들에 한해서 개별적으로 연락 드립니다. </p>
-                            <p>- 휴대폰 번호를 잘못 입력했거나 스팸 등록되어 문자메시지를 확인하지 못하는 경우, 또는 고객님의 개인 사정으로 문자메시지를 확인하지 못하는 경우 선정이 취소될 수 있으며, 결과에 대해 ㈜엘지유플러스가 책임지지 않습니다.</p>
+                            <p>- 휴대폰 번호를 잘못 입력했거나 스팸 등록되어 문자메시지를 확인하지 못하는 경우, 또는 고객님의 개인 사정으로 문자메시지를 확인하지 못하는 경우 선정이 취소될
+                                수 있으며, 결과에 대해 ㈜엘지유플러스가 책임지지 않습니다.</p>
                             <p>- 선발되신 분들에 한 해 부스터스 혜택에 대하여 개별 안내 드릴 예정입니다.</p>
                             <p>- 미션 확인 및 멘토링 프로그램 참여를 위해 부스터스 공식 카페에 의무 가입하여만 합니다. </p>
                             <p>- 활동 지원금은 미션 완료 시마다 20만원씩 5회 지급합니다.</p>
                             <p>- 5만원 초과 경품에 발생하는 소득세(3.3%)는 ㈜엘지유플러스에서 부담합니다. </p>
-                            <p>- 부스터스 미션 콘텐츠는 업로드 기간으로부터 1년 동안 공개상태로 유지하길 권장하며, 유플러스와 별도의 상의없이 중도 삭제/수정이 있을 경우 유플러스는 재업로드/원복을 요청할 수 있습니다.</p>
+                            <p>- 부스터스 미션 콘텐츠는 업로드 기간으로부터 1년 동안 공개상태로 유지하길 권장하며, 유플러스와 별도의 상의없이 중도 삭제/수정이 있을 경우 유플러스는
+                                재업로드/원복을 요청할 수 있습니다.</p>
                             <p>- ㈜엘지유플러스는 부스터스 콘텐츠를 마케팅 목적으로 활용할 수 있으며, 2차 활용을 위한 편집 및 수정 시 개별 안내될 예정입니다.</p>
                             <p>- 자세한 내용은 boost-us@freebr.co.kr 으로 문의주시기 바랍니다.</p>
                         </section>
@@ -974,7 +1051,10 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             <input type="hidden" name="agree2_ver" value="1.0">
                         </div>
                     </div>
-                    <button type="submit" onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</button>
+                    <button type="submit"
+                            onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">
+                        지원하기
+                    </button>
                 </form>
             </div>
             <div class="modal__close modal-boost-us__close">
@@ -992,13 +1072,126 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <p>WHY NOT 부스터스에 선정되신 것을 축하드립니다!</p>
             </div>
             <div class="modal-boost-us__content2 modal-boost-us__content3">
-                <div>이*형 1234</div>
-                <div>이*형 5678</div>
-                <div>이*형 1111</div>
-                <div>이*형 2222</div>
-                <div>이*형 3333</div>
-                <div>이*형 4444</div>
-                <div>이*형 5555</div>
+                <div>강진* (7*75)</div>
+                <div>곽민* (7*95)</div>
+                <div>구본* (1*97)</div>
+                <div>권동* (0*44)</div>
+                <div>김경* (9*29)</div>
+                <div>김계* (0*35)</div>
+                <div>김기* (1*77)</div>
+                <div>김나* (1*80)</div>
+                <div>김다* (5*59)</div>
+                <div>김민* (7*86)</div>
+                <div>김보* (9*21)</div>
+                <div>김상* (4*26)</div>
+                <div>김세* (9*90)</div>
+                <div>김소* (5*46)</div>
+                <div>김송* (7*31)</div>
+                <div>김수* (2*58)</div>
+                <div>김* (1*41)</div>
+                <div>김유* (8*31)</div>
+                <div>김윤* (8*59)</div>
+                <div>김은* (9*33)</div>
+                <div>김은* (0*70)</div>
+                <div>김은* (0*34)</div>
+                <div>김재* (2*61)</div>
+                <div>김하* (5*09)</div>
+                <div>김학* (4*86)</div>
+                <div>김현* (7*41)</div>
+                <div>김현* (0*35)</div>
+                <div>김혜* (1*89)</div>
+                <div>김혜* (2*53)</div>
+                <div>김환* (0*70)</div>
+                <div>김희* (2*51)</div>
+                <div>남효* (3*47)</div>
+                <div>노아* (2*66)</div>
+                <div>류채* (4*53)</div>
+                <div>문병* (2*09)</div>
+                <div>박서* (9*86)</div>
+                <div>박소* (3*47)</div>
+                <div>박주* (3*28)</div>
+                <div>박지* (6*09)</div>
+                <div>박지* (2*84)</div>
+                <div>박진* (8*94)</div>
+                <div>방지* (7*36)</div>
+                <div>방효* (9*87)</div>
+                <div>배지* (1*99)</div>
+                <div>백세* (1*73)</div>
+                <div>빈혜* (3*35)</div>
+                <div>서혜* (8*42)</div>
+                <div>손은* (5*57)</div>
+                <div>손주* (6*17)</div>
+                <div>송민* (4*58)</div>
+                <div>송진* (2*05)</div>
+                <div>신수* (1*79)</div>
+                <div>안종* (0*63)</div>
+                <div>양수* (8*69)</div>
+                <div>양승* (1*07)</div>
+                <div>양희* (4*44)</div>
+                <div>오영* (5*59)</div>
+                <div>왕선* (5*82)</div>
+                <div>원유* (4*26)</div>
+                <div>유연* (9*13)</div>
+                <div>유한* (1*99)</div>
+                <div>유홍* (8*08)</div>
+                <div>윤상* (1*70)</div>
+                <div>이로* (9*66)</div>
+                <div>이새* (0*29)</div>
+                <div>이송* (9*01)</div>
+                <div>이영* (1*09)</div>
+                <div>이예* (2*96)</div>
+                <div>이우* (6*28)</div>
+                <div>이원* (1*95)</div>
+                <div>이원* (9*05)</div>
+                <div>이유* (2*45)</div>
+                <div>이유* (5*52)</div>
+                <div>이은* (4*48)</div>
+                <div>이은* (0*31)</div>
+                <div>이정* (0*79)</div>
+                <div>이지* (3*12)</div>
+                <div>이채* (9*00)</div>
+                <div>이하* (4*31)</div>
+                <div>이하* (2*21)</div>
+                <div>이하* (7*92)</div>
+                <div>인령* (9*32)</div>
+                <div>임그* (7*56)</div>
+                <div>임정* (7*25)</div>
+                <div>임종* (4*47)</div>
+                <div>장아* (4*11)</div>
+                <div>장예* (1*84)</div>
+                <div>장현* (0*43)</div>
+                <div>전지* (2*62)</div>
+                <div>전지* (0*24)</div>
+                <div>정다* (3*78)</div>
+                <div>정민* (6*49)</div>
+                <div>정민* (0*05)</div>
+                <div>정민* (4*50)</div>
+                <div>정용* (1*32)</div>
+                <div>정주* (7*80)</div>
+                <div>조수* (5*73)</div>
+                <div>조영* (3*33)</div>
+                <div>조우* (9*28)</div>
+                <div>조현* (2*83)</div>
+                <div>조희* (2*79)</div>
+                <div>주영* (3*82)</div>
+                <div>지현* (7*07)</div>
+                <div>진서* (0*19)</div>
+                <div>진성* (9*89)</div>
+                <div>차윤* (9*46)</div>
+                <div>천유* (1*10)</div>
+                <div>천혜* (3*67)</div>
+                <div>최다* (3*14)</div>
+                <div>최범* (8*20)</div>
+                <div>최지* (9*79)</div>
+                <div>최화* (9*75)</div>
+                <div>하고* (7*04)</div>
+                <div>한수* (2*53)</div>
+                <div>현진* (2*88)</div>
+                <div>홍대* (7*86)</div>
+                <div>홍선* (3*04)</div>
+                <div>홍지* (5*57)</div>
+                <div>황으* (1*41)</div>
+                <div>황현* (9*76)</div>
             </div>
             <div class="modal__close modal-boost-us__close">
                 <button class="modal__close-button" type="button"><span class="modal__close-text">닫기</span></button>
@@ -1515,15 +1708,18 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             <div class="modal-footer-privacy__content">
                 <section>
                     <div>
-                        <p>㈜엘지유플러스 와이낫 웹사이트(https://whynot.lguplus.com/, 이하 “회사”)는 이용자의 개인 정보를 보호하기 위하여 「정보통신망 이용 촉진 및 정보보호 등에 관한 법률」 및 「개인정보보호법」 등 관련 법령상의 개인정보 보호 규정을 준수하고 있으며 다음과 같은 개인정보 처리방침을 가지고 있습니다.</p>
+                        <p>㈜엘지유플러스 와이낫 웹사이트(https://whynot.lguplus.com/, 이하 “회사”)는 이용자의 개인 정보를 보호하기 위하여 「정보통신망 이용 촉진 및
+                            정보보호 등에 관한 법률」 및 「개인정보보호법」 등 관련 법령상의 개인정보 보호 규정을 준수하고 있으며 다음과 같은 개인정보 처리방침을 가지고 있습니다.</p>
                         <p>
                             <br>
                         </p>
-                        <p>회사는 개인정보 처리방침을 통하여 이용자의 개인정보가 어떠한 목적과 방식으로 수집, 이용되고 있으며, 이용자의 개인정보 보호를 위해 회사가 어떠한 조치를 취하고 있는지 알려드립니다.</p>
+                        <p>회사는 개인정보 처리방침을 통하여 이용자의 개인정보가 어떠한 목적과 방식으로 수집, 이용되고 있으며, 이용자의 개인정보 보호를 위해 회사가 어떠한 조치를 취하고 있는지
+                            알려드립니다.</p>
                         <p>
                             <br>
                         </p>
-                        <p>본 개인정보 처리방침은 관련 법의 개정이나 회사의 정책에 따라 변경될 수 있으며, 회사는 웹사이트를 통하여 이를 알려드리오니, 웹사이트 이용 시에 수시로 확인하여 주시기 바랍니다.</p>
+                        <p>본 개인정보 처리방침은 관련 법의 개정이나 회사의 정책에 따라 변경될 수 있으며, 회사는 웹사이트를 통하여 이를 알려드리오니, 웹사이트 이용 시에 수시로 확인하여
+                            주시기 바랍니다.</p>
                     </div>
                     <div>
                         <p>
@@ -1624,7 +1820,9 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <p>
                             <br>
                         </p>
-                        <p>다만 상법, 국세기본법, 전자상거래 등에서의 소비자 보호에 관한 법률 등 관련 법령의 규정에 의하여 다음과 같이 거래 관련 권리 의무 관계의 확인 등을 이유로 일정기간 보유하여야 할 필요가 있을 경우에는 일정기간 보유합니다. 이 경우 회사는 보관하는 개인정보를 그 보관의 목적으로만 이용하며 보존 기간 및 보존 항목은 아래와 같습니다.</p>
+                        <p>다만 상법, 국세기본법, 전자상거래 등에서의 소비자 보호에 관한 법률 등 관련 법령의 규정에 의하여 다음과 같이 거래 관련 권리 의무 관계의 확인 등을 이유로 일정기간
+                            보유하여야 할 필요가 있을 경우에는 일정기간 보유합니다. 이 경우 회사는 보관하는 개인정보를 그 보관의 목적으로만 이용하며 보존 기간 및 보존 항목은 아래와
+                            같습니다.</p>
                         <p>
                             <br>
                         </p>
@@ -1641,11 +1839,13 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             <br>
                         </p>
                         <p>2) 파기 방법</p>
-                        <p>종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기하고, 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.</p>
+                        <p>종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기하고, 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여
+                            삭제합니다.</p>
                     </div>
                     <div>
                         <p>5. 개인정보 제3자 제공에 관한 사항</p>
-                        <p>회사는 이용자의 동의가 있거나 관련 법령의 규정에 의한 경우를 제외하고는 어떠한 경우에도 "1. 처리하는 개인정보의 항목", "2. 개인정보의 처리 목적"에서 고지한 범위를 넘어 이용자의 개인정보를 이용하거나 제3자에게 제공하지 않습니다. 다만, 다음의 경우에는 예외로 합니다.</p>
+                        <p>회사는 이용자의 동의가 있거나 관련 법령의 규정에 의한 경우를 제외하고는 어떠한 경우에도 "1. 처리하는 개인정보의 항목", "2. 개인정보의 처리 목적"에서 고지한
+                            범위를 넘어 이용자의 개인정보를 이용하거나 제3자에게 제공하지 않습니다. 다만, 다음의 경우에는 예외로 합니다.</p>
                         <p>
                             <br>
                         </p>
@@ -1666,34 +1866,35 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 <col width="70%">
                             </colgroup>
                             <thead>
-                                <tr>
-                                    <th>수탁업체</th>
-                                    <th>수탁 업무 내용</th>
-                                </tr>
+                            <tr>
+                                <th>수탁업체</th>
+                                <th>수탁 업무 내용</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>㈜에이치에스애드</td>
-                                    <td>부스터스와 관련된 업무 </td>
-                                </tr>
-                                <tr>
-                                    <td>㈜프리비알</td>
-                                    <td>부스터스 모집 및 활동 관련 안내 </td>
-                                </tr>
-                                <tr>
-                                    <td>㈜그룹아이디디</td>
-                                    <td>부스터스 사이트 개발 및 운영</td>
-                                </tr>
-                                <tr>
-                                    <td>㈜NHN KCP</td>
-                                    <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
-                                </tr>
+                            <tr>
+                                <td>㈜에이치에스애드</td>
+                                <td>부스터스와 관련된 업무</td>
+                            </tr>
+                            <tr>
+                                <td>㈜프리비알</td>
+                                <td>부스터스 모집 및 활동 관련 안내</td>
+                            </tr>
+                            <tr>
+                                <td>㈜그룹아이디디</td>
+                                <td>부스터스 사이트 개발 및 운영</td>
+                            </tr>
+                            <tr>
+                                <td>㈜NHN KCP</td>
+                                <td>부스터스 사이트 본인인증 확인 서비스 지원</td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
                     <div>
                         <p>7. 개인정보 자동 수집의 목적 및 거부에 관한 사항</p>
-                        <p>회사는 이용자의 정보를 수시로 저장하고 찾아내는 '쿠키(cookie)', 'ActiveX' 등 개인정보를 자동으로 수집하는 장치(이하 “쿠키 등”)를 설치 운용합니다. 쿠키란 LG유플러스 웹사이트를 운영하는데 이용되는 서버가 이용자의 브라우저에 보내는 아주 작은 텍스트 파일로서 이용자의 컴퓨터 하드디스크에 저장됩니다.</p>
+                        <p>회사는 이용자의 정보를 수시로 저장하고 찾아내는 '쿠키(cookie)', 'ActiveX' 등 개인정보를 자동으로 수집하는 장치(이하 “쿠키 등”)를 설치 운용합니다.
+                            쿠키란 LG유플러스 웹사이트를 운영하는데 이용되는 서버가 이용자의 브라우저에 보내는 아주 작은 텍스트 파일로서 이용자의 컴퓨터 하드디스크에 저장됩니다.</p>
                         <p>
                             <br>
                         </p>
@@ -1701,60 +1902,82 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <p>① 이용자의 접속빈도 또는 머문 시간 등을 분석하여 이용자의 취향과 관심분야를 파악하여 서비스 개선에 활용</p>
                         <p>② 웹사이트 방문 품목들에 대한 정보와 관심 있게 둘러본 품목들에 대한 자취를 추적하여 다음 번 웹사이트 방문 때 제품 정보를 제공</p>
                         <p>나. 쿠키 설정 거부 방법</p>
-                        <p>① 이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다. 따라서, 쿠키 설정을 거부하는 방법으로는 사용하시는 웹 브라우저의 옵션을 선택함으로써 모든 쿠키를 허용하거나 쿠키를 저장할 때마다 확인을 거치거나, 모든 쿠키의 저장을 거부할 수 있습니다.</p>
-                        <p>② 설정방법의 예시(웹 브라우저의 경우) : 웹 브라우저 상단의 도구 > 인터넷 옵션 > 개인정보에서 변경. 단, 이용자께서 쿠키 설치를 거부하였을 경우 서비스 제공에 어려움이 있을 수 있습니다.</p>
+                        <p>① 이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다. 따라서, 쿠키 설정을 거부하는 방법으로는 사용하시는 웹 브라우저의 옵션을 선택함으로써 모든 쿠키를 허용하거나
+                            쿠키를 저장할 때마다 확인을 거치거나, 모든 쿠키의 저장을 거부할 수 있습니다.</p>
+                        <p>② 설정방법의 예시(웹 브라우저의 경우) : 웹 브라우저 상단의 도구 > 인터넷 옵션 > 개인정보에서 변경. 단, 이용자께서 쿠키 설치를 거부하였을 경우 서비스 제공에
+                            어려움이 있을 수 있습니다.</p>
                         <p>③ ActiveX 설정 거부 방법</p>
                         <p>A. 이용자는 ActiveX 설치에 대한 선택권을 가지고 있습니다. ActiveX 설정을 거부하는 방법은 다음과 같습니다.</p>
                         <div style="padding: 0 7px;">
-                            <p>1) 웹 브라우저 상단의 도구 > 인터넷 옵션 > 보안 탭 클릭하여 하단의 사용자 지정수준 클릭 > ActiveX 컨트롤 및 플러그 인 항목에서 아래와 같이 체크함</p>
+                            <p>1) 웹 브라우저 상단의 도구 > 인터넷 옵션 > 보안 탭 클릭하여 하단의 사용자 지정수준 클릭 > ActiveX 컨트롤 및 플러그 인 항목에서 아래와 같이
+                                체크함</p>
                             <p>- 바이너리 및 스크립트 동작 => 사용안함</p>
                             <p>- 서명 된 ActiveX 컨트롤 다운로드 => 사용안함</p>
                             <p>- 스크립팅하기 안전하지 않은 것으로 표시된 ActiveX 컨트롤 초기화 및 스크립팅 => 사용안함</p>
                             <p>- 스크립팅하기 안전한 것으로 표시된 ActiveX 컨트롤 스크립트 => 사용안함</p>
                             <p>- ActiveX 컨트롤 및 플러그인 실행 => 사용안함</p>
                             <p>- ActiveX 컨트롤을 자동으로 사용자에게 확인 => 사용안함</p>
-                            <p>2) 새 웹 브라우저 창을 여신 후, 다시 접속해 주시기 바랍니다. 접속이 원활하게 되지 않을 경우에는 바이러스 및 악성 코드 제거 프로그램으로 바이러스와 악성코드를 제거 후에 다시 시도해 주시기 바랍니다.</p>
+                            <p>2) 새 웹 브라우저 창을 여신 후, 다시 접속해 주시기 바랍니다. 접속이 원활하게 되지 않을 경우에는 바이러스 및 악성 코드 제거 프로그램으로 바이러스와
+                                악성코드를 제거 후에 다시 시도해 주시기 바랍니다.</p>
                             <p></p>
                         </div>
-                        <p>④ 쿠키를 기반으로 수집되는 행태정보(Google 애널리틱스 통계데이터 정보)에 대해, 이용자는 Google 애널리틱스 분석 차단 브라우저 부가 기능을 사용하여 데이터 수집을 거부할 수도 있습니다.</p>
+                        <p>④ 쿠키를 기반으로 수집되는 행태정보(Google 애널리틱스 통계데이터 정보)에 대해, 이용자는 Google 애널리틱스 분석 차단 브라우저 부가 기능을 사용하여 데이터
+                            수집을 거부할 수도 있습니다.</p>
                         <div style="padding: 0 7px;">
-                            <p>Google 애널리틱스 차단 브라우저 부가기능을 설치하여 Google 애널리틱스에 웹사이트 활동을 제공하는 것을 차단할 수 있습니다. 이 부가기능은 웹사이트에서 실행되는 Google 애널리틱스 자바스크립트(ga.js, analytics.js, dc.js)를 통해 Google 애널리틱스에 방문 활동에 대한 정보를 공유하지 않도록 차단합니다. 웹로그 분석 차단 추가관련 부가기능은 아래URL에서 설치 가능합니다.</p>
+                            <p>Google 애널리틱스 차단 브라우저 부가기능을 설치하여 Google 애널리틱스에 웹사이트 활동을 제공하는 것을 차단할 수 있습니다. 이 부가기능은 웹사이트에서
+                                실행되는 Google 애널리틱스 자바스크립트(ga.js, analytics.js, dc.js)를 통해 Google 애널리틱스에 방문 활동에 대한 정보를
+                                공유하지 않도록 차단합니다. 웹로그 분석 차단 추가관련 부가기능은 아래URL에서 설치 가능합니다.</p>
                             <p>🡪</p>
-                            <p>https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=ko</p>
+                            <p>
+                                https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=ko</p>
                         </div>
                     </div>
                     <div>
                         <p>8. 개인정보의 안전성 확보조치에 관한 사항</p>
-                        <p>회사는 이용자의 개인정보를 처리함에 있어 개인정보가 분실, 도난, 유출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술적, 관리적 대책을 마련하고 있습니다.</p>
+                        <p>회사는 이용자의 개인정보를 처리함에 있어 개인정보가 분실, 도난, 유출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술적, 관리적 대책을 마련하고
+                            있습니다.</p>
                         <p>
                             <br>
                         </p>
                         <p>1) 기술적 보호조치</p>
-                        <p>① 이용자의 개인정보는 비밀번호에 의해 보호되며 암호 알고리즘을 이용하여 네트워크 상의 개인정보를 안전하게 전송할 수 있는 보안장치(SSL)를 채택하고 있습니다.</p>
-                        <p>② 해킹 등 외부 침입에 대비하여 각 서버마다 접근제어솔루션 등을 이용하여 외부로부터의 무단 접근을 통제하고 있으며, 기타 시스템적으로 보안성을 확보하기 위한 가능한 기술적 장치를 갖추어 개인정보 보안에 만전을 기하고 있습니다.</p>
+                        <p>① 이용자의 개인정보는 비밀번호에 의해 보호되며 암호 알고리즘을 이용하여 네트워크 상의 개인정보를 안전하게 전송할 수 있는 보안장치(SSL)를 채택하고
+                            있습니다.</p>
+                        <p>② 해킹 등 외부 침입에 대비하여 각 서버마다 접근제어솔루션 등을 이용하여 외부로부터의 무단 접근을 통제하고 있으며, 기타 시스템적으로 보안성을 확보하기 위한 가능한
+                            기술적 장치를 갖추어 개인정보 보안에 만전을 기하고 있습니다.</p>
                         <p>③ 패스워드 등 본인임을 인증하는 정보에 대해서는 복호화되지 아니하도록 일방향 암호화하여 저장합니다.</p>
                         <p>④ 개인정보 처리 시스템에서 개인정보의 출력 시(인쇄, 화면표시, 파일생성 등) 용도를 특정하며, 용도에 따라 출력 항목을 최소화합니다.</p>
-                        <p>⑤ 개인정보 처리자가 개인 정보를 종이로 인쇄하거나, 디스켓, 콤팩트디스크 등 이동 가능한 저장매체에 복사할 경우 개인정보보호 책임자의 사전 승인을 받도록 조치합니다. 출력, 복사물로부터 다시 출력 또는 복사하는 경우도 또한 같습니다.</p>
+                        <p>⑤ 개인정보 처리자가 개인 정보를 종이로 인쇄하거나, 디스켓, 콤팩트디스크 등 이동 가능한 저장매체에 복사할 경우 개인정보보호 책임자의 사전 승인을 받도록 조치합니다.
+                            출력, 복사물로부터 다시 출력 또는 복사하는 경우도 또한 같습니다.</p>
                         <p>2) 관리적 보호조치</p>
                         <p>① 이용자의 개인정보에 대한 접근 권한을 최소한의 인원으로 제한하고 있습니다.</p>
-                        <p>② 전보 또는 퇴직 등 인사 이동이 발생하여 개인정보처리자가 변경되었을 경우 지체 없이 개인 정보처리시스템의 접근 권한을 변경 또는 말소합니다. 이 경우 권한 부여, 변경 또는 말소에 대한 내역을 기록하고, 그 기록을 최소 5년간 보관합니다.</p>
-                        <p>③ 처리중인 개인정보가 인터넷 홈페이지, P2P, 공유설정 등을 통하여 권한이 없는 자에게 공개되지 않도록 개인정보처리 시스템 및 개인정보처리자의 PC를 설정합니다.</p>
-                        <p>④ 개인정보 수집, 활용 및 파기 시 그에 대한 법률이 권고하는 기준(정보통신망 이용촉진 및 정보보호 등에 관한 법률 및 개인정보보호법 등 관련 법령)에 따라 수집한 근거를 남기도록 하고 있으며, 이와 관련하여 내부 정책과 프로세스를 규정하고 교육을 실시합니다.</p>
-                        <p>⑤ 입사시 전 직원의 보안서약서를 통하여 사람에 의한 정보유출을 사전에 방지하고 개인정보보호정책에 대한 이행사항 및 직원의 준수여부를 감시하기 위한 내부절차를 마련하고 있습니다.</p>
+                        <p>② 전보 또는 퇴직 등 인사 이동이 발생하여 개인정보처리자가 변경되었을 경우 지체 없이 개인 정보처리시스템의 접근 권한을 변경 또는 말소합니다. 이 경우 권한 부여,
+                            변경 또는 말소에 대한 내역을 기록하고, 그 기록을 최소 5년간 보관합니다.</p>
+                        <p>③ 처리중인 개인정보가 인터넷 홈페이지, P2P, 공유설정 등을 통하여 권한이 없는 자에게 공개되지 않도록 개인정보처리 시스템 및 개인정보처리자의 PC를
+                            설정합니다.</p>
+                        <p>④ 개인정보 수집, 활용 및 파기 시 그에 대한 법률이 권고하는 기준(정보통신망 이용촉진 및 정보보호 등에 관한 법률 및 개인정보보호법 등 관련 법령)에 따라 수집한
+                            근거를 남기도록 하고 있으며, 이와 관련하여 내부 정책과 프로세스를 규정하고 교육을 실시합니다.</p>
+                        <p>⑤ 입사시 전 직원의 보안서약서를 통하여 사람에 의한 정보유출을 사전에 방지하고 개인정보보호정책에 대한 이행사항 및 직원의 준수여부를 감시하기 위한 내부절차를 마련하고
+                            있습니다.</p>
                         <p>⑥ 개인정보 관련 처리자의 업무 인수인계는 보안이 유지된 상태에서 철저하게 이뤄지고 있으며 입사 및 퇴사 후 개인정보 사고에 대한 책임을 명확히 하고 있습니다.</p>
                         <p>⑦ 개인정보와 일반 데이터를 혼합하여 보관하지 않고 별도의 서버를 통해 분리하여 보관하고 있습니다.</p>
                         <p>⑧ 전산실 및 자료 보관실 등을 특별 보호구역으로 설정하여 출입을 통제하고 있습니다.</p>
                         <p>⑨ 당사는 이용자 개인의 실수나 기본적인 인터넷의 위험성 때문에 일어나는 일들에 대해 책임을 지지 않습니다.</p>
-                        <p>⑩ 그 외 내부 관리자의 실수나 기술관리 상의 사고로 인해 개인정보의 상실, 유출, 변조, 훼손이 유발될 경우 당사는 즉각 이용자께 사실을 알리고 적절한 대책과 보상을 강구할 것입니다.</p>
+                        <p>⑩ 그 외 내부 관리자의 실수나 기술관리 상의 사고로 인해 개인정보의 상실, 유출, 변조, 훼손이 유발될 경우 당사는 즉각 이용자께 사실을 알리고 적절한 대책과 보상을
+                            강구할 것입니다.</p>
                     </div>
                     <div>
                         <p>9. 정보주체의 권리, 의무 및 그 행사방법에 관한 사항</p>
-                        <p>이용자 및 법정대리인의 개인정보를 최신의 상태로 정확하게 입력하여 불의의 사고를 예방해 주시기 바랍니다. 이용자 및 법정대리인이 입력한 부정확한 정보로 인해 발생하는 사고의 책임은 이용자 및 법정대리인 자신에게 있으며 타인 정보의 도용 등 허위 정보를 입력할 경우 서비스 이용이 제한될 수 있습니다. 이용자 및 법정대리인은 개인정보를 보호받을 권리와 함께 스스로를 보호하고 타인의 정보를 침해하지 않을 의무도 가지고 있습니다. 이용자 및 법정대리인의 개인 정보가 유출되지 않도록 조심하시고 게시물을 포함한 타인의 개인정보를 훼손하지 않도록 유의해 주십시오. 만약 이 같은 책임을 다하지 못하고 타인의 정보 및 존엄성을 훼손할 시에는 『정보통신망 이용촉진 및 정보보호 등에 관한 법률』, 『개인정보보호법』 등에 의해 처벌받을 수 있습니다.</p>
+                        <p>이용자 및 법정대리인의 개인정보를 최신의 상태로 정확하게 입력하여 불의의 사고를 예방해 주시기 바랍니다. 이용자 및 법정대리인이 입력한 부정확한 정보로 인해 발생하는
+                            사고의 책임은 이용자 및 법정대리인 자신에게 있으며 타인 정보의 도용 등 허위 정보를 입력할 경우 서비스 이용이 제한될 수 있습니다. 이용자 및 법정대리인은
+                            개인정보를 보호받을 권리와 함께 스스로를 보호하고 타인의 정보를 침해하지 않을 의무도 가지고 있습니다. 이용자 및 법정대리인의 개인 정보가 유출되지 않도록 조심하시고
+                            게시물을 포함한 타인의 개인정보를 훼손하지 않도록 유의해 주십시오. 만약 이 같은 책임을 다하지 못하고 타인의 정보 및 존엄성을 훼손할 시에는 『정보통신망 이용촉진
+                            및 정보보호 등에 관한 법률』, 『개인정보보호법』 등에 의해 처벌받을 수 있습니다.</p>
                         <p>
                             <br>
                         </p>
                         <p>1) 개인정보 열람, 정정, 삭제 요구의 권리:</p>
-                        <p>이용자 및 법정대리인은 언제든지 등록되어 있는 자신의 개인정보를 열람하거나 정정, 삭제하실 수 있습니다. 개인정보 열람 및 정정, 삭제를 하고자 할 경우에는 개인정보보호책임자 및 담당자에게 서면, 전화 또는 전자우편주소로 연락하시면 지체 없이 조치하겠습니다.</p>
+                        <p>이용자 및 법정대리인은 언제든지 등록되어 있는 자신의 개인정보를 열람하거나 정정, 삭제하실 수 있습니다. 개인정보 열람 및 정정, 삭제를 하고자 할 경우에는
+                            개인정보보호책임자 및 담당자에게 서면, 전화 또는 전자우편주소로 연락하시면 지체 없이 조치하겠습니다.</p>
                         <p>2) 개인정보 수집, 이용, 제공에 대한 동의 철회의 권리:</p>
                         <p>이용자 및 법정대리인은 서비스 이용을 위해 입력하신 개인정보의 수집, 이용, 제공, 저장에 대해 동의하신 내용을 철회하실 수 있습니다.
                             동의 철회는 개인정보보호 담당자에게 서면, 전화 또는 전자우편주소로 연락하시면 본인 확인 절차 후 개인정보의 삭제 등 필요한 조치를 하겠습니다.</p>
@@ -1771,7 +1994,8 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         <p>
                             <br>
                         </p>
-                        <p>또한, 기타 개인정보에 관한 상담이 필요한 경우에는 개인정보침해 신고센터, 개인정보분쟁조정위원회, 대검찰청 사이버수사과, 경찰청 사이버안전국 등으로 문의하실 수 있습니다.</p>
+                        <p>또한, 기타 개인정보에 관한 상담이 필요한 경우에는 개인정보침해 신고센터, 개인정보분쟁조정위원회, 대검찰청 사이버수사과, 경찰청 사이버안전국 등으로 문의하실 수
+                            있습니다.</p>
                         <p>1) 개인정보침해신고센터</p>
                         <p>- 전화 : (국번없이) 118</p>
                         <p>- URL : http://privacy.kisa.or.kr</p>
@@ -1809,8 +2033,12 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     <div class="footer__wrap">
         <div>
             <h1>(주)엘지유플러스</h1>
-            <p><a href="https://www.lguplus.com/" target="_blank" onclick="gtag('event','Footer',{'event_category' : '와이낫페이지' ,'event_label' : 'LG 유플러스 홈페이지 가기'})">LG 유플러스 홈페이지 가기</a></p>
-            <p><a href="#" class="footer__privacy" onclick="gtag('event','Footer',{'event_category' : '와이낫페이지' ,'event_label' : '개인정보 처리방침'})">개인정보 처리방침</a></p>
+            <p><a href="https://www.lguplus.com/" target="_blank"
+                  onclick="gtag('event','Footer',{'event_category' : '와이낫페이지' ,'event_label' : 'LG 유플러스 홈페이지 가기'})">LG
+                    유플러스 홈페이지 가기</a></p>
+            <p><a href="#" class="footer__privacy"
+                  onclick="gtag('event','Footer',{'event_category' : '와이낫페이지' ,'event_label' : '개인정보 처리방침'})">개인정보
+                    처리방침</a></p>
         </div>
         <div>
             <address>서울특별시 용산구 한강대로 32</address>
@@ -1826,6 +2054,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     </div>
 </footer>
 
-<iframe id="kcp_cert" name="kcp_cert" width="100%" height="700" frameborder="0" scrolling="no" style="display:none"></iframe>
+<iframe id="kcp_cert" name="kcp_cert" width="100%" height="700" frameborder="0" scrolling="no"
+        style="display:none"></iframe>
 </body>
 </html>

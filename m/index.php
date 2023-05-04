@@ -388,15 +388,15 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             <p><a href="#boost-us-v1" class="boost-us__inquiry">지원문의</a></p>
                         </div>
 
-                        <?php
-                        if (date("Y-m-d") > '2023-05-01') {
-                            ?>
-                            <p><button type="button" class="boost-us__apply" onclick="alert('모집이 종료 되었습니다.');">지원하기</button></p>
-                        <?php }else{?>
-                            <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>
-                        <?php } ?>
+<!--                        --><?php
+//                        if (date("Y-m-d") > '2023-05-01') {
+//                            ?>
+<!--                            <p><button type="button" class="boost-us__apply" onclick="alert('모집이 종료 되었습니다.');">지원하기</button></p>-->
+<!--                        --><?php //}else{?>
+<!--                            <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>-->
+<!--                        --><?php //} ?>
 
-<!--                        <p><a href="#boost-us-v3" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '결과발표'})">결과발표</a></p>-->
+                        <p><a href="#boost-us-v3" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '결과발표'})">결과발표</a></p>
                     </div>
                 </div>
             </div>
@@ -515,7 +515,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             <div class="section-logo section-logo--white2">
                 <span>why not</span>
             </div>
-            CREW
+            와이낫크루 시즌2
         </h2>
         <p data-aos="fade-up" data-aos-delay="100" data-aos-offset="300">
             유플러스와 함께 ESG 실천하는 착한 여행! <br>
@@ -981,9 +981,126 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <p>WHY NOT 부스터스에 선정되신 것을 축하드립니다!</p>
             </div>
             <div class="modal-boost-us__content2 modal-boost-us__content3">
-                <div>text</div>
-                <div>text</div>
-                <div>text</div>
+                <div>강진* (7*75)</div>
+                <div>곽민* (7*95)</div>
+                <div>구본* (1*97)</div>
+                <div>권동* (0*44)</div>
+                <div>김경* (9*29)</div>
+                <div>김계* (0*35)</div>
+                <div>김기* (1*77)</div>
+                <div>김나* (1*80)</div>
+                <div>김다* (5*59)</div>
+                <div>김민* (7*86)</div>
+                <div>김보* (9*21)</div>
+                <div>김상* (4*26)</div>
+                <div>김세* (9*90)</div>
+                <div>김소* (5*46)</div>
+                <div>김송* (7*31)</div>
+                <div>김수* (2*58)</div>
+                <div>김* (1*41)</div>
+                <div>김유* (8*31)</div>
+                <div>김윤* (8*59)</div>
+                <div>김은* (9*33)</div>
+                <div>김은* (0*70)</div>
+                <div>김은* (0*34)</div>
+                <div>김재* (2*61)</div>
+                <div>김하* (5*09)</div>
+                <div>김학* (4*86)</div>
+                <div>김현* (7*41)</div>
+                <div>김현* (0*35)</div>
+                <div>김혜* (1*89)</div>
+                <div>김혜* (2*53)</div>
+                <div>김환* (0*70)</div>
+                <div>김희* (2*51)</div>
+                <div>남효* (3*47)</div>
+                <div>노아* (2*66)</div>
+                <div>류채* (4*53)</div>
+                <div>문병* (2*09)</div>
+                <div>박서* (9*86)</div>
+                <div>박소* (3*47)</div>
+                <div>박주* (3*28)</div>
+                <div>박지* (6*09)</div>
+                <div>박지* (2*84)</div>
+                <div>박진* (8*94)</div>
+                <div>방지* (7*36)</div>
+                <div>방효* (9*87)</div>
+                <div>배지* (1*99)</div>
+                <div>백세* (1*73)</div>
+                <div>빈혜* (3*35)</div>
+                <div>서혜* (8*42)</div>
+                <div>손은* (5*57)</div>
+                <div>손주* (6*17)</div>
+                <div>송민* (4*58)</div>
+                <div>송진* (2*05)</div>
+                <div>신수* (1*79)</div>
+                <div>안종* (0*63)</div>
+                <div>양수* (8*69)</div>
+                <div>양승* (1*07)</div>
+                <div>양희* (4*44)</div>
+                <div>오영* (5*59)</div>
+                <div>왕선* (5*82)</div>
+                <div>원유* (4*26)</div>
+                <div>유연* (9*13)</div>
+                <div>유한* (1*99)</div>
+                <div>유홍* (8*08)</div>
+                <div>윤상* (1*70)</div>
+                <div>이로* (9*66)</div>
+                <div>이새* (0*29)</div>
+                <div>이송* (9*01)</div>
+                <div>이영* (1*09)</div>
+                <div>이예* (2*96)</div>
+                <div>이우* (6*28)</div>
+                <div>이원* (1*95)</div>
+                <div>이원* (9*05)</div>
+                <div>이유* (2*45)</div>
+                <div>이유* (5*52)</div>
+                <div>이은* (4*48)</div>
+                <div>이은* (0*31)</div>
+                <div>이정* (0*79)</div>
+                <div>이지* (3*12)</div>
+                <div>이채* (9*00)</div>
+                <div>이하* (4*31)</div>
+                <div>이하* (2*21)</div>
+                <div>이하* (7*92)</div>
+                <div>인령* (9*32)</div>
+                <div>임그* (7*56)</div>
+                <div>임정* (7*25)</div>
+                <div>임종* (4*47)</div>
+                <div>장아* (4*11)</div>
+                <div>장예* (1*84)</div>
+                <div>장현* (0*43)</div>
+                <div>전지* (2*62)</div>
+                <div>전지* (0*24)</div>
+                <div>정다* (3*78)</div>
+                <div>정민* (6*49)</div>
+                <div>정민* (0*05)</div>
+                <div>정민* (4*50)</div>
+                <div>정용* (1*32)</div>
+                <div>정주* (7*80)</div>
+                <div>조수* (5*73)</div>
+                <div>조영* (3*33)</div>
+                <div>조우* (9*28)</div>
+                <div>조현* (2*83)</div>
+                <div>조희* (2*79)</div>
+                <div>주영* (3*82)</div>
+                <div>지현* (7*07)</div>
+                <div>진서* (0*19)</div>
+                <div>진성* (9*89)</div>
+                <div>차윤* (9*46)</div>
+                <div>천유* (1*10)</div>
+                <div>천혜* (3*67)</div>
+                <div>최다* (3*14)</div>
+                <div>최범* (8*20)</div>
+                <div>최지* (9*79)</div>
+                <div>최화* (9*75)</div>
+                <div>하고* (7*04)</div>
+                <div>한수* (2*53)</div>
+                <div>현진* (2*88)</div>
+                <div>홍대* (7*86)</div>
+                <div>홍선* (3*04)</div>
+                <div>홍지* (5*57)</div>
+                <div>황으* (1*41)</div>
+                <div>황현* (9*76)</div>
             </div>
         </div>
     </div>
