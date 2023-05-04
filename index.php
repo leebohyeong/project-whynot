@@ -1193,6 +1193,19 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <div>황으* (1*41)</div>
                 <div>황현* (9*76)</div>
             </div>
+            <div class="modal-boost-us__content2" style="padding: 30px 36px;">
+                <p>
+                    - 최종 선정된 인원은 5/4(목) 문자 메시지를 통해 선정 여부 개별 안내 예정입니다. <br>
+                    - 와이낫 부스터스 활동을 위해 와이낫 부스터스 네이버 카페에 의무 가입하여만 하며,
+                    5/8(월)까지 가입하지 않을 경우 선정 취소될 수 있습니다. <br>
+                    - 네이버 카페 가입 시 원활한 와이낫 부스터스 활동을 위해 개인정보 동의를 받고 있으며
+                    동의하지 않을 경우 선정 취소될 수 있습니다. <br>
+                    - 휴대폰 번호를 잘못 입력했거나 스팸 등록되어 문자메시지를 확인하지 못하는 경우,
+                    또는 고객님의 개인 사정으로 문자메시지를 확인하지 못하는 경우 선정이 취소될 수 있으며,
+                    결과에 대해 ㈜엘지유플러스가 책임지지 않습니다. <br>
+                    - ㈜엘지유플러스 사정에 따라 부스터스 운영 및 상세 활동은 별도의 고지없이 변경될 수 있습니다.
+                </p>
+            </div>
             <div class="modal__close modal-boost-us__close">
                 <button class="modal__close-button" type="button"><span class="modal__close-text">닫기</span></button>
             </div>
