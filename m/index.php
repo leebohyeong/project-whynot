@@ -388,15 +388,15 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                             <p><a href="#boost-us-v1" class="boost-us__inquiry">지원문의</a></p>
                         </div>
 
-<!--                        --><?php
-//                        if (date("Y-m-d") > '2023-05-01') {
-//                            ?>
-<!--                            <p><button type="button" class="boost-us__apply" onclick="alert('모집이 종료 되었습니다.');">지원하기</button></p>-->
-<!--                        --><?php //}else{?>
-<!--                            <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>-->
-<!--                        --><?php //} ?>
+                        <?php
+                        if (date("Y-m-d") > '2023-05-01') {
+                            ?>
+                            <p><button type="button" class="boost-us__apply" onclick="alert('모집이 종료 되었습니다.');">지원하기</button></p>
+                        <?php }else{?>
+                            <p><a href="#boost-us-v2" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '지원하기'})">지원하기</a></p>
+                        <?php } ?>
 
-                        <p><a href="#boost-us-v3" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '결과발표'})">결과발표</a></p>
+<!--                        <p><a href="#boost-us-v3" class="boost-us__apply" target="_blank"  onclick="gtag('event','WHY NOT BOOST-US',{'event_category' : '와이낫페이지' ,'event_label' : '결과발표'})">결과발표</a></p>-->
                     </div>
                 </div>
             </div>
