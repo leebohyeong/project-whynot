@@ -515,7 +515,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             <div class="section-logo section-logo--white2">
                 <span>why not</span>
             </div>
-            CREW
+            와이낫크루 시즌2
         </h2>
         <p data-aos="fade-up" data-aos-delay="100" data-aos-offset="300">
             유플러스와 함께 ESG 실천하는 착한 여행! <br>
