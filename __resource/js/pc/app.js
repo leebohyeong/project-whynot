@@ -80,7 +80,7 @@ const app = () => {
 
     })();
 
-    // WHY NOT ROAD
+    // WHY NOT CREW
     (() => {
         // const iframes = find('.showroom-apps__content-swiper iframe');
         // //console.log(iframes)
@@ -89,7 +89,7 @@ const app = () => {
         //     iframeSrc.push(iframe.src);
         // });
 
-        const roadCarousel = new Swiper('.road .swiper', {
+        const crewCarousel = new Swiper('.crew .swiper', {
             loop: true,
             slidesPerView: 'auto',
             centeredSlides: true,
@@ -98,15 +98,10 @@ const app = () => {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-
-            on : {
-
-            }
-
         });
 
 
-        // const roadCarousel = new Swiper('.road .swiper', {
+        // const crewCarousel = new Swiper('.crew .swiper', {
         //     loop: true,
         //     slidesPerView: 'auto',
         //     centeredSlides: true,
@@ -120,7 +115,7 @@ const app = () => {
 
         (() => {
             const modal = new Modal();
-            const triggers = find('.road__link');
+            const triggers = find('.crew__link');
             const getId = trigger => trigger.getAttribute('href');
             const contents = triggers.reduce((contents, trigger) => {
                 const id = getId(trigger);

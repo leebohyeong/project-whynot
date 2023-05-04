@@ -14,7 +14,7 @@ body {
     min-width: 1250px;
 }
 
-body.modal-road--active {
+body.modal-crew--active {
     overflow: hidden;
 }
 
@@ -842,7 +842,7 @@ section {
 
 }
 
-.road {
+.crew {
     position: relative;
     //height: 1186px;
 
@@ -1256,7 +1256,7 @@ section {
     }
 }
 
-.modal-road {
+.modal-crew {
     &__title {
         display: flex;
         align-items: center;

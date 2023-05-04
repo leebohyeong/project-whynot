@@ -82,15 +82,15 @@ const app = () => {
 
     })();
 
-    // WHY NOT ROAD
+    // WHY NOT CREW
     (() => {
-        const road = findOne('.road');
-        const carouselWrap = findOne('.road__carousel_1 .swiper', road);
-        const carouselWrap2 = findOne('.road__carousel_2 .swiper', road);
-        const carouselPagination = findOne('.swiper-pagination', road);
+        const crew = findOne('.crew');
+        const carouselWrap = findOne('.crew__carousel_1 .swiper', crew);
+        const carouselWrap2 = findOne('.crew__carousel_2 .swiper', crew);
+        const carouselPagination = findOne('.swiper-pagination', crew);
         const carouselPaginationMenus = find('p', carouselWrap).map(menu => menu.innerText);
 
-        const roadCarousel = new Swiper(carouselWrap, {
+        const crewCarousel = new Swiper(carouselWrap, {
             loop:true,
             slidesPerView: 'auto',
             loopAdditionalSlides: '5',
@@ -106,7 +106,7 @@ const app = () => {
             },
         });
 
-        const roadCarousel2 = new Swiper(carouselWrap2, {
+        const crewCarousel2 = new Swiper(carouselWrap2, {
             // loop: true,
             slidesPerView: "auto",
             centeredSlides: true,
@@ -120,7 +120,7 @@ const app = () => {
 
         (() => {
             const modal = new Modal();
-            const triggers = find('.road__link');
+            const triggers = find('.crew__link');
             const getId = trigger => trigger.getAttribute('href');
             const contents = triggers.reduce((contents, trigger) => {
                 const id = getId(trigger);

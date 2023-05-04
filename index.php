@@ -188,7 +188,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                 <li><a class="header__link" href="#brand-film" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'Brand Flim'})">BRAND FILM</a></li>
                 <li><a class="header__link" href="#boost-us" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'BOOST-US'})">BOOST US</a></li>
                 <li><a class="header__link" href="#experience" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'EXPERIENCE'})">EXPERIENCE</a></li>
-                <li><a class="header__link" href="#road" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'ROAD'})">ROAD</a></li>
+                <li><a class="header__link" href="#crew" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CREW'})">CREW</a></li>
                 <li><a class="header__link" href="#contents" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'CONTENTS'})">CONTENTS</a></li>
                 <li><a class="header__link" href="#collaboration" onclick="gtag('event','GNB',{'event_category' : '와이낫페이지' ,'event_label' : 'COLLABORATION'})">COLLABORATION</a></li>
             </ul>
@@ -520,35 +520,33 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         </div>
     </div>
 </section>
-<section class="road" id="road">
+<section class="crew" id="crew">
     <header>
         <h2 data-aos="fade-up">
             <div class="section-logo section-logo--black">
                 <span>why not</span>
             </div>
-            ROAD
+            CREW
         </h2>
         <p data-aos="fade-up" data-aos-delay="100">
-            유플러스의 선 넘는 지역활성화 프로젝트 WHY NOT ROAD ! <br>
-            지자체와 함께 대한민국 전국 8도를 소개합니다. <br>
-            <strong>유플러스의 혜택이 담긴 대한민국 핫플을 클릭해 보세요!</strong>
-
+            유플러스와 함께 ESG 실천하는 착한 여행! <br>
+            와이낫크루 (KCM, 권은비, 조정식, 박현규)가 직접 다녀온 <br>
+            <strong>올해의 여행지 추천!</strong>
         </p>
     </header>
-    <div class="road__list-box">
-        <ul class="road__list">
-            <li class="road__item"><a class="road__link" href="#road-v1" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '춘천'})"><span>춘천</span></a></li>
-            <li class="road__item"><a class="road__link" href="#road-v2" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '부산'})"><span>부산</span></a></li>
-            <li class="road__item"><a class="road__link" href="#road-v3" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '인천'})"><span>인천</span></a></li>
-            <li class="road__item"><a class="road__link" href="#road-v4" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '울산'})"><span>울산</span></a></li>
-            <li class="road__item"><a class="road__link" href="#road-v5" onclick="gtag('event','WHY NOT ROAD',{'event_category' : '와이낫페이지' ,'event_label' : '서울'})"><span>서울</span></a></li>
+    <div class="crew__list-box">
+        <ul class="crew__list">
+            <li class="crew__item"><a class="crew__link" href="#crew-v1" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '춘천'})"><span>춘천</span></a></li>
+            <li class="crew__item"><a class="crew__link" href="#crew-v2" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '부산'})"><span>부산</span></a></li>
+            <li class="crew__item"><a class="crew__link" href="#crew-v3" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '인천'})"><span>인천</span></a></li>
+            <li class="crew__item"><a class="crew__link" href="#crew-v4" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '울산'})"><span>울산</span></a></li>
+            <li class="crew__item"><a class="crew__link" href="#crew-v5" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '서울'})"><span>서울</span></a></li>
         </ul>
         <p>
-            선넘는 즐거움과 혜택이 가득한 <br>
-            지역을 소개합니다.
+            유플러스의 혜택과 함께 대한민국 숨겨진 핫플을 방문해보세요!
         </p>
     </div>
-    <div class="road__carousel">
+    <div class="crew__carousel">
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -1008,18 +1006,18 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         </div>
     </div>
 </section>
-<section class="modal modal-road" id="road-v1">
+<section class="modal modal-crew" id="crew-v1">
     <div class="modal__backdrop"></div>
     <div class="modal__dialog">
         <div class="modal__container">
-            <div class="modal-road__title">
+            <div class="modal-crew__title">
                 <h2>
                     와이낫 크루가 추천하는
                     <span>와이낫 로드 <em>춘천</em></span>
                 </h2>
             </div>
-            <div class="modal-road__content">
-                <div class="modal-road__item">
+            <div class="modal-crew__content">
+                <div class="modal-crew__item">
                     <h3>레고랜드 코리아 리조트</h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_1_item_1.jpg')"></li>
@@ -1030,13 +1028,13 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         어린이와 가족들을 위한 최고의 LEGO 국내 첫 글로벌 테마파크
                     </p>
                 </div>
-                <div class="modal-road__benefit-box">
+                <div class="modal-crew__benefit-box">
                     <p><strong>유플러스 멤버십 혜택 <br> <span>레고랜드 코리아 1일 이용권 20% 상시 할인</span></strong> <br>
                         주중 20% 주말 10% 할인 본인 포함 동반 4인까지 최대 48,000원 할인
 
                     </p>
                 </div>
-                <div class="modal-road__item">
+                <div class="modal-crew__item">
                     <h3>평양 막국수 & 혜정 닭갈비</h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_1_item_3.jpg')">
@@ -1058,7 +1056,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 먹어본 적 없다는 그 맛! <br>
                                 착한 가격에 푸짐한 양을 혜정 닭갈비
                             </p>
-                            <div class="modal-road__benefit-box">
+                            <div class="modal-crew__benefit-box">
                                 <p><strong>유플러스 멤버십 혜택</strong> <br>
                                     유플러스 멤버십 회원 1,000원 당 <br>
                                     100원 할인 (최대 2만원 할인)
@@ -1068,7 +1066,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </li>
                     </ul>
                 </div>
-                <section class="modal-road__benefit">
+                <section class="modal-crew__benefit">
                     <h3>유플러스 고객을 위한 선 넘는
                         <span>춘천 멤버십 혜택</span>
                     </h3>
@@ -1112,7 +1110,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </li>
                     </ul>
                 </section>
-                <div class="modal-road__benefit-box modal-road__benefit-box2">
+                <div class="modal-crew__benefit-box modal-crew__benefit-box2">
                     <p><strong>멤버십 혜택 이용 방법</strong> <br>
                         1. 와이낫로드 유플러스 멤버십 zone에서 제휴 매장 확인하기 <br>
                         2. 와이낫로드 제휴 매장 방문하기 <br>
@@ -1127,18 +1125,18 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         </div>
     </div>
 </section>
-<section class="modal modal-road" id="road-v2">
+<section class="modal modal-crew" id="crew-v2">
     <div class="modal__backdrop"></div>
     <div class="modal__dialog">
         <div class="modal__container">
-            <div class="modal-road__title">
+            <div class="modal-crew__title">
                 <h2>
                     와이낫 크루가 추천하는
                     <span>와이낫 로드 <em>부산</em></span>
                 </h2>
             </div>
-            <div class="modal-road__content">
-                <div class="modal-road__item">
+            <div class="modal-crew__content">
+                <div class="modal-crew__item">
                     <h3>부산 해운대</h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_2_item_1.jpg')">
@@ -1162,7 +1160,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 타는 순간 여행이 되는, 좋은 친환경 퍼스널 <br>
                                 모빌리티 투어지!
                             </p>
-                            <div class="modal-road__benefit-box">
+                            <div class="modal-crew__benefit-box">
                                 <p><strong>유플러스 멤버십 혜택</strong> <br>
                                     유플러스 멤버십 회원 20% 할인
 
@@ -1171,7 +1169,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </li>
                     </ul>
                 </div>
-                <div class="modal-road__item">
+                <div class="modal-crew__item">
                     <h3>부산 엑스 더 스카이</h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_2_item_3.jpg')"></li>
@@ -1182,13 +1180,13 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         부산 최고의 랜드마크이자 부산 전경을 한눈에 담을 수 있는 하늘 위의 바다
                     </p>
                 </div>
-                <div class="modal-road__benefit-box">
+                <div class="modal-crew__benefit-box">
                     <p><strong>유플러스 멤버십 혜택</strong> <br>
                         유플러스 멤버십 회원 전망대 입장료 25% 할인 동반 1인까지 현장 할인
 
                     </p>
                 </div>
-                <section class="modal-road__benefit">
+                <section class="modal-crew__benefit">
                     <h3>유플러스 고객을 위한 선 넘는
                         <span>부산 멤버십 혜택</span>
                     </h3>
@@ -1229,7 +1227,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </li>
                     </ul>
                 </section>
-                <div class="modal-road__benefit-box modal-road__benefit-box2">
+                <div class="modal-crew__benefit-box modal-crew__benefit-box2">
                     <p><strong>멤버십 혜택 이용 방법</strong> <br>
                         1. 와이낫로드 유플러스 멤버십 zone에서 제휴 매장 확인하기 <br>
                         2. 와이낫로드 제휴 매장 방문하기 <br>
@@ -1244,18 +1242,18 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         </div>
     </div>
 </section>
-<section class="modal modal-road" id="road-v3">
+<section class="modal modal-crew" id="crew-v3">
     <div class="modal__backdrop"></div>
     <div class="modal__dialog">
         <div class="modal__container">
-            <div class="modal-road__title">
+            <div class="modal-crew__title">
                 <h2>
                     와이낫 크루가 추천하는
                     <span>와이낫 로드 <em>인천</em></span>
                 </h2>
             </div>
-            <div class="modal-road__content">
-                <div class="modal-road__item">
+            <div class="modal-crew__content">
+                <div class="modal-crew__item">
                     <h3>개항로 통닭</h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_3_item_1.jpg')"></li>
@@ -1266,7 +1264,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         레트로 감성이 물씬 풍기는 세대 구별 없이 어울려 즐기는 전기 구이 통닭집
                     </p>
                 </div>
-                <div class="modal-road__item">
+                <div class="modal-crew__item">
                     <h3>국제 롤러스케이트장</h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_3_item_2.jpg')"></li>
@@ -1277,7 +1275,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
 
                     </p>
                 </div>
-                <section class="modal-road__benefit">
+                <section class="modal-crew__benefit">
                     <h3>유플러스 고객을 위한 선 넘는
                         <span>인천 멤버십 혜택</span>
                     </h3>
@@ -1309,7 +1307,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </li>
                     </ul>
                 </section>
-                <div class="modal-road__benefit-box modal-road__benefit-box2">
+                <div class="modal-crew__benefit-box modal-crew__benefit-box2">
                     <p><strong>멤버십 혜택 이용 방법</strong> <br>
                         1. 와이낫로드 유플러스 멤버십 zone에서 제휴 매장 확인하기 <br>
                         2. 와이낫로드 제휴 매장 방문하기 <br>
@@ -1324,18 +1322,18 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         </div>
     </div>
 </section>
-<section class="modal modal-road" id="road-v4">
+<section class="modal modal-crew" id="crew-v4">
     <div class="modal__backdrop"></div>
     <div class="modal__dialog">
         <div class="modal__container">
-            <div class="modal-road__title">
+            <div class="modal-crew__title">
                 <h2>
                     와이낫 크루가 추천하는
                     <span>와이낫 로드 <em>울산</em></span>
                 </h2>
             </div>
-            <div class="modal-road__content">
-                <div class="modal-road__item">
+            <div class="modal-crew__content">
+                <div class="modal-crew__item">
                     <h3>장생포 고래문화마을</h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_4_item_1.jpg')"></li>
@@ -1348,7 +1346,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         테마와 이야기를 담은 공원을 둘러볼 수 있는 공간
                     </p>
                 </div>
-                <div class="modal-road__item">
+                <div class="modal-crew__item">
                     <h3>언양불고기한마당한우촌 & 복순도가</h3>
                     <ul style="display:flex; justify-content:space-between; grid-gap:inherit;">
                         <li style="background-image: url('/assets/images/img_modal_4_item_2.jpg')">
@@ -1358,7 +1356,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 두말이 필요 없는 울산 최고의 언양 불고기를 <br>
                                 즐길 수 있는 한우 암소 전문점
                             </p>
-                            <div class="modal-road__benefit-box">
+                            <div class="modal-crew__benefit-box">
                                 <p><strong>유플러스 멤버십 혜택</strong> <br>
                                     유플러스 멤버십 회원 1,000원 당 <br>
                                     100원 할인 (최대 2만원 할인)
@@ -1377,7 +1375,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </li>
                     </ul>
                 </div>
-                <section class="modal-road__benefit">
+                <section class="modal-crew__benefit">
                     <h3>유플러스 고객을 위한 선 넘는
                         <span>울산 멤버십 혜택</span>
                     </h3>
@@ -1420,7 +1418,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </li>
                     </ul>
                 </section>
-                <div class="modal-road__benefit-box modal-road__benefit-box2">
+                <div class="modal-crew__benefit-box modal-crew__benefit-box2">
                     <p><strong>멤버십 혜택 이용 방법</strong> <br>
                         1. 와이낫로드 유플러스 멤버십 zone에서 제휴 매장 확인하기 <br>
                         2. 와이낫로드 제휴 매장 방문하기 <br>
@@ -1435,18 +1433,18 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
         </div>
     </div>
 </section>
-<section class="modal modal-road" id="road-v5">
+<section class="modal modal-crew" id="crew-v5">
     <div class="modal__backdrop"></div>
     <div class="modal__dialog">
         <div class="modal__container">
-            <div class="modal-road__title">
+            <div class="modal-crew__title">
                 <h2>
                     와이낫 크루가 추천하는
                     <span>와이낫 로드 <em>서울</em></span>
                 </h2>
             </div>
-            <div class="modal-road__content">
-                <div class="modal-road__item">
+            <div class="modal-crew__content">
+                <div class="modal-crew__item">
                     <h3>LG 유플러스 마곡 사옥</h3>
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_5_item_1.jpg')">
@@ -1463,7 +1461,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </li>
                     </ul>
                 </div>
-                <section class="modal-road__benefit">
+                <section class="modal-crew__benefit">
                     <h3>유플러스 고객을 위한 선 넘는
                         <span>서울 멤버십 혜택</span>
                     </h3>
@@ -1489,7 +1487,7 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </li>
                     </ul>
                 </section>
-                <div class="modal-road__benefit-box modal-road__benefit-box2">
+                <div class="modal-crew__benefit-box modal-crew__benefit-box2">
                     <p><strong>멤버십 혜택 이용 방법</strong> <br>
                         1. 와이낫로드 유플러스 멤버십 zone에서 제휴 매장 확인하기 <br>
                         2. 와이낫로드 제휴 매장 방문하기 <br>
