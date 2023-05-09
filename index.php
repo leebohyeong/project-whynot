@@ -2011,18 +2011,13 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </p>
                         <p>또한, 기타 개인정보에 관한 상담이 필요한 경우에는 개인정보침해 신고센터, 개인정보분쟁조정위원회, 대검찰청 사이버수사과, 경찰청 사이버안전국 등으로 문의하실 수
                             있습니다.</p>
-                        <p>1) 개인정보침해신고센터</p>
-                        <p>- 전화 : (국번없이) 118</p>
-                        <p>- URL : http://privacy.kisa.or.kr</p>
-                        <p>2) 개인정보분쟁조정위원회</p>
-                        <p>- 전화 : 1833-6972</p>
-                        <p>- URL : http://www.kopico.go.kr</p>
-                        <p>3) 대검찰청 사이버수사과</p>
-                        <p>- 전화 : (국번없이) 1301</p>
-                        <p>- URL : http://www.spo.go.kr</p>
-                        <p>4) 경찰청 사이버안전국</p>
-                        <p>- 전화 : (국번없이) 182</p>
-                        <p>- URL : http://cyberbureau.police.go.kr</p>
+                        <p>
+                            <br>
+                        </p>
+                        <p>1. 개인정보분쟁조정위원회 : (국번없이) 1833-6972 (www.kopico.go.kr)</p>
+                        <p>2. 개인정보침해신고센터 : (국번없이) 118 (privacy.kisa.or.kr)</p>
+                        <p>3. 대검찰청 : (국번없이) 1301 (www.spo.go.kr)</p>
+                        <p>4. 경찰청 사이버범죄 신고시스템 : (국번없이) 182 (ecrm.police.go.kr)</p>
                     </div>
                     <div>
                         <p>11. 개인정보보호 책임자</p>
