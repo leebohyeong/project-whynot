@@ -1371,18 +1371,18 @@ section {
 
         p {
             font-size: getSize(24px);
-        }
 
-        strong {
-            display: inline-block;
-            padding-bottom: 5px;
-            color: #e6007e;
-            font-weight: $font-weight-extrabold;
-            font-size: getSize(26px);
-        }
+            strong {
+                display: inline-block;
+                padding-bottom: 5px;
+                color: #e6007e;
+                font-weight: $font-weight-extrabold;
+                font-size: getSize(26px);
+            }
 
-        span {
-            font-size: getSize(24px);
+            span {
+                font-size: getSize(24px);
+            }
         }
     }
 
@@ -1391,10 +1391,20 @@ section {
 
         p {
             line-height: math.div(24, 16);
-        }
 
-        strong {
-            font-size: getSize(26px);
+            strong {
+                font-size: getSize(26px);
+            }
+
+            b {
+                font-size: getSize(24px);
+            }
+
+            span {
+                display: block;
+                margin-top: getSize(16px);
+                font-size: getSize(20px);
+            }
         }
     }
 

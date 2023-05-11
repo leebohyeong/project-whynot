@@ -1357,6 +1357,10 @@ section {
             grid-gap: 40px;
         }
 
+        ul.modal-crew__item-gwangju {
+            grid-gap: 0;
+        }
+
         li {
             background: {
                 repeat: no-repeat;
@@ -1377,16 +1381,18 @@ section {
         padding: 8px 22px 6px;
         background: #f6f6f6;
 
-        strong {
-            display: inline-block;
-            padding-bottom: 5px;
-            color: #e6007e;
-            font-weight: $font-weight-bold;
-            font-size: 18px;
-        }
+        p {
+            strong {
+                display: inline-block;
+                padding-bottom: 5px;
+                color: #e6007e;
+                font-weight: $font-weight-bold;
+                font-size: 18px;
+            }
 
-        span {
-            font-size: 16px;
+            span {
+                font-size: 16px;
+            }
         }
     }
 
@@ -1395,10 +1401,18 @@ section {
 
         p {
             line-height: math.div(24, 16);
-        }
 
-        strong {
-            font-size: 20px;
+            strong {
+                font-size: 20px;
+            }
+
+            b {
+                font-weight: $font-weight-semibold;
+            }
+
+            span {
+                font-size: 14px;
+            }
         }
     }
 
@@ -1422,6 +1436,10 @@ section {
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 18px;
             margin-top: 13px;
+        }
+
+        ul.modal-crew__benefit-gwangju {
+            grid-template-columns: repeat(2, 1fr);
         }
 
         li {
@@ -1458,6 +1476,7 @@ section {
 
             span {
                 color: #e6007e;
+                font-weight: $font-weight-bold;
             }
         }
     }

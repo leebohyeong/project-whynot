@@ -568,20 +568,20 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
     </header>
     <div class="crew__list-box">
         <ul class="crew__list">
-            <li class="crew__item"><a class="crew__link" href="#crew-v1"
-                                      onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '춘천'})"><span>춘천</span></a>
+            <li class="crew__item">
+                <a class="crew__link" href="#crew-v5" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '광주'})"><span>광주</span></a>
             </li>
-            <li class="crew__item"><a class="crew__link" href="#crew-v2"
-                                      onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '부산'})"><span>부산</span></a>
+            <li class="crew__item">
+                <a class="crew__link" href="#crew-v1" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '춘천'})"><span>춘천</span></a>
             </li>
-            <li class="crew__item"><a class="crew__link" href="#crew-v3"
-                                      onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '인천'})"><span>인천</span></a>
+            <li class="crew__item">
+                <a class="crew__link" href="#crew-v2" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '부산'})"><span>부산</span></a>
             </li>
-            <li class="crew__item"><a class="crew__link" href="#crew-v4"
-                                      onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '울산'})"><span>울산</span></a>
+            <li class="crew__item">
+                <a class="crew__link" href="#crew-v3" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '인천'})"><span>인천</span></a>
             </li>
-            <li class="crew__item"><a class="crew__link" href="#crew-v5"
-                                      onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '서울'})"><span>서울</span></a>
+            <li class="crew__item">
+                <a class="crew__link" href="#crew-v4" onclick="gtag('event','WHY NOT CREW',{'event_category' : '와이낫페이지' ,'event_label' : '울산'})"><span>울산</span></a>
             </li>
         </ul>
         <p>
@@ -1288,31 +1288,31 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_1_list_2.jpg')">
                             <h4>혜정 닭갈비</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_1_list_3.jpg')">
                             <h4>수플레</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_1_list_4.jpg')">
                             <h4>처방전</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_1_list_5.jpg')">
                             <h4>불란서 홍차</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_1_list_6.jpg')">
                             <h4>오가는정과</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
@@ -1401,35 +1401,35 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_2_list_1.jpg')">
                             <h4>엑스 더 스카이 전망대</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>전망대 입장료 25% 할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>전망대 입장료 25% 할인</span></strong> <br>
                                 (동반 1인까지 현장 할인 가능)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_2_list_2.jpg')">
                             <h4>투어지</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>20% 할인</span></strong></p>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>20% 할인</span></strong></p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_2_list_3.jpg')">
                             <h4>수백진국</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_2_list_4.jpg')">
                             <h4>해운대시장산곰장어</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_2_list_5.jpg')">
                             <h4>마산 이모집</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_2_list_6.jpg')">
                             <h4>바다횟집</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
@@ -1490,25 +1490,25 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_3_list_1.jpg')">
                             <h4>꽁커피</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_3_list_2.jpg')">
                             <h4>다락</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_3_list_3.jpg')">
                             <h4>서니구락부</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_3_list_4.jpg')">
                             <h4>스푼빌</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
 
                             </p>
@@ -1590,37 +1590,37 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                     <ul>
                         <li style="background-image: url('/assets/images/img_modal_4_list_1.jpg')">
                             <h4>강변수구레국밥</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_4_list_2.jpg')">
                             <h4>소소원</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_4_list_3.jpg')">
                             <h4>수산물직판장태화점</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_4_list_4.jpg')">
                             <h4>이조참숯불갈비</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_4_list_5.jpg')">
                             <h4>할머니의 순두부</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_4_list_6.jpg')">
                             <h4>한마당한우촌</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <p><strong>LG U<sup>+</sup> 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
@@ -1648,60 +1648,84 @@ include "./kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             <div class="modal-crew__title">
                 <h2>
                     와이낫 크루가 추천하는
-                    <span>와이낫 로드 <em>서울</em></span>
+                    <span>올해의 여행지 <em>광주</em></span>
                 </h2>
             </div>
             <div class="modal-crew__content">
                 <div class="modal-crew__item">
-                    <h3>LG 유플러스 마곡 사옥</h3>
-                    <ul>
+                    <h3>광주 비엔날레</h3>
+                    <ul class="modal-crew__item-gwangju">
                         <li style="background-image: url('/assets/images/img_modal_5_item_1.jpg')">
-                            <h4>LG 유플러스 마곡 사옥</h4>
+                            <h4>광주 비엔날레</h4>
                             <p>
-                                <strong>주소지</strong> 서울 강서구 마곡중앙8로 71
-                            </p>
-                        </li>
-                        <li style="background-image: url('/assets/images/img_modal_5_item_2.jpg')">
-                            <h4>LG 아트센터</h4>
-                            <p>
-                                <strong>주소지</strong> 서울 강서구 마곡중앙로 136 <br> LG아트센터
+                                <strong>주소지</strong> 광주 북구 비엔날레로 111 <br>
+                                <strong>전시기간</strong> 2023/4/7~7/9 (매주 월요일 휴관)
                             </p>
                         </li>
                     </ul>
                 </div>
                 <section class="modal-crew__benefit">
-                    <h3>유플러스 고객을 위한 선 넘는
-                        <span>서울 멤버십 혜택</span>
-                    </h3>
-                    <ul>
+                    <h3>유플러스 고객을 위한 우리 동네 멤버십 혜택</h3>
+                    <ul class="modal-crew__benefit-gwangju">
                         <li style="background-image: url('/assets/images/img_modal_5_list_1.jpg')">
-                            <h4>공병득 쉐프</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <h4>OWLR (퓨전음식점)</h4>
+                            <p>
+                                <strong>
+                                    <span>주소 : 광주 동구 동명로 14번길 45-21</span> <br>
+                                    *LG U<sup>+</sup>멤버십 회원 결제 시 <br>
+                                    1,000원 당 100원 할인
+                                </strong>
+                                <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_5_list_2.jpg')">
-                            <h4>보나세라 오가닉</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <h4>프라임픽 (카페/소품샵)</h4>
+                            <p>
+                                <strong>
+                                    <span>주소 : 광주 동구 장동로 25</span> <br>
+                                    *LG U<sup>+</sup>멤버십 회원 결제 시 <br>
+                                    1,000원 당 100원 할인
+                                </strong>
+                                <br>
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
                         <li style="background-image: url('/assets/images/img_modal_5_list_3.jpg')">
-                            <h4>일빠네</h4>
-                            <p><strong>LG U+ 멤버십 회원 결제 시 <br> <span>1,000원당 100원할인</span></strong> <br>
+                            <h4>해담촌 (한식)</h4>
+                            <p>
+                                <strong>
+                                    <span> 주소 : 광주 북구 참판로 91</span> <br>
+                                    *LG U<sup>+</sup>멤버십 회원 결제 시 <br>
+                                    1,000원 당 100원 할인
+                                </strong>
+                                <br>
                                 (최대 2만원까지 할인)
-
+                            </p>
+                        </li>
+                        <li style="background-image: url('/assets/images/img_modal_5_list_4.jpg')">
+                            <h4>건우축산 (정육)</h4>
+                            <p>
+                                <strong>
+                                    <span> 주소 : 광주 북구 참판로 92</span> <br>
+                                    *LG U<sup>+</sup>멤버십 회원 결제 시 <br>
+                                    1,000원 당 100원 할인
+                                </strong>
+                                <br>
+                                (최대 2만원까지 할인)
                             </p>
                         </li>
                     </ul>
                 </section>
                 <div class="modal-crew__benefit-box modal-crew__benefit-box2">
-                    <p><strong>멤버십 혜택 이용 방법</strong> <br>
-                        1. 와이낫로드 유플러스 멤버십 zone에서 제휴 매장 확인하기 <br>
-                        2. 와이낫로드 제휴 매장 방문하기 <br>
-                        3. 결제 시 멤버스앱 > 바코드 제시하고 할인받기
-
-
+                    <p>
+                        <strong>U<sup>+</sup>멤버십 혜택 이용 방법</strong> <br>
+                        <b>1.  U<sup>+</sup>멤버스 앱 열기</b> <br>
+                        <b>2. 계산 전 멤버십 바코드 제시</b> <br>
+                        <span>
+                            그 외 U<sup>+</sup>멤버십 할인혜택을 받을 수 있는 우리동네 매장들이 궁금하시다면 <br>
+                            우측상단 메뉴 > 기본혜택 > 우리동네멤버십에서 확인할 수 있습니다!
+                        </span>
                     </p>
                 </div>
             </div>
