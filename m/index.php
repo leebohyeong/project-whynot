@@ -1612,7 +1612,7 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
                                 (최대 2만원까지 할인)
                             </p>
                         </li>
-                        <li style="background-image: url('/assets/images/img_modal_5_list_3.jpg')">
+                        <li style="background-image: url('/assets/images/img_modal_5_list_4.jpg')">
                             <h4>건우축산(정육)</h4>
                             <p>
                                 <strong>
