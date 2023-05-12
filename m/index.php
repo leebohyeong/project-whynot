@@ -553,6 +553,9 @@ include "../kcp/cfg/cert_conf.php";       // 환경설정 파일 include
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
+                        <iframe src="https://www.youtube.com/embed/06AA36hKA3I?controls=0" title=""></iframe>
+                    </div>
+                    <div class="swiper-slide">
                         <iframe src="https://www.youtube.com/embed/Q7cdvbrvSKU?controls=0" title="와이낫시즌2 EP.0 프롤로그"></iframe>
                     </div>
                     <div class="swiper-slide">
