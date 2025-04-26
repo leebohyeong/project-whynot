@@ -5,6 +5,7 @@
 - **제작 기간** : 2022 ~ 2024 (계속 업데이트)
 - **제작 도구** : Intellij
 - **사용 기술** : HTML5, CSS3, SCSS, JavaScript, Git, Webpack
+- **팀 규모**: 3명 (기획자1, 디자이너1, 퍼블리셔1)
 
 ## 프로젝트 설명
 - pc, mobile 따로 제작했으며, 2022년도에 제작하고 2024년도까지 계속 리뉴얼 업데이트 작업을 했습니다.
@@ -14,7 +15,6 @@
 - 📂 __resource/ — 개발 소스 (js, scss, pug)
 - 📂 assets/ — 빌드 결과물 (배포용)
 - 📂 m/ - mobile
-- 📄 index.html — 메인 HTML 파일
 
 ## 로컬에서 실행하기
 ```bash
